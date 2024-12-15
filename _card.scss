@@ -1,0 +1,22 @@
+@import 'text';
+.card-container {
+   
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    @include container()
+  }
+.right-item{
+    display: flex;
+    text-align: right; 
+    align-items: flex-end;
+    width: 20rem;
+ 
+   
+}
+.left-item{
+    align-items: flex-end;
+    width: 20rem;
+ 
+   
+}
