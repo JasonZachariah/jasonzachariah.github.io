@@ -1,0 +1,243 @@
+/* file import */
+.flex-d {
+  justify-content: top;
+  display: flex;
+  height: 30 rem;
+  flex-direction: row;
+  text-align: left;
+  background: #fff;
+}
+
+.flex-green {
+  justify-content: top;
+  display: flex;
+  height: 30 rem;
+  flex-direction: row;
+  text-align: left;
+  background: #6BE06B;
+}
+
+.flex-white {
+  justify-content: top;
+  display: flex;
+  height: 30 rem;
+  flex-direction: row;
+  text-align: left;
+  background: #E9E8E5;
+}
+
+.flexboxItem {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30rem;
+  border-left: 1px dashed #333;
+  padding: 1rem;
+}
+
+html {
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  /**
+  @media screen and (max-width: 500px) {
+      .flex-container {
+          margin-left: 2rem;
+          margin-right: 2rem;
+          flex-direction: column;
+
+      }
+  }
+  @media screen and (max-width: 768px) {
+      .flex-container {
+          margin-left: 3rem;
+          margin-right: 3rem;
+          flex-direction: column;
+      }
+  }
+  @media screen and (max-width: 992px) {
+      .flex-container {
+          margin-left: 4rem;
+          margin-right: 4rem;
+          flex-direction: column;
+      }
+  }
+  @media screen and (max-width: 1200px) {
+      .flex-container {
+          margin: 0 5rem;
+          flex-direction: column;
+      }
+  }
+      */
+}
+@media (max-width: 800px) {
+  html {
+    /* Reuduces all font sizes by 75%)*/
+    font-size: 75%;
+  }
+  html .flex-green {
+    flex-direction: column;
+  }
+  html .flex-white {
+    flex-direction: column;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  justify-content: top;
+  display: flex;
+  height: 30 rem;
+  flex-direction: row;
+  text-align: left;
+  background: #fff;
+}
+
+.right-item {
+  display: flex;
+  text-align: right;
+  align-items: flex-end;
+  width: 20rem;
+}
+
+.left-item {
+  align-items: flex-end;
+  width: 20rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  margin: 0px;
+}
+
+h2 {
+  display: flex;
+  width: 246px;
+  height: 80.337px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: aliceblue;
+  border: 4px solid #393835;
+  color: #393835;
+  font-size: 3rem;
+  font-family: Bricolage Grotesque;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+h3 {
+  /*Border code*/
+  display: flex;
+  align-items: center;
+  color: #393835;
+  font-size: 2rem;
+  /*font code*/
+  font-family: Adapter Mono PE Variable;
+  font-weight: 400;
+}
+
+h3::after {
+  content: "";
+  flex: auto;
+  margin-left: 2rem;
+  border-top: 1px dashed #393835;
+}
+
+h4 {
+  color: #393835;
+  font-size: 1rem;
+  font-family: Adapter Mono PE Variable;
+  font-weight: 600;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+h5 {
+  color: #393835;
+  font-size: 1.25rem;
+  font-family: Adapter Mono PE Variable;
+  font-weight: 700;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+h6 {
+  color: black;
+  font-size: 1rem;
+  font-family: Bricolage Grotesque;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+p {
+  color: #393835;
+  font-size: 1rem;
+  font-family: Bricolage Grotesque;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+
+.nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px black solid;
+}
+
+.navcontainer {
+  margin-left: 128px;
+  margin-right: 128px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+button {
+  color: #393835;
+  font-size: 1rem;
+  font-family: Adapter Mono PE Variable;
+  font-weight: 600;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  display: flex;
+  width: 105px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 100px;
+  border: 1px solid var(--grey, #393835);
+  background: #6BE06B;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background: #409520;
+}
+
+.border {
+  width: 7.5rem;
+  height: 3rem;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: aliceblue;
+  border: 1px solid #393835;
+}/*# sourceMappingURL=styles.css.map */
