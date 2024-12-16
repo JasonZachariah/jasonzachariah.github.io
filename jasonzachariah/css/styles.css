@@ -1,10 +1,5 @@
 /* file import */
 @import url("https://use.typekit.net/qvu8qst.css");
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
 .flex-d {
   justify-content: top;
   display: flex;
