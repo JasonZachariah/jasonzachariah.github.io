@@ -1,4 +1,8 @@
 /* file import */
+* {
+  @import url("https://use.typekit.net/qvu8qst.css");
+}
+
 .flex-d {
   justify-content: top;
   display: flex;
