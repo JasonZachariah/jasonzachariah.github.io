@@ -1,10 +1,58 @@
 
 
+/**reponsive sizes**/
 
+
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/**larger desktop**/
+@media (max-width: 1240px){
+    .container {
+      margin: 0 4rem;
+    }
+}
+
+.fit {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/** tablet**/
+
+@media (max-width: 720px){
+  html {
+    font-size: 8px;
+  }
+
+  .container {
+    margin: 0 1rem;
+  }
+
+  .fit {
+    margin: 0 30px;
+  }
+}
+/** phone**/
+@media (max-width: 640px){
+  .fit {
+    margin: 0 20px;
+  }
+}
+
+
+
+/*
 @mixin container($color: #fff) {
+
+    max-width: 1240px;
+    margin: 0 auto;
+
   justify-content: top;
   display: flex;
-  height: 30 rem;
   flex-direction: row;
   text-align: left;
   background: $color;
@@ -33,27 +81,10 @@
 
 
 
-html {
 
-  /* Responsive layout - makes a one column-layout instead of two-column layout */
-  @media (max-width: 800px) {
-
-    /* Reuduces all font sizes by 75%)*/
-
-    font-size: 75%;
-
-    .flex-green{
-
-      flex-direction: column;
-    }
-    .flex-white{
-
-      flex-direction: column;
-    }
-
-  }
 
   /**
+  
 @media screen and (max-width: 500px) {
     .flex-container {
         margin-left: 2rem;
@@ -83,4 +114,5 @@ html {
     }
 }
     */
-}
+
+//

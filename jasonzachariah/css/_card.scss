@@ -1,4 +1,105 @@
-@import 'text';
+@import 'containers';
+
+
+.homecard_title{
+
+    margin-top: 10rem;
+}
+.homecard_image{
+background-color: $primary-black;
+    height: 50vw;
+width: 100%;
+}
+.homecard_caption{
+
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.nav{
+    width: 100vw;
+    height: 10vh;
+   
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px black solid
+
+}
+.navcontainer {
+   margin-left: 30px;
+   margin-right: 30px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+}
+
+
+
+button{
+
+    color: $primary-black;
+    font-size: 1rem;
+    font-family: $secondary-font;
+    font-weight: 600;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    display: flex;
+    width: 105px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100px;
+    border: 1px solid var(--grey, $primary-black);
+    background: $accent;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition-duration: 0.4s;
+
+}
+button:hover{
+
+    background: #409520;
+}
+
+
+.border{
+    width: 7.5rem;
+    height: 3rem;
+ display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    background-color: aliceblue;
+     border: 1px solid $primary-black;
+
+
+}
+
+
+
+/*
+
 .card-container {
    
     display: flex;
@@ -20,3 +121,4 @@
  
    
 }
+*/
