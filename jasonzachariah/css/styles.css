@@ -4,6 +4,7 @@
 .container {
   max-width: 1240px;
   margin: 0 auto;
+  flex-direction: row;
 }
 
 /**larger desktop**/
@@ -20,7 +21,7 @@
 /** tablet**/
 @media (max-width: 720px) {
   html {
-    font-size: 8px;
+    font-size: 12px;
   }
   .container {
     margin: 0 1rem;
@@ -104,10 +105,6 @@
     }
 }
     */
-.homecard_title {
-  margin-top: 10rem;
-}
-
 .homecard_image {
   background-color: #393835;
   height: 50vw;
@@ -116,6 +113,18 @@
 
 .homecard_caption {
   flex-direction: row;
+}
+
+.card-hover {
+  border: #E9E8E5 3px dashed;
+  -webkit-mask: conic-gradient(from 180deg at top 8px right 8px, #E9E8E5 90deg, #E9E8E5 0) var(--_i, 200%) 0/200% var(--_i, 8px) border-box no-repeat, conic-gradient(at bottom 8px left 8px, #E9E8E5 90deg, #E9E8E5 0) 0 var(--_i, 200%)/var(--_i, 8px) 200% border-box no-repeat, linear-gradient(#E9E8E5 0 0) padding-box no-repeat;
+  transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
+}
+
+.card-hover:hover {
+  --_i: 100%;
+  color: #6BE06B;
+  transition: 0.3s, -webkit-mask-size 0.3s 0.3s;
 }
 
 .nav {
@@ -283,6 +292,7 @@ p {
 .container {
   max-width: 1240px;
   margin: 0 auto;
+  flex-direction: row;
 }
 
 /**larger desktop**/
@@ -299,7 +309,7 @@ p {
 /** tablet**/
 @media (max-width: 720px) {
   html {
-    font-size: 8px;
+    font-size: 12px;
   }
   .container {
     margin: 0 1rem;
