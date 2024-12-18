@@ -72,7 +72,7 @@ body {
 button {
   color: #393835;
   font-size: 1rem;
-  font-family: "adapter-mono-pe-variable", sans-serif;
+  font-family: "antarctican-mono", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -155,7 +155,8 @@ h1 {
   flex-shrink: 0;
   color: #393835;
   font-size: 6rem;
-  font-family: "adapter-mono-pe-variable", sans-serif;
+  font-family: "antarctican-mono", sans-serif;
+  font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -170,7 +171,8 @@ h2 {
   flex-shrink: 0;
   color: #393835;
   font-size: 3rem;
-  font-family: "adapter-mono-pe-variable", sans-serif;
+  font-family: "antarctican-mono", sans-serif;
+  font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -182,7 +184,7 @@ h3 {
   color: #E9E8E5;
   font-size: 2rem;
   /*font code*/
-  font-family: "adapter-mono-pe-variable", sans-serif;
+  font-family: "antarctican-mono", sans-serif;
   font-weight: 400;
 }
 
@@ -196,7 +198,7 @@ h3::after {
 h4 {
   color: #393835;
   font-size: 1rem;
-  font-family: "adapter-mono-pe-variable", sans-serif;
+  font-family: "antarctican-mono", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -205,7 +207,7 @@ h4 {
 h5 {
   color: #393835;
   font-size: 1.25rem;
-  font-family: "adapter-mono-pe-variable", sans-serif;
+  font-family: "antarctican-mono", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -248,7 +250,7 @@ p {
 /** tablet**/
 @media (max-width: 720px) {
   html {
-    font-size: 14px;
+    font-size: 20px;
   }
   .container {
     margin: 0 1rem;
@@ -259,8 +261,10 @@ p {
 }
 /** phone**/
 @media (max-width: 640px) {
-  .fit {
+  html {
     font-size: 18px;
+  }
+  .fit {
     margin: 0 20px;
   }
 }
@@ -332,4 +336,11 @@ p {
         flex-direction: column;
     }
 }
-    *//*# sourceMappingURL=styles.css.map */
+    */
+.project-item {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30rem;
+  border-left: 1px dashed #333;
+  padding: 1rem;
+}/*# sourceMappingURL=styles.css.map */
