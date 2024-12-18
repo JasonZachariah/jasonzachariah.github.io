@@ -6,6 +6,10 @@
   height: 100%;
   width: 100%;
   transition-duration: 0.4s;
+  justify-content: top;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
 }
 
 .homecard_text {
@@ -49,7 +53,6 @@ body {
   width: 100vw;
   height: 10vh;
   display: flex;
-  position: fixed;
   justify-content: center;
   align-items: center;
   border-bottom: 1px black solid;
@@ -143,14 +146,11 @@ body {
 
 h1 {
   display: flex;
-  width: 15.5rem;
-  height: 5rem;
   padding: 2px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
   flex-shrink: 0;
-  border: 2px solid #393835;
   color: #393835;
   font-size: 6rem;
   font-family: "adapter-mono-pe-variable", sans-serif;

@@ -12,17 +12,15 @@ body {
 h1 {
 
     display: flex;
-    width: 15.5rem;
-    height: 5rem;
     padding: 2px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 4px;
     flex-shrink: 0;
   
 
    
-     border: 2px solid $primary-black;
+    
 
 
     color:$primary-black;
