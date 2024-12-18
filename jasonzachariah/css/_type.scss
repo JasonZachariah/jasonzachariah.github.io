@@ -1,17 +1,19 @@
-* {box-sizing: border-box;}
-@font-face {
-    font-family: $secondary-font;
-    src: url("https://use.typekit.net/qvu8qst.css") format('woff2-variations');
-    font-display: swap;
-    font-weight: 200 800;
-  }
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
 a {
     text-decoration: none;
 }
+
 body {
     display: block;
     margin: 0px;
-   
+
 }
 
 h1 {
@@ -22,17 +24,17 @@ h1 {
     align-items: center;
     gap: 4px;
     flex-shrink: 0;
-  
-
-   
-    
 
 
-    color:$primary-black;
+
+
+
+
+    color: $primary-black;
     font-size: 6rem;
     font-family: $secondary-font;
     font-variation-settings: "BORD" 300, "ital" 0, "slnt" 0, "wght" 500;
- 
+
     font-style: normal;
     text-transform: uppercase;
     word-wrap: break-word
@@ -45,16 +47,16 @@ h2 {
     height: 5rem;
     padding: 2px;
 
-    
+
     gap: 10px;
     flex-shrink: 0;
-  
-
-   
- 
 
 
-    color:$primary-black;
+
+
+
+
+    color: $primary-black;
     font-size: 3rem;
     font-family: $secondary-font;
     font-variation-settings: "BORD" 300, "ital" 0, "slnt" 0, "wght" 400;
@@ -65,30 +67,31 @@ h2 {
 
 
 
-h3 { 
-    
+h3 {
+
     display: flex;
     align-items: center;
     color: $primary-white;
     font-size: 2rem;
-  
 
-/*font code*/
+
+    /*font code*/
     font-family: $secondary-font;
     font-weight: 400;
 
 
 
-   
+
 
 }
+
 h3::after {
     content: '';
     flex: auto;
     margin-left: 2rem;
     border-top: 1px dashed $primary-white;
-  
-  }
+
+}
 
 h4 {
     color: $primary-black;
