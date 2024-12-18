@@ -1,5 +1,10 @@
 * {box-sizing: border-box;}
-
+@font-face {
+    font-family: $secondary-font;
+    src: url("https://use.typekit.net/qvu8qst.css") format('woff2-variations');
+    font-display: swap;
+    font-weight: 200 800;
+  }
 a {
     text-decoration: none;
 }

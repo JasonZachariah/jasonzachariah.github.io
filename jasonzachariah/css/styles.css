@@ -135,6 +135,12 @@ button:hover {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "adapter-mono-pe-variable", sans-serif;
+  src: url("https://use.typekit.net/qvu8qst.css") format("woff2-variations");
+  font-display: swap;
+  font-weight: 200 800;
+}
 a {
   text-decoration: none;
 }
@@ -154,7 +160,7 @@ h1 {
   color: #393835;
   font-size: 6rem;
   font-family: "adapter-mono-pe-variable", sans-serif;
-  font-variation-settings: "wght",400;
+  font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
   word-wrap: break-word;
