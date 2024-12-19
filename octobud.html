@@ -19,7 +19,7 @@
 <body>
 
     <!--Nav bar-->
-    <div class="nav">
+    <div id="navbar">
         <div class="left-item">
             <img src="jzlogo.svg" alt="Jason Zachariah" width="30" height="30">
         </div>
@@ -127,8 +127,20 @@
     </div>
 
 -->
-
-
+<!--Navbar js-->
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    </script>
+    
 
 
 

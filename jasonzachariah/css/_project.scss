@@ -2,7 +2,13 @@
   margin-left: auto;
   margin-right: auto;
   width: 30rem;
-  border-left: 1px dashed #333;
+  padding: 1rem;
+}
+.project-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: $primary-black;
   padding: 1rem;
 }
 

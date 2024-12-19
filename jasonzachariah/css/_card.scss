@@ -1,68 +1,66 @@
+.homecard_image {
 
 
-
-
-.homecard_image{
-    margin-bottom: 2rem;
-background-color: $primary-white;
-    height: 100%;
-width: 100%;
-transition-duration: 0.4s;
+  cursor: url('cursor.svg'), auto;
+  margin-bottom: 2rem;
+  background-color: $primary-white;
+  height: 100%;
+  width: 100%;
+  transition-duration: 0.4s;
 
 
   justify-content: top;
   display: flex;
   flex-direction: row;
   text-align: left;
- 
+
 }
 
 
-.homecard_text{
-    width: 40%;
-    margin-left: 2rem;
-    position: relative;
-    top: 50%;
+.homecard_text {
+  cursor: url('cursor.svg'), auto;
+  width: 40%;
+  margin-left: 2rem;
+  position: relative;
+  top: 50%;
 
-    transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
-.homecard_caption{
 
-    flex-direction: row;
-    transition-duration: 0.4s;
+.homecard_caption {
+
+  flex-direction: row;
+  transition-duration: 0.4s;
 }
 
 
 .card-hover {
-    
-    box-sizing: border-box;
-    border:$accent 3px dashed;
-    border-image: 8;
-    -webkit-mask: conic-gradient(
-          from 180deg at top 100px right 100px,
-          #0000 90deg,
-          #000 0
-        )
-        var(--_i, 200%) 0 /200% var(--_i, 8px) border-box no-repeat,
-      conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0
-        var(--_i, 200%) / var(--_i, 8px) 200% border-box no-repeat,
-      linear-gradient(#000 0 0) padding-box no-repeat;
-    transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
-  }
-  .card-hover:hover {
-    height: 100%;
-    --_i: 100%;
-    color: $accent;
-    transition: 0.3s, -webkit-mask-size 0.3s 0.3s;
-  }
-  
-  body {
-    height: 100vh;
-    margin: 0;
-    display: grid;
-    place-content: center;
-    align-items: center;
-  }
+
+  box-sizing: border-box;
+  border: $accent 3px dashed;
+  border-image: 8;
+  -webkit-mask: conic-gradient(from 180deg at top 100px right 100px,
+      #0000 90deg,
+      #000 0) var(--_i, 200%) 0 /200% var(--_i, 8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0 var(--_i, 200%) / var(--_i, 8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
+}
+
+.card-hover:hover {
+  height: 100%;
+  --_i: 100%;
+  color: $accent;
+  transition: 0.3s, -webkit-mask-size 0.3s 0.3s;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  align-items: center;
+}
 
 
 
@@ -72,68 +70,73 @@ transition-duration: 0.4s;
 
 
 
-.nav{
-    width: 100vw;
-    height: 10vh;
-   
-    display: flex;
-   
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px black solid
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px black solid;
+   transition: top 0.3s;
 
 }
+
 .navcontainer {
-   margin-left: 2rem;
-   margin-right: 2rem;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    justify-content: space-around;
-    align-items: center;
-    
-    
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+
+
 }
 
 
 
-button{
+button {
 
-    color: $primary-black;
-    font-size: 1rem;
-    font-family: $secondary-font;
-    background:none;
-    border:none;
-    font-weight: 600;
-    text-transform: uppercase;
-    word-wrap: break-word;
-    display: flex;
-    width: 105px;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    transition-duration: 0.4s;
+  color: $primary-black;
+  font-size: 1rem;
+  font-family: $secondary-font;
+  background: none;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  display: flex;
+  width: 105px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition-duration: 0.4s;
 
 }
-button:hover{
 
-    color: $accent;
+button:hover {
+
+  color: $accent;
 }
 
 
-.border{
-    width: 7.5rem;
-    height: 3rem;
- display: flex;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
+.border {
+  width: 7.5rem;
+  height: 3rem;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 
-    background-color: aliceblue;
-     border: 1px solid $primary-black;
+  background-color: aliceblue;
+  border: 1px solid $primary-black;
 
 
 }
