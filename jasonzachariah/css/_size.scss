@@ -1,9 +1,7 @@
-
-
 /**reponsive sizes**/
 
-
-
+@import 'project';
+@import 'type';
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -11,30 +9,36 @@
 }
 
 /**larger desktop**/
-@media (max-width: 1240px){
-    .container {
-      margin: 0 4rem;
-    }
+@media (max-width: 1240px) {
+  .container {
+    margin: 0 4rem;
+  }
+  fit {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
 }
 
-.fit {
-  max-width: 700px;
-  margin: 0 auto;
-}
 
 /** tablet**/
 
-@media (max-width: 720px){
+@media (max-width: 800px) {
   html {
     font-size: 18px;
   }
-  .project-container{
 
-    margin-left: 3rem;
-    margin-right: 3rem;
+
+  .project-container {
+    max-width: 1240px;
+    margin: 0 auto;
+
+    justify-content: top;
+    display: flex;
     flex-direction: column;
+
   }
-  
+
   .container {
     margin: 0 1rem;
   }
@@ -43,15 +47,23 @@
     margin: 0 30px;
   }
 }
+
 /** phone**/
-@media (max-width: 640px){
-  html{
+@media (max-width: 640px) {
+  html {
     font-size: 16px;
   }
-  .project-container{
 
+  .project-container{
+    max-width: 1240px;
+    margin: 0 auto;
+
+    justify-content: top;
+    display: flex;
     flex-direction: column;
-    }
+
+  }
+
   .fit {
 
     margin: 0 20px;
