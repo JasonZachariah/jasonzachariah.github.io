@@ -26,9 +26,14 @@
 
 @media (max-width: 720px){
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
+  .project-container{
 
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
   
   .container {
     margin: 0 1rem;
@@ -41,8 +46,12 @@
 /** phone**/
 @media (max-width: 640px){
   html{
-    font-size: 18px;
+    font-size: 16px;
   }
+  .project-container{
+
+    flex-direction: column;
+    }
   .fit {
 
     margin: 0 20px;

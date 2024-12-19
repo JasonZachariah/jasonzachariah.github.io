@@ -1,9 +1,17 @@
 .project-item {
-    margin-left: auto;
-    margin-right: auto;
-    width: 30rem;
-    border-left: 1px dashed #333;
-    padding: 1rem;
-  }
-  
-  
+  margin-left: auto;
+  margin-right: auto;
+  width: 30rem;
+  border-left: 1px dashed #333;
+  padding: 1rem;
+}
+
+.project-container {
+  max-width: 1240px;
+  margin: 0 auto;
+
+  justify-content: top;
+  display: flex;
+  flex-direction: row;
+
+}

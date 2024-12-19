@@ -103,6 +103,8 @@ button{
     color: $primary-black;
     font-size: 1rem;
     font-family: $secondary-font;
+    background:none;
+    border:none;
     font-weight: 600;
     text-transform: uppercase;
     word-wrap: break-word;
@@ -111,18 +113,12 @@ button{
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    border-radius: 100px;
-    border: 1px solid var(--grey, $primary-black);
-    background: $accent;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     transition-duration: 0.4s;
 
 }
 button:hover{
 
-    background: #409520;
+    color: $accent;
 }
 
 

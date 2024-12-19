@@ -73,6 +73,8 @@ button {
   color: #393835;
   font-size: 1rem;
   font-family: "antarctican-mono", sans-serif;
+  background: none;
+  border: none;
   font-weight: 600;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -81,17 +83,11 @@ button {
   padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 100px;
-  border: 1px solid var(--grey, #393835);
-  background: #6BE06B;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   transition-duration: 0.4s;
 }
 
 button:hover {
-  background: #409520;
+  color: #6BE06B;
 }
 
 .border {
@@ -149,8 +145,6 @@ body {
 h1 {
   display: flex;
   padding: 2px;
-  justify-content: center;
-  align-items: center;
   gap: 4px;
   flex-shrink: 0;
   color: #393835;
@@ -229,6 +223,22 @@ p {
   word-wrap: break-word;
 }
 
+.project-item {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30rem;
+  border-left: 1px dashed #333;
+  padding: 1rem;
+}
+
+.project-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  justify-content: top;
+  display: flex;
+  flex-direction: row;
+}
+
 /**reponsive sizes**/
 .container {
   max-width: 1240px;
@@ -250,7 +260,12 @@ p {
 /** tablet**/
 @media (max-width: 720px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .project-container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
   }
   .container {
     margin: 0 1rem;
@@ -262,7 +277,10 @@ p {
 /** phone**/
 @media (max-width: 640px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .project-container {
+    flex-direction: column;
   }
   .fit {
     margin: 0 20px;
@@ -336,11 +354,4 @@ p {
         flex-direction: column;
     }
 }
-    */
-.project-item {
-  margin-left: auto;
-  margin-right: auto;
-  width: 30rem;
-  border-left: 1px dashed #333;
-  padding: 1rem;
-}/*# sourceMappingURL=styles.css.map */
+    *//*# sourceMappingURL=styles.css.map */
