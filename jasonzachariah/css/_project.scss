@@ -19,6 +19,41 @@
   justify-content: top;
   display: flex;
   flex-direction: row;
+  transition-duration: 0.4s;
 
 }
 
+.project-list{
+  max-width: 30%;
+  margin: 0 auto;
+
+  justify-content: top;
+  display: flex;
+  flex-direction: row;
+  transition-duration: 0.4s;
+}
+
+/*
+.progress-bar {
+  z-index: 99;
+  transform-origin: 0;
+  background-color: #221e1f;
+  width: 100svw;
+  height: 1.5svh;
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: auto
+}
+*/
+.progress-bar {
+  position: fixed;
+  height: 8px;
+  background: $accent;
+  width: 0%;
+}
+.intro{
+  background-color: $accent;
+  width: 100vw;
+}

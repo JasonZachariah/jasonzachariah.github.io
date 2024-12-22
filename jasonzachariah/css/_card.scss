@@ -1,7 +1,7 @@
 .homecard_image {
 
 
-  cursor: url('cursor.svg'), auto;
+
   margin-bottom: 2rem;
   background-color: $primary-white;
   height: 100%;
@@ -35,7 +35,7 @@
 
 
 .card-hover {
-
+  cursor: url('cursor.svg'), auto;
   box-sizing: border-box;
   border: $accent 3px dashed;
   border-image: 8;
@@ -48,6 +48,7 @@
 }
 
 .card-hover:hover {
+  cursor: url('cursor.svg'), auto;
   height: 100%;
   --_i: 100%;
   color: $accent;

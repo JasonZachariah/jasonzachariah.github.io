@@ -1,7 +1,6 @@
 /* file import */
 @import url("https://use.typekit.net/qvu8qst.css");
 .homecard_image {
-  cursor: url("cursor.svg"), auto;
   margin-bottom: 2rem;
   background-color: #E9E8E5;
   height: 100%;
@@ -28,6 +27,7 @@
 }
 
 .card-hover {
+  cursor: url("cursor.svg"), auto;
   box-sizing: border-box;
   border: #6BE06B 3px dashed;
   -o-border-image: 8;
@@ -37,6 +37,7 @@
 }
 
 .card-hover:hover {
+  cursor: url("cursor.svg"), auto;
   height: 100%;
   --_i: 100%;
   color: #6BE06B;
@@ -149,13 +150,12 @@ body {
 
 h1 {
   display: flex;
-  padding: 2px;
-  gap: 4px;
   flex-shrink: 0;
   color: #393835;
   font-size: 4.5rem;
   font-family: "antarctican-mono", sans-serif;
   font-weight: 400;
+  background-color: #6BE06B;
   font-style: normal;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -249,6 +249,42 @@ p {
   justify-content: top;
   display: flex;
   flex-direction: row;
+  transition-duration: 0.4s;
+}
+
+.project-list {
+  max-width: 30%;
+  margin: 0 auto;
+  justify-content: top;
+  display: flex;
+  flex-direction: row;
+  transition-duration: 0.4s;
+}
+
+/*
+.progress-bar {
+  z-index: 99;
+  transform-origin: 0;
+  background-color: #221e1f;
+  width: 100svw;
+  height: 1.5svh;
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: auto
+}
+*/
+.progress-bar {
+  position: fixed;
+  height: 8px;
+  background: #6BE06B;
+  width: 0%;
+}
+
+.intro {
+  background-color: #6BE06B;
+  width: 100vw;
 }
 
 /**reponsive sizes**/
@@ -273,6 +309,42 @@ p {
   justify-content: top;
   display: flex;
   flex-direction: row;
+  transition-duration: 0.4s;
+}
+
+.project-list {
+  max-width: 30%;
+  margin: 0 auto;
+  justify-content: top;
+  display: flex;
+  flex-direction: row;
+  transition-duration: 0.4s;
+}
+
+/*
+.progress-bar {
+  z-index: 99;
+  transform-origin: 0;
+  background-color: #221e1f;
+  width: 100svw;
+  height: 1.5svh;
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: auto
+}
+*/
+.progress-bar {
+  position: fixed;
+  height: 8px;
+  background: #6BE06B;
+  width: 0%;
+}
+
+.intro {
+  background-color: #6BE06B;
+  width: 100vw;
 }
 
 * {
@@ -292,13 +364,12 @@ body {
 
 h1 {
   display: flex;
-  padding: 2px;
-  gap: 4px;
   flex-shrink: 0;
   color: #393835;
   font-size: 4.5rem;
   font-family: "antarctican-mono", sans-serif;
   font-weight: 400;
+  background-color: #6BE06B;
   font-style: normal;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -398,6 +469,15 @@ p {
     justify-content: top;
     display: flex;
     flex-direction: column;
+    transition-duration: 0.4s;
+  }
+  .project-list {
+    max-width: 30%;
+    margin: 0 auto;
+    justify-content: top;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 0.4s;
   }
   .container {
     margin: 0 1rem;
@@ -417,6 +497,7 @@ p {
     justify-content: top;
     display: flex;
     flex-direction: column;
+    transition-duration: 0.4s;
   }
   .fit {
     margin: 0 20px;

@@ -2,6 +2,8 @@
 
 @import 'project';
 @import 'type';
+
+
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -36,8 +38,19 @@
     justify-content: top;
     display: flex;
     flex-direction: column;
+    transition-duration: 0.4s;
 
   }
+
+.project-list{
+  max-width: 30%;
+  margin: 0 auto;
+
+  justify-content: top;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 0.4s;
+}
 
   .container {
     margin: 0 1rem;
@@ -61,7 +74,7 @@
     justify-content: top;
     display: flex;
     flex-direction: column;
-
+    transition-duration: 0.4s;
   }
 
   .fit {
