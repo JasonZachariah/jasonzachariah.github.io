@@ -1,17 +1,31 @@
 .project-item {
   margin-left: auto;
   margin-right: auto;
-  width: 30rem;
-  padding: 1rem;
-}
-.project-image {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  background-color: $primary-black;
-  padding: 1rem;
+ 
 }
 
+
+.half{
+  width: 50%;
+ 
+}
+.full{
+
+  width: 100%;
+ 
+}
+.third{
+
+  width: 40%;
+
+}
+
+.imagefull{
+
+ 
+    
+  
+}
 .project-container {
   max-width: 1240px;
   margin: 0 auto;
@@ -22,14 +36,19 @@
   transition-duration: 0.4s;
 
 }
+.project-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .project-list{
-  max-width: 30%;
+  max-width: 50%;
   margin: 0 auto;
 
   justify-content: top;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   transition-duration: 0.4s;
 }
 
@@ -56,4 +75,10 @@
 .intro{
   background-color: $accent;
   width: 100vw;
+}
+
+.leftline{
+  padding-left: 1rem;
+  border-left: 4px dashed $primary-white;
+
 }

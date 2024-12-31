@@ -20,7 +20,7 @@ h1 {
 
     display: flex;
 
-   
+
 
     flex-shrink: 0;
 
@@ -33,7 +33,7 @@ h1 {
     font-size: 4.5rem;
     font-family: $secondary-font;
     font-weight: 400;
-background-color: $accent;
+    background-color: $accent;
     font-style: normal;
     text-transform: uppercase;
     word-wrap: break-word
@@ -42,13 +42,11 @@ background-color: $accent;
 h2 {
 
     display: flex;
-    width: 15.5rem;
-    height: 5rem;
-    padding: 2px;
+
+    
 
 
-    gap: 10px;
-    flex-shrink: 0;
+
 
 
 
@@ -67,10 +65,10 @@ h2 {
 
 
 h3 {
-
+margin-top: 0;
     display: flex;
     align-items: center;
-    color: $primary-white;
+    color: $primary-black;
     font-size: 2rem;
 
 
