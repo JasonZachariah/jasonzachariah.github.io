@@ -137,6 +137,7 @@ button:hover {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-top: 0;
 }
 
 a {
@@ -242,8 +243,12 @@ p {
 }
 
 .project-container {
+  border-left: 2px solid #E9E8E5;
+  border-bottom: 2px solid #E9E8E5;
+  border-right: 2px solid #E9E8E5;
   max-width: 1240px;
   margin: 0 auto;
+  padding: 0.5rem;
   justify-content: top;
   display: flex;
   flex-direction: row;
@@ -265,20 +270,6 @@ p {
   transition-duration: 0.4s;
 }
 
-/*
-.progress-bar {
-  z-index: 99;
-  transform-origin: 0;
-  background-color: #221e1f;
-  width: 100svw;
-  height: 1.5svh;
-  position: fixed;
-  top: 0;
-  bottom: auto;
-  left: 0;
-  right: auto
-}
-*/
 .progress-bar {
   position: fixed;
   height: 8px;
@@ -288,12 +279,11 @@ p {
 
 .intro {
   background-color: #6BE06B;
-  width: 100vw;
 }
 
 .leftline {
   padding-left: 1rem;
-  border-left: 4px dashed #E9E8E5;
+  border-left: 2px dotted #E9E8E5;
 }
 
 /**reponsive sizes**/
@@ -315,8 +305,12 @@ p {
 }
 
 .project-container {
+  border-left: 2px solid #E9E8E5;
+  border-bottom: 2px solid #E9E8E5;
+  border-right: 2px solid #E9E8E5;
   max-width: 1240px;
   margin: 0 auto;
+  padding: 0.5rem;
   justify-content: top;
   display: flex;
   flex-direction: row;
@@ -338,20 +332,6 @@ p {
   transition-duration: 0.4s;
 }
 
-/*
-.progress-bar {
-  z-index: 99;
-  transform-origin: 0;
-  background-color: #221e1f;
-  width: 100svw;
-  height: 1.5svh;
-  position: fixed;
-  top: 0;
-  bottom: auto;
-  left: 0;
-  right: auto
-}
-*/
 .progress-bar {
   position: fixed;
   height: 8px;
@@ -361,18 +341,18 @@ p {
 
 .intro {
   background-color: #6BE06B;
-  width: 100vw;
 }
 
 .leftline {
   padding-left: 1rem;
-  border-left: 4px dashed #E9E8E5;
+  border-left: 2px dotted #E9E8E5;
 }
 
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-top: 0;
 }
 
 a {
@@ -496,6 +476,10 @@ p {
     display: flex;
     flex-direction: column;
     transition-duration: 0.4s;
+  }
+  .project-item {
+    margin-left: 0;
+    width: 100%;
   }
   .container {
     margin: 0 2rem;
