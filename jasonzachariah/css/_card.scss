@@ -1,10 +1,11 @@
+
 .homecard_image {
 
 
 
   margin-bottom: 2rem;
   background-color: $primary-white;
-  height: 100%;
+  height: 30rem;
   width: 100%;
   transition-duration: 0.4s;
 
@@ -18,11 +19,10 @@
 
 
 .homecard_text {
-  cursor: url('cursor.svg'), auto;
   width: 40%;
   margin-left: 2rem;
   position: relative;
-  top: 50%;
+  top: 2rem;
 
   transition-duration: 0.4s;
 }
@@ -33,11 +33,11 @@
   transition-duration: 0.4s;
 }
 
-
+/*
 .card-hover {
   cursor: url('cursor.svg'), auto;
   box-sizing: border-box;
-  border: $accent 3px dashed;
+  border: $accent 3px dotted;
   border-image: 8;
   -webkit-mask: conic-gradient(from 180deg at top 100px right 100px,
       #0000 90deg,
@@ -48,12 +48,13 @@
 }
 
 .card-hover:hover {
-  cursor: url('cursor.svg'), auto;
+
   height: 100%;
   --_i: 100%;
   color: $accent;
   transition: 0.3s, -webkit-mask-size 0.3s 0.3s;
 }
+  */
 
 body {
   height: 100vh;
@@ -82,7 +83,7 @@ body {
   justify-content: center;
   align-items: center;
   border-bottom: 1px black solid;
-   transition: top 0.3s;
+  transition: top 0.3s;
 
 }
 
@@ -136,35 +137,24 @@ button:hover {
   gap: 10px;
   flex-shrink: 0;
 
-  background-color: aliceblue;
-  border: 1px solid $primary-black;
+
+  border-left: 2px dotted $primary-black;
+  border-right: 2px dotted $primary-black;
 
 
 }
 
 
 
-/*
+.cardhover {
+  width: 100vw;
+  height: 30rem;
+  border: 2px dotted #333;
+  justify-content: top;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
 
-.card-container {
-   
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    @include container()
-  }
-.right-item{
-    display: flex;
-    text-align: right; 
-    align-items: flex-end;
-    width: 20rem;
- 
-   
+  z-index: 0;
+  transition: 1s;
 }
-.left-item{
-    align-items: flex-end;
-    width: 20rem;
- 
-   
-}
-*/

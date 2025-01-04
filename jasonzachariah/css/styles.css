@@ -1,9 +1,10 @@
 /* file import */
+@import 'animate.css';
 @import url("https://use.typekit.net/qvu8qst.css");
 .homecard_image {
   margin-bottom: 2rem;
   background-color: #E9E8E5;
-  height: 100%;
+  height: 30rem;
   width: 100%;
   transition-duration: 0.4s;
   justify-content: top;
@@ -13,11 +14,10 @@
 }
 
 .homecard_text {
-  cursor: url("cursor.svg"), auto;
   width: 40%;
   margin-left: 2rem;
   position: relative;
-  top: 50%;
+  top: 2rem;
   transition-duration: 0.4s;
 }
 
@@ -26,24 +26,28 @@
   transition-duration: 0.4s;
 }
 
+/*
 .card-hover {
-  cursor: url("cursor.svg"), auto;
+  cursor: url('cursor.svg'), auto;
   box-sizing: border-box;
-  border: #6BE06B 3px dashed;
-  -o-border-image: 8;
-     border-image: 8;
-  -webkit-mask: conic-gradient(from 180deg at top 100px right 100px, rgba(0, 0, 0, 0) 90deg, #000 0) var(--_i, 200%) 0/200% var(--_i, 8px) border-box no-repeat, conic-gradient(at bottom 8px left 8px, rgba(0, 0, 0, 0) 90deg, #000 0) 0 var(--_i, 200%)/var(--_i, 8px) 200% border-box no-repeat, linear-gradient(#000 0 0) padding-box no-repeat;
+  border: $accent 3px dotted;
+  border-image: 8;
+  -webkit-mask: conic-gradient(from 180deg at top 100px right 100px,
+      #0000 90deg,
+      #000 0) var(--_i, 200%) 0 /200% var(--_i, 8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0 var(--_i, 200%) / var(--_i, 8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
   transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
 }
 
 .card-hover:hover {
-  cursor: url("cursor.svg"), auto;
+
   height: 100%;
   --_i: 100%;
-  color: #6BE06B;
+  color: $accent;
   transition: 0.3s, -webkit-mask-size 0.3s 0.3s;
 }
-
+  */
 body {
   height: 100vh;
   margin: 0;
@@ -105,39 +109,28 @@ button:hover {
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  background-color: aliceblue;
-  border: 1px solid #393835;
+  border-left: 2px dotted #393835;
+  border-right: 2px dotted #393835;
 }
 
-/*
-
-.card-container {
-
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    @include container()
-  }
-.right-item{
-    display: flex;
-    text-align: right; 
-    align-items: flex-end;
-    width: 20rem;
-
-
+.cardhover {
+  width: 100vw;
+  height: 30rem;
+  border: 2px dotted #333;
+  justify-content: top;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  z-index: 0;
+  transition: 1s;
 }
-.left-item{
-    align-items: flex-end;
-    width: 20rem;
 
-
-}
-*/
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -191,7 +184,7 @@ h3::after {
   border-top: 1px dashed #E9E8E5;
 }
 
-h4 {
+h4, figcaption {
   color: #393835;
   font-size: 1rem;
   font-family: "antarctican-mono", sans-serif;
@@ -225,6 +218,20 @@ p {
   word-wrap: break-word;
 }
 
+figcaption {
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 .project-item {
   margin-left: auto;
   margin-right: auto;
@@ -252,17 +259,16 @@ p {
   justify-content: top;
   display: flex;
   flex-direction: row;
-  transition-duration: 0.4s;
 }
 
 .project-container img {
-  width: 100%;
+  max-width: 800px;
   height: auto;
   display: block;
 }
 
 .project-list {
-  max-width: 50%;
+  min-width: 33%;
   margin: 0 auto;
   justify-content: top;
   display: flex;
@@ -283,10 +289,20 @@ p {
 
 .leftline {
   padding-left: 1rem;
-  border-left: 2px dotted #E9E8E5;
+  border-left: 2px dotted #6BE06B;
 }
 
 /**reponsive sizes**/
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 .project-item {
   margin-left: auto;
   margin-right: auto;
@@ -314,17 +330,16 @@ p {
   justify-content: top;
   display: flex;
   flex-direction: row;
-  transition-duration: 0.4s;
 }
 
 .project-container img {
-  width: 100%;
+  max-width: 800px;
   height: auto;
   display: block;
 }
 
 .project-list {
-  max-width: 50%;
+  min-width: 33%;
   margin: 0 auto;
   justify-content: top;
   display: flex;
@@ -345,7 +360,7 @@ p {
 
 .leftline {
   padding-left: 1rem;
-  border-left: 2px dotted #E9E8E5;
+  border-left: 2px dotted #6BE06B;
 }
 
 * {
@@ -353,6 +368,7 @@ p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -406,7 +422,7 @@ h3::after {
   border-top: 1px dashed #E9E8E5;
 }
 
-h4 {
+h4, figcaption {
   color: #393835;
   font-size: 1rem;
   font-family: "antarctican-mono", sans-serif;
@@ -438,6 +454,10 @@ p {
   font-family: "alfabet", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
+}
+
+figcaption {
+  text-align: center;
 }
 
 .container {

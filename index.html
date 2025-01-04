@@ -26,57 +26,87 @@
     <!--Nav bar-->
 
 
-    <div id="navbar">
-        <div class="left-item">
-            <img src="jzlogo.svg" alt="Jason Zachariah" width="30" height="30">
-        </div>
-
-
-
-
-        <a href="index.html">
-            <button>[work]</button>
-        </a>
-        <button>[about]</button>
-        <button><strong>[Resume]</strong></button>
-
-
-
-    </div>
-
-
 
 
     <div class="container">
+        <div id="navbar">
+            <div class="left-item">
+                <img src="jzlogo.svg" alt="Jason Zachariah" width="30" height="30">
+            </div>
+
+
+
+
+            <a href="index.html">
+                <button>[work]</button>
+            </a>
+            <button>[about]</button>
+            <button><strong>[Resume]</strong></button>
+
+
+
+        </div>
+
+
+
         <!--Title-->
-        <div class="homecard_image">
-            <section class="project-container" style="padding-left: 0px;margin-left: 0px;">
-                <div class="project-item" style="padding-left: 0px;margin-left: 0px;">
-                    <h1>[Jason]</h1>
-                    <h1> [Zachariah]</h1>
-                </div>
-                <div class="project-item">
-                    <!--Spline Animation-->
-                    <div style="height:450px ;width:50vw;overflow: hidden">
-                        <div>
-                            <script type="module"
-                                src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
-                            <spline-viewer
-                                url="https://prod.spline.design/qtJTzyaGV9KlKrzO/scene.splinecode"></spline-viewer>
+        <div class="project-container">
+            <div class="homecard_image">
+                <section class="project-container">
+                    <div class="project-item">
+                        <!--Spline Animation-->
+                        <div style="height:450px ;width:50vw;overflow: hidden">
+                            <div>
+                                <script type="module"
+                                    src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
+                                <spline-viewer
+                                    url="https://prod.spline.design/qtJTzyaGV9KlKrzO/scene.splinecode"></spline-viewer>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
         <!--title break-->
-        <h3>WORKS</h3>
+        <div class="project-container">
+            <h3>WORKS</h3>
 
 
-        <!--Octbud Card-->
+        </div>
 
+
+
+        <!--Second Card-->
+        <div class="project-container">
+            <div class="cardhover">
+
+                <a href="semoticcard.html">
+
+
+
+                    <div class="homecard_text">
+                        <h2>[Losing Connection]</h2>
+                        <p>A </p>
+
+                        <div class="homecard_caption">
+                            <h4 class="border">
+                                test
+                            </h4>
+                            <h4 class="border">
+                                test 3
+                            </h4>
+                        </div>
+                    </div>
+
+
+                </a>
+            </div>
+        </div>
+
+        <!--Third Card-->
         <div class="homecard_image">
 
-            <a href="octobud.html">
+            <a href="semoticcard.html">
                 <div class="card-hover">
 
                     <div>
@@ -106,78 +136,6 @@
             </a>
         </div>
 
-
-
-
-        <!--Second Card-->
-
-        <div class="homecard_image">
-
-            <a href="semoticcard.html">
-                <div class="card-hover">
-
-                    <div>
-                        <div class="homecard_text">
-                            <h2>[Losing Connection]</h2>
-                            <p>A </p>
-
-                            <div class="homecard_caption">
-                                <h4 class="border">
-                                    test
-                                </h4>
-                                <h4 class="border">
-                                    test 3
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    <!--Third Card-->
-    <div class="homecard_image">
-
-        <a href="semoticcard.html">
-            <div class="card-hover">
-
-                <div>
-                    <div class="homecard_text">
-                        <h2>[Octobud]</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                            sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <div class="homecard_caption">
-                            <h4 class="border">
-                                test
-                            </h4>
-                            <h4 class="border">
-                                test 3
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-50px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
 
 </body>
 

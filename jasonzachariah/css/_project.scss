@@ -1,52 +1,57 @@
+@import 'animation';
+
 .project-item {
+
   margin-left: auto;
   margin-right: auto;
- 
+
 }
+ 
 
-
-.half{
+.half {
   width: 50%;
- 
+
 }
-.full{
+
+.full {
 
   width: 100%;
- 
+
 }
-.third{
+
+.third {
 
   width: 40%;
 
 }
 
-.imagefull{
+.imagefull {}
 
- 
-    
-  
-}
 .project-container {
+
   border-left: 2px solid $primary-white;
   border-bottom: 2px solid $primary-white;
   border-right: 2px solid $primary-white;
   max-width: 1240px;
   margin: 0 auto;
-padding: 0.5rem;
+  padding: 0.5rem;
   justify-content: top;
   display: flex;
   flex-direction: row;
-  transition-duration: 0.4s;
+ 
+ 
+
 
 }
+
 .project-container img {
-  width: 100%;
+  max-width: 800px;
   height: auto;
   display: block;
 }
 
-.project-list{
-  max-width: 50%;
+.project-list {
+  min-width: 33%;
   margin: 0 auto;
 
   justify-content: top;
@@ -61,13 +66,14 @@ padding: 0.5rem;
   background: $accent;
   width: 0%;
 }
-.intro{
+
+.intro {
   background-color: $accent;
 
 }
 
-.leftline{
+.leftline {
   padding-left: 1rem;
-  border-left: 2px dotted $primary-white;
+  border-left: 2px dotted $accent;
 
 }
