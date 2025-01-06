@@ -37,7 +37,7 @@
   padding: 0.5rem;
   justify-content: top;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
  
  
 
@@ -45,7 +45,7 @@
 }
 
 .project-container img {
-  max-width: 800px;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -81,4 +81,17 @@
 .center{
   padding: 3rem 0;
   margin: 0;
+}
+
+.numberCircle {
+  border-radius: 90%;
+
+  padding: 8px;
+
+  background: #fff;
+  border: 2px solid $secondary-black;
+  color: $secondary-black;
+  text-align: center;
+
+  
 }

@@ -81,7 +81,7 @@ body {
 button {
   color: #393835;
   font-size: 1rem;
-  font-family: "chivo-mono", sans-serif;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   background: none;
   border: none;
   font-weight: 600;
@@ -139,6 +139,7 @@ a {
 }
 
 body {
+  cursor: url("cursor.png"), auto;
   display: block;
   margin: 0px;
 }
@@ -149,13 +150,12 @@ h1 {
   display: flex;
   flex-shrink: 0;
   color: #393835;
-  font-size: 8rem;
-  font-family: "chivo-mono", sans-serif;
+  font-size: 7vw;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   font-weight: 400;
   background-color: #6BE06B;
   font-style: normal;
   text-align: center;
-  text-transform: uppercase;
   word-wrap: break-word;
   justify-content: center;
   align-content: stretch;
@@ -166,7 +166,7 @@ h2 {
   display: flex;
   color: #393835;
   font-size: 3rem;
-  font-family: "chivo-mono", sans-serif;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   font-weight: 600;
   font-style: normal;
   word-wrap: break-word;
@@ -179,7 +179,7 @@ h3 {
   color: #393835;
   font-size: 2rem;
   /*font code*/
-  font-family: "chivo-mono", sans-serif;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   font-weight: 300;
 }
 
@@ -193,7 +193,7 @@ h3::after {
 h4, figcaption {
   color: #393835;
   font-size: 1rem;
-  font-family: "chivo-mono", sans-serif;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -202,7 +202,7 @@ h4, figcaption {
 h5 {
   color: #393835;
   font-size: 1.25rem;
-  font-family: "chivo-mono", sans-serif;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -211,7 +211,7 @@ h5 {
 h6 {
   color: black;
   font-size: 1rem;
-  font-family: "vinila", sans-serif;
+  font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
 }
@@ -219,7 +219,7 @@ h6 {
 p {
   color: #888383;
   font-size: 1rem;
-  font-family: "vinila", sans-serif;
+  font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
 }
@@ -268,7 +268,7 @@ figcaption {
 }
 
 .project-container img {
-  max-width: 800px;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -301,6 +301,15 @@ figcaption {
 .center {
   padding: 3rem 0;
   margin: 0;
+}
+
+.numberCircle {
+  border-radius: 90%;
+  padding: 8px;
+  background: #fff;
+  border: 2px solid #888383;
+  color: #888383;
+  text-align: center;
 }
 
 /**reponsive sizes**/
@@ -344,7 +353,7 @@ figcaption {
 }
 
 .project-container img {
-  max-width: 800px;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -379,6 +388,15 @@ figcaption {
   margin: 0;
 }
 
+.numberCircle {
+  border-radius: 90%;
+  padding: 8px;
+  background: #fff;
+  border: 2px solid #888383;
+  color: #888383;
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -394,6 +412,7 @@ a {
 }
 
 body {
+  cursor: url("cursor.png"), auto;
   display: block;
   margin: 0px;
 }
@@ -404,13 +423,12 @@ h1 {
   display: flex;
   flex-shrink: 0;
   color: #393835;
-  font-size: 8rem;
-  font-family: "chivo-mono", sans-serif;
+  font-size: 7vw;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   font-weight: 400;
   background-color: #6BE06B;
   font-style: normal;
   text-align: center;
-  text-transform: uppercase;
   word-wrap: break-word;
   justify-content: center;
   align-content: stretch;
@@ -421,7 +439,7 @@ h2 {
   display: flex;
   color: #393835;
   font-size: 3rem;
-  font-family: "chivo-mono", sans-serif;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   font-weight: 600;
   font-style: normal;
   word-wrap: break-word;
@@ -434,7 +452,7 @@ h3 {
   color: #393835;
   font-size: 2rem;
   /*font code*/
-  font-family: "chivo-mono", sans-serif;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   font-weight: 300;
 }
 
@@ -448,7 +466,7 @@ h3::after {
 h4, figcaption {
   color: #393835;
   font-size: 1rem;
-  font-family: "chivo-mono", sans-serif;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -457,7 +475,7 @@ h4, figcaption {
 h5 {
   color: #393835;
   font-size: 1.25rem;
-  font-family: "chivo-mono", sans-serif;
+  font-family: "cofo-sans-mono-variable", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -466,7 +484,7 @@ h5 {
 h6 {
   color: black;
   font-size: 1rem;
-  font-family: "vinila", sans-serif;
+  font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
 }
@@ -474,7 +492,7 @@ h6 {
 p {
   color: #888383;
   font-size: 1rem;
-  font-family: "vinila", sans-serif;
+  font-family: "neue-haas-grotesk-text", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
 }
@@ -493,16 +511,13 @@ figcaption {
 @media (max-width: 1240px) {
   .container {
     margin: 0 4rem;
-  }
-  fit {
-    max-width: 700px;
-    margin: 0 auto;
+    flex-direction: row;
   }
 }
 /** tablet**/
 @media (max-width: 800px) {
   html {
-    font-size: 18px;
+    font-size: 14px;
   }
   .project-container {
     max-width: 1240px;
@@ -527,96 +542,12 @@ figcaption {
   .container {
     margin: 0 2rem;
   }
-  .fit {
-    margin: 0 30px;
-  }
 }
 /** phone**/
+/**larger desktop**/
 @media (max-width: 640px) {
-  html {
-    font-size: 16px;
+  .container {
+    margin: 0 1rem;
+    flex-direction: row;
   }
-  .project-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    justify-content: top;
-    display: flex;
-    flex-direction: column;
-    transition-duration: 0.4s;
-  }
-  .fit {
-    margin: 0 20px;
-  }
-  .half {
-    width: 100%;
-  }
-}
-/*
-@mixin container($color: #fff) {
-
-    max-width: 1240px;
-    margin: 0 auto;
-
-  justify-content: top;
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  background: $color;
-}
-
-.flex-d {
-  @include container()
-}
-
-
-.flex-green {
-  @include container($accent)
-}
-
-.flex-white {
-  @include container($primary-white)
-}
-
-.flexboxItem {
-  margin-left: auto;
-  margin-right: auto;
-  width: 30rem;
-  border-left: 1px dashed #333;
-  padding: 1rem;
-}
-
-
-
-
-
-  /**
-
-@media screen and (max-width: 500px) {
-    .flex-container {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        flex-direction: column;
-
-    }
-}
-@media screen and (max-width: 768px) {
-    .flex-container {
-        margin-left: 3rem;
-        margin-right: 3rem;
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 992px) {
-    .flex-container {
-        margin-left: 4rem;
-        margin-right: 4rem;
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 1200px) {
-    .flex-container {
-        margin: 0 5rem;
-        flex-direction: column;
-    }
-}
-    *//*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

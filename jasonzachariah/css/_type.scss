@@ -14,7 +14,7 @@ a {
 }
 
 body {
-    cursor: url("jasonzachariah/css/cursor.png"), default;
+    cursor: url('cursor.png'),auto;
     display: block;
     margin: 0px;
 
@@ -36,13 +36,13 @@ h1 {
     ;
         flex-shrink: 0;
         color: #393835;
-        font-size: 8rem;
+        font-size: 7vw;
         font-family:$secondary-font;
         font-weight: 400;
         background-color: #6BE06B;
         font-style: normal;
         text-align: center;
-        text-transform: uppercase;
+       
         word-wrap: break-word;
         justify-content: center;
         align-content: stretch;

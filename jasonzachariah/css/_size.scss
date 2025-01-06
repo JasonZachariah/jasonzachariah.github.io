@@ -14,11 +14,9 @@
 @media (max-width: 1240px) {
   .container {
     margin: 0 4rem;
+    flex-direction: row;
   }
-  fit {
-    max-width: 700px;
-    margin: 0 auto;
-  }
+ 
   
 }
 
@@ -60,30 +58,17 @@
     margin: 0 2rem;
   }
 
-  .fit {
-    margin: 0 30px;
-  }
+  
 }
 
 /** phone**/
 
-  .project-container{
-    max-width: 1240px;
-    margin: 0 auto;
-
-    justify-content: top;
-    display: flex;
-    flex-direction: column;
-    transition-duration: 0.4s;
+ /**larger desktop**/
+@media (max-width: 640px) {
+  .container {
+    margin: 0 1rem;
+    flex-direction: row;
   }
-
-  .fit {
-
-    margin: 0 20px;
-  }
-  .half{
-    width: 100%;
-   
-  }
-
-
+ 
+  
+}
