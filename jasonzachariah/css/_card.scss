@@ -73,9 +73,10 @@ body {
 
 
 #navbar {
-  position: fixed;
+
   top: 0;
   left: 0;
+  height: 10vh;
   width: 100%;
 
   display: flex;
@@ -91,9 +92,9 @@ body {
   margin-left: 2rem;
   margin-right: 2rem;
   width: 100vw;
-  height: 20vh;
+  height: 50vh;
   display: flex;
-  position: relative;
+  
   justify-content: space-around;
   align-items: center;
 

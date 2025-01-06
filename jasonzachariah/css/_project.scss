@@ -74,6 +74,11 @@
 
 .leftline {
   padding-left: 1rem;
-  border-left: 2px dotted $accent;
+  border-left: 2px dotted $accenttrans;
 
+}
+
+.center{
+  padding: 3rem 0;
+  margin: 0;
 }

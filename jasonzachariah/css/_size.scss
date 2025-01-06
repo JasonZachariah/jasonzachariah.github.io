@@ -27,7 +27,7 @@
 
 @media (max-width: 800px) {
   html {
-    font-size: 18px;
+    font-size: 14px;
   }
 
 
@@ -66,10 +66,6 @@
 }
 
 /** phone**/
-@media (max-width: 640px) {
-  html {
-    font-size: 16px;
-  }
 
   .project-container{
     max-width: 1240px;
@@ -89,78 +85,5 @@
     width: 100%;
    
   }
-}
 
 
-
-/*
-@mixin container($color: #fff) {
-
-    max-width: 1240px;
-    margin: 0 auto;
-
-  justify-content: top;
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  background: $color;
-}
-
-.flex-d {
-  @include container()
-}
-
-
-.flex-green {
-  @include container($accent)
-}
-
-.flex-white {
-  @include container($primary-white)
-}
-
-.flexboxItem {
-  margin-left: auto;
-  margin-right: auto;
-  width: 30rem;
-  border-left: 1px dashed #333;
-  padding: 1rem;
-}
-
-
-
-
-
-  /**
-  
-@media screen and (max-width: 500px) {
-    .flex-container {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        flex-direction: column;
-        
-    }
-}
-@media screen and (max-width: 768px) {
-    .flex-container {
-        margin-left: 3rem;
-        margin-right: 3rem;
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 992px) {
-    .flex-container {
-        margin-left: 4rem;
-        margin-right: 4rem;
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 1200px) {
-    .flex-container {
-        margin: 0 5rem;
-        flex-direction: column;
-    }
-}
-    */
-
-//

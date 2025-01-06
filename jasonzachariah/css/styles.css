@@ -57,9 +57,9 @@ body {
 }
 
 #navbar {
-  position: fixed;
   top: 0;
   left: 0;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -72,9 +72,8 @@ body {
   margin-left: 2rem;
   margin-right: 2rem;
   width: 100vw;
-  height: 20vh;
+  height: 50vh;
   display: flex;
-  position: relative;
   justify-content: space-around;
   align-items: center;
 }
@@ -82,7 +81,7 @@ body {
 button {
   color: #393835;
   font-size: 1rem;
-  font-family: "antarctican-mono", sans-serif;
+  font-family: "chivo-mono", sans-serif;
   background: none;
   border: none;
   font-weight: 600;
@@ -131,6 +130,8 @@ button:hover {
   -moz-osx-font-smoothing: grayscale;
   margin-top: 0;
   scroll-behavior: smooth;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 
 a {
@@ -145,24 +146,29 @@ body {
 h1 {
   display: flex;
   flex-shrink: 0;
+  display: flex;
+  flex-shrink: 0;
   color: #393835;
-  font-size: 4.5rem;
-  font-family: "antarctican-mono", sans-serif;
+  font-size: 8rem;
+  font-family: "chivo-mono", sans-serif;
   font-weight: 400;
   background-color: #6BE06B;
   font-style: normal;
+  text-align: center;
   text-transform: uppercase;
   word-wrap: break-word;
+  justify-content: center;
+  align-content: stretch;
+  flex-direction: row;
 }
 
 h2 {
   display: flex;
   color: #393835;
   font-size: 3rem;
-  font-family: "antarctican-mono", sans-serif;
-  font-weight: 400;
+  font-family: "chivo-mono", sans-serif;
+  font-weight: 600;
   font-style: normal;
-  text-transform: uppercase;
   word-wrap: break-word;
 }
 
@@ -173,8 +179,8 @@ h3 {
   color: #393835;
   font-size: 2rem;
   /*font code*/
-  font-family: "antarctican-mono", sans-serif;
-  font-weight: 400;
+  font-family: "chivo-mono", sans-serif;
+  font-weight: 300;
 }
 
 h3::after {
@@ -187,7 +193,7 @@ h3::after {
 h4, figcaption {
   color: #393835;
   font-size: 1rem;
-  font-family: "antarctican-mono", sans-serif;
+  font-family: "chivo-mono", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -196,7 +202,7 @@ h4, figcaption {
 h5 {
   color: #393835;
   font-size: 1.25rem;
-  font-family: "antarctican-mono", sans-serif;
+  font-family: "chivo-mono", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -205,15 +211,15 @@ h5 {
 h6 {
   color: black;
   font-size: 1rem;
-  font-family: "alfabet", sans-serif;
+  font-family: "vinila", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
 }
 
 p {
-  color: #393835;
+  color: #888383;
   font-size: 1rem;
-  font-family: "alfabet", sans-serif;
+  font-family: "vinila", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
 }
@@ -289,7 +295,12 @@ figcaption {
 
 .leftline {
   padding-left: 1rem;
-  border-left: 2px dotted #6BE06B;
+  border-left: 2px dotted rgba(107, 224, 107, 0.5921568627);
+}
+
+.center {
+  padding: 3rem 0;
+  margin: 0;
 }
 
 /**reponsive sizes**/
@@ -360,7 +371,12 @@ figcaption {
 
 .leftline {
   padding-left: 1rem;
-  border-left: 2px dotted #6BE06B;
+  border-left: 2px dotted rgba(107, 224, 107, 0.5921568627);
+}
+
+.center {
+  padding: 3rem 0;
+  margin: 0;
 }
 
 * {
@@ -369,6 +385,8 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   margin-top: 0;
   scroll-behavior: smooth;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 
 a {
@@ -383,24 +401,29 @@ body {
 h1 {
   display: flex;
   flex-shrink: 0;
+  display: flex;
+  flex-shrink: 0;
   color: #393835;
-  font-size: 4.5rem;
-  font-family: "antarctican-mono", sans-serif;
+  font-size: 8rem;
+  font-family: "chivo-mono", sans-serif;
   font-weight: 400;
   background-color: #6BE06B;
   font-style: normal;
+  text-align: center;
   text-transform: uppercase;
   word-wrap: break-word;
+  justify-content: center;
+  align-content: stretch;
+  flex-direction: row;
 }
 
 h2 {
   display: flex;
   color: #393835;
   font-size: 3rem;
-  font-family: "antarctican-mono", sans-serif;
-  font-weight: 400;
+  font-family: "chivo-mono", sans-serif;
+  font-weight: 600;
   font-style: normal;
-  text-transform: uppercase;
   word-wrap: break-word;
 }
 
@@ -411,8 +434,8 @@ h3 {
   color: #393835;
   font-size: 2rem;
   /*font code*/
-  font-family: "antarctican-mono", sans-serif;
-  font-weight: 400;
+  font-family: "chivo-mono", sans-serif;
+  font-weight: 300;
 }
 
 h3::after {
@@ -425,7 +448,7 @@ h3::after {
 h4, figcaption {
   color: #393835;
   font-size: 1rem;
-  font-family: "antarctican-mono", sans-serif;
+  font-family: "chivo-mono", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -434,7 +457,7 @@ h4, figcaption {
 h5 {
   color: #393835;
   font-size: 1.25rem;
-  font-family: "antarctican-mono", sans-serif;
+  font-family: "chivo-mono", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -443,15 +466,15 @@ h5 {
 h6 {
   color: black;
   font-size: 1rem;
-  font-family: "alfabet", sans-serif;
+  font-family: "vinila", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
 }
 
 p {
-  color: #393835;
+  color: #888383;
   font-size: 1rem;
-  font-family: "alfabet", sans-serif;
+  font-family: "vinila", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
 }
