@@ -1,9 +1,19 @@
 
 
-$primary-font: "neue-haas-grotesk-text", sans-serif;
-$secondary-font:"cofo-sans-mono-variable", sans-serif;
+$primary-font: "halyard-display", sans-serif;
+$secondary-font:"halyard-display", sans-serif;
 $primary-black:#393835;
-$secondary-black:#888383;
+$secondary-black:#8b8079;
 $primary-white:#E9E8E5;
 $accent:#6BE06B;
 $accenttrans:#6be06b97;
+
+::-moz-selection { /* Code for Firefox */
+  color: $primary-black;
+  background: $secondary-black;
+}
+  
+  ::selection {
+    color: $primary-black;
+    background: $secondary-black;
+  }

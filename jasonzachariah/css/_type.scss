@@ -22,30 +22,17 @@ body {
 
 h1 {
 
-    display: flex;
-
-
-
-    flex-shrink: 0;
-
-
-
-
-
-    display: flex
-    ;
-        flex-shrink: 0;
+  
         color: #393835;
-        font-size: 7vw;
-        font-family:$secondary-font;
+        font-size: 4.5rem;
+        font-family: 'ocr-b-std';
         font-weight: 400;
-        background-color: #6BE06B;
+   
         font-style: normal;
-        text-align: center;
+      
        
         word-wrap: break-word;
-        justify-content: center;
-        align-content: stretch;
+
         flex-direction: row;
 }
 

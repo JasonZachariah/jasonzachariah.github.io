@@ -1,6 +1,16 @@
 /* file import */
 @import 'animate.css';
 @import url("https://use.typekit.net/qvu8qst.css");
+::-moz-selection { /* Code for Firefox */
+  color: #393835;
+  background: #8b8079;
+}
+
+::selection {
+  color: #393835;
+  background: #8b8079;
+}
+
 .homecard_image {
   margin-bottom: 2rem;
   background-color: #E9E8E5;
@@ -81,7 +91,7 @@ body {
 button {
   color: #393835;
   font-size: 1rem;
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-family: "halyard-display", sans-serif;
   background: none;
   border: none;
   font-weight: 600;
@@ -145,20 +155,12 @@ body {
 }
 
 h1 {
-  display: flex;
-  flex-shrink: 0;
-  display: flex;
-  flex-shrink: 0;
   color: #393835;
-  font-size: 7vw;
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-size: 4.5rem;
+  font-family: "ocr-b-std";
   font-weight: 400;
-  background-color: #6BE06B;
   font-style: normal;
-  text-align: center;
   word-wrap: break-word;
-  justify-content: center;
-  align-content: stretch;
   flex-direction: row;
 }
 
@@ -166,7 +168,7 @@ h2 {
   display: flex;
   color: #393835;
   font-size: 3rem;
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 600;
   font-style: normal;
   word-wrap: break-word;
@@ -179,7 +181,7 @@ h3 {
   color: #393835;
   font-size: 2rem;
   /*font code*/
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 300;
 }
 
@@ -193,7 +195,7 @@ h3::after {
 h4, figcaption {
   color: #393835;
   font-size: 1rem;
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -202,7 +204,7 @@ h4, figcaption {
 h5 {
   color: #393835;
   font-size: 1.25rem;
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -211,15 +213,15 @@ h5 {
 h6 {
   color: black;
   font-size: 1rem;
-  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
 }
 
 p {
-  color: #888383;
+  color: #8b8079;
   font-size: 1rem;
-  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
 }
@@ -307,8 +309,8 @@ figcaption {
   border-radius: 90%;
   padding: 8px;
   background: #fff;
-  border: 2px solid #888383;
-  color: #888383;
+  border: 2px solid #8b8079;
+  color: #8b8079;
   text-align: center;
 }
 
@@ -392,8 +394,8 @@ figcaption {
   border-radius: 90%;
   padding: 8px;
   background: #fff;
-  border: 2px solid #888383;
-  color: #888383;
+  border: 2px solid #8b8079;
+  color: #8b8079;
   text-align: center;
 }
 
@@ -418,20 +420,12 @@ body {
 }
 
 h1 {
-  display: flex;
-  flex-shrink: 0;
-  display: flex;
-  flex-shrink: 0;
   color: #393835;
-  font-size: 7vw;
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-size: 4.5rem;
+  font-family: "ocr-b-std";
   font-weight: 400;
-  background-color: #6BE06B;
   font-style: normal;
-  text-align: center;
   word-wrap: break-word;
-  justify-content: center;
-  align-content: stretch;
   flex-direction: row;
 }
 
@@ -439,7 +433,7 @@ h2 {
   display: flex;
   color: #393835;
   font-size: 3rem;
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 600;
   font-style: normal;
   word-wrap: break-word;
@@ -452,7 +446,7 @@ h3 {
   color: #393835;
   font-size: 2rem;
   /*font code*/
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 300;
 }
 
@@ -466,7 +460,7 @@ h3::after {
 h4, figcaption {
   color: #393835;
   font-size: 1rem;
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -475,7 +469,7 @@ h4, figcaption {
 h5 {
   color: #393835;
   font-size: 1.25rem;
-  font-family: "cofo-sans-mono-variable", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -484,15 +478,15 @@ h5 {
 h6 {
   color: black;
   font-size: 1rem;
-  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
 }
 
 p {
-  color: #888383;
+  color: #8b8079;
   font-size: 1rem;
-  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-family: "halyard-display", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
 }
@@ -510,7 +504,7 @@ figcaption {
 /**larger desktop**/
 @media (max-width: 1240px) {
   .container {
-    margin: 0 4rem;
+    margin: 0 2rem;
     flex-direction: row;
   }
 }
