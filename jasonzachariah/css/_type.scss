@@ -24,15 +24,16 @@ h1 {
 
   
         color: #393835;
-        font-size: 4.5rem;
-        font-family: 'ocr-b-std';
-        font-weight: 400;
+        font-size: 4rem;
+        font-family: $primary-font;
+        letter-spacing: 4px;
+        font-weight: 100;
    
         font-style: normal;
       
        
-        word-wrap: break-word;
 
+margin: 0;
         flex-direction: row;
 }
 
@@ -47,13 +48,13 @@ h2 {
 
 
 
-
+    text-wrap: nowrap;
 
 
     color: $primary-black;
     font-size: 3rem;
     font-family: $secondary-font;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
   
     word-wrap: break-word
@@ -115,7 +116,7 @@ h6 {
 
 p {
     color: $secondary-black;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-family: $primary-font;
     font-weight: 300;
     word-wrap: break-word

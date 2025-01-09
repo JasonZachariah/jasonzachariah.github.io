@@ -69,11 +69,10 @@ body {
 #navbar {
   top: 0;
   left: 0;
-  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   border-bottom: 1px black solid;
   transition: top 0.3s;
 }
@@ -89,19 +88,8 @@ body {
 }
 
 button {
-  color: #393835;
-  font-size: 1rem;
-  font-family: "halyard-display", sans-serif;
   background: none;
   border: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  word-wrap: break-word;
-  display: flex;
-  width: 105px;
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
   transition-duration: 0.4s;
 }
 
@@ -156,20 +144,22 @@ body {
 
 h1 {
   color: #393835;
-  font-size: 4.5rem;
-  font-family: "ocr-b-std";
-  font-weight: 400;
+  font-size: 4rem;
+  font-family: "halyard-display", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 100;
   font-style: normal;
-  word-wrap: break-word;
+  margin: 0;
   flex-direction: row;
 }
 
 h2 {
   display: flex;
+  text-wrap: nowrap;
   color: #393835;
   font-size: 3rem;
   font-family: "halyard-display", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   word-wrap: break-word;
 }
@@ -210,7 +200,7 @@ h5 {
   word-wrap: break-word;
 }
 
-h6 {
+h6, button {
   color: black;
   font-size: 1rem;
   font-family: "halyard-display", sans-serif;
@@ -220,7 +210,7 @@ h6 {
 
 p {
   color: #8b8079;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
@@ -230,16 +220,58 @@ figcaption {
   text-align: center;
 }
 
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
+.type {
+  --d:2s; /* duration */
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.type > span {
+  display: grid;
+  overflow: hidden;
+  height: 11vw;
+  background-color: #6BE06B;
+}
+
+.type span span {
+  width: 0%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  overflow: hidden;
+  font-size: 5.8vw;
+  font-family: "halyard-micro", sans-serif;
+  font-weight: 700;
+  height: inherit;
+  word-break: break-all;
+  animation: c 0.5s infinite steps(1), t var(--d) linear infinite alternate, m calc(var(--d) * 2 * var(--n)) steps(var(--n)) infinite;
+}
+
+.type span span:before {
+  content: " ";
+  display: inline-block;
+}
+
+@keyframes t {
+  90%, 100% {
+    width: 100%;
   }
 }
+/*
+@keyframes c{
+  0%,100%{box-shadow:5px 0 0 #0000}
+  50%    {box-shadow:5px 0 0 $accent  }
+
+}
+*/
+@keyframes m {
+  100% {
+    transform: translateY(calc(-100% * var(--n)));
+  }
+}
+body {
+  font-size: 40px;
+}
+
 .project-item {
   margin-left: auto;
   margin-right: auto;
@@ -257,10 +289,7 @@ figcaption {
   width: 40%;
 }
 
-.project-container {
-  border-left: 2px solid #E9E8E5;
-  border-bottom: 2px solid #E9E8E5;
-  border-right: 2px solid #E9E8E5;
+.project-container, .container-border {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0.5rem;
@@ -269,7 +298,15 @@ figcaption {
   flex-direction: row;
 }
 
-.project-container img {
+.container-border {
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid #E9E8E5;
+  border-bottom: 2px solid #E9E8E5;
+  border-right: 2px solid #E9E8E5;
+}
+
+.project-container img, .container-border img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -291,8 +328,12 @@ figcaption {
   width: 0%;
 }
 
-.intro {
+.accentbg {
   background-color: #6BE06B;
+}
+
+.greybg {
+  background-color: #8b8079;
 }
 
 .leftline {
@@ -306,7 +347,7 @@ figcaption {
 }
 
 .numberCircle {
-  border-radius: 90%;
+  border-radius: 0%;
   padding: 8px;
   background: #fff;
   border: 2px solid #8b8079;
@@ -315,16 +356,58 @@ figcaption {
 }
 
 /**reponsive sizes**/
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
+.type {
+  --d:2s; /* duration */
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.type > span {
+  display: grid;
+  overflow: hidden;
+  height: 11vw;
+  background-color: #6BE06B;
+}
+
+.type span span {
+  width: 0%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  overflow: hidden;
+  font-size: 5.8vw;
+  font-family: "halyard-micro", sans-serif;
+  font-weight: 700;
+  height: inherit;
+  word-break: break-all;
+  animation: c 0.5s infinite steps(1), t var(--d) linear infinite alternate, m calc(var(--d) * 2 * var(--n)) steps(var(--n)) infinite;
+}
+
+.type span span:before {
+  content: " ";
+  display: inline-block;
+}
+
+@keyframes t {
+  90%, 100% {
+    width: 100%;
   }
 }
+/*
+@keyframes c{
+  0%,100%{box-shadow:5px 0 0 #0000}
+  50%    {box-shadow:5px 0 0 $accent  }
+
+}
+*/
+@keyframes m {
+  100% {
+    transform: translateY(calc(-100% * var(--n)));
+  }
+}
+body {
+  font-size: 40px;
+}
+
 .project-item {
   margin-left: auto;
   margin-right: auto;
@@ -342,10 +425,7 @@ figcaption {
   width: 40%;
 }
 
-.project-container {
-  border-left: 2px solid #E9E8E5;
-  border-bottom: 2px solid #E9E8E5;
-  border-right: 2px solid #E9E8E5;
+.project-container, .container-border {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0.5rem;
@@ -354,7 +434,15 @@ figcaption {
   flex-direction: row;
 }
 
-.project-container img {
+.container-border {
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid #E9E8E5;
+  border-bottom: 2px solid #E9E8E5;
+  border-right: 2px solid #E9E8E5;
+}
+
+.project-container img, .container-border img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -376,8 +464,12 @@ figcaption {
   width: 0%;
 }
 
-.intro {
+.accentbg {
   background-color: #6BE06B;
+}
+
+.greybg {
+  background-color: #8b8079;
 }
 
 .leftline {
@@ -391,7 +483,7 @@ figcaption {
 }
 
 .numberCircle {
-  border-radius: 90%;
+  border-radius: 0%;
   padding: 8px;
   background: #fff;
   border: 2px solid #8b8079;
@@ -421,20 +513,22 @@ body {
 
 h1 {
   color: #393835;
-  font-size: 4.5rem;
-  font-family: "ocr-b-std";
-  font-weight: 400;
+  font-size: 4rem;
+  font-family: "halyard-display", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 100;
   font-style: normal;
-  word-wrap: break-word;
+  margin: 0;
   flex-direction: row;
 }
 
 h2 {
   display: flex;
+  text-wrap: nowrap;
   color: #393835;
   font-size: 3rem;
   font-family: "halyard-display", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   word-wrap: break-word;
 }
@@ -475,7 +569,7 @@ h5 {
   word-wrap: break-word;
 }
 
-h6 {
+h6, button {
   color: black;
   font-size: 1rem;
   font-family: "halyard-display", sans-serif;
@@ -485,7 +579,7 @@ h6 {
 
 p {
   color: #8b8079;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
@@ -508,18 +602,21 @@ figcaption {
     flex-direction: row;
   }
 }
-/** tablet**/
+/** smaller screen**/
 @media (max-width: 800px) {
   html {
     font-size: 14px;
   }
-  .project-container {
+  .project-container, .container-border {
     max-width: 1240px;
     margin: 0 auto;
     justify-content: top;
     display: flex;
     flex-direction: column;
     transition-duration: 0.4s;
+  }
+  .half {
+    width: 100%;
   }
   .project-list {
     max-width: 100%;
@@ -538,10 +635,60 @@ figcaption {
   }
 }
 /** phone**/
-/**larger desktop**/
 @media (max-width: 640px) {
   .container {
     margin: 0 1rem;
     flex-direction: row;
   }
+}
+.type {
+  --d:2s; /* duration */
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.type > span {
+  display: grid;
+  overflow: hidden;
+  height: 11vw;
+  background-color: #6BE06B;
+}
+
+.type span span {
+  width: 0%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  overflow: hidden;
+  font-size: 5.8vw;
+  font-family: "halyard-micro", sans-serif;
+  font-weight: 700;
+  height: inherit;
+  word-break: break-all;
+  animation: c 0.5s infinite steps(1), t var(--d) linear infinite alternate, m calc(var(--d) * 2 * var(--n)) steps(var(--n)) infinite;
+}
+
+.type span span:before {
+  content: " ";
+  display: inline-block;
+}
+
+@keyframes t {
+  90%, 100% {
+    width: 100%;
+  }
+}
+/*
+@keyframes c{
+  0%,100%{box-shadow:5px 0 0 #0000}
+  50%    {box-shadow:5px 0 0 $accent  }
+
+}
+*/
+@keyframes m {
+  100% {
+    transform: translateY(calc(-100% * var(--n)));
+  }
+}
+body {
+  font-size: 40px;
 }/*# sourceMappingURL=styles.css.map */

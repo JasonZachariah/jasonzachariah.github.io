@@ -29,9 +29,7 @@
 
 .project-container {
 
-  border-left: 2px solid $primary-white;
-  border-bottom: 2px solid $primary-white;
-  border-right: 2px solid $primary-white;
+ 
   max-width: 1240px;
   margin: 0 auto;
   padding: 0.5rem;
@@ -42,6 +40,16 @@
  
 
 
+}
+.container-border {
+
+@extend .project-container;
+margin:0;
+padding:0;
+
+border-left: 2px solid $primary-white;
+border-bottom: 2px solid $primary-white;
+border-right: 2px solid $primary-white;
 }
 
 .project-container img {
@@ -67,8 +75,12 @@
   width: 0%;
 }
 
-.intro {
+.accentbg {
   background-color: $accent;
+
+}
+.greybg {
+  background-color: $secondary-black;
 
 }
 
@@ -84,7 +96,7 @@
 }
 
 .numberCircle {
-  border-radius: 90%;
+  border-radius: 0%;
 
   padding: 8px;
 

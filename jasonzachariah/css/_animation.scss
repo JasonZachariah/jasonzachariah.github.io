@@ -1,13 +1,51 @@
+.type {
+  --d:2s; /* duration */
+  display:inline-block;
+  vertical-align: bottom;
+}
 
-@keyframes fadeInUp {
-    0% {
-      transform: translateY(20%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
+.type > span {
+  display:grid;
+  overflow: hidden;
+  height:11vw;
+  background-color: $accent;
+}
+
+.type span span {
+  width:0%;
+  max-width:max-content;
+  overflow: hidden;
+font-size: 5.8vw;
+  font-family: "halyard-micro", sans-serif;
+  font-weight: 700
+  ;
+  height:inherit;
+  word-break:break-all;
+  animation:
+    c 0.5s infinite steps(1),  
+    t var(--d) linear infinite alternate,
+    m calc(var(--d)*2*var(--n)) steps(var(--n)) infinite;
+}
+.type span span:before {
+  content:" ";
+  display:inline-block;
+}
+
+@keyframes t{
+  90%,100% {width:100%}
+}
+/*
+@keyframes c{
+  0%,100%{box-shadow:5px 0 0 #0000}
+  50%    {box-shadow:5px 0 0 $accent  }
   
-  
+}
+*/
+@keyframes m{
+  100% {transform:translateY(calc(-100%*var(--n)))}
+}
+
+
+body {
+  font-size:40px;
+}

@@ -76,13 +76,13 @@ body {
 
   top: 0;
   left: 0;
-  height: 10vh;
+
   width: 100%;
 
   display: flex;
 
   justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   border-bottom: 1px black solid;
   transition: top 0.3s;
 
@@ -105,19 +105,10 @@ body {
 
 button {
 
-  color: $primary-black;
-  font-size: 1rem;
-  font-family: $secondary-font;
+ @extend h6;
   background: none;
   border: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  word-wrap: break-word;
-  display: flex;
-  width: 105px;
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+ 
   transition-duration: 0.4s;
 
 }

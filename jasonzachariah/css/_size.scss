@@ -16,12 +16,12 @@
     margin: 0 2rem;
     flex-direction: row;
   }
- 
-  
+
+
 }
 
 
-/** tablet**/
+/** smaller screen**/
 
 @media (max-width: 800px) {
   html {
@@ -40,35 +40,40 @@
 
   }
 
-.project-list{
-  max-width: 100%;
-  margin: 0;
+  .half {
+    width: 100%
+  }
 
-  justify-content: top;
-  display: flex;
-  flex-direction: column;
-  transition-duration: 0.4s;
-}
-.project-item {
-  margin-left: 0;
-  width: 100%;
-}
+  .project-list {
+    max-width: 100%;
+    margin: 0;
+
+    justify-content: top;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 0.4s;
+  }
+
+  .project-item {
+    margin-left: 0;
+    width: 100%;
+  }
 
   .container {
     margin: 0 2rem;
   }
 
-  
+
 }
 
 /** phone**/
 
- /**larger desktop**/
+
 @media (max-width: 640px) {
   .container {
     margin: 0 1rem;
     flex-direction: row;
   }
- 
-  
+
+
 }
