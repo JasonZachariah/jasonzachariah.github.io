@@ -8,24 +8,7 @@
 }
  
 
-.half {
-  width: 50%;
 
-}
-
-.full {
-
-  width: 100%;
-
-}
-
-.third {
-
-  width: 40%;
-
-}
-
-.imagefull {}
 
 .project-container {
 
@@ -52,26 +35,26 @@ border-bottom: 2px solid $primary-white;
 border-right: 2px solid $primary-white;
 }
 
-.project-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
 }
 
-.project-list {
-  min-width: 33%;
-  margin: 0 auto;
+.progress-container {
+  width: 100%;    position: fixed;
 
-  justify-content: top;
-  display: flex;
-  flex-direction: column;
-  transition-duration: 0.4s;
+  height: 8px;
+  background: #ccc;
 }
 
 .progress-bar {
-  position: fixed;
   height: 8px;
-  background: $accent;
+  background: #04AA6D;
   width: 0%;
 }
 
@@ -107,3 +90,4 @@ border-right: 2px solid $primary-white;
 
   
 }
+

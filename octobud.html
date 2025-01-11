@@ -6,8 +6,13 @@
     <title>Octobud</title>
 
     <link rel="icon" type="image/x-icon" href="jzlogo.svg">
-
-    <!--links css stylesheet styles.css-->
+    <!--Bootrsap Import-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+        <!--links css stylesheet styles.css-->
     <link rel="stylesheet" href="jasonzachariah/css/styles.css">
 
     <!-- link refrnce to Animate.css, where all the css aniamtions are-->
@@ -20,8 +25,12 @@
 <body>
 
     <!--Progress Bar-->
-    <div class="width:100vw">
-        <div class="progress-bar" id="myBar"></div>
+
+    <div class="header ">
+
+        <div class="progress-container ">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
     </div>
     <!--Intro-->
     <div class="container">
@@ -47,18 +56,26 @@
 
 
             <section>
+                <h4><i class="bi bi-arrow-left-short"></i>Go Home </h4>
                 <!--Title-->
-                <div class="project-container">
-                    <h2 class="center">[OCTOBUD]</h2>
+                <div class="row">
+                    <h2 class="col">[OCTOBUD]</h2>
 
                 </div>
+                <!--Breadcrumbs-->
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Photos</a></li>
+                    <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
+                    <li class="breadcrumb-item"><a href="#">Italy</a></li>
+                    <li class="breadcrumb-item active">Rome</li>
+                </ul>
                 <div class="project-container">
 
                     <h4>/UX DESIGN/</h4>
                 </div>
                 <!--Labels-->
-                <div class="project-container">
-                    <div class="project-item">
+                <div class="row">
+                    <div class="col-md-2">
 
                         <h4>timleline:</h4>
                         <p>Sep 2024- Dec 2024</p>
@@ -67,27 +84,30 @@
 
                     </div>
                     <!--about scetions-->
-                    <div class="project-item leftline " style="width: 80%;">
-                        <h4>PROBLEM</h4>
-                        <p> Technology-based stratagies
-                            iPads and Chromebooks are inneffective for both educaters and studens alike, prvoiding no
-                            way to montaior proper usage and falling into addictive scycles
-                        </p>
-                        <h4>KEY TAKEAWAYS</h4>
-                        <p> Learning stratagies can be tedious, especially in subjects like math or science.
-                            Technology-based stratagies
-                            iPads and Chromebooks, are costly</strong> and require unique devices. iPads, due to
-                            Internet
-                            access, pose challenges for long-term teaching.
-                        </p>
+                    <div class="col-md-10 leftline ">
+                        <h5>PROBLEM</h4>
+                            <p> Technology-based stratagies
+                                iPads and Chromebooks are inneffective for both educaters and studens alike,
+                                prvoiding
+                                no
+                                way to montaior proper usage and falling into addictive scycles
+                            </p>
+                            <h5>KEY TAKEAWAYS</h4>
+                                <p> Learning stratagies can be tedious, especially in subjects like math or science.
+                                    Technology-based stratagies
+                                    iPads and Chromebooks, are costly</strong> and require unique devices. iPads,
+                                    due to
+                                    Internet
+                                    access, pose challenges for long-term teaching.
+                                </p>
                     </div>
             </section>
             <!--Problems-->
             <!--About line breaker-->
-            <h3 class="center">PROBLEMS</h3>
-            <section class="project-container">
+            <h3 class="center col">PROBLEMS</h3>
+            <section class="row">
 
-                <div class="project-list leftline">
+                <div class="col-md-4 leftline">
                     <h5>New learning sratagies are expensive to maintian</h5>
                     <p>Learning, especially memorization-heavy subjects like math or science, can be challenging to
                         learn and to teach, tedious for the teacher to keep each of their students focused, and
@@ -95,14 +115,14 @@
 
                 </div>
 
-                <div class="project-list leftline">
+                <div class="col-md-4 leftline">
 
                     <h5>Traditional learning stratagies are boring</h5>
                     <p>Learning, especially memorization-heavy subjects like math or science, can be challenging to
                         learn and to teach, tedious for the teacher to keep each of their students focused, and
                         frustrating for the students to learn </p>
                 </div>
-                <div class="project-list leftline">
+                <div class="col-md-4 leftline">
                     <h5> Tech-based learning is not good for long term plans</h5>
                     <p>Learning, especially memorization-heavy subjects like math or science, can be challenging to
                         learn and to teach, tedious for the teacher to keep each of their students focused, and
@@ -115,9 +135,9 @@
 
             </section>
 
-            <section class="project-container accentbg ">
+            <section class="row accentbg ">
 
-                <div class="project-item ">
+                <div class="col">
                     <h3>&emsp;An interactive learning device that allows students a gamified and
                         flexible learning system
                         using a code-and-scanner system, where each unique code has a unique visual,auditory and/or
@@ -134,24 +154,27 @@
 
             </section>
 
-            <section class="project-container">
-                <div class="project-item full">
+            <section class="row">
+                <div class="col">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi
                         ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                        in
                         culpa qui officia deserunt mollit anim id </p>
                 </div>
             </section>
 
-            <section class="project-container">
+            <section class="row">
 
-                <div class="project-item">
+                <div class="col text-center">
 
                     <figure>
-                        <img src="images/octobud/octobud_poster.png" alt="mockup1" width="100%">
+                        <img src="images/octobud/octobud_poster.png" alt="mockup1" class="col-md-6">
                         <figcaption><strong>Octobud Poster</strong></figcaption>
                     </figure>
                 </div>
@@ -159,14 +182,14 @@
 
             </section>
 
-            <section class="project-container">
+            <section class="row">
 
 
 
 
-                <div class="project-item">
+                <div class="col mx-autor">
 
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" class="col"
                         src="https://embed.figma.com/slides/FDwjA4UMSPnze4cK1m7ce7/Untitled?node-id=1-92&embed-host=share"
                         allowfullscreen></iframe>
                 </div>
@@ -176,7 +199,7 @@
             </section>
             <div>
                 <a href="#">
-                    <h5>BACK TO TOP (↑)</h5>
+                    <h5>BACK TO TOP <i class="bi bi-arrow-up-short"></i></h5>
                 </a>
             </div>
         </div>

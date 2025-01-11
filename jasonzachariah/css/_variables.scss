@@ -9,12 +9,15 @@ $accent:#6BE06B;
 $accenttrans:#6be06b97;
 
 ::-moz-selection { /* Code for Firefox */
-  color: $primary-black;
+
   background: $secondary-black;
+  mix-blend-mode: multiply;
+
 }
   
   ::selection {
-    color: $primary-black;
+  
     background: $secondary-black;
+    mix-blend-mode: multiply;
   }
   
