@@ -1,152 +1,29 @@
 
-.homecard_image {
-
-
-
-  margin-bottom: 2rem;
-  background-color: $primary-white;
-  height: 30rem;
-  width: 100%;
-  transition-duration: 0.4s;
-
-
-  justify-content: top;
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
 
-
-.homecard_text {
-  width: 40%;
-  margin-left: 2rem;
-  position: relative;
-  top: 2rem;
-
-  transition-duration: 0.4s;
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.homecard_caption {
-
-  flex-direction: row;
-  transition-duration: 0.4s;
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-/*
-.card-hover {
-  cursor: url('cursor.svg'), auto;
-  box-sizing: border-box;
-  border: $accent 3px dotted;
-  border-image: 8;
-  -webkit-mask: conic-gradient(from 180deg at top 100px right 100px,
-      #0000 90deg,
-      #000 0) var(--_i, 200%) 0 /200% var(--_i, 8px) border-box no-repeat,
-    conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0 var(--_i, 200%) / var(--_i, 8px) 200% border-box no-repeat,
-    linear-gradient(#000 0 0) padding-box no-repeat;
-  transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 
-.card-hover:hover {
-
-  height: 100%;
-  --_i: 100%;
-  color: $accent;
-  transition: 0.3s, -webkit-mask-size 0.3s 0.3s;
-}
-  */
-
-body {
-  height: 100vh;
-  margin: 0;
-  display: grid;
-  place-content: center;
-  align-items: center;
-}
-
-
-
-
-
-
-
-
-
-#navbar {
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-
-  display: flex;
-
-  justify-content: center;
-  justify-content: space-between;
-  border-bottom: 1px black solid;
-  transition: top 0.3s;
-
-}
-
-.navcontainer {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  width: 100vw;
-  height: 50vh;
-  display: flex;
-  
-  justify-content: space-around;
-  align-items: center;
-
-
-}
-
-
-
-button {
-
- @extend h6;
-  background: none;
-  border: none;
- 
-  transition-duration: 0.4s;
-
-}
-
-button:hover {
-
-  color: $accent;
-}
-
-
-.border {
-  width: 7.5rem;
-  height: 3rem;
-  display: flex;
-  padding: 5px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-
-
-  border-left: 2px dotted $primary-black;
-  border-right: 2px dotted $primary-black;
-
-
-}
-
-
-
-.cardhover {
-  width: 100vw;
-  height: 30rem;
-  border: 2px dotted #333;
-  justify-content: top;
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-
-  z-index: 0;
-  transition: 1s;
+.topnav .icon {
+  display: none;
 }

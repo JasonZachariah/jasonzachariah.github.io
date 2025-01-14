@@ -11,21 +11,12 @@
 
 a {
     text-decoration: none;
+    @extend h6;
 }
 
-a:link { 
-    text-decoration: none; 
-  } 
-  a:visited { 
-    text-decoration: none; 
-  } 
-  a:hover { 
-    text-decoration: none; 
-  } 
-  a:active { 
-    text-decoration: none; 
-  }
-
+.nav-item{
+ font-size: 1rem;
+}
 body {
     cursor: url('cursor.png'),auto;
     display: block;
@@ -140,4 +131,5 @@ figcaption {
     @extend h4;
 
 }
+
 
