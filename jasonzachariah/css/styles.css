@@ -11,41 +11,13 @@
   mix-blend-mode: multiply;
 }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: 0;
   scroll-behavior: smooth;
+  text-decoration: none;
   -webkit-hyphens: auto;
           hyphens: auto;
 }
@@ -194,6 +166,17 @@ body {
   font-size: 40px;
 }
 
+/*progress bar*/
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -211,7 +194,7 @@ body {
 
 .progress-bar {
   height: 8px;
-  background: #04AA6D;
+  background: #8b8079;
   width: 0%;
 }
 
@@ -240,6 +223,10 @@ body {
   border: 2px solid #8b8079;
   color: #8b8079;
   text-align: center;
+}
+
+.shadow {
+  filter: drop-shadow(18px 13px 20px #ece8e8);
 }
 
 /**reponsive sizes**/
@@ -295,6 +282,17 @@ body {
   font-size: 40px;
 }
 
+/*progress bar*/
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -312,7 +310,7 @@ body {
 
 .progress-bar {
   height: 8px;
-  background: #04AA6D;
+  background: #8b8079;
   width: 0%;
 }
 
@@ -343,12 +341,17 @@ body {
   text-align: center;
 }
 
+.shadow {
+  filter: drop-shadow(18px 13px 20px #ece8e8);
+}
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: 0;
   scroll-behavior: smooth;
+  text-decoration: none;
   -webkit-hyphens: auto;
           hyphens: auto;
 }

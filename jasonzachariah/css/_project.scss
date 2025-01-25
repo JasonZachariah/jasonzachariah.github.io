@@ -1,6 +1,20 @@
 @import 'animation';
 
 
+/*progress bar*/
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
 
 
 .header {
@@ -20,7 +34,7 @@
 
 .progress-bar {
   height: 8px;
-  background: #04AA6D;
+  background: $secondary-black;
   width: 0%;
 }
 
@@ -57,3 +71,6 @@
   
 }
 
+.shadow{
+  filter: drop-shadow(18px 13px 20px #ece8e8);
+}
