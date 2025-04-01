@@ -229,6 +229,19 @@ body {
   filter: drop-shadow(18px 13px 20px #ece8e8);
 }
 
+.homecard {
+  transition: 0.3s;
+}
+
+.homecard:hover {
+  color: #E9E8E5;
+  background-color: #6BE06B;
+}
+
+.homecard:hover h2 {
+  color: white;
+}
+
 /**reponsive sizes**/
 .type {
   --d:2s; /* duration */
@@ -343,6 +356,19 @@ body {
 
 .shadow {
   filter: drop-shadow(18px 13px 20px #ece8e8);
+}
+
+.homecard {
+  transition: 0.3s;
+}
+
+.homecard:hover {
+  color: #E9E8E5;
+  background-color: #6BE06B;
+}
+
+.homecard:hover h2 {
+  color: white;
 }
 
 * {

@@ -74,3 +74,19 @@
 .shadow{
   filter: drop-shadow(18px 13px 20px #ece8e8);
 }
+
+.homecard {
+
+  transition: 0.3s;
+
+
+}
+
+.homecard:hover {
+
+color: $primary-white;
+ background-color: $accent;
+}
+.homecard:hover h2 {
+	color: white;
+}
