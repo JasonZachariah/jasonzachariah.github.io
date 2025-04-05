@@ -1,0 +1,577 @@
+/* file import */
+@import 'animate.css';
+@import url("https://use.typekit.net/qvu8qst.css");
+::-moz-selection { /* Code for Firefox */
+  background: #8b8079;
+  mix-blend-mode: multiply;
+}
+
+::selection {
+  background: #8b8079;
+  mix-blend-mode: multiply;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 0;
+  scroll-behavior: smooth;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-item {
+  font-size: 1rem;
+}
+
+body {
+  cursor: url("cursor.png"), auto;
+  display: block;
+  margin: 0px;
+}
+
+h1 {
+  color: #393835;
+  font-size: 4rem;
+  font-family: "halyard-display", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 100;
+  font-style: normal;
+  margin: 0;
+  flex-direction: row;
+}
+
+h2 {
+  display: flex;
+  text-wrap: nowrap;
+  color: #393835;
+  font-size: 3rem;
+  font-family: "halyard-display", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  word-wrap: break-word;
+}
+
+h3 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  color: #393835;
+  font-size: 2rem;
+  /*font code*/
+  font-family: "halyard-display", sans-serif;
+  font-weight: 300;
+}
+
+h3::after {
+  content: "";
+  flex: auto;
+  margin-left: 2rem;
+  border-top: 1px dashed #E9E8E5;
+}
+
+h4, figcaption {
+  color: #393835;
+  font-size: 1.5rem;
+  font-family: "halyard-display", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+h5 {
+  color: #393835;
+  font-size: 1.25rem;
+  font-family: "halyard-display", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+h6, a {
+  color: black;
+  font-size: 1rem;
+  font-family: "halyard-display", sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+p {
+  color: #8b8079;
+  font-size: 1.25rem;
+  font-family: "halyard-display", sans-serif;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.type {
+  --d:2s; /* duration */
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.type > span {
+  display: grid;
+  overflow: hidden;
+  height: 8rem;
+  background-color: #6BE06B;
+}
+
+.type span span {
+  width: 0%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  overflow: hidden;
+  font-size: 4rem;
+  font-family: "halyard-micro", sans-serif;
+  font-weight: 700;
+  height: inherit;
+  word-break: break-all;
+  animation: c 0.5s infinite steps(1), t var(--d) linear infinite alternate, m calc(var(--d) * 2 * var(--n)) steps(var(--n)) infinite;
+}
+
+.type span span:before {
+  content: " ";
+  display: inline-block;
+}
+
+@keyframes t {
+  90%, 100% {
+    width: 100%;
+  }
+}
+/*
+@keyframes c{
+  0%,100%{box-shadow:5px 0 0 #0000}
+  50%    {box-shadow:5px 0 0 $accent  }
+
+}
+*/
+@keyframes m {
+  100% {
+    transform: translateY(calc(-100% * var(--n)));
+  }
+}
+body {
+  font-size: 40px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-container {
+  width: 100%;
+  position: fixed;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+}
+
+.accentbg {
+  background-color: #6BE06B;
+}
+
+.greybg {
+  background-color: #8b8079;
+}
+
+.leftline {
+  padding-left: 1rem;
+  border-left: 2px dotted rgba(107, 224, 107, 0.5921568627);
+}
+
+.center {
+  padding: 3rem 0;
+  margin: 0;
+}
+
+.numberCircle {
+  border-radius: 0%;
+  padding: 8px;
+  background: #fff;
+  border: 2px solid #8b8079;
+  color: #8b8079;
+  text-align: center;
+}
+
+<<<<<<< HEAD
+.shadow {
+  filter: drop-shadow(18px 13px 20px #ece8e8);
+}
+
+.homecard {
+  transition: 0.3s;
+}
+
+.homecard:hover {
+  color: #E9E8E5;
+  background-color: #6BE06B;
+}
+
+.homecard:hover h2 {
+  color: white;
+}
+
+=======
+>>>>>>> parent of 17c4fd1 (home card changes)
+/**reponsive sizes**/
+.type {
+  --d:2s; /* duration */
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.type > span {
+  display: grid;
+  overflow: hidden;
+  height: 8rem;
+  background-color: #6BE06B;
+}
+
+.type span span {
+  width: 0%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  overflow: hidden;
+  font-size: 4rem;
+  font-family: "halyard-micro", sans-serif;
+  font-weight: 700;
+  height: inherit;
+  word-break: break-all;
+  animation: c 0.5s infinite steps(1), t var(--d) linear infinite alternate, m calc(var(--d) * 2 * var(--n)) steps(var(--n)) infinite;
+}
+
+.type span span:before {
+  content: " ";
+  display: inline-block;
+}
+
+@keyframes t {
+  90%, 100% {
+    width: 100%;
+  }
+}
+/*
+@keyframes c{
+  0%,100%{box-shadow:5px 0 0 #0000}
+  50%    {box-shadow:5px 0 0 $accent  }
+
+}
+*/
+@keyframes m {
+  100% {
+    transform: translateY(calc(-100% * var(--n)));
+  }
+}
+body {
+  font-size: 40px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-container {
+  width: 100%;
+  position: fixed;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+}
+
+.accentbg {
+  background-color: #6BE06B;
+}
+
+.greybg {
+  background-color: #8b8079;
+}
+
+.leftline {
+  padding-left: 1rem;
+  border-left: 2px dotted rgba(107, 224, 107, 0.5921568627);
+}
+
+.center {
+  padding: 3rem 0;
+  margin: 0;
+}
+
+.numberCircle {
+  border-radius: 0%;
+  padding: 8px;
+  background: #fff;
+  border: 2px solid #8b8079;
+  color: #8b8079;
+  text-align: center;
+}
+
+<<<<<<< HEAD
+.shadow {
+  filter: drop-shadow(18px 13px 20px #ece8e8);
+}
+
+.homecard {
+  transition: 0.3s;
+}
+
+.homecard:hover {
+  color: #E9E8E5;
+  background-color: #6BE06B;
+}
+
+.homecard:hover h2 {
+  color: white;
+}
+
+=======
+>>>>>>> parent of 17c4fd1 (home card changes)
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 0;
+  scroll-behavior: smooth;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-item {
+  font-size: 1rem;
+}
+
+body {
+  cursor: url("cursor.png"), auto;
+  display: block;
+  margin: 0px;
+}
+
+h1 {
+  color: #393835;
+  font-size: 4rem;
+  font-family: "halyard-display", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 100;
+  font-style: normal;
+  margin: 0;
+  flex-direction: row;
+}
+
+h2 {
+  display: flex;
+  text-wrap: nowrap;
+  color: #393835;
+  font-size: 3rem;
+  font-family: "halyard-display", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  word-wrap: break-word;
+}
+
+h3 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  color: #393835;
+  font-size: 2rem;
+  /*font code*/
+  font-family: "halyard-display", sans-serif;
+  font-weight: 300;
+}
+
+h3::after {
+  content: "";
+  flex: auto;
+  margin-left: 2rem;
+  border-top: 1px dashed #E9E8E5;
+}
+
+h4, figcaption {
+  color: #393835;
+  font-size: 1.5rem;
+  font-family: "halyard-display", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+h5 {
+  color: #393835;
+  font-size: 1.25rem;
+  font-family: "halyard-display", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+h6, a {
+  color: black;
+  font-size: 1rem;
+  font-family: "halyard-display", sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+p {
+  color: #8b8079;
+  font-size: 1.25rem;
+  font-family: "halyard-display", sans-serif;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+/**larger desktop**/
+@media (max-width: 992px) {
+  .container {
+    max-width: 900px;
+    margin: 0 2rem;
+    flex-direction: row;
+  }
+}
+/** m size**/
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 700px;
+    margin: 0 2rem;
+  }
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+/** s size **/
+@media (max-width: 576px) {
+  .container {
+    max-width: 500px;
+    margin: 0 1rem;
+    flex-direction: row;
+  }
+}
+.type {
+  --d:2s; /* duration */
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.type > span {
+  display: grid;
+  overflow: hidden;
+  height: 8rem;
+  background-color: #6BE06B;
+}
+
+.type span span {
+  width: 0%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  overflow: hidden;
+  font-size: 4rem;
+  font-family: "halyard-micro", sans-serif;
+  font-weight: 700;
+  height: inherit;
+  word-break: break-all;
+  animation: c 0.5s infinite steps(1), t var(--d) linear infinite alternate, m calc(var(--d) * 2 * var(--n)) steps(var(--n)) infinite;
+}
+
+.type span span:before {
+  content: " ";
+  display: inline-block;
+}
+
+@keyframes t {
+  90%, 100% {
+    width: 100%;
+  }
+}
+/*
+@keyframes c{
+  0%,100%{box-shadow:5px 0 0 #0000}
+  50%    {box-shadow:5px 0 0 $accent  }
+
+}
+*/
+@keyframes m {
+  100% {
+    transform: translateY(calc(-100% * var(--n)));
+  }
+}
+body {
+  font-size: 40px;
+}/*# sourceMappingURL=styles.css.map */

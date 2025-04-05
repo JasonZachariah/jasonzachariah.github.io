@@ -1,0 +1,81 @@
+@import 'animation';
+
+
+
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-container {
+  width: 100%;    position: fixed;
+
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+}
+
+.accentbg {
+  background-color: $accent;
+
+}
+.greybg {
+  background-color: $secondary-black;
+
+}
+
+.leftline {
+  padding-left: 1rem;
+  border-left: 2px dotted $accenttrans;
+
+}
+
+.center{
+  padding: 3rem 0;
+  margin: 0;
+}
+
+.numberCircle {
+  border-radius: 0%;
+
+  padding: 8px;
+
+  background: #fff;
+  border: 2px solid $secondary-black;
+  color: $secondary-black;
+  text-align: center;
+
+  
+}
+
+<<<<<<< HEAD
+.shadow{
+  filter: drop-shadow(18px 13px 20px #ece8e8);
+}
+
+.homecard {
+
+  transition: 0.3s;
+
+
+}
+
+.homecard:hover {
+
+color: $primary-white;
+ background-color: $accent;
+}
+.homecard:hover h2 {
+	color: white;
+}
+=======
+>>>>>>> parent of 17c4fd1 (home card changes)
