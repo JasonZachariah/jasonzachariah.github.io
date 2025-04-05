@@ -1,0 +1,56 @@
+/**reponsive sizes**/
+
+@import 'project';
+@import 'type';
+
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+/**larger desktop**/
+@media (max-width: 992px) {
+  
+  .container {
+    max-width: 900px;
+    margin: 0 2rem;
+    flex-direction: row;
+  }
+
+
+}
+
+
+/** m size**/
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 700px;
+    margin: 0 2rem;
+  }
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+}
+
+/** s size **/
+
+
+@media (max-width: 576px) {
+
+  .container {
+    max-width: 500px;
+    margin: 0 1rem;
+    flex-direction: row;
+  }
+
+
+}
