@@ -78,7 +78,7 @@ h1 {
 h2 {
   display: flex;
   text-wrap: nowrap;
-  color: red;
+  color: #393835;
   font-size: 3rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 500;
@@ -90,7 +90,7 @@ h3 {
   margin-top: 0;
   display: flex;
   align-items: center;
-  color: red;
+  color: #393835;
   font-size: 2rem;
   /*font code*/
   font-family: "halyard-display", sans-serif;
@@ -105,7 +105,7 @@ h3::after {
 }
 
 h4, figcaption {
-  color: red;
+  color: #393835;
   font-size: 1.5rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 300;
@@ -114,7 +114,7 @@ h4, figcaption {
 }
 
 h5 {
-  color: red;
+  color: #393835;
   font-size: 1.25rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 700;
@@ -311,7 +311,7 @@ h1 {
 h2 {
   display: flex;
   text-wrap: nowrap;
-  color: red;
+  color: #393835;
   font-size: 3rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 500;
@@ -323,7 +323,7 @@ h3 {
   margin-top: 0;
   display: flex;
   align-items: center;
-  color: red;
+  color: #393835;
   font-size: 2rem;
   /*font code*/
   font-family: "halyard-display", sans-serif;
@@ -338,7 +338,7 @@ h3::after {
 }
 
 h4, figcaption {
-  color: red;
+  color: #393835;
   font-size: 1.5rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 300;
@@ -347,7 +347,7 @@ h4, figcaption {
 }
 
 h5 {
-  color: red;
+  color: #393835;
   font-size: 1.25rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 700;
