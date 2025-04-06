@@ -207,6 +207,17 @@ figcaption {
   color: white;
 }
 
+.navbar {
+  display: flex;
+  background-color: #E9E8E5;
+}
+
+.navbaritem {
+  flex-direction: row;
+  padding: 2rem;
+  z-index: 1;
+}
+
 /**reponsive sizes**/
 .header {
   position: fixed;
@@ -271,6 +282,17 @@ figcaption {
 
 .homecard:hover h2 {
   color: white;
+}
+
+.navbar {
+  display: flex;
+  background-color: #E9E8E5;
+}
+
+.navbaritem {
+  flex-direction: row;
+  padding: 2rem;
+  z-index: 1;
 }
 
 * {
@@ -396,7 +418,7 @@ figcaption {
   }
   .container {
     max-width: 700px;
-    margin: 0 2rem;
+    margin: 0rem 2rem;
   }
   .topnav a:not(:first-child) {
     display: none;
@@ -410,7 +432,11 @@ figcaption {
 @media (max-width: 576px) {
   .container {
     max-width: 500px;
-    margin: 0 1rem;
+    margin: 0rem 2rem;
     flex-direction: row;
   }
+}
+.coverimg {
+  width: auto;
+  max-height: 700px;
 }/*# sourceMappingURL=styles.css.map */

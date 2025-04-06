@@ -12,7 +12,8 @@
 }
 
 .progress-container {
-  width: 100%;    position: fixed;
+  width: 100%;
+  position: fixed;
 
   height: 8px;
   background: #ccc;
@@ -28,6 +29,7 @@
   background-color: $accent;
 
 }
+
 .greybg {
   background-color: $secondary-black;
 
@@ -39,7 +41,7 @@
 
 }
 
-.center{
+.center {
   padding: 3rem 0;
   margin: 0;
 }
@@ -54,10 +56,10 @@
   color: $secondary-black;
   text-align: center;
 
-  
+
 }
 
-.shadow{
+.shadow {
   filter: drop-shadow(18px 13px 20px #ece8e8);
 }
 
@@ -70,9 +72,22 @@
 
 .homecard:hover {
 
-color: $primary-white;
- background-color: $accent;
+  color: $primary-white;
+  background-color: $accent;
 }
+
 .homecard:hover h2 {
-	color: white;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+
+  background-color:$primary-white;
+}
+
+.navbaritem{
+  flex-direction: row;
+  padding: 2rem;
+  z-index: 1;
 }
