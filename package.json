@@ -24,6 +24,7 @@
     "tailwindcss-animated": "^2.0.0"
   },
   "devDependencies": {
+    "tailwindcss-bg-patterns": "^0.3.0",
     "tailwindcss-motion": "^1.1.0"
   }
 }
