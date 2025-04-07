@@ -21,7 +21,7 @@
 
 .progress-bar {
   height: 8px;
-  background: #04AA6D;
+  background:$accent;
   width: 0%;
 }
 
@@ -86,8 +86,13 @@
   background-color:$primary-white;
 }
 
-.navbaritem{
+
+.navbarcon{
+width: 100%;
+  position: fixed;
+
+  
   flex-direction: row;
-  padding: 2rem;
-  z-index: 1;
+ 
+ 
 }

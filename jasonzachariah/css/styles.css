@@ -2,12 +2,12 @@
 @import 'animate.css';
 @import url("https://use.typekit.net/qvu8qst.css");
 ::-moz-selection { /* Code for Firefox */
-  background: #8b8079;
+  background: oklch(55.2% 0.016 285.938);
   mix-blend-mode: multiply;
 }
 
 ::selection {
-  background: #8b8079;
+  background: oklch(55.2% 0.016 285.938);
   mix-blend-mode: multiply;
 }
 
@@ -78,9 +78,9 @@ h1 {
 h2 {
   display: flex;
   text-wrap: nowrap;
-  color: #393835;
+  color: oklch(21% 0.006 285.885);
   font-size: 3rem;
-  font-family: "halyard-display", sans-serif;
+  font-family: "ibm-plex-mono", sans-serif;
   font-weight: 500;
   font-style: normal;
   word-wrap: break-word;
@@ -90,10 +90,10 @@ h3 {
   margin-top: 0;
   display: flex;
   align-items: center;
-  color: #393835;
+  color: oklch(21% 0.006 285.885);
   font-size: 2rem;
   /*font code*/
-  font-family: "halyard-display", sans-serif;
+  font-family: "ibm-plex-mono", sans-serif;
   font-weight: 300;
 }
 
@@ -105,18 +105,18 @@ h3::after {
 }
 
 h4, figcaption {
-  color: #393835;
+  color: oklch(21% 0.006 285.885);
   font-size: 1.5rem;
-  font-family: "halyard-display", sans-serif;
+  font-family: "ibm-plex-mono", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   word-wrap: break-word;
 }
 
 h5 {
-  color: #393835;
+  color: oklch(21% 0.006 285.885);
   font-size: 1.25rem;
-  font-family: "halyard-display", sans-serif;
+  font-family: "ibm-plex-mono", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -131,7 +131,7 @@ h6, a {
 }
 
 p {
-  color: #8b8079;
+  color: oklch(55.2% 0.016 285.938);
   font-size: 1.25rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 300;
@@ -159,16 +159,16 @@ figcaption {
 
 .progress-bar {
   height: 8px;
-  background: #04AA6D;
+  background: oklch(76.8% 0.233 130.85);
   width: 0%;
 }
 
 .accentbg {
-  background-color: #6BE06B;
+  background-color: oklch(76.8% 0.233 130.85);
 }
 
 .greybg {
-  background-color: #8b8079;
+  background-color: oklch(55.2% 0.016 285.938);
 }
 
 .leftline {
@@ -185,8 +185,8 @@ figcaption {
   border-radius: 0%;
   padding: 8px;
   background: #fff;
-  border: 2px solid #8b8079;
-  color: #8b8079;
+  border: 2px solid oklch(55.2% 0.016 285.938);
+  color: oklch(55.2% 0.016 285.938);
   text-align: center;
 }
 
@@ -200,7 +200,7 @@ figcaption {
 
 .homecard:hover {
   color: #E9E8E5;
-  background-color: #6BE06B;
+  background-color: oklch(76.8% 0.233 130.85);
 }
 
 .homecard:hover h2 {
@@ -212,10 +212,10 @@ figcaption {
   background-color: #E9E8E5;
 }
 
-.navbaritem {
+.navbarcon {
+  width: 100%;
+  position: fixed;
   flex-direction: row;
-  padding: 2rem;
-  z-index: 1;
 }
 
 /**reponsive sizes**/
@@ -236,16 +236,16 @@ figcaption {
 
 .progress-bar {
   height: 8px;
-  background: #04AA6D;
+  background: oklch(76.8% 0.233 130.85);
   width: 0%;
 }
 
 .accentbg {
-  background-color: #6BE06B;
+  background-color: oklch(76.8% 0.233 130.85);
 }
 
 .greybg {
-  background-color: #8b8079;
+  background-color: oklch(55.2% 0.016 285.938);
 }
 
 .leftline {
@@ -262,8 +262,8 @@ figcaption {
   border-radius: 0%;
   padding: 8px;
   background: #fff;
-  border: 2px solid #8b8079;
-  color: #8b8079;
+  border: 2px solid oklch(55.2% 0.016 285.938);
+  color: oklch(55.2% 0.016 285.938);
   text-align: center;
 }
 
@@ -277,7 +277,7 @@ figcaption {
 
 .homecard:hover {
   color: #E9E8E5;
-  background-color: #6BE06B;
+  background-color: oklch(76.8% 0.233 130.85);
 }
 
 .homecard:hover h2 {
@@ -289,10 +289,10 @@ figcaption {
   background-color: #E9E8E5;
 }
 
-.navbaritem {
+.navbarcon {
+  width: 100%;
+  position: fixed;
   flex-direction: row;
-  padding: 2rem;
-  z-index: 1;
 }
 
 * {
@@ -333,9 +333,9 @@ h1 {
 h2 {
   display: flex;
   text-wrap: nowrap;
-  color: #393835;
+  color: oklch(21% 0.006 285.885);
   font-size: 3rem;
-  font-family: "halyard-display", sans-serif;
+  font-family: "ibm-plex-mono", sans-serif;
   font-weight: 500;
   font-style: normal;
   word-wrap: break-word;
@@ -345,10 +345,10 @@ h3 {
   margin-top: 0;
   display: flex;
   align-items: center;
-  color: #393835;
+  color: oklch(21% 0.006 285.885);
   font-size: 2rem;
   /*font code*/
-  font-family: "halyard-display", sans-serif;
+  font-family: "ibm-plex-mono", sans-serif;
   font-weight: 300;
 }
 
@@ -360,18 +360,18 @@ h3::after {
 }
 
 h4, figcaption {
-  color: #393835;
+  color: oklch(21% 0.006 285.885);
   font-size: 1.5rem;
-  font-family: "halyard-display", sans-serif;
+  font-family: "ibm-plex-mono", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   word-wrap: break-word;
 }
 
 h5 {
-  color: #393835;
+  color: oklch(21% 0.006 285.885);
   font-size: 1.25rem;
-  font-family: "halyard-display", sans-serif;
+  font-family: "ibm-plex-mono", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -386,7 +386,7 @@ h6, a {
 }
 
 p {
-  color: #8b8079;
+  color: oklch(55.2% 0.016 285.938);
   font-size: 1.25rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 300;
