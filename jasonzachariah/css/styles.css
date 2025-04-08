@@ -59,6 +59,18 @@
   left: 50%;
 }
 
+.animate-on-scroll {
+  transform: translate(0px, 50px);
+  opacity: 0;
+  transition: all 0.8s ease;
+  transition-delay: 0.2s;
+}
+
+.animate {
+  transform: translate(0px, 0);
+  opacity: 1;
+}
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -273,8 +285,8 @@ figcaption {
 /**larger desktop**/
 @media (max-width: 1024px) {
   .container {
-    max-width: 900px;
-    margin: 2rem 2rem;
+    max-width: 80vw;
+    margin: 2rem auto;
     flex-direction: row;
   }
 }
@@ -284,8 +296,8 @@ figcaption {
     font-size: 14px;
   }
   .container {
-    max-width: 650px;
-    margin: 0rem 2rem;
+    max-width: 80vw;
+    margin: 0rem auto;
   }
   .topnav a:not(:first-child) {
     display: none;
@@ -298,8 +310,8 @@ figcaption {
 /** s size **/
 @media (max-width: 576px) {
   .container {
-    max-width: 450px;
-    margin: 0rem 2rem;
+    max-width: 80vw;
+    margin: 0rem 10vw;
     flex-direction: row;
   }
 }

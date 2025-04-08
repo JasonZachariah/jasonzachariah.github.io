@@ -30,20 +30,42 @@
 .paper {
   background-color: $primary-white;
   opacity: 0.8;
-  background-image:  linear-gradient(#d6d6d8 2px, transparent 2px), linear-gradient(90deg, #d6d6d8 2px, transparent 2px), linear-gradient(#d6d6d8 1px, transparent 1px), linear-gradient(90deg, #d6d6d8 1px, #efefef 1px);
+  background-image: linear-gradient(#d6d6d8 2px, transparent 2px), linear-gradient(90deg, #d6d6d8 2px, transparent 2px), linear-gradient(#d6d6d8 1px, transparent 1px), linear-gradient(90deg, #d6d6d8 1px, #efefef 1px);
   background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
+
 #fixed {
   display: block;
-  position:absolute;
+  position: absolute;
 }
 
-.navbarcon{
+.navbarcon {
   position: fixed;
-    
-    bottom:15%;
-    left: 50%;
- 
-   
-  }
+
+  bottom: 15%;
+  left: 50%;
+
+
+}
+
+
+.animate-on-scroll {
+  transform: translate(0px, 50px);
+  opacity: 0;
+  transition: all 0.8s ease;
+  transition-delay: 0.2s;
+
+
+
+
+}
+
+
+
+
+.animate {
+  transform: translate(0px, 0);
+  opacity: 1;
+
+}
