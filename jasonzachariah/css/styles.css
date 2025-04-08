@@ -41,11 +41,22 @@
 }
 
 .paper {
-  background-color: #efefef;
+  background-color: #E9E8E5;
   opacity: 0.8;
   background-image: linear-gradient(#d6d6d8 2px, transparent 2px), linear-gradient(90deg, #d6d6d8 2px, transparent 2px), linear-gradient(#d6d6d8 1px, transparent 1px), linear-gradient(90deg, #d6d6d8 1px, #efefef 1px);
   background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+#fixed {
+  display: block;
+  position: absolute;
+}
+
+.navbarcon {
+  position: fixed;
+  bottom: 15%;
+  left: 50%;
 }
 
 * {
@@ -255,12 +266,12 @@ figcaption {
 
 .container {
   max-width: 1240px;
-  margin: 0 auto;
+  margin: 2rem auto;
   flex-direction: row;
 }
 
 /**larger desktop**/
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .container {
     max-width: 900px;
     margin: 2rem 2rem;
@@ -273,7 +284,7 @@ figcaption {
     font-size: 14px;
   }
   .container {
-    max-width: 700px;
+    max-width: 650px;
     margin: 0rem 2rem;
   }
   .topnav a:not(:first-child) {
@@ -287,7 +298,7 @@ figcaption {
 /** s size **/
 @media (max-width: 576px) {
   .container {
-    max-width: 500px;
+    max-width: 450px;
     margin: 0rem 2rem;
     flex-direction: row;
   }
