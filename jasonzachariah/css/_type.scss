@@ -11,34 +11,30 @@
 
 a {
     text-decoration: none;
-    @extend h6;
-}
-
-.nav-item{
- font-size: 1rem;
-}
-body {
-    cursor: url('cursor.png'),auto;
-    display: block;
-    margin: 0px;
 
 }
+
+
+
 
 h1 {
 
-  
-        color: #393835;
-        font-size: 4rem;
-        font-family: $primary-font;
-        letter-spacing: 4px;
-        font-weight: 100;
-   
-        font-style: normal;
-      
-       
 
-margin: 0;
-        flex-direction: row;
+    color: #393835;
+    font-size: 4.2222222rem;
+    line-height: 5.1111111rem;
+    margin-top: 1.2777778rem;
+    margin-bottom: 2.5555556rem;
+    font-family: $primary-font;
+    letter-spacing: 4px;
+    font-weight: 100;
+
+    font-style: normal;
+
+
+
+    margin: 0;
+    flex-direction: row;
 }
 
 h2 {
@@ -52,15 +48,19 @@ h2 {
 
 
 
-    text-wrap: nowrap;
+
 
 
     color: $primary-black;
-    font-size: 3rem;
-    font-family: $secondary-font;
-    font-weight: 500;
-    font-style: normal;
+    font-size: 2.6111111rem;
+    line-height: 3.8333333rem;
+    margin-top: 1.2777778rem;
+    margin-bottom: 1.2777778rem;
   
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-style: normal;
+
     word-wrap: break-word
 }
 
@@ -71,7 +71,11 @@ h3 {
     display: flex;
     align-items: center;
     color: $primary-black;
-    font-size: 2rem;
+    font-size: 1.6111111rem;
+  line-height: 2.5555556rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 0rem;
+  
 
 
     /*font code*/
@@ -94,16 +98,22 @@ h3::after {
 
 h4 {
     color: $primary-black;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.2777778rem;
+    margin-top: 1.2777778rem;
+    margin-bottom: 0rem;
     font-family: $secondary-font;
-    font-weight: 300;
+    font-weight: 700;
     text-transform: uppercase;
     word-wrap: break-word
 }
 
 h5 {
     color: $primary-black;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.2777778rem;
+    margin-top: 1.2777778rem;
+    margin-bottom: 0rem;
     font-family: $secondary-font;
     font-weight: 700;
     text-transform: uppercase;
@@ -120,7 +130,10 @@ h6 {
 
 p {
     color: $secondary-black;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 0rem;
+    margin-bottom: 1.2777778rem;
     font-family: $primary-font;
     font-weight: 300;
     word-wrap: break-word
@@ -131,5 +144,3 @@ figcaption {
     @extend h4;
 
 }
-
-

@@ -6,7 +6,8 @@
 
 .container {
   max-width: 1240px;
-  margin:  2rem auto;
+  margin:  0rem auto;
+  padding: 0rem 2rem;
   
   flex-direction: row;
 }
@@ -14,11 +15,7 @@
 /**larger desktop**/
 @media (max-width: 1024px) {
   
-  .container {
-    max-width: 80vw;
-    margin: 2rem auto;
-    flex-direction: row;
-  }
+ 
 
 
 }
@@ -49,7 +46,7 @@
 
   .container {
     max-width: 80vw;
-    margin: 0rem 10vw;
+    margin: 0 auto;
     flex-direction: row;
   }
 

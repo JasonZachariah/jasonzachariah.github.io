@@ -40,14 +40,6 @@
   display: none;
 }
 
-.paper {
-  background-color: #E9E8E5;
-  opacity: 0.8;
-  background-image: linear-gradient(#d6d6d8 2px, transparent 2px), linear-gradient(90deg, #d6d6d8 2px, transparent 2px), linear-gradient(#d6d6d8 1px, transparent 1px), linear-gradient(90deg, #d6d6d8 1px, #efefef 1px);
-  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-}
-
 #fixed {
   display: block;
   position: absolute;
@@ -55,8 +47,11 @@
 
 .navbarcon {
   position: fixed;
+  background-color: #04AA6D;
   bottom: 15%;
   left: 50%;
+  z-index: 3;
+  text-wrap: nowrap;
 }
 
 .animate-on-scroll {
@@ -69,6 +64,10 @@
 .animate {
   transform: translate(0px, 0);
   opacity: 1;
+}
+
+section {
+  margin: 2rem 0;
 }
 
 * {
@@ -85,19 +84,12 @@ a {
   text-decoration: none;
 }
 
-.nav-item {
-  font-size: 1rem;
-}
-
-body {
-  cursor: url("cursor.png"), auto;
-  display: block;
-  margin: 0px;
-}
-
 h1 {
   color: #393835;
-  font-size: 4rem;
+  font-size: 4.2222222rem;
+  line-height: 5.1111111rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 2.5555556rem;
   font-family: "halyard-display", sans-serif;
   letter-spacing: 4px;
   font-weight: 100;
@@ -108,11 +100,13 @@ h1 {
 
 h2 {
   display: flex;
-  text-wrap: nowrap;
   color: oklch(21% 0.006 285.885);
-  font-size: 3rem;
+  font-size: 2.6111111rem;
+  line-height: 3.8333333rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 1.2777778rem;
   font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
   word-wrap: break-word;
 }
@@ -122,7 +116,10 @@ h3 {
   display: flex;
   align-items: center;
   color: oklch(21% 0.006 285.885);
-  font-size: 2rem;
+  font-size: 1.6111111rem;
+  line-height: 2.5555556rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 0rem;
   /*font code*/
   font-family: "ibm-plex-mono", sans-serif;
   font-weight: 300;
@@ -132,28 +129,34 @@ h3::after {
   content: "";
   flex: auto;
   margin-left: 2rem;
-  border-top: 1px dashed #E9E8E5;
+  border-top: 1px dashed oklch(96.7% 0.003 264.542);
 }
 
 h4, figcaption {
   color: oklch(21% 0.006 285.885);
-  font-size: 1.5rem;
-  font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  word-wrap: break-word;
-}
-
-h5 {
-  color: oklch(21% 0.006 285.885);
-  font-size: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.2777778rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 0rem;
   font-family: "ibm-plex-mono", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
 }
 
-h6, a {
+h5 {
+  color: oklch(21% 0.006 285.885);
+  font-size: 1rem;
+  line-height: 1.2777778rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 0rem;
+  font-family: "ibm-plex-mono", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+h6 {
   color: black;
   font-size: 1rem;
   font-family: "halyard-display", sans-serif;
@@ -163,7 +166,10 @@ h6, a {
 
 p {
   color: oklch(55.2% 0.016 285.938);
-  font-size: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0rem;
+  margin-bottom: 1.2777778rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
@@ -188,19 +194,12 @@ a {
   text-decoration: none;
 }
 
-.nav-item {
-  font-size: 1rem;
-}
-
-body {
-  cursor: url("cursor.png"), auto;
-  display: block;
-  margin: 0px;
-}
-
 h1 {
   color: #393835;
-  font-size: 4rem;
+  font-size: 4.2222222rem;
+  line-height: 5.1111111rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 2.5555556rem;
   font-family: "halyard-display", sans-serif;
   letter-spacing: 4px;
   font-weight: 100;
@@ -211,11 +210,13 @@ h1 {
 
 h2 {
   display: flex;
-  text-wrap: nowrap;
   color: oklch(21% 0.006 285.885);
-  font-size: 3rem;
+  font-size: 2.6111111rem;
+  line-height: 3.8333333rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 1.2777778rem;
   font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
   word-wrap: break-word;
 }
@@ -225,7 +226,10 @@ h3 {
   display: flex;
   align-items: center;
   color: oklch(21% 0.006 285.885);
-  font-size: 2rem;
+  font-size: 1.6111111rem;
+  line-height: 2.5555556rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 0rem;
   /*font code*/
   font-family: "ibm-plex-mono", sans-serif;
   font-weight: 300;
@@ -235,28 +239,34 @@ h3::after {
   content: "";
   flex: auto;
   margin-left: 2rem;
-  border-top: 1px dashed #E9E8E5;
+  border-top: 1px dashed oklch(96.7% 0.003 264.542);
 }
 
 h4, figcaption {
   color: oklch(21% 0.006 285.885);
-  font-size: 1.5rem;
-  font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  word-wrap: break-word;
-}
-
-h5 {
-  color: oklch(21% 0.006 285.885);
-  font-size: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.2777778rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 0rem;
   font-family: "ibm-plex-mono", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
 }
 
-h6, a {
+h5 {
+  color: oklch(21% 0.006 285.885);
+  font-size: 1rem;
+  line-height: 1.2777778rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 0rem;
+  font-family: "ibm-plex-mono", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+h6 {
   color: black;
   font-size: 1rem;
   font-family: "halyard-display", sans-serif;
@@ -266,7 +276,10 @@ h6, a {
 
 p {
   color: oklch(55.2% 0.016 285.938);
-  font-size: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0rem;
+  margin-bottom: 1.2777778rem;
   font-family: "halyard-display", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
@@ -278,18 +291,12 @@ figcaption {
 
 .container {
   max-width: 1240px;
-  margin: 2rem auto;
+  margin: 0rem auto;
+  padding: 0rem 2rem;
   flex-direction: row;
 }
 
 /**larger desktop**/
-@media (max-width: 1024px) {
-  .container {
-    max-width: 80vw;
-    margin: 2rem auto;
-    flex-direction: row;
-  }
-}
 /** m size**/
 @media (max-width: 768px) {
   html {
@@ -311,7 +318,7 @@ figcaption {
 @media (max-width: 576px) {
   .container {
     max-width: 80vw;
-    margin: 0rem 10vw;
+    margin: 0 auto;
     flex-direction: row;
   }
 }
