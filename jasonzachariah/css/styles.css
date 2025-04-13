@@ -40,6 +40,13 @@
   display: none;
 }
 
+.stripes {
+  border: solid 2px #a7a6a6;
+  mix-blend-mode: multiply;
+  background-color: rgba(242, 242, 242, 0);
+  background: repeating-linear-gradient(-45deg, #cbcbcb, #cbcbcb 2px, oklch(96.7% 0.003 264.542) 2px, oklch(96.7% 0.003 264.542) 10px);
+}
+
 #fixed {
   display: block;
   position: absolute;

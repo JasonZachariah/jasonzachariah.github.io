@@ -27,8 +27,12 @@
   display: none;
 }
 
-.paper {
-    
+.stripes {
+  border: solid 2px  #a7a6a6;
+  mix-blend-mode: multiply; 
+  background-color: #f2f2f200;
+
+  background: repeating-linear-gradient( -45deg, #cbcbcb, #cbcbcb 2px, $primary-white 2px, $primary-white 10px );
 }
 
 #fixed {
