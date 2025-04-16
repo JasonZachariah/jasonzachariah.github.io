@@ -26,7 +26,7 @@ h1 {
     line-height: 5.1111111rem;
     margin-top: 1.2777778rem;
     margin-bottom: 2.5555556rem;
-    font-family: $primary-font;
+    font-family: $secondary-font;
     letter-spacing: 4px;
     font-weight: 100;
 
@@ -98,7 +98,11 @@ h3::after {
 }
 
 h4 {
-    color: $primary-black;
+    color: $primary-white;
+    background-color: $primary-black;
+    padding: 0.25rem 1rem;
+    display: inline;
+    
     font-size: 1rem;
     line-height: 1.2777778rem;
     margin-top: 1.2777778rem;
@@ -124,8 +128,11 @@ h5 {
 h6 {
     color: black;
     font-size: 1rem;
-    font-family: $primary-font;
-    font-weight: 400;
+    border: 1px solid $secondary-black;
+    padding: 0.25rem 1rem;
+    display: inline;
+    font-family: $secondary-font;
+    font-weight: 200;
     word-wrap: break-word
 }
 

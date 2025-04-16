@@ -1,9 +1,10 @@
 .topnav {
   overflow: hidden;
-  background-color: #333;
+
 }
 
 .topnav a {
+  @extend h5;
   float: left;
   display: block;
   color: #f2f2f2;
@@ -19,7 +20,7 @@
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: $accent;
   color: white;
 }
 
@@ -27,12 +28,19 @@
   display: none;
 }
 
+
 .stripes {
   border: solid 2px  #a7a6a6;
   mix-blend-mode: multiply; 
   background-color: #f2f2f200;
 
   background: repeating-linear-gradient( -45deg, #cbcbcb, #cbcbcb 2px, $primary-white 2px, $primary-white 10px );
+}
+
+.greyborder{
+  margin: 2px;
+outline: 2px solid  #a7a6a6;
+  
 }
 
 #fixed {
