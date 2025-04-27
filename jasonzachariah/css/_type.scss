@@ -5,6 +5,7 @@
     margin-top: 0;
     scroll-behavior: smooth;
     hyphens: auto;
+    color: rgb(229, 231, 235);
 }
 
 
@@ -22,12 +23,12 @@ h1 {
 
     color: #393835;
     
-    font-size: 4.2222222rem;
-    line-height: 5.1111111rem;
+    font-size: 4.2222222rem*2;
+    line-height: 5.1111111rem*2;
     margin-top: 1.2777778rem;
     margin-bottom: 2.5555556rem;
     font-family: $secondary-font;
-    letter-spacing: 4px;
+    letter-spacing: -1px;
     font-weight: 100;
 
     font-style: normal;
@@ -143,7 +144,7 @@ p {
     margin-top: 0rem;
     margin-bottom: 1.2777778rem;
     font-family: $primary-font;
-    font-weight: 300;
+    font-weight: 500;
     word-wrap: break-word
 }
 

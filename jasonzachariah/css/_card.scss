@@ -49,10 +49,7 @@ outline: 2px solid  #a7a6a6;
 }
 
 .navbarcon {
-  position: fixed;
-background-color: #04AA6D;
-  bottom: 15%;
-  left: 50%;
+
   z-index: 3;
   text-wrap: nowrap;
 
@@ -82,4 +79,8 @@ background-color: #04AA6D;
 section{
 
   margin: 2rem 0;
+}
+
+.colorbg{
+  background-color: $accent2;
 }

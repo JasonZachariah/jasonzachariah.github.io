@@ -31,7 +31,7 @@
 }
 
 .topnav a.active {
-  background-color: oklch(76.8% 0.233 130.85);
+  background-color: #ea580c;
   color: white;
 }
 
@@ -43,7 +43,7 @@
   border: solid 2px #a7a6a6;
   mix-blend-mode: multiply;
   background-color: rgba(242, 242, 242, 0);
-  background: repeating-linear-gradient(-45deg, #cbcbcb, #cbcbcb 2px, oklch(96.7% 0.003 264.542) 2px, oklch(96.7% 0.003 264.542) 10px);
+  background: repeating-linear-gradient(-45deg, #cbcbcb, #cbcbcb 2px, rgb(229, 231, 235) 2px, rgb(229, 231, 235) 10px);
 }
 
 .greyborder {
@@ -57,10 +57,6 @@
 }
 
 .navbarcon {
-  position: fixed;
-  background-color: #04AA6D;
-  bottom: 15%;
-  left: 50%;
   z-index: 3;
   text-wrap: nowrap;
 }
@@ -81,6 +77,10 @@ section {
   margin: 2rem 0;
 }
 
+.colorbg {
+  background-color: #f97316;
+}
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -89,6 +89,7 @@ section {
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
           hyphens: auto;
+  color: rgb(229, 231, 235);
 }
 
 a {
@@ -97,12 +98,12 @@ a {
 
 h1 {
   color: #393835;
-  font-size: 4.2222222rem;
-  line-height: 5.1111111rem;
+  font-size: 8.4444444rem;
+  line-height: 10.2222222rem;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
   font-family: "ibm-plex-mono", sans-serif;
-  letter-spacing: 4px;
+  letter-spacing: -1px;
   font-weight: 100;
   font-style: normal;
   margin: 0;
@@ -140,11 +141,11 @@ h3::after {
   content: "";
   flex: auto;
   margin-left: 2rem;
-  border-top: 1px dashed oklch(96.7% 0.003 264.542);
+  border-top: 1px dashed rgb(229, 231, 235);
 }
 
 h4, figcaption {
-  color: oklch(96.7% 0.003 264.542);
+  color: rgb(229, 231, 235);
   background-color: oklch(21% 0.006 285.885);
   padding: 0.25rem 1rem;
   display: inline;
@@ -187,8 +188,8 @@ p {
   line-height: 1.5rem;
   margin-top: 0rem;
   margin-bottom: 1.2777778rem;
-  font-family: "helvetica-lt-pro", sans-serif;
-  font-weight: 300;
+  font-family: "aktiv-grotesk", sans-serif;
+  font-weight: 500;
   word-wrap: break-word;
 }
 
@@ -205,6 +206,7 @@ figcaption {
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
           hyphens: auto;
+  color: rgb(229, 231, 235);
 }
 
 a {
@@ -213,12 +215,12 @@ a {
 
 h1 {
   color: #393835;
-  font-size: 4.2222222rem;
-  line-height: 5.1111111rem;
+  font-size: 8.4444444rem;
+  line-height: 10.2222222rem;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
   font-family: "ibm-plex-mono", sans-serif;
-  letter-spacing: 4px;
+  letter-spacing: -1px;
   font-weight: 100;
   font-style: normal;
   margin: 0;
@@ -256,11 +258,11 @@ h3::after {
   content: "";
   flex: auto;
   margin-left: 2rem;
-  border-top: 1px dashed oklch(96.7% 0.003 264.542);
+  border-top: 1px dashed rgb(229, 231, 235);
 }
 
 h4, figcaption {
-  color: oklch(96.7% 0.003 264.542);
+  color: rgb(229, 231, 235);
   background-color: oklch(21% 0.006 285.885);
   padding: 0.25rem 1rem;
   display: inline;
@@ -303,8 +305,8 @@ p {
   line-height: 1.5rem;
   margin-top: 0rem;
   margin-bottom: 1.2777778rem;
-  font-family: "helvetica-lt-pro", sans-serif;
-  font-weight: 300;
+  font-family: "aktiv-grotesk", sans-serif;
+  font-weight: 500;
   word-wrap: break-word;
 }
 
