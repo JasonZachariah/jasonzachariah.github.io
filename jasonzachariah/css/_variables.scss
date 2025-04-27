@@ -2,12 +2,12 @@
 
 $primary-font: "aktiv-grotesk", sans-serif;
 $secondary-font:"ibm-plex-mono", sans-serif;
-$primary-black:oklch(21% 0.006 285.885);
+$primary-black:#1C1515;
 $secondary-black:oklch(55.2% 0.016 285.938);
 $primary-white:rgb(229, 231, 235);
-$accent:#ea580c;
-$accent2:#f97316;
 
+$accent: #89f336;
+$accent2:#556AE1;
 ::-moz-selection { /* Code for Firefox */
 
   background: $secondary-black;

@@ -1,5 +1,5 @@
 /* file import */
-@import 'animate.css';
+
 @import url("https://use.typekit.net/qvu8qst.css");
 ::-moz-selection { /* Code for Firefox */
   background: oklch(55.2% 0.016 285.938);
@@ -31,7 +31,7 @@
 }
 
 .topnav a.active {
-  background-color: #ea580c;
+  background-color: #89f336;
   color: white;
 }
 
@@ -78,7 +78,7 @@ section {
 }
 
 .colorbg {
-  background-color: #f97316;
+  background-color: #89f336;
 }
 
 * {
@@ -94,17 +94,20 @@ section {
 
 a {
   text-decoration: none;
+  font-family: "ibm-plex-mono", sans-serif;
+  font-weight: 700;
+  color: #1C1515;
 }
 
 h1 {
-  color: #393835;
-  font-size: 8.4444444rem;
-  line-height: 10.2222222rem;
+  color: #1C1515;
+  font-size: 9vw;
+  line-height: 8.5vw;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
   font-family: "ibm-plex-mono", sans-serif;
   letter-spacing: -1px;
-  font-weight: 100;
+  font-weight: 700;
   font-style: normal;
   margin: 0;
   flex-direction: row;
@@ -112,7 +115,7 @@ h1 {
 
 h2 {
   display: flex;
-  color: oklch(21% 0.006 285.885);
+  color: #1C1515;
   font-size: 2.6111111rem;
   line-height: 3.8333333rem;
   margin-top: 1.2777778rem;
@@ -127,7 +130,7 @@ h3 {
   margin-top: 0;
   display: flex;
   align-items: center;
-  color: oklch(21% 0.006 285.885);
+  color: #1C1515;
   font-size: 1.6111111rem;
   line-height: 2.5555556rem;
   margin-top: 1.2777778rem;
@@ -146,7 +149,7 @@ h3::after {
 
 h4, figcaption {
   color: rgb(229, 231, 235);
-  background-color: oklch(21% 0.006 285.885);
+  background-color: #1C1515;
   padding: 0.25rem 1rem;
   display: inline;
   font-size: 1rem;
@@ -160,7 +163,7 @@ h4, figcaption {
 }
 
 h5, .topnav a {
-  color: oklch(21% 0.006 285.885);
+  color: #1C1515;
   font-size: 1rem;
   line-height: 1.2777778rem;
   margin-top: 1.2777778rem;
@@ -211,17 +214,20 @@ figcaption {
 
 a {
   text-decoration: none;
+  font-family: "ibm-plex-mono", sans-serif;
+  font-weight: 700;
+  color: #1C1515;
 }
 
 h1 {
-  color: #393835;
-  font-size: 8.4444444rem;
-  line-height: 10.2222222rem;
+  color: #1C1515;
+  font-size: 9vw;
+  line-height: 8.5vw;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
   font-family: "ibm-plex-mono", sans-serif;
   letter-spacing: -1px;
-  font-weight: 100;
+  font-weight: 700;
   font-style: normal;
   margin: 0;
   flex-direction: row;
@@ -229,7 +235,7 @@ h1 {
 
 h2 {
   display: flex;
-  color: oklch(21% 0.006 285.885);
+  color: #1C1515;
   font-size: 2.6111111rem;
   line-height: 3.8333333rem;
   margin-top: 1.2777778rem;
@@ -244,7 +250,7 @@ h3 {
   margin-top: 0;
   display: flex;
   align-items: center;
-  color: oklch(21% 0.006 285.885);
+  color: #1C1515;
   font-size: 1.6111111rem;
   line-height: 2.5555556rem;
   margin-top: 1.2777778rem;
@@ -263,7 +269,7 @@ h3::after {
 
 h4, figcaption {
   color: rgb(229, 231, 235);
-  background-color: oklch(21% 0.006 285.885);
+  background-color: #1C1515;
   padding: 0.25rem 1rem;
   display: inline;
   font-size: 1rem;
@@ -277,7 +283,7 @@ h4, figcaption {
 }
 
 h5, .topnav a {
-  color: oklch(21% 0.006 285.885);
+  color: #1C1515;
   font-size: 1rem;
   line-height: 1.2777778rem;
   margin-top: 1.2777778rem;

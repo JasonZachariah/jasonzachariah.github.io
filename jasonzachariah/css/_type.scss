@@ -12,7 +12,9 @@
 
 a {
     text-decoration: none;
-
+font-family: $secondary-font;
+font-weight: 700;
+color: $primary-black;
 }
 
 
@@ -21,15 +23,15 @@ a {
 h1 {
 
 
-    color: #393835;
+    color:$primary-black;
     
-    font-size: 4.2222222rem*2;
-    line-height: 5.1111111rem*2;
+    font-size: 9vw;
+    line-height: 8.5vw;
     margin-top: 1.2777778rem;
     margin-bottom: 2.5555556rem;
     font-family: $secondary-font;
     letter-spacing: -1px;
-    font-weight: 100;
+    font-weight: 700;
 
     font-style: normal;
 
