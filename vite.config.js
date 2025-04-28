@@ -5,7 +5,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',       //
-        project1: 'octobud.html'      
+
+        //project pages
+        project1: 'octobud.html',
+        project2: 'fitfam.html',
+        project3: 'handbook.html'
       }
     }
   }
