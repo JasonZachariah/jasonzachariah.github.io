@@ -82,6 +82,7 @@ section {
 
 .line {
   stroke-width: 0.2rem;
+  background-color: black;
 }
 
 * {
