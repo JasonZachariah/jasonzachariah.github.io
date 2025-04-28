@@ -1,5 +1,4 @@
 /* file import */
-
 @import url("https://use.typekit.net/qvu8qst.css");
 ::-moz-selection { /* Code for Firefox */
   background: oklch(55.2% 0.016 285.938);
@@ -79,6 +78,10 @@ section {
 
 .colorbg {
   background-color: #89f336;
+}
+
+.line {
+  stroke-width: 3px;
 }
 
 * {

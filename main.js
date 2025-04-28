@@ -1,4 +1,9 @@
-import { animate } from 'animejs';
+import { animate, svg, stagger } from 'animejs';
 
-//logo animation
-animate('#logo', { rotate: '5turn', });
+animate(svg.createDrawable('.line'), {
+  draw: ['0 1'],
+  ease: 'inOutQuad',
+  duration: 2000,
+  delay: stagger(100),
+  
+});
