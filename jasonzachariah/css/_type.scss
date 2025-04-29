@@ -5,16 +5,16 @@
     margin-top: 0;
     scroll-behavior: smooth;
     hyphens: auto;
-    color: rgb(229, 231, 235);
+
 }
 
 
 
 a {
     text-decoration: none;
-font-family: $secondary-font;
-font-weight: 700;
-color: $primary-black;
+    font-family: $secondary-font;
+    font-weight: 700;
+    color: $primary-black;
 }
 
 
@@ -23,8 +23,8 @@ color: $primary-black;
 h1 {
 
 
-    color:$primary-black;
-    
+    color: $primary-black;
+
     font-size: 9vw;
     line-height: 8.5vw;
     margin-top: 1.2777778rem;
@@ -60,9 +60,9 @@ h2 {
     line-height: 3.8333333rem;
     margin-top: 1.2777778rem;
     margin-bottom: 1.2777778rem;
-  
+
     font-family: $secondary-font;
-    font-weight: 700;
+    font-weight: 800;
     font-style: normal;
 
     word-wrap: break-word
@@ -76,10 +76,10 @@ h3 {
     align-items: center;
     color: $primary-black;
     font-size: 1.6111111rem;
-  line-height: 2.5555556rem;
-  margin-top: 1.2777778rem;
-  margin-bottom: 0rem;
-  
+    line-height: 2.5555556rem;
+    margin-top: 1.2777778rem;
+    margin-bottom: 0rem;
+
 
 
     /*font code*/
@@ -92,20 +92,15 @@ h3 {
 
 }
 
-h3::after {
-    content: '';
-    flex: auto;
-    margin-left: 2rem;
-    border-top: 1px dashed $primary-white;
 
-}
+
 
 h4 {
     color: $primary-white;
     background-color: $primary-black;
     padding: 0.25rem 1rem;
     display: inline;
-    
+
     font-size: 1rem;
     line-height: 1.2777778rem;
     margin-top: 1.2777778rem;
