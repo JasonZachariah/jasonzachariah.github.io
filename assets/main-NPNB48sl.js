@@ -1,4 +1,4 @@
-import"./output-5PY6sRfC.js";/**
+import"./output-gf-tthi3.js";/**
  * anime.js - ESM
  * @version v4.0.2
  * @author Julian Garnier
