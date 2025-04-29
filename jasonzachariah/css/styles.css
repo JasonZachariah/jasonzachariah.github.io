@@ -299,9 +299,9 @@ figcaption {
 }
 
 .container {
-  margin: 0rem 4rem;
-  padding: 0rem 0rem;
-  flex-direction: row;
+  max-width: 100vw;
+  margin: 0rem;
+  padding: 0rem 2rem;
 }
 
 /**larger desktop**/
@@ -310,44 +310,10 @@ figcaption {
   html {
     font-size: 14px;
   }
-  .container {
-    margin: 0rem auto;
-  }
-  .topnav a:not(:first-child) {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
 }
 /** s size **/
-@media screen and (max-width: 768px) {
-  .topnav a:not(:first-child) {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-@media screen and (max-width: 768px) {
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
 @media (max-width: 576px) {
-  .container {
-    margin: 0 2rem;
+  html {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=styles.css.map */
