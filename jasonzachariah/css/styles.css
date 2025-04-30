@@ -36,7 +36,6 @@
 }
 
 .greyborder {
-  margin: 2px;
   outline: 2px solid #a7a6a6;
 }
 
@@ -84,7 +83,6 @@ section {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 0;
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
           hyphens: auto;
@@ -99,8 +97,8 @@ a {
 
 h1 {
   color: #1C1515;
-  font-size: 9vw;
-  line-height: 8.5vw;
+  font-size: 13.5vw;
+  line-height: 12.75vw;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
   font-family: "ibm-plex-mono", sans-serif;
@@ -114,7 +112,7 @@ h1 {
 h2 {
   display: flex;
   color: #1C1515;
-  font-size: 2.6111111rem;
+  font-size: 3.263888875rem;
   line-height: 3.8333333rem;
   margin-top: 1.2777778rem;
   margin-bottom: 1.2777778rem;
@@ -196,7 +194,6 @@ figcaption {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 0;
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
           hyphens: auto;
@@ -211,8 +208,8 @@ a {
 
 h1 {
   color: #1C1515;
-  font-size: 9vw;
-  line-height: 8.5vw;
+  font-size: 13.5vw;
+  line-height: 12.75vw;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
   font-family: "ibm-plex-mono", sans-serif;
@@ -226,7 +223,7 @@ h1 {
 h2 {
   display: flex;
   color: #1C1515;
-  font-size: 2.6111111rem;
+  font-size: 3.263888875rem;
   line-height: 3.8333333rem;
   margin-top: 1.2777778rem;
   margin-bottom: 1.2777778rem;
@@ -306,7 +303,7 @@ figcaption {
 .container {
   max-width: 100vw;
   margin: 0rem;
-  padding: 0rem 2rem;
+  padding: 0rem 8rem;
 }
 
 /**larger desktop**/
@@ -321,7 +318,8 @@ figcaption {
   html {
     font-size: 12px;
   }
-  container {
+  .container {
     overflow-x: hidden;
+    padding: 0rem 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */
