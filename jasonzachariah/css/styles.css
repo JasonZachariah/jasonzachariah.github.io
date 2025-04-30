@@ -83,6 +83,7 @@ section {
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
           hyphens: auto;
+  overflow-x: hidden;
 }
 
 a {
@@ -195,6 +196,7 @@ figcaption {
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
           hyphens: auto;
+  overflow-x: hidden;
 }
 
 a {
