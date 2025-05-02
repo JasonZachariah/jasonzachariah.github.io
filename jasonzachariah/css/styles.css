@@ -74,9 +74,21 @@ section {
   background-color: black;
 }
 
-.coverimg {
-  aspect-ratio: 1/1;
-  max-width: 300px;
+.parent {
+  background-color: lightgrey;
+}
+
+.child {
+  aspect-ratio: 3/2;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.parent:hover .child {
+  background-color: green;
+  width: 150%;
+  transition: 0.3s;
 }
 
 * {
@@ -97,8 +109,8 @@ a {
 
 h1 {
   color: #1C1515;
-  font-size: 13.5vw;
-  line-height: 12.75vw;
+  font-size: 7.5rem;
+  line-height: 6.75rem;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
   font-family: "ibm-plex-mono", sans-serif;
@@ -106,7 +118,6 @@ h1 {
   font-weight: 700;
   font-style: normal;
   margin: 0;
-  flex-direction: row;
 }
 
 h2 {
@@ -140,7 +151,7 @@ h4, figcaption {
   color: rgb(229, 231, 235);
   background-color: #1C1515;
   padding: 0.25rem 1rem;
-  display: inline;
+  display: inline-block;
   font-size: 1rem;
   line-height: 1.2777778rem;
   margin-top: 1.2777778rem;
@@ -148,7 +159,6 @@ h4, figcaption {
   font-family: "ibm-plex-mono", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  word-wrap: break-word;
 }
 
 h5, .topnav a {
@@ -208,8 +218,8 @@ a {
 
 h1 {
   color: #1C1515;
-  font-size: 13.5vw;
-  line-height: 12.75vw;
+  font-size: 7.5rem;
+  line-height: 6.75rem;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
   font-family: "ibm-plex-mono", sans-serif;
@@ -217,7 +227,6 @@ h1 {
   font-weight: 700;
   font-style: normal;
   margin: 0;
-  flex-direction: row;
 }
 
 h2 {
@@ -251,7 +260,7 @@ h4, figcaption {
   color: rgb(229, 231, 235);
   background-color: #1C1515;
   padding: 0.25rem 1rem;
-  display: inline;
+  display: inline-block;
   font-size: 1rem;
   line-height: 1.2777778rem;
   margin-top: 1.2777778rem;
@@ -259,7 +268,6 @@ h4, figcaption {
   font-family: "ibm-plex-mono", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  word-wrap: break-word;
 }
 
 h5, .topnav a {
@@ -312,6 +320,9 @@ figcaption {
   html {
     font-size: 14px;
   }
+  h1 {
+    font-size: 3rem;
+  }
 }
 /** s size **/
 @media (max-width: 576px) {
@@ -319,7 +330,6 @@ figcaption {
     font-size: 12px;
   }
   .container {
-    overflow-x: hidden;
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
   }
 }/*# sourceMappingURL=styles.css.map */

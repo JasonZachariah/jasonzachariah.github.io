@@ -1,4 +1,5 @@
 import { animate, svg, stagger } from 'animejs';
+import { gsap } from "gsap";
 
 animate(svg.createDrawable('.line'), {
   draw: ['0.5 2'],
