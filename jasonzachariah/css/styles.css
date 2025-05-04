@@ -1,4 +1,5 @@
 /* file import */
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap");
 @import url("https://use.typekit.net/qvu8qst.css");
 .topnav {
   overflow: hidden;
@@ -32,11 +33,11 @@
   border: solid 2px #a7a6a6;
   mix-blend-mode: multiply;
   background-color: rgba(242, 242, 242, 0);
-  background: repeating-linear-gradient(-45deg, #cbcbcb, #cbcbcb 2px, rgb(229, 231, 235) 2px, rgb(229, 231, 235) 10px);
+  background: repeating-linear-gradient(-45deg, #cbcbcb, #cbcbcb 2px, #F2F2F2 2px, #F2F2F2 10px);
 }
 
 .greyborder {
-  outline: 2px solid #a7a6a6;
+  outline: 2px solid #C9C9C9;
 }
 
 #fixed {
@@ -66,28 +67,25 @@ section {
 }
 
 .colorbg {
-  background-color: #89f336;
+  background-color: #C9C9C9;
 }
 
 .line {
   stroke-width: 0.2rem;
-  background-color: black;
-}
-
-.parent {
-  background-color: lightgrey;
+  background-color: #0F0F0F;
 }
 
 .child {
+  width: 20rem;
+}
+
+.covermask {
   aspect-ratio: 3/2;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  overflow: hidden;
 }
 
 .parent:hover .child {
-  background-color: green;
-  width: 150%;
+  width: 30rem;
   transition: 0.3s;
 }
 
@@ -98,36 +96,38 @@ section {
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
           hyphens: auto;
+  transition: 0.3s;
 }
 
 a {
   text-decoration: none;
-  font-family: "ibm-plex-mono", sans-serif;
+  font-family: "Geist Mono", monospace;
   font-weight: 700;
-  color: #1C1515;
+  color: #0F0F0F;
 }
 
 h1 {
-  color: #1C1515;
+  color: #0F0F0F;
   font-size: 7.5rem;
   line-height: 6.75rem;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
-  font-family: "ibm-plex-mono", sans-serif;
-  letter-spacing: -1px;
-  font-weight: 700;
+  font-family: "Geist", sans-serif;
+  letter-spacing: -4px;
+  font-weight: 600;
   font-style: normal;
   margin: 0;
 }
 
 h2 {
   display: flex;
-  color: #1C1515;
-  font-size: 3.263888875rem;
+  color: #0F0F0F;
+  font-size: 3.91666665rem;
   line-height: 3.8333333rem;
   margin-top: 1.2777778rem;
   margin-bottom: 1.2777778rem;
-  font-family: "ibm-plex-mono", sans-serif;
+  letter-spacing: -2px;
+  font-family: "Geist Mono", monospace;
   font-weight: 500;
   font-style: normal;
   word-wrap: break-word;
@@ -137,60 +137,39 @@ h3 {
   margin-top: 0;
   display: flex;
   align-items: center;
-  color: #1C1515;
+  color: #0F0F0F;
   font-size: 1.6111111rem;
   line-height: 2.5555556rem;
   margin-top: 1.2777778rem;
   margin-bottom: 0rem;
+  letter-spacing: -1px;
   /*font code*/
-  font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 300;
+  font-family: "Geist", sans-serif;
+  font-weight: 500;
 }
 
-h4, figcaption {
-  color: rgb(229, 231, 235);
-  background-color: #1C1515;
+h4, figcaption, .topnav a {
+  color: #F2F2F2;
+  background-color: #0F0F0F;
   padding: 0.25rem 1rem;
   display: inline-block;
   font-size: 1rem;
   line-height: 1.2777778rem;
   margin-top: 1.2777778rem;
   margin-bottom: 0rem;
-  font-family: "ibm-plex-mono", sans-serif;
+  font-family: "Geist Mono", monospace;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-h5, .topnav a {
-  color: #1C1515;
-  font-size: 1rem;
-  line-height: 1.2777778rem;
-  margin-top: 1.2777778rem;
-  margin-bottom: 0rem;
-  font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  word-wrap: break-word;
-}
-
-h6 {
-  color: black;
-  font-size: 1rem;
-  border: 1px solid oklch(55.2% 0.016 285.938);
-  padding: 0.25rem 1rem;
-  display: inline;
-  font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 200;
-  word-wrap: break-word;
-}
-
 p {
+  letter-spacing: -0.5px;
   color: oklch(55.2% 0.016 285.938);
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.2777778rem;
   margin-top: 0rem;
   margin-bottom: 1.2777778rem;
-  font-family: "ibm-plex-sans", sans-serif;
+  font-family: "Geist", sans-serif;
   font-weight: 500;
   word-wrap: break-word;
 }
@@ -207,36 +186,38 @@ figcaption {
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
           hyphens: auto;
+  transition: 0.3s;
 }
 
 a {
   text-decoration: none;
-  font-family: "ibm-plex-mono", sans-serif;
+  font-family: "Geist Mono", monospace;
   font-weight: 700;
-  color: #1C1515;
+  color: #0F0F0F;
 }
 
 h1 {
-  color: #1C1515;
+  color: #0F0F0F;
   font-size: 7.5rem;
   line-height: 6.75rem;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
-  font-family: "ibm-plex-mono", sans-serif;
-  letter-spacing: -1px;
-  font-weight: 700;
+  font-family: "Geist", sans-serif;
+  letter-spacing: -4px;
+  font-weight: 600;
   font-style: normal;
   margin: 0;
 }
 
 h2 {
   display: flex;
-  color: #1C1515;
-  font-size: 3.263888875rem;
+  color: #0F0F0F;
+  font-size: 3.91666665rem;
   line-height: 3.8333333rem;
   margin-top: 1.2777778rem;
   margin-bottom: 1.2777778rem;
-  font-family: "ibm-plex-mono", sans-serif;
+  letter-spacing: -2px;
+  font-family: "Geist Mono", monospace;
   font-weight: 500;
   font-style: normal;
   word-wrap: break-word;
@@ -246,60 +227,39 @@ h3 {
   margin-top: 0;
   display: flex;
   align-items: center;
-  color: #1C1515;
+  color: #0F0F0F;
   font-size: 1.6111111rem;
   line-height: 2.5555556rem;
   margin-top: 1.2777778rem;
   margin-bottom: 0rem;
+  letter-spacing: -1px;
   /*font code*/
-  font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 300;
+  font-family: "Geist", sans-serif;
+  font-weight: 500;
 }
 
-h4, figcaption {
-  color: rgb(229, 231, 235);
-  background-color: #1C1515;
+h4, .topnav a, figcaption {
+  color: #F2F2F2;
+  background-color: #0F0F0F;
   padding: 0.25rem 1rem;
   display: inline-block;
   font-size: 1rem;
   line-height: 1.2777778rem;
   margin-top: 1.2777778rem;
   margin-bottom: 0rem;
-  font-family: "ibm-plex-mono", sans-serif;
+  font-family: "Geist Mono", monospace;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-h5, .topnav a {
-  color: #1C1515;
-  font-size: 1rem;
-  line-height: 1.2777778rem;
-  margin-top: 1.2777778rem;
-  margin-bottom: 0rem;
-  font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  word-wrap: break-word;
-}
-
-h6 {
-  color: black;
-  font-size: 1rem;
-  border: 1px solid oklch(55.2% 0.016 285.938);
-  padding: 0.25rem 1rem;
-  display: inline;
-  font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 200;
-  word-wrap: break-word;
-}
-
 p {
+  letter-spacing: -0.5px;
   color: oklch(55.2% 0.016 285.938);
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.2777778rem;
   margin-top: 0rem;
   margin-bottom: 1.2777778rem;
-  font-family: "ibm-plex-sans", sans-serif;
+  font-family: "Geist", sans-serif;
   font-weight: 500;
   word-wrap: break-word;
 }

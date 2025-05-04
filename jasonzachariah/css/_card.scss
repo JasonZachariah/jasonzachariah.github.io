@@ -4,7 +4,7 @@
 }
 
 .topnav a {
-  @extend h5;
+  @extend h4;
   float: left;
   display: block;
   color: #f2f2f2;
@@ -39,7 +39,7 @@
 
 .greyborder{
   
-outline: 2px solid  #a7a6a6;
+outline: 2px solid  $accent2;
   
 }
 
@@ -82,31 +82,36 @@ section{
 }
 
 .colorbg{
-  background-color: $accent;
+  background-color: $accent2;
 }
 
 .line{
   stroke-width: 0.2rem;
-  background-color: black;
+  background-color: $primary-black;
 
 }
 
 .parent {
- 
-  background-color: lightgrey;
+
 }
 
 .child {
-aspect-ratio: 3/2;
-width: 100%;
-object-fit: contain;
+  
 
+width: 20rem
+
+
+}
+
+.covermask{
+  aspect-ratio: 3/2;
+
+  overflow: hidden;
  
 }
 
-
 .parent:hover .child {
-  background-color: green;
-  width: 150%;
+
+  width: 30rem;
 transition: 0.3s;
 }

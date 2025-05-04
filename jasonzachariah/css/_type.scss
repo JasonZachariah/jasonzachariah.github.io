@@ -5,7 +5,7 @@
  
     scroll-behavior: smooth;
     hyphens: auto;
-   
+   transition: 0.3s;
 
 }
 
@@ -30,9 +30,9 @@ h1 {
     line-height: 4.5rem*1.5;
     margin-top: 1.2777778rem;
     margin-bottom: 2.5555556rem;
-    font-family: $secondary-font;
-    letter-spacing: -1px;
-    font-weight: 700;
+    font-family: $primary-font;
+    letter-spacing: -4px;
+    font-weight: 600;
 
     font-style: normal;
 
@@ -57,10 +57,11 @@ h2 {
 
 
     color: $primary-black;
-    font-size: 2.6111111rem*1.25;
+    font-size: 2.6111111rem*1.5;
     line-height: 3.8333333rem;
     margin-top: 1.2777778rem;
     margin-bottom: 1.2777778rem;
+    letter-spacing:-2px;
 
     font-family: $secondary-font;
     font-weight: 500;
@@ -77,15 +78,14 @@ h3 {
     align-items: center;
     color: $primary-black;
     font-size: 1.6111111rem;
-    line-height: 2.5555556rem;
-    margin-top: 1.2777778rem;
-    margin-bottom: 0rem;
+  line-height: 2.5555556rem;
+  margin-top: 1.2777778rem;
+  margin-bottom: 0rem;
 
-
-
+  letter-spacing:-1px;
     /*font code*/
-    font-family: $secondary-font;
-    font-weight: 300;
+    font-family: $primary-font;
+    font-weight: 500;
 
 
 
@@ -111,35 +111,17 @@ h4 {
     
 }
 
-h5 {
-    color: $primary-black;
-    font-size: 1rem;
-    line-height: 1.2777778rem;
-    margin-top: 1.2777778rem;
-    margin-bottom: 0rem;
-    font-family: $secondary-font;
-    font-weight: 700;
-    text-transform: uppercase;
-    word-wrap: break-word
-}
 
-h6 {
-    color: black;
-    font-size: 1rem;
-    border: 1px solid $secondary-black;
-    padding: 0.25rem 1rem;
-    display: inline;
-    font-family: $secondary-font;
-    font-weight: 200;
-    word-wrap: break-word
-}
+
+
 
 p {
+    letter-spacing: -0.5px;
     color: $secondary-black;
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.2777778rem;
     margin-top: 0rem;
-    margin-bottom: 1.2777778rem;
+  margin-bottom: 1.2777778rem;
     font-family: $primary-font;
     font-weight: 500;
     word-wrap: break-word
