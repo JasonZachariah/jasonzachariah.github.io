@@ -96,7 +96,6 @@ section {
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
           hyphens: auto;
-  transition: 0.3s;
 }
 
 a {
@@ -186,7 +185,6 @@ figcaption {
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
           hyphens: auto;
-  transition: 0.3s;
 }
 
 a {
@@ -286,9 +284,6 @@ figcaption {
 }
 /** s size **/
 @media (max-width: 576px) {
-  html {
-    font-size: 12px;
-  }
   .container {
     padding: 0rem 1rem;
   }
