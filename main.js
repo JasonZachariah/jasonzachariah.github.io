@@ -40,7 +40,7 @@ animate('#logo', {
 
 
   let split;
-  SplitText.create(".text", {
+  SplitText.create(".line", {
     type: "char,lines",
     linesClass: "line",
     autoSplit: true,
