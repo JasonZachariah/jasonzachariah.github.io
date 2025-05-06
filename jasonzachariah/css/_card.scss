@@ -1,6 +1,5 @@
 .topnav {
   overflow: hidden;
-
 }
 
 .topnav a {
@@ -28,19 +27,22 @@
   display: none;
 }
 
-
 .stripes {
-  border: solid 2px  #a7a6a6;
-  mix-blend-mode: multiply; 
+  border: solid 2px #a7a6a6;
+  mix-blend-mode: multiply;
   background-color: #f2f2f200;
 
-  background: repeating-linear-gradient( -45deg, #cbcbcb, #cbcbcb 2px, $primary-white 2px, $primary-white 10px );
+  background: repeating-linear-gradient(
+    -45deg,
+    #cbcbcb,
+    #cbcbcb 2px,
+    $primary-white 2px,
+    $primary-white 10px
+  );
 }
 
-.greyborder{
-  
-outline: 2px solid  $accent2;
-  
+.greyborder {
+  outline: 2px solid $accent2;
 }
 
 #fixed {
@@ -49,73 +51,52 @@ outline: 2px solid  $accent2;
 }
 
 .navbarcon {
-
   z-index: 3;
   text-wrap: nowrap;
-
 }
-
 
 .animate-on-scroll {
   transform: translate(0px, 50px);
   opacity: 0;
   transition: all 0.8s ease;
   transition-delay: 0.2s;
-
-
-
-
 }
-
-
-
 
 .animate {
   transform: translate(0px, 0);
   opacity: 1;
-
 }
 
-section{
-
+section {
   margin: 2rem 0;
 }
 
-.colorbg{
+.colorbg {
   background-color: $accent2;
 }
 
-.line{
+.line {
   stroke-width: 0.2rem;
   background-color: $primary-black;
-
 }
 
 .parent {
-
 }
 
 .child {
-  
-
-width: 20rem
-
-
+  width: 20rem;
 }
 
-.covermask{
+.covermask {
   aspect-ratio: 3/2;
 
   overflow: hidden;
- 
 }
 
 .parent:hover .child {
-
   width: 30rem;
-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.text{
- 
+.text {
 }
