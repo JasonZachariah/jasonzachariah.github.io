@@ -1,1 +1,0 @@
-import"./output-DLaQTJuD.js";const n=document.querySelectorAll(".animate-on-scroll, .animate-top-down"),o=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add("animate")})},{threshold:.5});for(let e=0;e<n.length;e++){const t=n[e];o.observe(t)}
