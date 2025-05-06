@@ -5,9 +5,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+    
         main: './index.html',
         octobud: './octobud.html', 
         handbook: './handbook.html', 
+        error:'./404.html',
       }
     },
     outDir: 'dist', 
