@@ -1,6 +1,15 @@
 /* file import */
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap");
 @import url("https://use.typekit.net/qvu8qst.css");
+::-moz-selection {
+  color: #0F0F0F;
+  background: #C9C9C9;
+}
+::selection {
+  color: #0F0F0F;
+  background: #C9C9C9;
+}
+
 .topnav {
   overflow: hidden;
 }
@@ -40,13 +49,9 @@
   outline: 2px solid #C9C9C9;
 }
 
-#fixed {
-  display: block;
-  position: absolute;
-}
-
 .navbarcon {
-  z-index: 3;
+  background-color: #89f336;
+  z-index: 8;
   text-wrap: nowrap;
 }
 
@@ -111,7 +116,7 @@ h1 {
   line-height: 6.75rem;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
-  font-family: "Geist", sans-serif;
+  font-family: "Geist Mono", monospace;
   letter-spacing: -4px;
   font-weight: 600;
   overflow-wrap: normal;
@@ -201,7 +206,7 @@ h1 {
   line-height: 6.75rem;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
-  font-family: "Geist", sans-serif;
+  font-family: "Geist Mono", monospace;
   letter-spacing: -4px;
   font-weight: 600;
   overflow-wrap: normal;

@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitfam</title>
+    <title>Handbook</title>
     <link rel="icon" type="image/x-icon" href="jzlogo.svg">
 
 
@@ -25,8 +25,26 @@
 </head>
 
 <body>
-   
-       
+     <!--Nav bar-->
+     <nav class="container">
+
+
+        <div class="flex w-full  my-8  content-center justify-between">
+            <a href="#home">
+                <img src="jzlogo.png" width="30px">
+            </a>
+            <div class=" flex justify-end-safe space-x-6">
+                <a href="#news">WORKS</a>
+                <a href="#contact">PLAY</a>
+                <a href="#about">ABOUT</a>
+                <a href="#about">RESUME</a>
+            </div>
+        </div>
+
+
+
+    </nav>
+    <!--Progress Bar-->
 
     <div class="header ">
 
@@ -36,91 +54,82 @@
 
 
     </div>
-    <div class="flex justify-center navbarcon ">
-        <div class="  hidden  md:fixed   md:w-fit  md:items-center md:space-x-3 md:p-6  md:block">
+ 
+        <div class=" hidden md:m-auto md:w-full justify-center navbarcon md:flex  md:fixed md:items-center md:space-x-6 md:p-6  md:block">
             <div class="">
                 <a href="#step1">
-                    <h6 class=" ">OVERVIEW</h6>
+                    <button class=" ">OBJECTIVE</button>
                 </a>
             </div>
             <div>
-                <span class="material-symbols-outlined">
-                    arrow_circle_right
-                </span>
+                <svg data-testid="geist-icon" height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.25 7.25H4.5V8.75H5.25H9.43934L7.96967 10.2197L7.43934 10.75L8.5 11.8107L9.03033 11.2803L11.7803 8.53033C12.0732 8.23744 12.0732 7.76256 11.7803 7.46967L9.03033 4.71967L8.5 4.18934L7.43934 5.25L7.96967 5.78033L9.43934 7.25H5.25ZM8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8C14.5 11.5899 11.5899 14.5 8 14.5ZM0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8Z" fill="currentColor"></path></svg>
             </div>
             <div>
                 <a href="#step2">
-                    <h6 class="">PROBLEM</h6>
+                    <h6 class="">IDEATION</h6>
                 </a>
             </div>
             <div>
-                <span class="material-symbols-outlined">
-                    arrow_circle_right
-                </span>
+                <svg data-testid="geist-icon" height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.25 7.25H4.5V8.75H5.25H9.43934L7.96967 10.2197L7.43934 10.75L8.5 11.8107L9.03033 11.2803L11.7803 8.53033C12.0732 8.23744 12.0732 7.76256 11.7803 7.46967L9.03033 4.71967L8.5 4.18934L7.43934 5.25L7.96967 5.78033L9.43934 7.25H5.25ZM8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8C14.5 11.5899 11.5899 14.5 8 14.5ZM0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8Z" fill="currentColor"></path></svg>
             </div>
             <div>
                 <a href="#step3">
-                    <h6 class="">RESEARCH</h6>
+                    <h6 class="">FINAL THOUGHTS</h6>
                 </a>
             </div>
 
 
         </div>
-    </div>
-    </div>
+
     <div class="container ">
 
 
-        <img src="images/fitfam/fitfamcover2.png" alt="fitfam cover image">
+
 
         <section id="step1" class="animate-on-scroll">
 
             <!--Title-->
-            <div class="flex flex-col md:flex-row gap-4">
+            <div class="grid grid-cols-1 gap-4  md:grid-cols-2">
 
 
 
 
-                <div class="w-full md:w-1/2">
-                    <h2>Design Handbook</h2>
+                <div class="">
+                    <h2>Octobud</h2>
 
                     <div class="flex flex-row ">
 
-                        <h6 class="w-fit text-center p-2 m-1 border">
+                        <h4 class="w-fit text-center p-2 m-1 border">
                             USER RESEARCH
-                        </h6>
-                        <h6 class="w-fit text-center p-2 m-1 border">
-                            SYSTEMS DESIGN
-                        </h6>
+                        </h4>
+                        <h4 class="w-fit text-center p-2 m-1 border">
+                            UX DESIGN
+                        </h4>
                     </div>
-                   
+
 
                 </div>
                 <!--Labels-->
-                <div class="w-full md:w-1/2">
-                    
-                    <div class="col-md-10 leftline ">
+                <div class="">
+                    <div class=" flex flex-row space-x-6 ">
+                        <div>
+                            <h4>timleline:</h4>
+                            <p>Sep 2024- Dec 2024</p>
+                        </div>
+                        <div>
 
-                        <h5>Objective</h5>
-                        <p class="text-2xl"> Design a physical rpoduct and application that creates an engaging
-                            lesarning experince
-                            that can is flexibale and ease of usage for teachers to implment in the learning
-                            process.
-                        </p>
-
+                            <h4>tools:</h4>
+                            <p>Adobe Illustrator</p>
+                        </div>
                     </div>
-                    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                    <div class="">
 
-                    <div class=" flex flex-row space-x-8 my-2">
-                        <div>
-                            <h4>timleline</h4>
-                            <h6>Sep 2024 - Dec 2024</h6>
-                        </div>
-                        <div>
+                        <h4>Objective</h4>
+                            <h3 > Design a physical rpoduct and application that creates an engaging lesarning experince
+                                that can is flexibale and ease of usage for teachers to implment in the learning
+                                process.
+                            </h3>
 
-                            <h4>tools</h4>
-                            <h6>Adobe Illustrator</h6>
-                        </div>
                     </div>
                 </div>
 
@@ -129,34 +138,47 @@
         </section>
         <!--Problems-->
         <!--About line breaker-->
-
+        <h2 class="  ">
         </p>
-        <section class="animate-on-scroll flex flex-col md:flex-row " id="step2">
+        <section class="animate-on-scroll" id="step2">
 
-            <div class="wfull md:w-1/3">
-                <h4> PROBLEM</h4>
-                <h3>Online workout routines don't understand the risk of chronic pain of elders
-                </h3>
-                <p>
-                    When looking for workout routines for elders, there is a sense of follow through that forces
-                    elders to work it out.
-                </p>
+            <div class="col-md-4 leftline">
+                <h2>New learning sratagies are expensive to maintian</h2>
+                <p>Learning, especially memorization-heavy subjects like math or science, can be challenging to
+                    learn and to teach, tedious for the teacher to keep each of their students focused, and
+                    frustrating for the students to learn </p>
+
             </div>
-            <div class="w-full stripes"></div>
+
+            <div class="col-md-4 leftline">
+
+                <h5>Traditional learning stratagies are boring</h5>
+                <p>Learning, especially memorization-heavy subjects like math or science, can be challenging to
+                    learn and to teach, tedious for the teacher to keep each of their students focused, and
+                    frustrating for the students to learn </p>
+            </div>
+            <div class="col-md-4 leftline">
+                <h5> Tech-based learning is not good for long term plans</h5>
+                <p>Learning, especially memorization-heavy subjects like math or science, can be challenging to
+                    learn and to teach, tedious for the teacher to keep each of their students focused, and
+                    frustrating for the students to learn </p>
+
+            </div>
+        </section>
+        <section class="project-container">
+
 
         </section>
-       
-
     </div>
+    <div class=" bg-lime-500">
+        <section class="container bg-lime-500 w-500% animate-on-scroll">
 
-   
-    <div class=" bg-lime-100 animate-on-scroll ">
-        <section class="container  ">
-
-            <div class="py-4 
+            <div class="
             ">
-            <h4> HOW MIGHT WE STATMENT</h4>
-                <h3 class="">&emsp; How might we design a fitness app that fits the routine of baby boomers with accommodations for differences in ability? ▮</h3>
+                <h3 class="">&emsp;An interactive learning device that allows students a gamified and
+                    flexible learning system
+                    using a code-and-scanner system, where each unique code has a unique visual,auditory and/or
+                    haptic response that encourages students to learn in a fun way▮</h3>
             </div>
 
         </section>
@@ -171,8 +193,16 @@
 
         <section class="row">
             <div class="col">
-                <h4>Solution</h4>
-                <p>Intdr</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi
+                    ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in
+                    culpa qui officia deserunt mollit anim id </p>
             </div>
         </section>
 
@@ -181,7 +211,7 @@
             <div class="col text-center">
 
                 <figure>
-
+                    <img src="images/octobud/octobud_poster.png" alt="mockup1" class="col-md-6">
                     <figcaption><strong>Octobud Poster</strong></figcaption>
                 </figure>
             </div>
@@ -190,6 +220,17 @@
         </section>
 
         <section class="row ">
+
+
+            <div class=" col w-75 text-center" id="step3">
+
+
+
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="500" height="250"
+                    src="https://embed.figma.com/slides/FDwjA4UMSPnze4cK1m7ce7/Untitled?node-id=1-92&embed-host=share"
+                    allowfullscreen></iframe>
+
+            </div>
 
 
 
@@ -202,7 +243,7 @@
     </div>
 
 
-    <script src="scroll.js"></script>
+    <script type="module" src="scroll.js"></script>
 
 
 

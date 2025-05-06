@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: './index.html',
         octobud: './octobud.html', 
+        handbook: './handbook.html', 
       }
     },
     outDir: 'dist', 

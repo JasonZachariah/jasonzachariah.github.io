@@ -9,4 +9,7 @@ $primary-white: #F2F2F2;
 $accent: #89f336;
 $accent2:#C9C9C9;
 
-  
+::selection {
+    color: $primary-black;
+    background: $accent2;
+  }
