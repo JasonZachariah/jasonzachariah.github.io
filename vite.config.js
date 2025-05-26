@@ -10,7 +10,7 @@ export default defineConfig({
         octobud: './octobud.html', 
         handbook: './handbook.html', 
         error:'./404.html',
-        wip:'./wip.html'
+        wip:'./wip.html',
       }
     },
     outDir: 'dist', 
