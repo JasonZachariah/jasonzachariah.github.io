@@ -79,10 +79,12 @@ section {
 }
 
 .parent {
+
 }
 
 .child {
   width: 20rem;
+  transition: all ease-in-out 0.5s;
 }
 
 .covermask {
@@ -93,7 +95,7 @@ section {
 
 .parent:hover .child {
   width: 30rem;
-  transition: 0.3s;
+
 }
 
 .text {
