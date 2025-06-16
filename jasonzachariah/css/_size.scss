@@ -7,24 +7,29 @@
 .container {
   max-width: 100vw;
 
-  padding: 0rem 8rem;
+  padding: 0rem 14rem;
 
 }
 
-.header{
 
-
-  max-width: 100vw;
-
-  padding-left: 8rem;
-
-}
 
 
 /**larger desktop**/
 @media (max-width: 1024px) {
   
- 
+  .container {
+    max-width: 100vw;
+  
+    padding: 0rem 10rem;
+  
+  }
+  html {
+    font-size: 14px;
+  }
+  h1{
+    font-size: 8rem;
+  }
+
 
 
 }
@@ -34,7 +39,7 @@
 
 @media (max-width: 768px) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
   h1{
     font-size: 6rem;
@@ -52,7 +57,7 @@
 
 .container{
  
-  padding: 0rem 1rem;
+  padding: 0rem 2rem;
 }
 
 
