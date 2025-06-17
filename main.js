@@ -24,9 +24,16 @@ gsap.from(split.chars, {
 //draws all elements with the "draw-me" class applied with staggered start times 0.1 seconds apart
 gsap.from(".line", {duration:1,stagger: 0.1, drawSVG: 0});
 
+
+function initPageScripts() {
+  console.log("Re-running page scripts");
+  // re-initialize sliders, listeners, animations, etc.
+}
+
 import barba from '@barba/core';
 
 barba.init({
+  
     transitions: [{
         name: 'opacity-transition',
         leave(data) {
@@ -40,4 +47,7 @@ barba.init({
           });
         }
       }]
+      
   });
+
+  

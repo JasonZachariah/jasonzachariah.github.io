@@ -24,7 +24,9 @@
 
 </head>
 
-<body>
+<body data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="home">
+    
     <!--Nav bar-->
     <nav class="container">
 
@@ -188,8 +190,15 @@
 
 
     <script type="module" src="scroll.js"></script>
-
-
+    <script>
+        window.addEventListener('pageshow', function (event) {
+          if (event.persisted) {
+            // Page is loaded from bfcache (back-forward cache)
+            location.reload();
+          }
+        });
+      </script>
+    </main>
 
 </body>
 
