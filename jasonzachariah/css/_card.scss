@@ -71,12 +71,12 @@ section {
 }
 
 .child {
-  width: 20rem;
+  width: 100%;
   transition: all ease-in-out 0.5s;
 }
 
 .covermask {
-  aspect-ratio: 3/2;
+  aspect-ratio: 4/3;
 
   overflow: hidden;
 }
