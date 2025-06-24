@@ -2,8 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap");
 @import url("https://use.typekit.net/qvu8qst.css");
 @font-face {
-  font-family: "SF Pro Text";
-  src: url(SF-Pro-Text-Medium.otf);
+  font-family: SFProText;
+  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SFProText-Medium.ttf);
+}
+@font-face {
+  font-family: SFProText;
+  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SFProText-Medium.ttf);
+  font-weight: 500;
 }
 ::-moz-selection {
   color: #0F0F0F;
@@ -142,7 +147,7 @@ h3 {
   margin-bottom: 0rem;
   letter-spacing: -1px;
   /*font code*/
-  font-family: "SF Pro Text", sans-serif;
+  font-family: SFProText;
   font-weight: 500;
 }
 
@@ -167,7 +172,7 @@ p {
   line-height: 1.40555558rem;
   margin-top: 0rem;
   margin-bottom: 1.2777778rem;
-  font-family: "SF Pro Text", sans-serif;
+  font-family: SFProText;
   font-weight: 500;
   -webkit-hyphens: auto;
           hyphens: auto;
@@ -234,7 +239,7 @@ h3 {
   margin-bottom: 0rem;
   letter-spacing: -1px;
   /*font code*/
-  font-family: "SF Pro Text", sans-serif;
+  font-family: SFProText;
   font-weight: 500;
 }
 
@@ -259,7 +264,7 @@ p {
   line-height: 1.40555558rem;
   margin-top: 0rem;
   margin-bottom: 1.2777778rem;
-  font-family: "SF Pro Text", sans-serif;
+  font-family: SFProText;
   font-weight: 500;
   -webkit-hyphens: auto;
           hyphens: auto;
