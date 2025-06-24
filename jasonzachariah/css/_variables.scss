@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
-
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url(SF-Pro-Text-Medium.otf);
+}
 $primary-font: "SF Pro Text", sans-serif;
 $secondary-font:"Geist Mono", monospace;
 $primary-black: #0F0F0F;

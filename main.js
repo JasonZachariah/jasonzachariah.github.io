@@ -25,8 +25,7 @@ gsap.from(split.chars, {
 gsap.from(".line", {duration:1,stagger: 0.1, drawSVG: 0});
 
 
-function initPageScripts() {
-  console.log("Re-running page scripts");
-  // re-initialize sliders, listeners, animations, etc.
-}
 
+
+import Swup from 'swup';
+const swup = new Swup();

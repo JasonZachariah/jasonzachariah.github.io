@@ -1,6 +1,10 @@
 /* file import */
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap");
 @import url("https://use.typekit.net/qvu8qst.css");
+@font-face {
+  font-family: "SF Pro Text";
+  src: url(SF-Pro-Text-Medium.otf);
+}
 ::-moz-selection {
   color: #0F0F0F;
   background: #8B8B8B;
@@ -299,4 +303,15 @@ b {
   .container {
     padding: 0rem 2rem;
   }
+}
+.transition-fade {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  opacity: 1;
+  color: #EC5A2A;
+}
+
+html.is-animating .transition-fade {
+  transform: translateY(-500px);
+  color: #EC5A2A;
+  opacity: 0;
 }/*# sourceMappingURL=styles.css.map */

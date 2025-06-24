@@ -1,0 +1,11 @@
+.transition-fade{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+    opacity: 1;
+    color: $accent;
+}
+
+html.is-animating .transition-fade{
+  transform: translateY(-500px);
+  color: $accent;
+    opacity: 0;
+}
