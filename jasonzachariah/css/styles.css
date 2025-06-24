@@ -3,11 +3,11 @@
 @import url("https://use.typekit.net/qvu8qst.css");
 ::-moz-selection {
   color: #0F0F0F;
-  background: #C9C9C9;
+  background: #8B8B8B;
 }
 ::selection {
   color: #0F0F0F;
-  background: #C9C9C9;
+  background: #8B8B8B;
 }
 
 .topnav {
@@ -30,7 +30,7 @@
 }
 
 .topnav a.active {
-  background-color: #89f336;
+  background-color: #EC5A2A;
   color: white;
 }
 
@@ -38,19 +38,12 @@
   display: none;
 }
 
-.stripes {
-  border: solid 2px #a7a6a6;
-  mix-blend-mode: multiply;
-  background-color: rgba(242, 242, 242, 0);
-  background: repeating-linear-gradient(-45deg, #cbcbcb, #cbcbcb 2px, #F2F2F2 2px, #F2F2F2 10px);
-}
-
 .greyborder {
-  outline: 2px solid #C9C9C9;
+  outline: 2px solid #8B8B8B;
 }
 
 .navbarcon {
-  background-color: #89f336;
+  background-color: #EC5A2A;
   z-index: 8;
   text-wrap: nowrap;
 }
@@ -72,7 +65,7 @@ section {
 }
 
 .colorbg {
-  background-color: #C9C9C9;
+  background-color: #EC5A2A;
 }
 
 .line {
@@ -99,6 +92,7 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  color: #F2F2F2;
 }
 
 a {
@@ -110,14 +104,14 @@ a {
 
 h1 {
   color: #0F0F0F;
-  font-size: 7.5rem;
-  line-height: 6.75rem;
+  font-size: 5rem;
+  line-height: 4.5rem;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
   font-family: "Geist Mono", monospace;
   letter-spacing: -4px;
   font-weight: 600;
-  overflow-wrap: normal;
+  text-wrap: nowrap;
   font-style: normal;
   margin: 0;
 }
@@ -125,10 +119,9 @@ h1 {
 h2 {
   display: flex;
   color: #0F0F0F;
-  font-size: 3.91666665rem;
+  font-size: 2.6111111rem;
   line-height: 3.8333333rem;
   margin-top: 1.2777778rem;
-  margin-bottom: 1.2777778rem;
   letter-spacing: -2px;
   font-family: "Geist Mono", monospace;
   font-weight: 500;
@@ -145,13 +138,13 @@ h3 {
   margin-bottom: 0rem;
   letter-spacing: -1px;
   /*font code*/
-  font-family: "SF Pro", sans-serif;
+  font-family: "SF Pro Text", sans-serif;
   font-weight: 500;
 }
 
 h4, figcaption, .topnav a {
   color: #F2F2F2;
-  background-color: #0F0F0F;
+  background-color: #EC5A2A;
   padding: 0.25rem 1rem;
   display: inline-block;
   font-size: 1rem;
@@ -165,12 +158,12 @@ h4, figcaption, .topnav a {
 
 p {
   letter-spacing: -0.5px;
-  color: oklch(55.2% 0.016 285.938);
+  color: #8B8B8B;
   font-size: 1rem;
   line-height: 1.40555558rem;
   margin-top: 0rem;
   margin-bottom: 1.2777778rem;
-  font-family: "SF Pro", sans-serif;
+  font-family: "SF Pro Text", sans-serif;
   font-weight: 500;
   -webkit-hyphens: auto;
           hyphens: auto;
@@ -179,6 +172,10 @@ p {
 
 figcaption {
   text-align: center;
+}
+
+b {
+  color: #EC5A2A;
 }
 
 /**reponsive sizes**/
@@ -187,6 +184,7 @@ figcaption {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  color: #F2F2F2;
 }
 
 a {
@@ -198,14 +196,14 @@ a {
 
 h1 {
   color: #0F0F0F;
-  font-size: 7.5rem;
-  line-height: 6.75rem;
+  font-size: 5rem;
+  line-height: 4.5rem;
   margin-top: 1.2777778rem;
   margin-bottom: 2.5555556rem;
   font-family: "Geist Mono", monospace;
   letter-spacing: -4px;
   font-weight: 600;
-  overflow-wrap: normal;
+  text-wrap: nowrap;
   font-style: normal;
   margin: 0;
 }
@@ -213,10 +211,9 @@ h1 {
 h2 {
   display: flex;
   color: #0F0F0F;
-  font-size: 3.91666665rem;
+  font-size: 2.6111111rem;
   line-height: 3.8333333rem;
   margin-top: 1.2777778rem;
-  margin-bottom: 1.2777778rem;
   letter-spacing: -2px;
   font-family: "Geist Mono", monospace;
   font-weight: 500;
@@ -233,13 +230,13 @@ h3 {
   margin-bottom: 0rem;
   letter-spacing: -1px;
   /*font code*/
-  font-family: "SF Pro", sans-serif;
+  font-family: "SF Pro Text", sans-serif;
   font-weight: 500;
 }
 
 h4, .topnav a, figcaption {
   color: #F2F2F2;
-  background-color: #0F0F0F;
+  background-color: #EC5A2A;
   padding: 0.25rem 1rem;
   display: inline-block;
   font-size: 1rem;
@@ -253,12 +250,12 @@ h4, .topnav a, figcaption {
 
 p {
   letter-spacing: -0.5px;
-  color: oklch(55.2% 0.016 285.938);
+  color: #8B8B8B;
   font-size: 1rem;
   line-height: 1.40555558rem;
   margin-top: 0rem;
   margin-bottom: 1.2777778rem;
-  font-family: "SF Pro", sans-serif;
+  font-family: "SF Pro Text", sans-serif;
   font-weight: 500;
   -webkit-hyphens: auto;
           hyphens: auto;
@@ -267,6 +264,10 @@ p {
 
 figcaption {
   text-align: center;
+}
+
+b {
+  color: #EC5A2A;
 }
 
 .container {

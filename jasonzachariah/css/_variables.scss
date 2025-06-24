@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
 
-$primary-font: "SF Pro", sans-serif;
+$primary-font: "SF Pro Text", sans-serif;
 $secondary-font:"Geist Mono", monospace;
 $primary-black: #0F0F0F;
-$secondary-black:oklch(55.2% 0.016 285.938);
+$secondary-black: #8B8B8B;
 $primary-white: #F2F2F2;
 
-$accent: #89f336;
-$accent2:#C9C9C9;
+$accent: #EC5A2A;
 
 ::selection {
     color: $primary-black;
-    background: $accent2;
+    background: $secondary-black;
   }

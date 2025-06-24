@@ -4,7 +4,7 @@
     -moz-osx-font-smoothing: grayscale;
  
     scroll-behavior: smooth;
-
+color: $primary-white;
 
 
 }
@@ -26,14 +26,14 @@ h1 {
 
     color: $primary-black;
 
-    font-size: 5rem*1.5;
-    line-height: 4.5rem*1.5;
+    font-size: 5rem;
+    line-height: 4.5rem;
     margin-top: 1.2777778rem;
     margin-bottom: 2.5555556rem;
     font-family: $secondary-font;
     letter-spacing: -4px;
     font-weight: 600;
-    overflow-wrap: normal;
+    text-wrap: nowrap;
     font-style: normal;
 
 
@@ -57,10 +57,10 @@ h2 {
 
 
     color: $primary-black;
-    font-size: 2.6111111rem*1.5;
+    font-size: 2.6111111rem;
     line-height: 3.8333333rem;
     margin-top: 1.2777778rem;
-    margin-bottom: 1.2777778rem;
+
     letter-spacing:-2px;
 
     font-family: $secondary-font;
@@ -98,7 +98,7 @@ h3 {
 
 h4 {
     color: $primary-white;
-    background-color: $primary-black;
+    background-color: $accent;
     padding: 0.25rem 1rem;
     display: inline-block; 
     font-size: 1rem;
@@ -132,4 +132,8 @@ figcaption {
     text-align: center;
     @extend h4;
 
+}
+
+b{
+    color: $accent;
 }

@@ -27,22 +27,10 @@
   display: none;
 }
 
-.stripes {
-  border: solid 2px #a7a6a6;
-  mix-blend-mode: multiply;
-  background-color: #f2f2f200;
 
-  background: repeating-linear-gradient(
-    -45deg,
-    #cbcbcb,
-    #cbcbcb 2px,
-    $primary-white 2px,
-    $primary-white 10px
-  );
-}
 
 .greyborder {
-  outline: 2px solid $accent2;
+  outline: 2px solid $secondary-black;
 }
 
 
@@ -70,7 +58,7 @@ section {
 }
 
 .colorbg {
-  background-color: $accent2;
+  background-color: $accent;
 }
 
 .line {
