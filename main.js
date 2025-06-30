@@ -29,3 +29,26 @@ gsap.from(".line", {duration:1,stagger: 0.1, drawSVG: 0});
 
 import Swup from 'swup';
 const swup = new Swup();
+//inject nav bar
+const  navbar = ` 
+ <nav class="container">
+
+
+            <div class="flex w-full  my-8  content-center justify-between">
+                <a href="./">
+                    <img src="jzlogo.svg" width="45px">
+                </a>
+                <div class=" flex justify-end-safe space-x-6">
+                    <a href="./">WORKS</a>
+                    <a href="./play">PLAY</a>
+                    <a href="./about">ABOUT</a>
+                    <a href="./resume">RESUME</a>
+                </div>
+            </div>
+
+
+
+        </nav>`;
+        document.body.insertAdjacentHTML("afterbegin", navbar);
+
+

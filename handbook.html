@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handbook</title>
+    <title>DESNbook</title>
     <link rel="icon" type="image/x-icon" href="jzlogo.svg">
 
 
@@ -27,26 +27,7 @@
 <body data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="home">
         <!--Nav bar-->
-        <nav class="container">
-
-
-            <div class="flex w-full  my-8  content-center justify-between">
-                <a href="#home">
-                    <img src="jzlogo.svg" width="45px">
-                </a>
-                <div class=" flex justify-end-safe space-x-6">
-                    <a href="#news">WORKS</a>
-                    <a href="#contact">PLAY</a>
-                    <a href="#about">ABOUT</a>
-                    <a href="#about">RESUME</a>
-                </div>
-            </div>
-
-
-
-        </nav>
-
-
+        element(navbar);
         </div>
 
 
@@ -77,9 +58,9 @@
                 </div> -->
             <!--Labels-->
             <section class="grid grid-cols-1">
-                <div class=" grid grid-cols-1 md:flex items-stretch ">
+                <div class=" items-baseline grid grid-cols-1 md:flex  ">
                     <div>
-                        <h2>Design Handbook</h2>
+                        <h2>DESNbook</h2>
 
                     </div>
                     <div>
@@ -108,49 +89,63 @@
 
             <!--Problems-->
 
-            <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 al " id="step2">
+            <section class="grid grid-cols-1" id="step2">
 
 
 
-                <div class="grid grid-cols-1 gap-4  ">
-                    <video class="greyborder colorbg h-full" autoplay loop muted>
-                        <source src="images/handbook/OldVSB.mp4" type="video/mp4" />
 
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
 
+                    <div class="col-span-2">
+                        <h4>CONTEXT & RESEARCH</h4>
+                        <p>
+                            To understand the issues design students faces, I surveyed 15 current DESN students to
+                            understand their expeirnce wwhen planning out their degree.
+                        </p>
+                        <p>
+                            Here is what I gained:
+                        </p>
+                        <h3>Confusion over course requirements</h3>
+                        <p>
+                            The current Design handbook lacks support to showing how courses affect their degree, with
+                            <b>53% of having trouble keeping track of course requirments</b>, and <b>46% wishing they
+                                had a
+                                real-time degree requirements checker</b>
+
+
+                        </p>
+                        <h3>Planning your degree is tedious.</h3>
+                        <p>
+                            The current system of planning out the degree requires students to go through
+                            3
+                            separate processes to plan their program,creating a split task flow that has a higher rate
+                            of miscommunication.<b> Over 25% of students say they have to rely on other schedule
+                                trackers </b>(Notion,Excel etc)to keep track of the 3 diffrent task flows
+                            .
+                        </p>
+
+
+                    </div>
                 </div>
-                <div class="w-fit">
-                    <h4>The Problem</h4>
-                    <h3>Planning out your courses is too spread out.</h3>
-                    <p>
-                        The DESN Program is a 120-credit program that requires students to plan out their courses to fit
-                        the
-                        requirements. The current system of planning out the degree requires students to go through 3
-                        separate processes to plan their program- one for checking degree requirements, one for checking
-                        availability of courses, and one for plotting their timetables. This split-up system creates
-                        potential for miscommunication and a chance for students to fail to maintain degree
-                        requirements.
-                    </p>
+                <img class="greyborder child  " style="width: 100%;" src="images/handbook/currentflow.png">
 
-                </div>
             </section>
 
         </div>
         </div>
-        <div class="colorbg">
-            <section class="container w-500% animate-on-scroll">
+        <div class=" grid colorbg container  gap-4">
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-4" id="step2">
 
-                <div class="
-            ">
-                    <h3 class="">&emsp;An interactive learning device that allows students a gamified and
-                        flexible learning system
-                        using a code-and-scanner system, where each unique code has a unique visual,auditory and/or
-                        haptic response that encourages students to learn in a fun way▮</h3>
+                <div class="col-start-1 col-span-2 ">
+                    <h4>Problem </h4>
+                    <h3>Inconsistant, divided platforms </h3>
+                    <h4>Solution </h4>
+                    <h3>One dashboard, for all your course planning needs </h3>
                 </div>
 
             </section>
 
+            <img class="greyborder child  " style="width: 100%;" src="images/handbook/revisedflow.png">
 
         </div>
 
@@ -158,72 +153,83 @@
 
 
         <div class="container ">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
 
-            <section>
-                <div class="col">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                        in
-                        culpa qui officia deserunt mollit anim id </p>
+                <div class="col-span-2">
+                    <h4>Method</h4>
+                    <h3>A/B testing</h3>
+                    <p>Since I wanted to test I wide scope of features to improve the work, I used A/B resting amgonst 3
+                        students in order to make clearer desgin choices that optimize orginzation and faster workflow
+                        speeds.</p>
+
                 </div>
+            </div>
+            <section class="gap-y-4">
+                <div class="col-span-2">
+
+                    <h3>Dashboard Hiearchy</h3>
+                    <p> The dashboard is the main contexct of the student, and thefore had to be abe to easily show
+                        students avaibe courses as well as futher options to. Based on user testing , the final layout
+                        allowed for easy to read task flow while also being scable for diffrent devices
+
+                    </p>
+                </div>
+                <img class="greyborder child  " style="width: 100%;" src="images/handbook/olddash.png">
+            </section>
+            <img class="greyborder child  " style="width: 100%;" src="images/handbook/newdash.png">
             </section>
 
-            <section>
-                <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 ">
-                    <video width="100%" height="40" class="greyborder" autoplay loop muted>
-                        <source src="images/handbook/AddCourseV1.mp4" type="video/mp4" />
+        </div>
+        <section>
+            <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 ">
+                <video width="100%" height="40" class="greyborder" autoplay loop muted>
+                    <source src="images/handbook/AddCourseV1.mp4" type="video/mp4" />
 
-                        Your browser does not support the video tag.
-                    </video>
-                    <div>
-                        <h4>Test 1</h4>
-                        <h3>Planning out your courses is too spread out.</h3>
-                        <p>Text is here </p>
-                    </div>
+                    Your browser does not support the video tag.
+                </video>
+                <div>
+                    <h4>Test 1</h4>
+                    <h3>Planning out your courses is too spread out.</h3>
+                    <p>Text is here </p>
                 </div>
+            </div>
+            <section>
+
                 <section>
+                    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 ">
+                        <video width="100%" height="40" class="greyborder" autoplay loop muted>
+                            <source src="images/handbook/Visual Schedule V1.mp4" type="video/mp4" />
 
-                    <section>
-                        <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 ">
-                            <video width="100%" height="40" class="greyborder" autoplay loop muted>
-                                <source src="images/handbook/Visual Schedule V1.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        <div>
 
-                                Your browser does not support the video tag.
-                            </video>
-                            <div>
-
-                                <h3>Easily add a courses and see its reaction.</h3>
-                                <p>Text is here </p>
-                            </div>
+                            <h3>Easily add a courses and see its reaction.</h3>
+                            <p>Text is here </p>
                         </div>
-
-
-
-
-                    </section>
-
+                    </div>
 
 
 
 
                 </section>
-                <div>
-                    <a href="#">
-                        <h5>BACK TO TOP <i class="bi bi-arrow-up-short"></i></h5>
-                    </a>
-                </div>
-        </div>
 
 
-     
+
+
+
+            </section>
+            <div>
+                <a href="#">
+                    <h5>BACK TO TOP <i class="bi bi-arrow-up-short"></i></h5>
+                </a>
+            </div>
+            </div>
+
+
+
     </main>
-
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>

@@ -7,6 +7,7 @@
 color: $primary-white;
 
 
+
 }
 
 
@@ -29,7 +30,7 @@ h1 {
     font-size: 5rem;
     line-height: 4.5rem;
     margin-top: 1.2777778rem;
-    margin-bottom: 2.5555556rem;
+
     font-family: $secondary-font;
     letter-spacing: -4px;
     font-weight: 600;
@@ -59,8 +60,7 @@ h2 {
     color: $primary-black;
     font-size: 2.6111111rem;
     line-height: 3.8333333rem;
-    margin-top: 1.2777778rem;
-
+   
     letter-spacing:-2px;
 
     font-family: $secondary-font;
@@ -73,14 +73,14 @@ h2 {
 
 
 h3 {
-    margin-top: 0;
+
    
 
     color: $primary-black;
     font-size: 1.6111111rem;
-  line-height: 2.5555556rem;
-  margin-top: 1.2777778rem;
-  margin-bottom: 0rem;
+
+
+  margin-bottom: 0.2777778rem;
 
   letter-spacing:-1px;
     /*font code*/
@@ -97,14 +97,14 @@ h3 {
 
 
 h4 {
-    color: $primary-white;
-    background-color: $accent;
-    padding: 0.25rem 1rem;
+    color: $secondary-black;
+
+
     display: inline-block; 
     font-size: 1rem;
+
     line-height: 1.2777778rem;
-    margin-top: 1.2777778rem;
-    margin-bottom: 0rem;
+  margin-bottom: 1.2777778rem*0.75;
     font-family: $secondary-font;
     font-weight: 500;
     text-transform: uppercase;
@@ -121,7 +121,7 @@ p {
     font-size: 1rem;
     line-height: 1.2777778rem*1.1;
     margin-top: 0rem;
-  margin-bottom: 1.2777778rem;
+  margin-bottom: 0.2777778rem;
     font-family: $primary-font;
     font-weight: 500;
     hyphens: auto;
@@ -135,5 +135,7 @@ figcaption {
 }
 
 b{
-    color: $accent;
+    color: $primary-black;
+    background-color: $accenttrans;
+    padding: 0.1rem;
 }
