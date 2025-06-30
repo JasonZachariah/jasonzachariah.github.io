@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tw:watch": "npx @tailwindcss/cli -i ./src/input.css -o ./output.css --watch",
+    "tw:watch": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",

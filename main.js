@@ -12,12 +12,13 @@ let split = SplitText.create(".text", {
 });
 
 // now animate the characters in a staggered fashion
-gsap.from(split.chars, {
+gsap.from(split.words, {
 
   ease: "expo.out",
-  y: 500,       // animate from 100px below
+  y: 10,       // animate from 100px below
   autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
-  stagger: 0.1 // 0.05 seconds between each
+  stagger: 0.2 ,// 0.05 seconds between each
+  filter: "blur(10px)",
 });
 
 

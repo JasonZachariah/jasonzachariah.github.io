@@ -1,32 +1,3 @@
-.topnav {
-  overflow: hidden;
-}
-
-.topnav a {
-  @extend h4;
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: $accent;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
 
 
 .greyborder {
@@ -66,9 +37,6 @@ section {
   background-color: $primary-black;
 }
 
-.parent {
-
-}
 
 .child {
   width: 100%;
@@ -76,7 +44,7 @@ section {
 }
 
 .covermask {
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
 
   overflow: hidden;
 }
