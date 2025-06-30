@@ -36,7 +36,7 @@ const  navbar = `
 
             <div class="flex w-full  my-8  content-center justify-between">
                 <a href="./">
-                    <img src="jzlogo.svg" width="45px">
+                    <img src="./jzlogo.svg" width="45px">
                 </a>
                 <div class=" flex justify-end-safe space-x-6">
                     <a href="./">WORKS</a>
