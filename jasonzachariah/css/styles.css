@@ -63,10 +63,6 @@ section {
   width: 30rem;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 a {
   text-decoration: none;
   font-family: "Geist Mono", monospace;
@@ -120,7 +116,15 @@ h4, figcaption {
   text-transform: uppercase;
 }
 
-p {
+h4::before, figcaption::before {
+  content: "[";
+}
+
+h4::after, figcaption::after {
+  content: "]";
+}
+
+p, li {
   letter-spacing: -0.5px;
   color: #8B8B8B;
   font-size: 1rem;
@@ -136,6 +140,14 @@ p {
 
 figcaption {
   text-align: center;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  color: #2a2a2a;
 }
 
 b {
@@ -145,10 +157,6 @@ b {
 }
 
 /**reponsive sizes**/
-* {
-  box-sizing: border-box;
-}
-
 a {
   text-decoration: none;
   font-family: "Geist Mono", monospace;
@@ -202,7 +210,15 @@ h4, figcaption {
   text-transform: uppercase;
 }
 
-p {
+h4::before, figcaption::before {
+  content: "[";
+}
+
+h4::after, figcaption::after {
+  content: "]";
+}
+
+p, li {
   letter-spacing: -0.5px;
   color: #8B8B8B;
   font-size: 1rem;
@@ -218,6 +234,14 @@ p {
 
 figcaption {
   text-align: center;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  color: #2a2a2a;
 }
 
 b {
