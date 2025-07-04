@@ -142,7 +142,8 @@ ol{
 }
 li{
     @extend p;
-    color: $primary-black;
+    font-size: 1.25rem;
+    margin-bottom: 0.2777778rem*2;
 }
 b{
     color: $primary-black;

@@ -2,7 +2,16 @@
 import { gsap } from "gsap";
 
 import { SplitText } from "gsap/SplitText";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+
+
+
+
+import {
+  Carousel,
+  initTWE,
+} from "tw-elements";
+
+initTWE({ Carousel });
 
 gsap.registerPlugin(DrawSVGPlugin) ;
 
