@@ -52,13 +52,13 @@
         </section>
 
 
-        <div class="container ">
+        <section class="container ">
 
 
 
 
             <section class="grid grid-cols-1 md:grid-cols-3 ">
-                <div class="col-span-2 space-y-4">
+                <div class="md:col-span-2 space-y-4">
                     <div class=" items-baseline grid grid-cols-1 md:flex  ">
 
                         <h2><b>DESNbook</b></h2>
@@ -68,7 +68,7 @@
                     </div>
                     <div>
                     </div>
-                  
+
                     <h3>An all-in-one dashboard that allows design students to plan their degrees, meet program
                         requirements, and create a balanced course load in one platform.
                     </h3>
@@ -89,7 +89,7 @@
                 </div>
 
             </section>
-        </div>
+        </section>
 
 
         </section>
@@ -97,20 +97,23 @@
         </div>
 
 
-        <section class="container">
+        <section class="container space-y-4">
 
 
-            <section class=" grid grid-cols-1 my-4" id="step2">
+            <div class=" grid grid-cols-1 my-4" id="step2">
 
 
-
+                <h4>RESEARCH</h4>
 
                 <div class="grid grid-cols-1 md:grid-cols-3  ">
+                    <div>
 
-                    <div class="col-span-2 space-y-4">
-                        <h4>RESEARCH</h4>
+                        <h3>Understanding Pain Points</h3>
+                    </div>
+                    <div class="md:col-span-2 space-y-4">
+
                         <div>
-                            <h3>Understanding Pain Points</h3>
+
                             <p>
                                 To understand the pain points design students faces, I surveyed 15 current DESN students
                                 to
@@ -151,15 +154,14 @@
                     </div>
                 </div>
 
-            </section>
-
             </div>
-            </div>
-            <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-                <div class="col-span-2">
-
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="col-span-3 md:col-span-1">
                     <h3>Competitor Analysis</h3>
+                </div>
+                <div class="col-span-3 md:col-span-2">
+
+
                     <p>
 
                         I analysed the three most common tools design students use to plan out their degree-
@@ -170,30 +172,33 @@
                     </p>
                 </div>
 
-                <div class="col-span-2">
-                    <img class="greyborder child col-span-2  " src="images/handbook/competitor.png">
+                <div class="md:col-span-3">
+                    <img class="greyborder child md:col-span-2  " src="images/handbook/competitor.png">
 
 
                 </div>
-                <p class="col-span-2">
+                <p class="col-span-3 md:col-start-2  md:col-span-2">
                     Each platform had only one or two strong features, forcing students to use multiple platforms to
                     meet their needs. This reinforces frustrations noted in user surveys, highlighting that the main
                     issue with course selection is this split-up user experiences
 
                 </p>
-            </section>
+            </div>
+
+
         </section>
         <section class=" grid colorbg container  gap-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="step2">
 
-                <div class="col-start-1 col-span-2 ">
+                <div class="col-start-1 md:col-span-2 ">
                     <h4>Problem</h4>
                     <h3>Inconsistent, divided platforms </h3>
 
                     <h4>Solution</h4>
                     <h3>One dashboard, for all your course planning needs </h3>
 
-                    <p>A live digital planner that tracks DESN requirements, allowing students to manage course planning, view potential schedules, and address any issues in one place.
+                    <p>A live digital planner that tracks DESN requirements, allowing students to manage course
+                        planning, view potential schedules, and address any issues in one place.
 
                     </p>
 
@@ -202,9 +207,12 @@
 
 
         </section>
-        <section class="container">
-            <div class="col-span-2">
+        <section class="container grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="col-span-3 md:col-span-1">
                 <h3>Re-evaluating the User Journey</h3>
+            </div>
+            <div class="col-span-3 md:col-span-2">
+
                 <p>
 
 
@@ -216,92 +224,99 @@
             </div>
 
 
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <img class="greyborder child  " style="width: 100%;" src="images/handbook/currentjourney.png">
-                <img class="greyborder child " style="width: 100%;" src="images/handbook/revisedjourney.png">
-            </section>
-
-            <section class=" space-y-4 grid grid-cols-1 md:grid-cols-3 ">
-
-
-                <div class="col-span-2">
-                    <h4>user testing</h4>
-                    <p>
-
-                        Based on my research, I developed a mid-fidelity prototype of a dashboard that met the
-                        revised user journey, allowing for access to all the major flows from the home dashboard.
-
-                    </p>
+            <div class="col-span-3 w-full">
+                <div class=" grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <img class="greyborder child  col-span-3 " style="width: 100%;"
+                        src="images/handbook/currentjourney.png">
+                    <img class="greyborder child col-span-3 " style="width: 100%;"
+                        src="images/handbook/revisedjourney.png">
 
                 </div>
-                <div class="col-span-3">
-                    <img class="greyborder child  " style="width: 100%;" src="images/handbook/midfid.png">
-                </div>
-                <div class="col-span-2">
-                    <p>The current flow is spread throughout multiple platforms, requiring users to frequently switch
-                        between them. To fix this, I created a flow that combines these categories into a single,
-                        cohesive experience, allowing users to transition between flows on one platform easily.</p>
-                </div>
+            </div>
+            <h4 class="md:col-span-3">user testing</h4>
 
-                <div class="col-span-2">
-                    <h3>Observations</h3>
-                    <p>
+            <h3 class="col-span-3 md:col-span-1">Mid-Fidelity</h3>
+            <div class="col-span-3 md:col-span-2">
 
-                        Since I wanted to test a wide scope of features to improve the work, I gave my mid-fidelity
-                        to 3 design students who hadn't used the app, and asked them to :
+                <p>
 
+                    Based on my research, I developed a mid-fidelity prototype of a dashboard that met the
+                    revised user journey, allowing for access to all the major flows from the home dashboard.
 
+                </p>
 
-                    </p>
-                </div>
+            </div>
+            <div class="md:col-span-3">
+                <img class="greyborder child  " style="width: 100%;" src="images/handbook/midfid.png">
+            </div>
+            <div class="col-span-3 md:col-start-2  md:col-span-2">
+                <p>The current flow is spread throughout multiple platforms, requiring users to frequently switch
+                    between them. To fix this, I created a flow that combines these categories into a single,
+                    cohesive experience, allowing users to transition between flows on one platform easily.</p>
+            </div>
+            <h3>Observations</h3>
+            <div class="col-span-3 md:col-span-2">
 
-                <div class="col-span-2">
-                    <ol>
-                        <li> Add a course to their year one schedule</li>
-                        <li> Check what credits they need completed
-                        </li>
+                <p>
 
-                        <li>
-                            Make a timetable for a year.
-
-                        </li>
-                    </ol>
-                </div>
-                <div class="col-span-2">
-                    <p>
-                        Since these three flows were the most important to design students, my focus was to
-                        make
-                        these
-                        flows
-                        as simple and intuitive as possible.
-
-                    </p>
-
-                </div>
+                    Since I wanted to test a wide scope of features to improve the work, I gave my mid-fidelity
+                    to 3 design students who hadn't used the app, and asked them to :
 
 
-            </section>
-            <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="col-span-2">
-                    <h4>Fixes</h4>
-                    <h3>Course Card Design</h3>
-                    <p>
 
-                        User testing highlighted that the information on the course cards was not intuitive and
-                        lacked
-                        necessary information, such as when the course was being offered. Based on this
-                        feedback, I
-                        created a final version with better-organised cards and a labelling system to specify if
-                        courses
-                        fit certain requirements.
-                    </p>
-                </div>
+                </p>
 
-            </section>
-            <img class="greyborder child  " style="width: 100%;" src="images/handbook/desnbookcard.png">
-            <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!---
-                <div class="col-span-2">
+                <ol>
+                    <li> Add a course to their year one schedule</li>
+                    <li> Check what credits they need completed
+                    </li>
+
+                    <li>
+                        Make a timetable for a year.
+
+                    </li>
+                </ol>
+
+
+                <p>
+                    Since these three flows were the most important to design students, my focus was to
+                    make
+                    these
+                    flows
+                    as simple and intuitive as possible.
+
+                </p>
+
+            </div>
+
+            <div class="col-span-3">
+                <h4>Fixes</h4>
+            </div>
+
+            <div class="col-span-3 md:col-span-1">
+
+                <h3>Course Card Design</h3>
+
+            </div>
+            <div class="col-span-3 md:col-span-2">
+
+                <p>
+
+                    User testing highlighted that the information on the course cards was not intuitive and
+                    lacked
+                    necessary information, such as when the course was being offered. Based on this
+                    feedback, I
+                    created a final version with better-organised cards and a labelling system to specify if
+                    courses
+                    fit certain requirements.
+                </p>
+            </div>
+
+
+            <img class="greyborder child  col-span-3" src="images/handbook/desnbookcard.png">
+
+            <!---
+                <div class="md:col-span-2">
 
                     <h3>Dashboard Hierarchy</h3>
                     <p>
@@ -320,36 +335,38 @@
                 <img class="greyborder child  " style="width: 100%;" src="images/handbook/newdash.png">
              -->
 
-                <div class="col-span-2">
+            <div class="col-span-3 md:col-span-1">
+                <h3>Suggestion Side Bar</h3>
+            </div>
+            <div class="col-span-3 md:col-span-2">
 
-                    <h3>Suggestion Side Bar</h3>
-                    <p>
+                <p>
 
-                        Users expressed a desire for the sidebar to be more useful. Early versions displayed
-                        only credit
-                        information without suggestions for improvements or additional courses. Suggested
-                        changes were
-                        implemented to help users easily identify and resolve issues with a click.
-                    </p>
-                </div>
-                <div class="col-span-3">
-                    <img class="greyborder child col-span-3  " src="images/handbook/sidebarimage.png">
-                </div>
-
-
-
-
-
-
-
-            </section>
+                    Users expressed a desire for the sidebar to be more useful. Early versions displayed
+                    only credit
+                    information without suggestions for improvements or additional courses. Suggested
+                    changes were
+                    implemented to help users easily identify and resolve issues with a click.
+                </p>
+            </div>
+            <div class="col-span-3">
+                <img class="greyborder child   " src="images/handbook/sidebarimage.png">
+            </div>
 
 
 
 
-            <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <h4>Final product</h4>
-                <video class="col-span-3 greyborder" preload="auto" autoplay loop muted playsinline>
+
+
+
+
+
+
+
+
+            <h4 class="col-span-3">Final product</h4>
+            <div class="col-span-3">
+                <video class="greyborder" preload="auto" autoplay loop muted playsinline>
                     <source src="images/handbook/finalprereq.mp4" type="video/mp4">
                     <source src="movie.ogg" type="video/ogg">
                     Your browser does not support the video tag.
@@ -357,11 +374,33 @@
                 <div class="col-span-3">
                     <p>Easily look at course desrciption,and add prequiste for courses as well.</p>
                 </div>
-            </section>
-
-            <div class="col-span-2">
-                <h4>next steps</h4>
+            </div>
+            <div class="col-span-3">
+                <video class=" greyborder" preload="auto" autoplay loop muted playsinline>
+                    <source src="images/handbook/finalprereq.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="col-span-3">
+                    <p>Easily look at course desrciption,and add prequiste for courses as well.</p>
+                </div>
+            </div>
+            <div class="col-span-3">
+                <video class="col-span-3 greyborder" preload="auto" autoplay loop muted playsinline>
+                    <source src="images/handbook/sidebarfinal.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="col-span-3">
+                    <p>Easily look at course desrciption,and add prequiste for courses as well.</p>
+                </div>
+            </div>
+            <h4 class="col-span-3">next steps</h4>
+            <div class="col-span-3 md:col-span-1">
                 <h3>Connection to existing platforms</h3>
+            </div>
+            <div class="col-span-3 md:col-span-2">
+
                 <p>
 
                     Since people, thre would be no immediate roll over to the platform, so adding a function
@@ -373,15 +412,23 @@
                     when consulting other course resources.
 
                 </p>
-                <h4>Takeaways</h4>
-                <h3>Don't reinvent the wheel</h3>
-                <p>
-                    My early designs were focused on creating something that looked nice before consider how the user would use it. By focusing on the issues of users journey and allowing feedback from students on my designs, the ending product allowed for an experience catered toward those who would use it.
 
-                </p>
+
+
             </div>
+            <h4 class="col-span-3">Takeaways</h4>
+            <div class="col-span-3 md:col-span-1">
+                <h3>Don't reinvent the wheel</h3>
+            </div>
+            <div class="col-span-3 md:col-span-2">
 
+                <p>
+                    My early designs were focused on creating something that looked nice before consider how the user
+                    would use it. By focusing on the issues of users journey and allowing feedback from students on my
+                    designs, the ending product allowed for an experience catered toward those who would use it.
 
+                </p>s
+            </div>
     </main>
     <script src="./main.js" type="module"></script>
 </body>
