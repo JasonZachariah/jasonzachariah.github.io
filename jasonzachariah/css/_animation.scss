@@ -9,3 +9,15 @@ html.is-leaving .transition-main {
 html.is-animating .transition-main {
   opacity: 0;
 }
+
+
+.change:before {
+
+  content:"jason [";
+ 
+}
+
+.cursor:after{
+  opacity: 1;
+  content:"] zachariah";
+}

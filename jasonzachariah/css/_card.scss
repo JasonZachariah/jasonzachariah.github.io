@@ -1,7 +1,13 @@
 
 
 .greyborder {
-  outline: 2px solid $secondary-black;
+  --s: 10px; /* corner size */
+  padding: 15px; /* the gap */
+  border: 2px solid $secondary-black;
+  mask:
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+     0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+    conic-gradient(#000 0 0) content-box;
 }
 
 

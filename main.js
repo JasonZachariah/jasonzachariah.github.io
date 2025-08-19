@@ -1,66 +1,30 @@
 
 import { gsap } from "gsap";
+import { RoughEase } from "gsap/EasePack";
+  
+import { TextPlugin } from "gsap/TextPlugin";
 
-import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(TextPlugin, RoughEase);
 
 
+const names=["the Markhamite","Ux/UI designer at WizRobotics","education forward"]
 
 
-import {
-  Carousel,
-  initTWE,
-} from "tw-elements";
+let cursor = gsap.to ('.cursor' ,{opacity:0, ease : "circ.inOut",repeat :-1 
+}
+)
 
-initTWE({ Carousel });
+let mastertl = gsap.timeline({repeat:-1})
 
-gsap.registerPlugin(DrawSVGPlugin) ;
+names.forEach(word => {
 
-let split = SplitText.create(".text", { 
-  type: "words, chars",
-  mask:"chars"
+  let tl = gsap.timeline({repeat: 1, yoyo: true,repeatDelay:2})
+
+  tl.to('.change' ,{ duration:2, text: word,})
+
+  mastertl.add(tl)
+  
 });
-
-// now animate the characters in a staggered fashion
-gsap.from(split.words, {
-
-  ease: "expo.out",
-  y: 10,       // animate from 100px below
-  autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
-  stagger: 0.2 ,// 0.05 seconds between each
-  filter: "blur(10px)",
-});
-
-
-//draws all elements with the "draw-me" class applied with staggered start times 0.1 seconds apart
-gsap.from(".line", {duration:1,stagger: 0.1, drawSVG: 0});
-
-
-
 
 import Swup from 'swup';
 const swup = new Swup();
-//inject nav bar
-/*
-const  navbar = ` 
- <nav class="container">
-
-
-            <div class="flex w-full  my-8  content-center justify-between">
-                <a href="./">
-                  <img src="./jzlogo.svg" width="45px">
-                </a>
-                <div class=" flex justify-end-safe space-x-6">
-                    <a href="./">WORKS</a>
-                    <a href="./play">PLAY</a>
-                    <a href="./about">ABOUT</a>
-                    <a href="./resume">RESUME</a>
-                </div>
-            </div>
-
-
-
-        </nav>`;
-        document.body.insertAdjacentHTML("afterbegin", navbar);
-
-
-*/

@@ -5,6 +5,10 @@
   font-family: SFProText;
   src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SFProText-Medium.ttf);
 }
+@font-face {
+  font-family: SF-Mono-Medium;
+  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SF-Mono-Medium.otf);
+}
 ::-moz-selection {
   color: #2a2a2a;
   background: #8B8B8B;
@@ -15,7 +19,11 @@
 }
 
 .greyborder {
-  outline: 2px solid #8B8B8B;
+  --s: 10px; /* corner size */
+  padding: 15px; /* the gap */
+  border: 2px solid #8B8B8B;
+  -webkit-mask: conic-gradient(at var(--s) var(--s), rgba(0, 0, 0, 0) 75%, #000 0) 0 0/calc(100% - var(--s)) calc(100% - var(--s)), conic-gradient(#000 0 0) content-box;
+          mask: conic-gradient(at var(--s) var(--s), rgba(0, 0, 0, 0) 75%, #000 0) 0 0/calc(100% - var(--s)) calc(100% - var(--s)), conic-gradient(#000 0 0) content-box;
 }
 
 .navbarcon {
@@ -65,7 +73,7 @@ section {
 
 a {
   text-decoration: none;
-  font-family: "Geist Mono", monospace;
+  font-family: SF-Mono-Medium;
   font-weight: 700;
   color: #2a2a2a;
 }
@@ -75,7 +83,7 @@ h1 {
   font-size: 5rem;
   line-height: 4.5rem;
   margin-top: 1.2777778rem;
-  font-family: "Geist Mono", monospace;
+  font-family: SF-Mono-Medium;
   letter-spacing: -4px;
   font-weight: 600;
   text-wrap: nowrap;
@@ -89,7 +97,7 @@ h2 {
   font-size: 2.6111111rem;
   line-height: 3.8333333rem;
   letter-spacing: -2px;
-  font-family: "Geist Mono", monospace;
+  font-family: SF-Mono-Medium;
   font-weight: 500;
   font-style: normal;
   word-wrap: break-word;
@@ -97,12 +105,13 @@ h2 {
 
 h3 {
   color: #2a2a2a;
-  font-size: 1.6111111rem;
+  font-size: 2.1481481333rem;
   margin-bottom: 0.2777778rem;
   letter-spacing: -1px;
   /*font code*/
   font-family: SFProText;
   font-weight: 500;
+  vertical-align: top;
 }
 
 h4, figcaption {
@@ -111,7 +120,7 @@ h4, figcaption {
   font-size: 1rem;
   line-height: 1.2777778rem;
   margin-bottom: 0.95833335rem;
-  font-family: "Geist Mono", monospace;
+  font-family: SF-Mono-Medium;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -149,18 +158,12 @@ ol {
 li {
   font-size: 1.25rem;
   margin-bottom: 0.5555556rem;
-}
-
-b {
-  color: #2a2a2a;
-  background-color: rgba(236, 90, 42, 0.6745098039);
-  padding: 0.1rem;
 }
 
 /**reponsive sizes**/
 a {
   text-decoration: none;
-  font-family: "Geist Mono", monospace;
+  font-family: SF-Mono-Medium;
   font-weight: 700;
   color: #2a2a2a;
 }
@@ -170,7 +173,7 @@ h1 {
   font-size: 5rem;
   line-height: 4.5rem;
   margin-top: 1.2777778rem;
-  font-family: "Geist Mono", monospace;
+  font-family: SF-Mono-Medium;
   letter-spacing: -4px;
   font-weight: 600;
   text-wrap: nowrap;
@@ -184,7 +187,7 @@ h2 {
   font-size: 2.6111111rem;
   line-height: 3.8333333rem;
   letter-spacing: -2px;
-  font-family: "Geist Mono", monospace;
+  font-family: SF-Mono-Medium;
   font-weight: 500;
   font-style: normal;
   word-wrap: break-word;
@@ -192,12 +195,13 @@ h2 {
 
 h3 {
   color: #2a2a2a;
-  font-size: 1.6111111rem;
+  font-size: 2.1481481333rem;
   margin-bottom: 0.2777778rem;
   letter-spacing: -1px;
   /*font code*/
   font-family: SFProText;
   font-weight: 500;
+  vertical-align: top;
 }
 
 h4, figcaption {
@@ -206,7 +210,7 @@ h4, figcaption {
   font-size: 1rem;
   line-height: 1.2777778rem;
   margin-bottom: 0.95833335rem;
-  font-family: "Geist Mono", monospace;
+  font-family: SF-Mono-Medium;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -244,12 +248,6 @@ ol {
 li {
   font-size: 1.25rem;
   margin-bottom: 0.5555556rem;
-}
-
-b {
-  color: #2a2a2a;
-  background-color: rgba(236, 90, 42, 0.6745098039);
-  padding: 0.1rem;
 }
 
 .container {
@@ -289,4 +287,13 @@ html.is-leaving .transition-main {
 
 html.is-animating .transition-main {
   opacity: 0;
+}
+
+.change:before {
+  content: "jason [";
+}
+
+.cursor:after {
+  opacity: 1;
+  content: "] zachariah";
 }/*# sourceMappingURL=styles.css.map */
