@@ -1,6 +1,7 @@
 
 
 .greyborder {
+  transition: all 0.5s ease;
   --s: 10px; /* corner size */
   padding: 15px; /* the gap */
   border: 2px solid $secondary-black;
@@ -10,6 +11,11 @@
     conic-gradient(#000 0 0) content-box;
 }
 
+.parent:hover .greyborder{
+  transform: scale(1.05);
+  animation-duration: 4s;
+  --s: 20px;
+}
 
 .navbarcon {
   background-color: $accent;
