@@ -26,5 +26,3 @@ names.forEach(word => {
   
 });
 
-import Swup from 'swup';
-const swup = new Swup();

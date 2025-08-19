@@ -1,6 +1,8 @@
 /* file import */
-@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap");
-@import url("https://use.typekit.net/qvu8qst.css");
+@view-transition {
+  navigation: auto;
+}
+
 @font-face {
   font-family: SFProText;
   src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SFProText-Medium.ttf);
@@ -301,4 +303,16 @@ html.is-animating .transition-main {
 .cursor:after {
   opacity: 1;
   content: "] zachariah";
-}/*# sourceMappingURL=styles.css.map */
+}
+
+::view-transition-group(*) {
+  animation-duration: 0.5s;
+}
+
+#homedesnbook,#desnbook{
+  view-transition-name: picture;
+}
+
+#homewizedos,#wizedos{
+  view-transition-name: picture;
+}
