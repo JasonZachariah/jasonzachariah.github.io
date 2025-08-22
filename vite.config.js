@@ -11,6 +11,7 @@ export default defineConfig({
         handbook: './handbook.html', 
         error:'./404.html',
         wip:'./wip.html',
+        wizedos:'./wizedos.html',
       }
     },
     outDir: 'dist', 
