@@ -269,14 +269,14 @@ li {
 }
 .container {
   max-width: 100vw;
-  padding: 0rem 14rem;
+  padding: 0rem 8rem;
 }
 
 /**larger desktop**/
 @media (max-width: 1024px) {
   .container {
     max-width: 100vw;
-    padding: 0rem 8rem;
+    padding: 0rem 4rem;
   }
   html {
     font-size: 14px;
