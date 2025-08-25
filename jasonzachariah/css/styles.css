@@ -294,17 +294,6 @@ li {
     padding: 0rem 2rem;
   }
 }
-html.is-changing .transition-main {
-  transition: opacity 250ms ease-in-out;
-}
-
-html.is-leaving .transition-main {
-  transition: opacity 250ms ease-in-out;
-}
-
-html.is-animating .transition-main {
-  opacity: 0;
-}
 
 .change:before {
   content: "jason [";
@@ -315,14 +304,17 @@ html.is-animating .transition-main {
   content: "] zachariah";
 }
 
-::view-transition-group(*) {
-  animation-duration: 0.5s;
+.image1{
+
+  view-transition-name: image1;
 }
 
-#homedesnbook,#desnbook{
-  view-transition-name: picture;
+.image2{
+
+  view-transition-name: image2;
 }
 
-#homewizedos,#wizedos{
-  view-transition-name: picture;
+.image3{
+
+  view-transition-name: image3;
 }
