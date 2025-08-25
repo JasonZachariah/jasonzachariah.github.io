@@ -305,16 +305,19 @@ li {
 }
 
 .image1{
+  object-fit: contain;
 
   view-transition-name: image1;
-}
+} 
 
 .image2{
-
+  object-fit: contain;
+ 
   view-transition-name: image2;
 }
 
 .image3{
+  object-fit: contain;
 
   view-transition-name: image3;
 }
