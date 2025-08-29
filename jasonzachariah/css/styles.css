@@ -3,6 +3,10 @@
   navigation: auto;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: SFProText;
   src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SFProText-Medium.ttf);
@@ -58,6 +62,8 @@ section {
 }
 
 .colorbg {
+   margin: 2rem -2rem;
+   padding: 2rem 2rem;
   background-color: #F0F0F0;
 }
 
@@ -81,8 +87,16 @@ section {
 }
 
 a {
+
+  color: #8B8B8B;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.2777778rem;
+
+  font-weight: 500;
+
   text-decoration: none;
-  font-family: SF-Mono-Medium;
+
 
   color: #2a2a2a;
 }
@@ -169,12 +183,7 @@ li {
 }
 
 /**reponsive sizes**/
-a {
-  text-decoration: none;
-  font-family: SF-Mono-Medium;
-  font-weight: 700;
-  color: #2a2a2a;
-}
+
 
 h1 {
   color: #2a2a2a;
@@ -286,6 +295,10 @@ li {
 @media (max-width: 768px) {
   h1 {
     font-size: 5.2rem;
+  }
+  .colorbg {
+    margin:0 -4rem ;
+    padding:0 4rem;
   }
 }
 /** s size **/
