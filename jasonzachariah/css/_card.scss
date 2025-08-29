@@ -1,0 +1,68 @@
+
+
+.greyborder {
+  transition: all 0.5s ease;
+  --s: 10px; /* corner size */
+  padding: 15px; /* the gap */
+  border: 2px solid $secondary-black;
+  mask:
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+     0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+    conic-gradient(#000 0 0) content-box;
+}
+
+.parent:hover .greyborder{
+  transform: scale(1.05);
+  animation-duration: 4s;
+  --s: 20px;
+}
+
+.navbarcon {
+  background-color: $accent;
+  z-index: 8;
+
+  text-wrap: nowrap;
+}
+
+.animate-on-scroll {
+  transform: translate(0px, 50px);
+  opacity: 0;
+  transition: all 0.8s ease;
+  transition-delay: 0.2s;
+}
+
+.animate {
+  transform: translate(0px, 0);
+  opacity: 1;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+.colorbg {
+  background-color: $primary-white;
+}
+
+.line {
+  stroke-width: 0.2rem;
+  background-color: $primary-black;
+}
+
+
+.child {
+  width: 100%;
+  transition: all ease-in-out 0.5s;
+}
+
+.covermask {
+  aspect-ratio: 16/9;
+
+  overflow: hidden;
+}
+
+.parent:hover .child {
+  width: 30rem;
+
+}
+

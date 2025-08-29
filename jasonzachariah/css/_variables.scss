@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
+@font-face {
+  font-family: SFProText;
+  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SFProText-Medium.ttf);
+}
+@font-face {
+  font-family: SF-Mono-Medium;
+  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SF-Mono-Medium.otf);
+}
+
+
+$primary-font: SFProText;
+$secondary-font:SF-Mono-Medium;
+$primary-black: #2a2a2a;
+$secondary-black: #8B8B8B;
+$primary-white: #F0F0F0;
+
+$accent: #EC5A2A;
+$accenttrans: #ec5a2aac;
+
+::selection {
+    color: $primary-black;
+    background: $secondary-black;
+  }
