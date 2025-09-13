@@ -12,6 +12,7 @@ export default defineConfig({
         error:'./404.html',
         wip:'./wip.html',
         wizedos:'./wizedos.html',
+        wizparser:'./wizParser.html',
       }
     },
     outDir: 'dist', 
