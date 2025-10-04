@@ -1,6 +1,7 @@
 /* file import */
 @view-transition {
   navigation: auto;
+
 }
 
 html{
@@ -11,6 +12,7 @@ html{
   font-family: SFProText;
   src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SFProText-Medium.ttf);
 }
+
 @font-face {
   font-family: SF-Mono-Medium;
   src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SF-Mono-Medium.otf);
@@ -101,52 +103,6 @@ a {
   color: #2a2a2a;
 }
 
-h1 {
-  color: #2a2a2a;
-  font-size: 5rem;
-  line-height: 4.5rem;
-  margin-top: 1.2777778rem;
-  font-family: SF-Mono-Medium;
-  letter-spacing: -4px;
-  font-weight: 600;
-  text-wrap: nowrap;
-  font-style: normal;
-  margin: 0;
-}
-
-h2 {
-  display: flex;
-  color: #2a2a2a;
-  font-size: 2.6111111rem;
-  line-height: 3.8333333rem;
-  letter-spacing: -2px;
-  font-family: SF-Mono-Medium;
-  font-weight: 500;
-  font-style: normal;
-  word-wrap: break-word;
-}
-
-h3 {
-  color: #2a2a2a;
-  font-size: 2.1481481333rem;
-  margin-bottom: 0.2777778rem;
-  letter-spacing: -1px;
-  /*font code*/
-  font-family: SFProText;
-  font-weight: 500;
-  vertical-align: top;
-}
-
-h4, figcaption {
-  color: #8B8B8B;
-  display: inline-block;
-  font-size: 1rem;
-  line-height: 1.2777778rem;
-  font-family: SF-Mono-Medium;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 h4::before, figcaption::before {
   content: "[";
 }
@@ -155,6 +111,20 @@ h4::after, figcaption::after {
   content: "]";
 }
 
+p b{
+  letter-spacing: -0.5px;
+  color: #8B8B8B;
+  font-size: 1rem;
+  line-height: 1.40555558rem;
+  margin-top: 0rem;
+  margin-bottom: 0.2777778rem;
+  font-family: SFProText;
+  font-weight: 500;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-wrap: break-word;
+  background-color: #c7c7c747;
+}
 p, li {
   letter-spacing: -0.5px;
   color: #8B8B8B;
@@ -211,7 +181,7 @@ h2 {
 }
 
 h3 {
-  text-wrap: balance;
+  text-wrap: pretty;
   color: #2a2a2a;
   font-size: 2.1481481333rem;
   margin-bottom: 0.2777778rem;
@@ -293,7 +263,7 @@ li {
   }
 }
 /** m size**/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h1 {
     font-size: 5.2rem;
   }
