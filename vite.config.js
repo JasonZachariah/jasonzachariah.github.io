@@ -8,6 +8,7 @@ export default defineConfig({
         about:'./about.html',
         main: './index.html',
         octobud: './octobud.html', 
+        play:'./play.html',
         handbook: './handbook.html', 
         error:'./404.html',
         wip:'./wip.html',
