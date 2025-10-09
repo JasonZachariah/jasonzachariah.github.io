@@ -91,7 +91,7 @@ section {
 a {
 
   color: #8B8B8B;
-  display: inline-block;
+
   font-size: 1rem;
   line-height: 1.2777778rem;
 
@@ -117,7 +117,7 @@ p b{
   font-size: 1rem;
   line-height: 1.40555558rem;
   margin-top: 0rem;
-  margin-bottom: 0.2777778rem;
+  margin-bottom: 0.2777778*2rem;
   font-family: SFProText;
   font-weight: 500;
   -webkit-hyphens: auto;
@@ -131,7 +131,7 @@ p, li {
   font-size: 1rem;
   line-height: 1.40555558rem;
   margin-top: 0rem;
-  margin-bottom: 0.2777778rem;
+  margin-bottom: 0.5777778rem;
   font-family: SFProText;
   font-weight: 500;
   -webkit-hyphens: auto;
@@ -192,7 +192,7 @@ h3 {
   vertical-align: top;
 }
 
-h4, figcaption {
+h4, figcaption,.pagelink {
   color: #8B8B8B;
   display: inline-block;
   font-size: 1rem;
