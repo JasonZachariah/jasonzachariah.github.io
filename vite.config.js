@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-    
+        about:'./about.html',
         main: './index.html',
         octobud: './octobud.html', 
         handbook: './handbook.html', 
