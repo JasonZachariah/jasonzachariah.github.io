@@ -3,106 +3,74 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DESNbook</title>
+    <title>Wiz Parser</title>
     <link rel="icon" type="image/x-icon" href="jzlogo.svg">
 
-
-    <!--Font Import-->
+    <!-- Font Import -->
     <link rel="stylesheet" href="https://use.typekit.net/qvu8qst.css">
 
-    <!--Material Desgin icon-->
+    <!-- Material Design Icon -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_circle_right" />
 
-    <!--links css stylesheet style.css-->
+    <!-- Link CSS Stylesheet -->
     <link rel="stylesheet" href="jasonzachariah/css/styles.css">
 
-    <!--Tailwinf import-->
+    <!-- Tailwind Import -->
     <link href="output.css" rel="stylesheet">
-
-
-
 </head>
 
 <body data-barba="wrapper">
     <nav class="container">
-
-
-        <div class="flex w-full  my-8  content-center justify-between">
+        <div class="flex w-full my-8 content-center justify-between">
             <a href="./">
                 <img src="./jzlogo.svg" width="45px">
             </a>
 
-            <div class=" flex justify-end-safe space-x-6">
+            <div class="flex justify-end-safe space-x-6">
                 <a href="./" class="pagelink">WORKS</a>
-                <a href="./archive.html" class="pagelink">archive</a>
+                <a href="./archive.html" class="pagelink">ARCHIVE</a>
                 <a href="./about" class="pagelink">ABOUT</a>
                 <a href="https://drive.google.com/file/d/1dYPKVENDlAFRUzEPWyE4Pw8uElywU83K/view?usp=sharing"
                     target="_blank" class="pagelink">RESUME</a>
             </div>
-
         </div>
-
-
-
     </nav>
+
     <main id="swup" class="transition-main">
-
-        <div class="greyborder child  flex justify-center ">
+        <div class="greyborder child flex justify-center">
             <img class="h-100 mt-4 image4" src="images/wizparser/wizparser header.png" id="handbook">
-
         </div>
-        </section>
 
-
-        <section class="container ">
-
-
-
-
-            <section class="grid grid-cols-1 md:grid-cols-3 ">
+        <section class="container">
+            <section class="grid grid-cols-1 md:grid-cols-3">
                 <div class="md:col-span-2 space-y-4">
-                    <div class=" items-baseline grid grid-cols-1 md:flex  ">
-
+                    <div class="items-baseline grid grid-cols-1 md:flex">
                         <h3 class="borders">Wiz Parser</h3>
-
-
-
-                    </div>
-                    <div>
                     </div>
 
-                    <h3>Creating a design system for software engineers to easily refer to.
-
-                    </h3>
+                    <h3>Creating a design system for software engineers to easily refer to.</h3>
                 </div>
+
                 <div class="space-y-4">
                     <div>
                         <p><b>Timeline:</b></p>
                         <p>1 week</p>
-
                     </div>
                     <div>
                         <p><b>Tools & Skills:</b></p>
                         <p>Figma</p>
                         <p>User Research</p>
                         <p>User Testing</p>
-                        <p>JSON file systems</p>
+                        <p>JSON File Systems</p>
                     </div>
                 </div>
-
             </section>
         </section>
 
-
-        </section>
-
-        </div>
-
-
         <section class="container grid grid-cols-1 md:grid-cols-4 gap-4">
-            <!--Side Bar-->
-            <div class="  hidden md:h-screen md:sticky md:top-8 md:block">
+            <!-- Side Bar -->
+            <div class="hidden md:h-screen md:sticky md:top-8 md:block">
                 <p><a href="#step1">Overview</a></p>
                 <p><a href="#step2">Problems</a></p>
                 <p><a href="#step3">Research & Development</a></p>
@@ -112,190 +80,122 @@
 
             <section class="col-span-3 space-y-16 px-8">
                 <div class="space-y-4" id="step1">
-                    <h4>overview</h4>
+                    <h4>Overview</h4>
                     <h3>The Issue</h3>
                     <p>
-
-                        During my time at WizRobotics, I was assigned to work with an front-end developer on a platform
-                        to help redesign their platform for Wiz Parser, an online interactive teaching platform.
-
+                        During my time at WizRobotics, I was assigned to work with a front-end developer to redesign
+                        their platform, Wiz Parser - an online interactive teaching platform. This not only meant
+                        redesigning elements to create a more unifed look, but creating a new system in place to help
+                        future developers of the program to create a consistant style when developing.
                     </p>
-                    <p>
-
-
-                        The current developer I was working with had no system in place for designing the different
-                        modules for the Wiz Parser, "designing" the modules as they were needed.
-
-
-                    </p>
-
 
                 </div>
+
                 <div class="space-y-8" id="step2">
-
-
-
-
-
                     <div>
-
-                        <h4>So,what was the problem with the Wiz Parser</h4>
-                        <h3> Lack of unity creates confusion</h3>
-
+                        <h4>So, what was the problem with Wiz Parser?</h4>
+                        <h3>Lack of unity creates confusion</h3>
                     </div>
                     <p>
-
-                        Due to not having a system for creating the elements in the Wiz Parser, the platform lacks
-                        consistency both in looks and interactivity. Not only did this look visually unappealing, but it
-                        created confusion on the end points for each module, creating no distinction between a marked vs
-                        unmarked module.
-
+                        The developer I was working with had no system in place for designing the different modules in
+                        Wiz Parser, instead "designing" them as they were needed, and working off what the previous
+                        developer had done before.
+                        Without a proper system for creating elements in Wiz Parser, the platform lacked consistency in
+                        both appearance and interactivity.
                     </p>
 
                     <img class="greyborder" src="images/wizparser/Inconsistencies.png">
-                    <h3> Creating new elements is time consuming</h3>
+
+                    <h3>Creating new elements is time-consuming</h3>
                     <p>
-
-                        One complaint that I got from the engineer was how annoying it was to create new elements for
-                        the module, as he had to code the CSS for each module from scratch and make sure it didn't
-                        interfere with other modules. This new system had to be flexible, and not interfere with the
-                        existing coding system in place.
+                        One complaint I received from the engineer was how tedious it was to create new elements for the
+                        modules, as he had to code the CSS for each one from scratch and ensure it didn't interfere with
+                        others. This new system had to be flexible and compatible with the existing codebase.
                     </p>
-
+                    <img class="greyborder" src="images/wizparser/PreviousSystem.png">
                 </div>
+
                 <div class="space-y-8" id="step3">
                     <div class="space-y-8">
                         <h4>Research & Development</h4>
-
-
-
-                        <h3>Perfecting handoff </h3>
+                        <h3>Perfecting handoff</h3>
                         <p>
-                            Since I was creating a system for a team with little experience in Figma, my system had
-                            to
-                            be
-                            easily translatable for the development stage and cover all bases to ensure that a
-                            consistent
-                            system is followed throughout. To achieve this, I create a detailed manual list of all
-                            components and variants, which helps create a smoother handoff experience during the
-                            design
-                            process.
+                            Since I was creating a system for a team with limited experience in Figma, it needed to be
+                            easily translatable to development and ensure consistency across all stages. To achieve
+                            this, I created a detailed manual listing all components and variants, helping ensure a
+                            smoother design-to-development handoff.
                         </p>
-                        <img class="greyborder" src="images/wizparser/PreviousSystem.png">
-                   
-
+           
                         <img class="greyborder" src="images/wizparser/FinalSystem.png">
-
-                        <p>
-                            Here are some of the details I formatted before handoff:
-                        </p>
-
-
+                        <p>Here are some of the details I prepared before handoff:</p>
                     </div>
+
                     <div>
                         <h3>Typography</h3>
                         <p>
-                            Typography guidelines were important to establish, especially when relating to creating
-                            type
-                            hierarchy that would work both on desktop and mobile devices. Previously, type styles
-                            were
-                            used
-                            based on style, rather than purpose,leading to time wasted when encoding into CSS . By
-                            labelling
-                            them with titles to show what they were for, it allowed developers to understand where
-                            to
-                            use
-                            each style in the future
-
-
+                            Typography guidelines were crucial for establishing a clear hierarchy that worked on both
+                            desktop and mobile devices. Previously, type styles were chosen based on appearance rather
+                            than purpose, leading to inefficiencies when converting them into CSS. By labeling them
+                            according to their intended use, developers could easily understand where each style should
+                            be applied.
                         </p>
                         <img class="greyborder" src="images/wizparser/Typography.png">
                     </div>
+
                     <h3>Colours</h3>
                     <img class="greyborder" src="images/wizparser/Colour_Modes.png">
                     <p>
-
-                        To make a color schematic that worked for light and dark mode and was easily able to be
-                        implemented coding wise, the primary and neutral palette was defined using the Radix colour
-                        system, which could be easily implemented into the code of the Parser. After this, status
-                        colours for alerts were defined, both for light and dark mode.
-                        Components
-
-
+                        To create a color scheme that worked in both light and dark modes and was easy to implement, the
+                        primary and neutral palettes were defined using the Radix color system. This allowed for
+                        straightforward integration into the Parser's code. Afterward, status colors for alerts were
+                        also defined for both modes.
                     </p>
 
                     <h3>Spacing</h3>
                     <img class="greyborder" src="images/wizparser/Sizing_Guidlines.png">
-
-                    <p>
-
-                    </p>
-
-                    <p>
                 </div>
+
                 <div class="space-y-8" id="step4">
                     <h4>Final Products</h4>
                     <h3>A whole new way of designing elements</h3>
-                    <p> Here are just a few of the delieverables that were made for the final Wiz Parser:</p>
+                    <p>Here are a few of the deliverables created for the final Wiz Parser:</p>
 
                     <img class="greyborder" src="images/wizparser/FinalScreens.png">
+
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                         <video class="greyborder" preload="auto" autoplay loop muted playsinline>
                             <source src="images/wizparser/Light_Dark.mp4" type="video/mp4">
-
-
                         </video>
 
                         <video class="greyborder" preload="auto" autoplay loop muted playsinline>
                             <source src="images/wizparser/Drop-Down-Question.mp4" type="video/mp4">
-
-
                         </video>
 
                         <video class="greyborder" preload="auto" autoplay loop muted playsinline>
                             <source src="images/wizparser/AI-Chat.mp4" type="video/mp4">
-
-
                         </video>
+
                         <video class="greyborder" preload="auto" autoplay loop muted playsinline>
                             <source src="images/wizparser/Copy_Text.mp4" type="video/mp4">
-
-
                         </video>
-
-
-
-
                     </div>
                 </div>
+
                 <div class="space-y-8" id="step5">
-
                     <h4>Takeaways</h4>
-
                     <h3>Assumptions kill productivity</h3>
-
-
                     <p>
-
-
-                        One of the biggest challenges when designing this system was making it actually practical
-                        for
-                        the workflow of the developers using it, especially for those using it in the future when I
-                        am
-                        not there to give feedback. This is why it was so valuable to have the developer with me to
-                        pass
-                        along feedback and questions he had about the design, and plan for all edge cases of the
-                        design
-                        that he might encounter, and not just assume everything I create would turn out smoothly.
-
-
+                        One of the biggest challenges when designing this system was ensuring it was practical for the
+                        developers' workflow - especially for those who might use it in the future without my guidance.
+                        Collaborating closely with the developer helped me address his feedback, anticipate potential
+                        edge cases, and avoid assuming that everything I designed would work seamlessly without
+                        adjustment.
                     </p>
-
-
-
                 </div>
             </section>
+        </section>
     </main>
+
     <script src="./main.js" type="module"></script>
 </body>
 
