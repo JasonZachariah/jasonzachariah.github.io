@@ -192,6 +192,17 @@ h3 {
   vertical-align: top;
 }
 
+h5 {
+  text-wrap: pretty;
+  color: #8B8B8B;
+  font-size: 1.61111109998rem;
+  margin-bottom: 0.2777778rem;
+  letter-spacing: -1px;
+  /*font code*/
+  font-family: SFProText;
+  font-weight: 500;
+  vertical-align: top;
+}
 h4, figcaption,.pagelink {
   color: #8B8B8B;
   display: inline-block;
