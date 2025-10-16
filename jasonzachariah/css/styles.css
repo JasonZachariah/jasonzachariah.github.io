@@ -316,3 +316,8 @@ li {
 
   view-transition-name: image3;
 }
+.image4{
+  object-fit: contain;
+
+  view-transition-name: image3;
+}
