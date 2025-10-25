@@ -28,15 +28,20 @@ html{
 
 .greyborder {
   transition: all 0.5s ease;
+
   --s: 10px; /* corner size */
   padding: 15px; /* the gap */
-  border: 2px solid #8B8B8B;
-  -webkit-mask: conic-gradient(at var(--s) var(--s), rgba(0, 0, 0, 0) 75%, #000 0) 0 0/calc(100% - var(--s)) calc(100% - var(--s)), conic-gradient(#000 0 0) content-box;
+
+  border:1px #8B8B8B ;
+  background-color: #c7c7c747;
+ /* -webkit-mask: conic-gradient(at var(--s) var(--s), rgba(0, 0, 0, 0) 75%, #000 0) 0 0/calc(100% - var(--s)) calc(100% - var(--s)), conic-gradient(#000 0 0) content-box;
           mask: conic-gradient(at var(--s) var(--s), rgba(0, 0, 0, 0) 75%, #000 0) 0 0/calc(100% - var(--s)) calc(100% - var(--s)), conic-gradient(#000 0 0) content-box;
-}
+*/
+          }
 
 .parent:hover .greyborder {
-  transform: scale(1.05);
+  transform: scale(1.01);
+
   animation-duration: 4s;
   --s: 20px;
 }
