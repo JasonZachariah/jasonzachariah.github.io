@@ -65,12 +65,12 @@ html{
 }
 
 section {
-  margin: 2rem 0;
+
 }
 
 .colorbg {
-   margin: 2rem -2rem;
-   padding: 2rem 2rem;
+   
+      padding: 2rem 2rem;
   background-color: #F0F0F0;
 }
 
@@ -108,12 +108,10 @@ a {
   color: #2a2a2a;
 }
 
-h4::before, figcaption::before {
-  content: "[";
-}
-
-h4::after, figcaption::after {
-  content: "]";
+b > h4{
+  padding:2px 4px;
+  background-color: #9b999947;
+  
 }
 
 p b{
@@ -208,7 +206,7 @@ h5 {
   font-weight: 500;
   vertical-align: top;
 }
-h4, figcaption,.pagelink {
+h4, figcaption,.pagelink , h4 >a {
   color: #8B8B8B;
   display: inline-block;
   font-size: 1rem;
@@ -218,13 +216,7 @@ h4, figcaption,.pagelink {
   text-transform: uppercase;
 }
 
-h4::before, figcaption::before {
-  content: "[";
-}
 
-h4::after, figcaption::after {
-  content: "]";
-}
 
 p, li {
   letter-spacing: -0.5px;
@@ -265,7 +257,7 @@ li {
 }
 .container {
   max-width: 100vw;
-  padding: 0rem 8rem;
+  padding: 0rem 4rem;
 }
 
 /**larger desktop**/
@@ -283,10 +275,7 @@ li {
   h1 {
     font-size: 5.2rem;
   }
-  .colorbg {
-    margin:0 -4rem ;
-    padding:2rem 4rem;
-  }
+  
   
 }
 /** s size **/
