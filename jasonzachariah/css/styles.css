@@ -108,7 +108,7 @@ a {
   color: #2a2a2a;
 }
 
-b > h4{
+b > h4, .higlight{
   padding:2px 4px;
   background-color: #9b999947;
   
