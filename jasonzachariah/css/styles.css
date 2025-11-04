@@ -10,12 +10,12 @@ html{
 
 @font-face {
   font-family: SFProText;
-  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SFProText-Medium.ttf);
+  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/IBMPlexSans-VariableFont_wdth,wght.ttf);
 }
 
 @font-face {
   font-family: SF-Mono-Medium;
-  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/SF-Mono-Medium.otf);
+  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/IBMPlexMono-Medium.ttf);
 }
 ::-moz-selection {
   color: #2a2a2a;
@@ -163,7 +163,7 @@ h1 {
   font-size: 5rem;
   line-height: 4.5rem;
   margin-top: 1.2777778rem;
-  font-family: SF-Mono-Medium;
+  font-family: var;
   letter-spacing: -4px;
   font-weight: 600;
   text-wrap: nowrap;
