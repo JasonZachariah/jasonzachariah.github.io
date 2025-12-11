@@ -5,6 +5,9 @@
 }
 :root{
 
+  --color-1: #2a2a2a;
+  --color-2: #8B8B8B;
+  --color-3: #c7c7c747;
   /* Fluid Typography with CSS clamp() */
 
   /* Font Family */
@@ -101,12 +104,12 @@ html{
   src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/IBMPlexMono-Medium.ttf);
 }
 ::-moz-selection {
-  color: #2a2a2a;
-  background: #8B8B8B;
+  color: var(--color-1) ;
+  background:var(--color-3);
 }
 ::selection {
-  color: #2a2a2a;
-  background: #8B8B8B;
+  color: var(--color-1) ;;
+  background: var(--color-3) ;
 }
 
 .greyborder {
@@ -115,11 +118,9 @@ html{
   --s: 10px; /* corner size */
   padding: 15px; /* the gap */
 
-  border:1px #8B8B8B ;
-  background-color: #c7c7c747;
- /* -webkit-mask: conic-gradient(at var(--s) var(--s), rgba(0, 0, 0, 0) 75%, #000 0) 0 0/calc(100% - var(--s)) calc(100% - var(--s)), conic-gradient(#000 0 0) content-box;
-          mask: conic-gradient(at var(--s) var(--s), rgba(0, 0, 0, 0) 75%, #000 0) 0 0/calc(100% - var(--s)) calc(100% - var(--s)), conic-gradient(#000 0 0) content-box;
-*/
+  border:1px var(--color-2) ; 
+  background-color: var(--color-3);
+
           }
 
 .parent:hover .greyborder {
@@ -151,7 +152,7 @@ b > h4, .higlight{
 
 p, li {
   letter-spacing: -0.5px;
-  color: #8B8B8B;
+  color: var(--color-2) ;
   font-size: 1rem;
   line-height: 1.40555558rem;
   margin-top: 0rem;
@@ -163,7 +164,7 @@ p, li {
   word-wrap: break-word;
    b{
     font-weight: 500;
-    background-color: #c7c7c747;
+    background-color: var(--color-3) ;
    }
 }
 
@@ -177,7 +178,7 @@ ol {
 
 
 h1 {
-  color: #2a2a2a;
+  color: var(--color-1) ;;
   font-family: basefont;
   font-size: var(--h1-size) ;
   font-weight: var(--h1-weight);
@@ -190,7 +191,7 @@ h1 {
 
 h2 {
   display: flex;
-  color: #2a2a2a;
+  color: var(--color-1) ;;
   font-family: monofont;
   font-size: var(--h2-size) ;
   font-weight: var(--h2-weight);
@@ -202,7 +203,7 @@ h2 {
 
 h3 {
   text-wrap: pretty;
-  color: #2a2a2a;
+  color: var(--color-1) ;;
   font-family: basefont;
   font-size: var(--h3-size) ;
   font-weight: var(--h3-weight);
@@ -213,7 +214,7 @@ h3 {
 h4, h4 >a {
 
 
-  color: #8B8B8B;
+  color: var(--color-2) ;;
   display: inline-block;
   font-family: monofont;
   text-transform:uppercase;
@@ -229,7 +230,7 @@ h4, h4 >a {
 
 p, li {
 
-  color: #8B8B8B;
+  color: var(--color-2) ;;
   
   -webkit-hyphens: auto;
           hyphens: auto;
