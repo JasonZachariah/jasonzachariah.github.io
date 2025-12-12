@@ -116,7 +116,7 @@ html{
   transition: all 0.5s ease;
 
   --s: 10px; /* corner size */
-  padding: 15px; /* the gap */
+  padding: 5px; /* the gap */
 
   border:1px var(--color-2) ; 
   background-color: var(--color-3);
