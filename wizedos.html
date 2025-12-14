@@ -32,23 +32,23 @@
                 <h4> <a href="./archive" class="pagelink">ARCHIVE</a></h4>
                 <h4> <a href="./about" class="pagelink">ABOUT</a></h4>
                 <h4> <a href="https://drive.google.com/file/d/1dYPKVENDlAFRUzEPWyE4Pw8uElywU83K/view?usp=sharing"
-                    target="_blank" class="pagelink">RESUME</a></h4>
+                        target="_blank" class="pagelink">RESUME</a></h4>
             </div>
         </div>
     </nav>
 
     <main>
-      
+
 
         <section class="container">
-          
+
         </section>
 
         <!-- Content -->
         <section class="container grid grid-cols-1 md:grid-cols-6 gap-8">
             <!-- Side Bar -->
             <div class="hidden md:h-screen md:sticky md:inset-y-0 md:left-0 md:block  border-gray-400 border-r-2">
-               <div class="flex flex-col gap-4 pt-8 px-2">
+                <div class="flex flex-col gap-4 pt-8 px-2">
                     <h4><a href="#step1">Overview</a></h4>
                     <h4><a href="#step2">Initial Notes</a></h4>
                     <h4><a href="#step3">Creating the Flows</a></h4>
@@ -56,25 +56,29 @@
                     <h4><a href="#step5">Design to Implementation</a></h4>
                     <h4><a href="#step6">Final Design</a></h4>
                     <h4><a href="#step7">Reflection</a></h4>
-               </div>
+                </div>
             </div>
 
             <section class="col-span-5 space-y-16 md:mx-32 ">
-                <div class=" child flex justify-center">
-                    <img class="h-100 mt-4 image1" src="images/wizedos/wizedosheader.png" id="wizedos">
-                </div>
+                <video class=" image3 greyborder" preload="auto" autoplay muted playsinline>
+                    <source src="images/wizedos/Header.mp4" type="video/mp4">
+                </video>
                 <section class="grid grid-cols-1 gap-6 md:grid-cols-3">
                     <div class="md:col-span-2 space-y-4 ">
                         <div class="grid grid-cols-1 md:flex">
                             <h3>WizEdOS</h3>
                         </div>
-    
+
                         <h3>A redesign for the WizEdOS platform</h3>
                     </div>
-    
-                    
+
+
                 </section>
-                <div class="space-y-4 grid grid-cols-1- md:grid-cols-4   gap-4">
+                <div class="flex grid grid-cols-1 justify-between ">
+                    <div>
+                        <p><b>Project Type:</b></p>
+                        <p>Client Work (WizRobotics)</p>
+                    </div>
                     <div>
                         <p><b>Project Type:</b></p>
                         <p>Client Work (WizRobotics)</p>
@@ -83,7 +87,7 @@
                         <p><b>Timeline:</b></p>
                         <p>2 weeks</p>
                     </div>
-                    
+
                     <div>
                         <p><b>Tools & Skills:</b></p>
                         <p>Figma</p>
@@ -91,7 +95,7 @@
                         <p>Webflow</p>
                     </div>
                 </div>
-                <div class="space-y-4" id="step1">
+                <div id="step1" class="">
                     <h4>Overview</h4>
 
                     <h3>WizEdOS, a B2B service for STEM education, lacked a consistent design system that alienated
@@ -108,7 +112,7 @@
                     </p>
                 </div>
 
-                <div class="space-y-4" id="step2">
+                <div id="step2">
                     <h4>Initial Notes</h4>
 
                     <h3>So, what were the issues with the old WizEdOS system?</h3>
@@ -137,53 +141,59 @@
                     </p>
                 </div>
 
-                <div class="space-y-4" id="step3">
+                <div id="step3" class="space-y-8">
                     <h4>Creating the Flows</h4>
                     <h3>Treat the website layout like a conversation</h3>
 
-               <div class="space-y-4">
-                      <div>
-                            <p>
-                                To get a clearer idea of how to structure the website that would satisfy the client, I had them
-                                "pitch" me the WizEdOS service as if I were another business
-                                . Using this method, I was able to identify natural ways to group content, taking notes on major
-                                points and structuring them based on how the client explained the platform.
-                            </p>
-                      </div>
-    
-                        <div>
-                            <p>
-                                This process allowed us to  find what aspects of the website needed to be added, and how we should organize them by pages.
-                            </p>
-        
-                        </div>
-                       <div>
-                            <p> From this, we identified two main user flows for the WizEdOS website:
-                                 to encourage companies to book a meeting, and second, to showcase the four sub-services
-                                of WizEdOS.</p>
-                       </div>
-               </div>
+                    <div>
+
+                        <p>
+                            To get a clearer idea of how to structure the website that would satisfy the client, I had
+                            them
+                            "pitch" me the WizEdOS service as if I were another business
+                            . Using this method, I was able to identify natural ways to group content, taking notes on
+                            major
+                            points and structuring them based on how the client explained the platform.
+                        </p>
+
+
+
+                        <p>
+                            This process allowed us to find what aspects of the website needed to be added, and how we
+                            should organize them by pages.
+                        </p>
+
+
+
+                        <p> From this, we identified two main user flows for the WizEdOS website:
+                            to encourage companies to book a meeting, and second, to showcase the four sub-services
+                            of WizEdOS.</p>
+
+                    </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <img class="greyborder child col-span-3" style="width: 100%;"
                             src="images/wizedos/InformationArchitecture.png">
                     </div>
 
-                    <p>
-                        For the first flow, this was achieved by adding a CTA button in both the hero section and the
-                        navigation bar. This opened a pop-up modal, allowing users to access the booking flow easily
-                        without it disrupting the users flow like it did before/
-                    </p>
+                    <div>
+                        <p>
+                            For the first flow, this was achieved by adding a CTA button in both the hero section and
+                            the
+                            navigation bar. This opened a pop-up modal, allowing users to access the booking flow easily
+                            without it disrupting the users flow like it did before
+                        </p>
 
+                    </div>
                     <img class="greyborder" src="images/wizedos/HeroSection.png">
-                    
+
                     <video class="greyborder" preload="auto" autoplay loop muted playsinline>
                         <source src="images/wizedos/WireFrame_to_Final.mp4" type="video/mp4">
                     </video>
-                  
+
                 </div>
 
-                <div class="space-y-4" id="step7">
+                <div id="step7">
                     <h4>Takeaways</h4>
                     <h3>Work with your client, not against them</h3>
 

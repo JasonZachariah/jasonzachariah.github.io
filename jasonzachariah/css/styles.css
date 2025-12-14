@@ -27,7 +27,7 @@
   --h1-size: clamp(1.656rem, calc(1.427rem + 1.143vw), 2.284rem);
   --h1-weight: 500;
   --h1-line-height: 1.55;
-  --h1-letter-spacing: 0.02em;
+  --h1-letter-spacing: 0.005em;
 
   --h2-size: clamp(1.399rem, calc(1.278rem + 0.609vw), 1.734rem);
   --h2-weight: 600;
