@@ -20,11 +20,14 @@
 </head>
 
 <body data-barba="wrapper">
-    <nav class="container">
-        <div class="flex w-full my-8 content-center justify-between">
-            <a href="./">
-                <img src="./jzlogo.svg" width="45px">
-            </a>
+    <nav class="container header-border">
+        <div class="flex w-full py-4 items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="./">
+                    <img src="./jzlogo.svg" width="45px">
+                </a>
+                <h4 class="higlight">JASON ZACHARIAH</h4>
+            </div>
 
             <div class="flex justify-end-safe space-x-6">
                 <h4> <a href="./" class="pagelink">WORKS</a></h4>
@@ -40,28 +43,30 @@
 
 
 
-        <section class="container grid grid-cols-1 md:grid-cols-6 gap-8">
+        <section class="container grid grid-cols-1 md:grid-cols-6 gap-4">
             <!--Sidebar-->
-            <div class="hidden md:h-screen md:sticky md:inset-y-0 md:left-0 md:block  border-gray-400 border-r-2">
-                <div class="flex flex-col gap-4 pt-8 px-2 ">
-                    <h4><a href="#step1">Overview</a></h4>
-                    <h4><a href="#step2">Initial Research</a></h4>
-                    <h4><a href="#step3">Problem Statement</a></h4>
-                    <h4><a href="#step4">Ideation Process</a></h4>
-                    <h4><a href="#step5">User Feedback</a></h4>
-                    <h4><a href="#step6">Final Design</a></h4>
-                    <h4><a href="#step7">Reflection</a></h4>
+            <div class="hidden md:h-screen md:sticky md:inset-y-0 md:left-0 md:flex md:flex-col sidebar-border">
+                <div class="flex flex-col justify-between flex-1 pt-8 px-2 overflow-hidden">
+                    <div class="flex flex-col gap-4">
+                        <h4 class="break-words"><a href="#step1">Overview</a></h4>
+                        <h4 class="break-words"><a href="#step2">Initial Research</a></h4>
+                        <h4 class="break-words"><a href="#step3">Problem Statement</a></h4>
+                        <h4 class="break-words"><a href="#step4">Ideation Process</a></h4>
+                        <h4 class="break-words"><a href="#step5">User Feedback</a></h4>
+                        <h4 class="break-words"><a href="#step6">Final Design</a></h4>
+                        <h4 class="break-words"><a href="#step7">Reflection</a></h4>
+                    </div>
+                    <div class="flex flex-row gap-4 pb-16 mt-8">
+                        <h4 class="whitespace-nowrap"><a href="./wizedos" class="pagelink greyborder px-2 py-1">&larr; Previous</a></h4>
+                        <h4 class="whitespace-nowrap"><a href="./octobud" class="pagelink greyborder px-2 py-1">Next &rarr;</a></h4>
+                    </div>
                 </div>
             </div>
 
-            <section class="col-span-5 space-y-16  md:mx-32 ">
-                <div class=" child flex justify-center">
-                    <img class="h-100 mt-4 image1" src="images/home/home-handbook.png" id="handbook">
-                </div>
-                <section class="">
+            <section class="col-span-5 space-y-16  md:mx-32 mt-16">
+                <section>
 
-
-                    <h2 class="borders">DESNbook</h2>
+                    <h3 class="borders">DESNbook</h3>
 
 
                     <h3>Concept for an all-in-one dashboard that allows design students to plan their degrees.</h3>
@@ -69,8 +74,11 @@
 
 
                 </section>
-                <div class="space-y-4  flex-col md:flex-row  gap-4">
+                <div class=" child flex justify-center">
 
+                    <img class="image1 greyborder" src="images/home/home-handbook.png" id="handbook">
+                </div>
+                <div class="flex justify-between flex-col   md:flex-row ">
                     <div>
                         <p><b>Project Type:</b></p>
                         <p>Personal Project</p>

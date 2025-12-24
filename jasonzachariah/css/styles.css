@@ -230,7 +230,17 @@ b>h4,
 
 .container {
   max-width: 100vw;
-  padding: 0rem 4rem;
+  padding: 0rem 2rem;
+}
+
+/* Sidebar Border */
+.sidebar-border {
+  border-right: 2px solid var(--color-2);
+}
+
+/* Header Bottom Border */
+.header-border {
+  border-bottom: 2px solid var(--color-2);
 }
 
 /* ============================================
@@ -258,7 +268,7 @@ b>h4,
 
 .parent:hover .child {
   width: 30rem;
-}
+  }
 
 /* Image Classes with View Transitions */
 .image1 {
@@ -310,5 +320,5 @@ b>h4,
 @media (max-width: 640px) {
   .container {
     padding: 0rem 2rem;
-  }
+}
 }
