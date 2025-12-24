@@ -1,15 +1,9 @@
-/* file import */
-@view-transition {
-  navigation: auto;
-
-}
-
-body {
-  background-color: var(--color-4);
-}
+/* ============================================
+   CSS VARIABLES
+   ============================================ */
 
 :root {
-
+  /* Color Palette */
   --color-1: oklch(0.229 0.005 248.0);
   --color-2: oklch(0.670 0.003 286.3);
   --color-3: #9b999947;
@@ -18,91 +12,103 @@ body {
   --accent-color: oklch(0.869 0.108 55.0);
   --accent2-color: oklch(0.500 0.169 55.0);
 
-  /* Fluid Typography with CSS clamp() */
-
   /* Font Family */
   --font-family: "IBM Plex Sans", sans-serif;
 
-  /* Type Scale */
+  /* Type Scale - Display Large */
   --display-lg-size: clamp(1.959rem, calc(1.577rem + 1.909vw), 3.008rem);
   --display-lg-weight: 800;
   --display-lg-line-height: 1.55;
   --display-lg-letter-spacing: 0.015em;
 
+  /* Type Scale - Display Medium */
   --display-md-size: clamp(1.801rem, calc(1.502rem + 1.492vw), 2.622rem);
   --display-md-weight: 800;
   --display-md-line-height: 1.55;
   --display-md-letter-spacing: 0.015em;
 
+  /* Type Scale - Heading 1 */
   --h1-size: clamp(1.656rem, calc(1.427rem + 1.143vw), 2.284rem);
   --h1-weight: 500;
   --h1-line-height: 1.55;
   --h1-letter-spacing: 0.005em;
 
+  /* Type Scale - Heading 2 */
   --h2-size: clamp(1.399rem, calc(1.278rem + 0.609vw), 1.734rem);
   --h2-weight: 600;
   --h2-line-height: 1.55;
   --h2-letter-spacing: 0.02em;
 
+  /* Type Scale - Heading 3 */
   --h3-size: clamp(1.287rem, calc(1.205rem + 0.409vw), 1.511rem);
   --h3-weight: 600;
   --h3-line-height: 1.6;
   --h3-letter-spacing: 0.025em;
 
+  /* Type Scale - Heading 4 */
   --h4-size: clamp(1.183rem, calc(1.134rem + 0.244vw), 1.317rem);
   --h4-weight: 500;
   --h4-line-height: 1.6;
   --h4-letter-spacing: 0.025em;
 
+  /* Type Scale - Heading 5 */
   --h5-size: clamp(1.134rem, calc(1.100rem + 0.173vw), 1.229rem);
   --h5-weight: 500;
   --h5-line-height: 1.6;
   --h5-letter-spacing: 0.03em;
 
+  /* Type Scale - Heading 6 */
   --h6-size: clamp(1.088rem, calc(1.066rem + 0.109vw), 1.148rem);
   --h6-weight: 500;
   --h6-line-height: 1.6;
   --h6-letter-spacing: 0.03em;
 
+  /* Type Scale - Body XL */
   --body-xl-size: clamp(1.043rem, calc(1.033rem + 0.052vw), 1.071rem);
   --body-xl-weight: 400;
   --body-xl-line-height: 1.6;
   --body-xl-letter-spacing: 0.03em;
 
+  /* Type Scale - Body */
   --body-size: clamp(1.000rem, calc(1.000rem + 0.000vw), 1.000rem);
   --body-weight: 400;
   --body-line-height: 1.6;
   --body-letter-spacing: 0.03em;
 
+  /* Type Scale - Body Small */
   --body-sm-size: clamp(0.959rem, calc(0.968rem + -0.046vw), 0.933rem);
   --body-sm-weight: 400;
   --body-sm-line-height: 1.65;
   --body-sm-letter-spacing: 0.03em;
 
+  /* Type Scale - Caption Large */
   --caption-lg-size: clamp(0.919rem, calc(0.937rem + -0.087vw), 0.871rem);
   --caption-lg-weight: 400;
   --caption-lg-line-height: 1.65;
   --caption-lg-letter-spacing: 0.03em;
 
+  /* Type Scale - Caption */
   --caption-size: clamp(0.882rem, calc(0.906rem + -0.124vw), 0.813rem);
   --caption-weight: 400;
   --caption-line-height: 1.65;
   --caption-letter-spacing: 0.03em;
 
+  /* Type Scale - Caption Small */
   --caption-sm-size: clamp(0.845rem, calc(0.877rem + -0.156vw), 0.759rem);
   --caption-sm-weight: 300;
   --caption-sm-line-height: 1.65;
   --caption-sm-letter-spacing: 0.03em;
 
+  /* Type Scale - Overline */
   --overline-size: clamp(0.811rem, calc(0.848rem + -0.185vw), 0.709rem);
   --overline-weight: 500;
   --overline-line-height: 1.65;
   --overline-letter-spacing: 0.03em;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* ============================================
+   FONT FACE DECLARATIONS
+   ============================================ */
 
 @font-face {
   font-family: basefont;
@@ -114,6 +120,19 @@ html {
   src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/IBMPlexMono-Medium.ttf);
 }
 
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-4);
+}
+
+/* Text Selection Styles */
 ::-moz-selection {
   color: var(--color-1);
   background: var(--color-3);
@@ -121,216 +140,175 @@ html {
 
 ::selection {
   color: var(--color-1);
-  ;
   background: var(--color-3);
 }
 
-.greyborder {
-  transition: all 0.5s ease;
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
 
-
-
-
-  background-color: var(--color-4);
-
-  box-shadow:
-
-
-    0 0 0 3px var(--color-3);
-}
-
-.parent:hover .greyborder {
-  transform: scale(1.01);
-
-  animation-duration: 4s;
-
-  box-shadow:
-
-
-    0 0 0 2px var(--color-3),
-    0 0 0 2.2px var(--color-3);
-
-
-}
-
-
-.child {
-  width: 100%;
-  transition: all ease-in-out 0.5s;
-}
-
-
-.parent:hover .child {
-  width: 30rem;
-}
-
-
-b>h4,
-.higlight {
-  padding: 2px 4px;
-  background-color: var(--color-3);
-
-}
-
-
-
-p,
-li {
-  letter-spacing: -0.5px;
-  color: var(--color-2);
-  font-size: 1rem;
-  line-height: 1.40555558rem;
-  margin-top: 0rem;
-  margin-bottom: 0.5777778rem;
-  font-family: basefont;
-  font-weight: 500;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-  word-wrap: break-word;
-
-  b {
-    font-weight: 500;
-    color: var(--color-1);
-    ;
-    background-color: var(--color-3);
-  }
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-
-
-/**reponsive sizes**/
-
-
+/* Headings */
 h1 {
   color: var(--color-1);
-  ;
   font-family: basefont;
   font-size: var(--h1-size);
   font-weight: var(--h1-weight);
   line-height: var(--h1-line-height);
-
   letter-spacing: var(--h1-letter-spacing);
-
-
 }
 
 h2 {
   display: flex;
   color: var(--color-1);
-  ;
   font-family: monofont;
   font-size: var(--h2-size);
   font-weight: var(--h2-weight);
   line-height: var(--h2-line-height);
-
   letter-spacing: var(--h2-letter-spacing);
 }
-
 
 h3 {
   text-wrap: pretty;
   color: var(--color-1);
-  ;
   font-family: basefont;
   font-size: var(--h3-size);
   font-weight: var(--h3-weight);
   line-height: var(--h3-line-height);
-
   letter-spacing: var(--h3-letter-spacing);
 }
 
 h4,
 h4>a {
-
-
   color: var(--color-2);
-  ;
   display: inline-block;
   font-family: monofont;
   text-transform: uppercase;
   font-size: var(--caption-size);
   font-weight: var(--caption-weight);
   line-height: var(--caption-line-height);
-
   letter-spacing: var(--caption-letter-spacing);
 }
 
-
-
-
+/* Paragraphs and Lists */
 p,
 li {
-
   color: var(--color-2);
-  ;
-
-  -webkit-hyphens: auto;
-  hyphens: auto;
-  word-wrap: break-word;
-
   font-size: var(--body-size);
   font-weight: var(--body-weight);
   line-height: var(--body-line-height);
-
   letter-spacing: var(--body-letter-spacing);
+  margin-top: 0rem;
+  margin-bottom: 0.5777778rem;
+  font-family: basefont;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
 }
 
+p b,
+li b {
+  font-weight: 500;
+  color: var(--color-1);
+  background-color: var(--color-3);
+}
 
-
+/* Lists */
 ol {
   list-style-type: decimal;
 }
 
+/* Highlight and Emphasis */
+b>h4,
+.higlight {
+  padding: 2px 4px;
+  background-color: var(--color-3);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
 
 .container {
   max-width: 100vw;
   padding: 0rem 4rem;
 }
 
-/**larger desktop**/
-@media (max-width: 1024px) {
-  .container {
-    max-width: 100vw;
-    padding: 0rem 4rem;
-  }
+/* ============================================
+   COMPONENT CLASSES
+   ============================================ */
 
+/* Card Border and Hover Effects */
+.greyborder {
+  transition: all 0.5s ease;
+  background-color: var(--color-4);
+  box-shadow: 0 0 0 3px var(--color-3);
 }
 
-/** m size**/
-@media (max-width: 767px) {}
-
-/** s size **/
-@media (max-width: 640px) {
-  .container {
-    padding: 0rem 2rem;
-  }
+.parent:hover .greyborder {
+  transform: scale(1.01);
+  animation-duration: 4s;
+  box-shadow: 0 0 0 2px var(--color-3), 0 0 0 2.2px var(--color-3);
 }
 
+/* Child Element Transitions */
+.child {
+  width: 100%;
+  transition: all ease-in-out 0.5s;
+}
 
+.parent:hover .child {
+  width: 30rem;
+}
+
+/* Image Classes with View Transitions */
 .image1 {
   object-fit: contain;
-
   view-transition-name: image1;
 }
 
 .image2 {
   object-fit: contain;
-
   view-transition-name: image2;
 }
 
 .image3 {
   object-fit: contain;
-
   view-transition-name: image3;
 }
 
 .image4 {
   object-fit: contain;
-
   view-transition-name: image3;
+}
+
+/* ============================================
+   VIEW TRANSITIONS
+   ============================================ */
+
+@view-transition {
+  navigation: auto;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Larger Desktop (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100vw;
+    padding: 0rem 4rem;
+  }
+}
+
+/* Medium Size (max-width: 767px) */
+@media (max-width: 767px) {
+  /* Add medium screen styles here if needed */
+}
+
+/* Small Size (max-width: 640px) */
+@media (max-width: 640px) {
+  .container {
+    padding: 0rem 2rem;
+  }
 }
