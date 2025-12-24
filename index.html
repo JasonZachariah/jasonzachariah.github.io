@@ -2,16 +2,20 @@
 <html>
 
 <head>
+    <!-- Viewport meta tag for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jason Zachariah</title>
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="jzlogo.svg">
 
     <!-- HTML Meta Tags -->
+    <!-- SEO: Page title and description for search engines -->
     <title>Jason Zachariah Portfolio</title>
     <meta name="description"
         content="I am a product designer currently working for WizRobotics. I am interested in designing accessible technologies for educational purposes, allowing for products that are both visually appealing and utilitarian.">
 
     <!-- Facebook Meta Tags -->
+    <!-- Open Graph tags for social media sharing on Facebook -->
     <meta property="og:url" content="https://jasonzachariah.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Jason Zachariah Portfolio">
@@ -20,6 +24,7 @@
     <meta property="og:image" content="images/home/openGraph.png">
 
     <!-- Twitter Meta Tags -->
+    <!-- Twitter Card tags for social media sharing on Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="jasonzachariah.github.io">
     <meta property="twitter:url" content="https://jasonzachariah.github.io/">
@@ -29,28 +34,38 @@
     <meta name="twitter:image" content="https://jasonzachariah.github.io/assets/openGraph-C5QNJkqu.png">
 
     <!-- Font Import -->
+    <!-- Adobe Typekit font import -->
     <link rel="stylesheet" href="https://use.typekit.net/qvu8qst.css">
 
+    <!-- Additional Open Graph image meta tag -->
     <meta property="og:image" content="images/home/opengraph.png">
 
     <!-- CSS Stylesheet -->
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" href="jasonzachariah/css/styles.css">
 
     <!-- Tailwind Import -->
+    <!-- Tailwind CSS compiled output -->
     <link href="output.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Navigation Bar -->
+    <!-- Contains logo and main navigation links -->
     <nav class="container">
         <div class="flex w-full my-8 content-center justify-between">
+            <!-- Logo - links back to home page -->
             <a href="./">
                 <img src="./jzlogo.svg" width="45rem" alt="Jason Zachariah Logo">
             </a>
 
+            <!-- Navigation Links -->
+            <!-- Main menu items: Works, Archive, About, and Resume -->
             <div class="flex justify-end-safe space-x-6">
                 <h4> <a href="./" class="pagelink">WORKS</a></h4>
                 <h4> <a href="./archive" class="pagelink">ARCHIVE</a></h4>
                 <h4> <a href="./about" class="pagelink">ABOUT</a></h4>
+                <!-- Resume link opens in new tab -->
                 <h4> <a href="https://drive.google.com/file/d/1dYPKVENDlAFRUzEPWyE4Pw8uElywU83K/view?usp=sharing"
                     target="_blank" class="pagelink">RESUME</a></h4>
             </div>
@@ -58,18 +73,26 @@
     </nav>
 
     <main>
-        <!-- Title Section -->
+        <!-- Hero Section -->
+        <!-- Two-column layout: introduction text on left, animated logo on right -->
+        <!-- Responsive: stacks vertically on mobile, side-by-side on medium+ screens -->
         <div class="container grid items-center grid-cols-1 md:grid-cols-2  gap-4">
 
           
 
+            <!-- Left Column: Introduction and Contact Links -->
             <div class=" space-y-8">
+                <!-- Main headline with highlighted text -->
                 <h1>Jason Zachariah is a product designer looking to <span class="higlight">bridge the gap between designers and developers</span></h1>
              
+                <!-- Contact Links -->
+                <!-- Social media and email links -->
                 <div>
+                    <!-- LinkedIn profile link (opens in new tab) -->
                     <a href="https://www.linkedin.com/in/jasontzachariah/" target="_blank" rel="noopener noreferrer">
                        <b> <h4>LINKEDIN</h4></b>
                     </a>
+                    <!-- Email link with pre-filled subject -->
                     <a href="mailto:jasontzachariah@gmail.com?subject=Project Request">
                         <b><h4>EMAIL</h4></b>
                     </a>
@@ -82,24 +105,32 @@
 
 
 
+            <!-- Right Column: Animated Logo -->
+            <!-- Displays animated GIF logo in a bordered container -->
             <div class="flex justify-center items-center greyborder ">         
                 <img style="width: 50%;" src="images/home/jzlogo.gif" alt="Logo">
             </div>
         </div>
 
+        <!-- Portfolio Projects Grid -->
+        <!-- Responsive grid: 1 column on mobile, 2 columns on large screens -->
         <div class="container">
             <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-8">
-                <!-- Wiz Parser -->
+                <!-- Project Card: Wiz Parser -->
+                <!-- Design system project card -->
                 <div class="parent">
                     <a href="./wizParser">
                         <div class="flex flex-col greyborder">
+                            <!-- Project Header Image -->
                             <div class="">
                                 <img class="aspect-16/9 image4" src="images/wizparser/wizparser header.png"
                                     id="homewizedos" alt="Wiz Parser Header">
                             </div>
+                            <!-- Project Details -->
                             <div class="m-4">
                                 <h3>Wiz Parser</h3>
                                 <p>Creating a unifed design system for faster development times.</p>
+                                <!-- Project Tags -->
                                 <div class="space-x-2">
                                     <h4 class="w-fit text-center">DESIGN SYSTEMS</h4>
                                     <h4 class="w-fit text-center">|</h4>
@@ -110,17 +141,21 @@
                     </a>
                 </div>
 
-                <!-- WizEdOS -->
+                <!-- Project Card: WizEdOS -->
+                <!-- Web design and branding project card -->
                 <div class="parent">
                     <a href="./wizedos">
                         <div class="flex flex-col greyborder">
+                            <!-- Project Header Image -->
                             <div class="">
                                 <img class="aspect-16/9 image2" src="images/wizedos/wizedosheader.png" id="homewizedos"
                                     alt="WizEdOS Header">
                             </div>
+                            <!-- Project Details -->
                             <div class="m-4">
                                 <h3>WizEdOS</h3>
                                 <p>Refining brand identity and optimizing website content layout.</p>
+                                <!-- Project Tags -->
                                 <div class="space-x-2">
                                     
                                         <h4 class="w-fit text-center">WEB DESIGN</h4>
@@ -134,17 +169,21 @@
                     </a>
                 </div>
 
-                <!-- DESNbook -->
+                <!-- Project Card: DESNbook -->
+                <!-- Case study project card for educational dashboard -->
                 <div class="parent">
                     <a href="./handbook">
                         <div class="flex flex-col greyborder">
+                            <!-- Project Header Image -->
                             <div class="">
                                 <img class="aspect-16/9 image3" id="homedesnbook" src="images/home/home-desnbook.png"
                                     alt="DESNbook Header">
                             </div>
+                            <!-- Project Details -->
                             <div class="m-4">
                                 <h3>DESNbook</h3>
                                 <p>An all-in-one dashboard for design students to plan their degrees.</p>
+                                <!-- Project Tags -->
                                 <div class="space-x-2">
                                     <h4 class="w-fit text-center">CASE STUDY</h4>
                                     <h4 class="w-fit text-center">|</h4>
@@ -155,16 +194,21 @@
                     </a>
                 </div>
 
-                <!-- Octobud -->
+                <!-- Project Card: Octobud -->
+                <!-- Hardware/device design project card -->
                 <div class="parent">
                     <a href="./octobud">
                         <div class="flex flex-col greyborder">
+                            <!-- Project Header Image -->
+                            <!-- Centered image for this project -->
                             <div class=" flex justify-center">
                                 <img class="object-nones image3" src="images/home/home-octobudheader.png" alt="Octobud Header">
                             </div>
+                            <!-- Project Details -->
                             <div class="m-4">
                                 <h3>Octobud</h3>
                                 <p>A learning device made to meet the needs of students and teachers.</p>
+                                <!-- Project Tags -->
                                 <div class="space-x-2">
                                     <h4 class="w-fit text-center">USER RESEARCH</h4>
                                     <h4 class="w-fit text-center">PROTOTYPING</h4>
@@ -176,6 +220,8 @@
             </div>
         </div>
 
+        <!-- JavaScript Module -->
+        <!-- Main JavaScript file for interactive functionality -->
         <script src="main.js" type="module"></script>
     </main>
 </body>
