@@ -215,6 +215,11 @@ li b {
 /* Lists */
 ol {
   list-style-type: decimal;
+  padding-left: 1.5em;
+}
+
+ol li {
+  padding-left: 0.5em;
 }
 
 /* Highlight and Emphasis */
@@ -252,7 +257,7 @@ b>h4,
   transition: all 0.5s ease;
   background-color: var(--color-4);
   box-shadow: 0 0 0 3px var(--color-3);
-}
+  }
 
 .parent:hover .greyborder {
   transform: scale(1.01);
