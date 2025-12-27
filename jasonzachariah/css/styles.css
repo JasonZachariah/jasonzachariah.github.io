@@ -216,10 +216,19 @@ li b {
 ol {
   list-style-type: decimal;
   padding-left: 1.5em;
+  color: var(--color-2);
+  font-family: basefont;
 }
 
 ol li {
   padding-left: 0.5em;
+}
+
+ol li::marker {
+  color: var(--color-2);
+  font-size: var(--body-size);
+  font-weight: var(--body-weight);
+  font-family: basefont;
 }
 
 /* Highlight and Emphasis */
