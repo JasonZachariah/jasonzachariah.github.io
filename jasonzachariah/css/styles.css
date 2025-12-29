@@ -238,6 +238,22 @@ b>h4,
   background-color: var(--color-3);
 }
 
+/* Active sidebar link */
+.sidebar-link {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.sidebar-link.active {
+  background-color: var(--color-3);
+  padding: 2px 4px;
+  display: inline-block;
+}
+
+/* Ensure h4 containing active sidebar link displays correctly */
+h4 .sidebar-link.active {
+  display: inline-block;
+}
+
 /* ============================================
    UTILITY CLASSES
    ============================================ */
