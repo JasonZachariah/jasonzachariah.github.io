@@ -35,13 +35,13 @@
 
   /* Type Scale - Heading 2 */
   --h2-size: clamp(1.399rem, calc(1.278rem + 0.609vw), 1.734rem);
-  --h2-weight: 600;
+  --h2-weight: 500;
   --h2-line-height: 1.55;
   --h2-letter-spacing: 0.02em;
 
   /* Type Scale - Heading 3 */
   --h3-size: clamp(1.287rem, calc(1.205rem + 0.409vw), 1.511rem);
-  --h3-weight: 600;
+  --h3-weight: 500;
   --h3-line-height: 1.6;
   --h3-letter-spacing: 0.025em;
 
@@ -249,12 +249,12 @@ b>h4,
 
 /* Sidebar Border */
 .sidebar-border {
-  border-right: 2px solid var(--color-2);
+  border-right: 2px solid var(--color-3);
 }
 
 /* Header Bottom Border */
 .header-border {
-  border-bottom: 2px solid var(--color-2);
+  border-bottom: 2px solid var(--color-3);
 }
 
 /* ============================================
