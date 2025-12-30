@@ -5,7 +5,7 @@
 :root {
   /* Color Palette */
   --color-1: oklch(0.229 0.005 248.0);
-  --color-2: oklch(0.670 0.003 286.3);
+  --color-2: oklch(0.4661 0.003 60.35);
   --color-3: #9b999947;
   --color-4: #ffffff;
   
@@ -37,7 +37,7 @@
   --h2-size: clamp(1.399rem, calc(1.278rem + 0.609vw), 1.734rem);
   --h2-weight: 500;
   --h2-line-height: 1.55;
-  --h2-letter-spacing: 0.02em;
+  --h2-letter-spacing: 0.005em;
 
   /* Type Scale - Heading 3 */
   --h3-size: clamp(1.287rem, calc(1.205rem + 0.409vw), 1.511rem);
@@ -160,7 +160,7 @@ h1 {
 h2 {
   display: flex;
   color: var(--color-1);
-  font-family: monofont;
+  font-family: basefont;
   font-size: var(--h2-size);
   font-weight: var(--h2-weight);
   line-height: var(--h2-line-height);
