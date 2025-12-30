@@ -254,6 +254,14 @@ h4 .sidebar-link.active {
   display: inline-block;
 }
 
+/* Solution section background */
+.solution-bg,
+.colorbg {
+  background-color: var(--color-3);
+  padding: 1.5rem;
+ 
+}
+
 /* ============================================
    UTILITY CLASSES
    ============================================ */
