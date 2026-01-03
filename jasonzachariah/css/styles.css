@@ -12,7 +12,7 @@
   --accent-color: #E84B26;
   --accent2-color:#ff562f;
   --accent3-color:#fbe9e8;
-  --accent4-color:#f4f3f3ea;
+  --accent4-color:#fefbfb;
 
   /* Font Family */
   --font-family: "IBM Plex Sans", sans-serif;
@@ -205,7 +205,6 @@ li {
   -webkit-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  max-width: 66.666667%;
 }
 
 p b,
@@ -284,19 +283,22 @@ h4 .sidebar-link.active {
   text-align: center;
 }
 
-/* Remove max-width constraint for paragraphs inside important-bg */
-.important-bg p {
+
+
+/* Content width constraint for text sections */
+.content-width {
   max-width: 100%;
 }
 
-/* Remove max-width constraint for paragraphs in project metadata sections */
-.flex.justify-between p {
-  max-width: 100%;
+@media (min-width: 768px) {
+  .content-width {
+    max-width: 75%;
+  }
 }
 
-/* Remove max-width constraint for paragraphs inside greyborder containers */
-.greyborder p {
-  max-width: 100%;
+/* Full width class for flex-rows and images */
+.full {
+  width: 100%;
 }
 
 /* ============================================
@@ -326,7 +328,7 @@ h4 .sidebar-link.active {
 .greyborder {
   transition: all 0.5s ease;
   background-color: var(--color-4);
-  box-shadow: 0 0 0 3px var(--color-3);
+  box-shadow: 0 0 0 2px var(--color-3);
   }
 
 .parent:hover .greyborder {
