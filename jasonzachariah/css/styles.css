@@ -97,7 +97,7 @@
 
   /* Type Scale - Caption Small */
   --caption-sm-size: clamp(0.845rem, calc(0.877rem + -0.156vw), 0.759rem);
-  --caption-sm-weight: 300;
+  --caption-sm-weight: 400;
   --caption-sm-line-height: 1.65;
   --caption-sm-letter-spacing: 0.03em;
 
@@ -164,7 +164,7 @@ h2 {
   color: var(--color-1);
   font-family: basefont;
   font-size: var(--h2-size);
-  font-weight: var(--h2-weight);
+  font-weight: bold;
   line-height: var(--h2-line-height);
   letter-spacing: var(--h2-letter-spacing);
 }
@@ -212,6 +212,47 @@ li b {
   font-weight: 500;
   color: var(--color-1);
   background-color: var(--color-3);
+}
+
+/* Caption Large */
+.caption-lg {
+  color: var(--color-2);
+  font-size: var(--caption-lg-size);
+  font-weight: var(--caption-lg-weight);
+  line-height: var(--caption-lg-line-height);
+  letter-spacing: var(--caption-lg-letter-spacing);
+  font-family: basefont;
+  margin-top: 0rem;
+  margin-bottom: 0.5777778rem;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+/* Caption Small */
+.caption-sm {
+  color: var(--color-2);
+  font-size: var(--caption-sm-size);
+  font-weight: var(--caption-sm-weight);
+  line-height: var(--caption-sm-line-height);
+  letter-spacing: var(--caption-sm-letter-spacing);
+  font-family: basefont;
+  margin-top: 0rem;
+  margin-bottom: 0.5777778rem;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-wrap: pretty;
+}
+
+
+/* Important Text */
+.important-text {
+  color: var(--accent-color);
+}
+
+/* Important Background */
+.important-background {
+  background-color: var(--accent-color);
 }
 
 /* Lists */
@@ -281,6 +322,14 @@ h4 .sidebar-link.active {
   background-color: var(--color-3);
   padding: 1.5rem;
   text-align: center;
+}
+
+/* Quote styling with left border and gradient background */
+.quote {
+  border-left: 4px solid var(--accent-color);
+  background: linear-gradient(to right, var(--accent3-color), var(--accent4-color));
+  padding: 1.5rem;
+  color: var(--accent-color);
 }
 
 
