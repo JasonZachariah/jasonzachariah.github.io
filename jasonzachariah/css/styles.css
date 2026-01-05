@@ -305,6 +305,11 @@ h4 .sidebar-link.active {
  
 }
 
+.orange-bg {
+  background-color: var(--accent-color);
+  padding: 1.5rem;
+ 
+}
 /* Color background */
 .colorbg {
   background-color: var(--color-3);
