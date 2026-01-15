@@ -231,7 +231,7 @@ li b {
 }
 
 /* Caption Small */
-.caption-sm {
+.caption-sm,tr,td {
   color: var(--color-2);
   font-size: var(--caption-sm-size);
   font-weight: var(--caption-sm-weight);
@@ -357,9 +357,6 @@ h4 .sidebar-link.active {
 
 
 
-/* ============================================
-   UTILITY CLASSES
-   ============================================ */
 
 .container {
   max-width: 100vw;
@@ -376,9 +373,7 @@ h4 .sidebar-link.active {
   border-bottom: 2px solid var(--color-3);
 }
 
-/* ============================================
-   COMPONENT CLASSES
-   ============================================ */
+
 
 /* Card Border and Hover Effects */
 .greyborder {
