@@ -8,11 +8,11 @@
   --color-2: oklch(0.4661 0.003 60.35);
   --color-3: #9b999947;
   --color-4: #ffffff;
-  
+
   --accent-color: #E84B26;
-  --accent2-color:#ff562f;
-  --accent3-color:#fbe9e8;
-  --accent4-color:#fefbfb;
+  --accent2-color: #ff562f;
+  --accent3-color: #fbe9e8;
+  --accent4-color: #fefbfb;
 
   /* Font Family */
   --font-family: "IBM Plex Sans", sans-serif;
@@ -231,7 +231,9 @@ li b {
 }
 
 /* Caption Small */
-.caption-sm,tr,td {
+.caption-sm,
+tr,
+td {
   color: var(--color-2);
   font-size: var(--caption-sm-size);
   font-weight: var(--caption-sm-weight);
@@ -303,19 +305,56 @@ h4 .sidebar-link.active {
 .solution-bg {
   background-color: var(--accent3-color);
   padding: 1.5rem;
- 
+
 }
 
-.orange-bg {
-  background-color: var(--accent-color);
-  padding: 1.5rem;
- 
+.logo-container {
+  max-width: 200px;
 }
+.orange-text {
+  color: var(--color-1);
+}
+.orange-bg{
+  margin: 1rem;
+ max-width: 450px;
+  aspect-ratio: 16/9;
+  background-color: var(--accent-color);
+  padding: 0.5rem;
+  animation: rotate-simple 0.25s ease-in-out;
+  animation-fill-mode: forwards;
+  box-shadow: 10px var(--color-3)
+}
+
+@keyframes rotate-simple {
+  0% {
+    transform: translateY(-110px);
+    transform: rotate(0deg);
+    opacity: 0.2;
+  }
+  30% {
+    transform: translateY(0px);
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  75% {
+    transform: rotate(8.7deg);
+    opacity: 1;
+
+  }
+
+  100% {
+    transform: rotate(10deg);
+    opacity: 1;
+
+  }
+}
+
 /* Color background */
 .colorbg {
   background-color: var(--color-3);
   padding: 1.5rem;
- 
+
 }
 
 /* Remove max-width constraint for paragraphs inside solution-bg */
@@ -391,7 +430,7 @@ h4 .sidebar-link.active {
   transition: all 0.5s ease;
   background-color: var(--color-4);
   box-shadow: 0 0 0 2px var(--color-3);
-  }
+}
 
 .parent:hover .greyborder {
   transform: scale(1.01);
@@ -407,7 +446,7 @@ h4 .sidebar-link.active {
 
 .parent:hover .child {
   width: 30rem;
-  }
+}
 
 /* Image Classes with View Transitions */
 .image1 {
@@ -459,5 +498,5 @@ h4 .sidebar-link.active {
 @media (max-width: 640px) {
   .container {
     padding: 0rem 2rem;
-}
+  }
 }
