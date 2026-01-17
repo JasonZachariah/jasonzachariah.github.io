@@ -321,6 +321,17 @@ h4 .sidebar-link.active {
 /* Remove max-width constraint for paragraphs inside solution-bg */
 .solution-bg p {
   max-width: 100%;
+  min-height: 3.5rem;
+}
+
+/* Blank background - same formatting as solution-bg but without background color */
+.blank-bg {
+  padding: 1.5rem;
+}
+
+.blank-bg p {
+  max-width: 100%;
+  min-height: 3.5rem;
 }
 
 /* Important section background */
@@ -332,7 +343,7 @@ h4 .sidebar-link.active {
 /* Quote styling with left border and gradient background */
 .quote {
   border-left: 4px solid var(--accent-color);
-  background: linear-gradient(to right, var(--accent3-color), var(--accent4-color));
+  background: var(--accent3-color);
   padding: 1.5rem;
   color: var(--accent-color);
 }
