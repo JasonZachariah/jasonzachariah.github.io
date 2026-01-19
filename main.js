@@ -1,30 +1,14 @@
 
-import { gsap } from "gsap";
-import { RoughEase } from "gsap/EasePack";
-  
-import { TextPlugin } from "gsap/TextPlugin";
+import { annotate } from 'rough-notation';
+//makes rough underline on the rough-highlight class
+const e = document.querySelector('.rough-highlight');
+const annotation = annotate(e, { type: 'underline', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 5 });
+annotation.show()
 
-gsap.registerPlugin(TextPlugin, RoughEase);
+const f = document.querySelector('.rough-circle');
+const annotationcircle = annotate(f, { type: 'circle' });
+annotationcircle.show()
 
-
-const names=["the Markhamite","Ux/UI designer at WizRobotics","education forward"]
-
-
-let cursor = gsap.to ('.cursor' ,{opacity:0, ease : "circ.inOut",repeat :-1 
-}
-)
-
-let mastertl = gsap.timeline({repeat:-1})
-
-names.forEach(word => {
-
-  let tl = gsap.timeline({repeat: 1, yoyo: true,repeatDelay:2})
-
-  tl.to('.change' ,{ duration:2, text: word,})
-
-  mastertl.add(tl)
-  
-});
 
 // Scrollspy for sidebar navigation
 function initScrollspy() {
