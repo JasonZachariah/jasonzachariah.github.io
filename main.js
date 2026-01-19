@@ -1,125 +1,130 @@
+import { annotate, annotationGroup } from 'rough-notation';
 
-import { annotate } from 'rough-notation';
-//makes rough underline on the rough-highlight class
-const e = document.querySelector('.rough-highlight');
-const annotation = annotate(e, { type: 'underline', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 5 });
-annotation.show()
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const f = document.querySelector('.rough-circle');
-const annotationcircle = annotate(f, { type: 'circle' });
-annotationcircle.show()
+gsap.registerPlugin(ScrollTrigger);
+
+//makes rough underline on the rough-highlight class - triggered on scroll
+const e = document.querySelectorAll('.rough-underline');
+
+e.forEach(element => {
+  const a1 = annotate(element, { type: 'underline', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 5 });
+  
+  ScrollTrigger.create({
+    trigger: element,
+    start: 'top 80%',
+    onEnter: () => a1.show(),
+    once: true
+  });
+});
+
+
+
+
+const sidebarLinks = document.querySelectorAll('.sidebar-border a[href^="#"]');
+ScrollTrigger.create({
+  trigger: sidebarLinks,
+  start: 'top 80%',
+  onEnter: () => sidebarLinks.forEach(link => link.classList.add('active')),
+  once: true
+});   
+
+
 
 
 // Scrollspy for sidebar navigation
-function initScrollspy() {
-  // Find all sidebar links
+// GSAP-based scrollspy
+function gsapScrollspy() {
   const sidebarLinks = document.querySelectorAll('.sidebar-border a[href^="#"]');
-  
-  // If no sidebar links found, exit
   if (sidebarLinks.length === 0) return;
-  
-  // Get all sections that have IDs matching the sidebar links
-  const sections = Array.from(sidebarLinks).map(link => {
+
+  // Map sidebar links to section targets
+  const linkSectionPairs = Array.from(sidebarLinks).map(link => {
     const href = link.getAttribute('href');
     if (href && href.startsWith('#')) {
       const section = document.querySelector(href);
-      return section ? { link, section } : null;
+      if (section) return { link, section };
     }
     return null;
-  }).filter(item => item !== null);
-  
-  // If no sections found, exit
-  if (sections.length === 0) return;
-  
+  }).filter(Boolean);
+  if (linkSectionPairs.length === 0) return;
+
   // Add sidebar-link class to all sidebar links for styling
-  sidebarLinks.forEach(link => {
-    link.classList.add('sidebar-link');
-  });
-  
-  // Function to update active link based on scroll position
-  function updateActiveLink() {
-    let activeSection = null;
-    let maxVisibility = -1;
-    
-    // Find the section that's most visible in the viewport
-    sections.forEach(({ section }) => {
-      const rect = section.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      
-      // Calculate how much of the section is visible in the upper portion of viewport
-      const topVisible = Math.max(0, viewportHeight * 0.2 - rect.top);
-      const bottomVisible = Math.max(0, rect.bottom - viewportHeight * 0.2);
-      const visibleHeight = Math.min(topVisible, bottomVisible, rect.height);
-      const visibility = visibleHeight / rect.height;
-      
-      // Prefer sections that are in the upper portion of viewport
-      if (rect.top <= viewportHeight * 0.3 && rect.bottom >= viewportHeight * 0.1) {
-        if (visibility > maxVisibility) {
-          maxVisibility = visibility;
-          activeSection = section;
-        }
+  sidebarLinks.forEach(link => link.classList.add('sidebar-link'));
+
+  // Remove 'active' from all; add to correct link
+  function setActiveLinkBySection(section) {
+    sidebarLinks.forEach(link => link.classList.remove('active'));
+    if (!section) {
+      if (window.scrollY < 100) {
+        sidebarLinks[0].classList.add('active');
       }
-    });
-    
-    // If no section is in the preferred area, find the closest one
-    if (!activeSection) {
-      let closestDistance = Infinity;
-      sections.forEach(({ section }) => {
-        const rect = section.getBoundingClientRect();
-        const distance = Math.abs(rect.top - window.innerHeight * 0.2);
-        if (distance < closestDistance && rect.top < window.innerHeight) {
-          closestDistance = distance;
-          activeSection = section;
-        }
-      });
+      return;
     }
-    
-    // Update active class
-    sidebarLinks.forEach(link => {
-      link.classList.remove('active');
-    });
-    
-    if (activeSection) {
-      const id = activeSection.getAttribute('id');
-      if (id) {
-        const correspondingLink = Array.from(sidebarLinks).find(link => {
-          const href = link.getAttribute('href');
-          return href === `#${id}`;
-        });
-        
-        if (correspondingLink) {
-          correspondingLink.classList.add('active');
-        }
-      }
-    } else if (window.scrollY < 100) {
-      // If at top of page, highlight first section
-      const firstLink = sidebarLinks[0];
-      if (firstLink) {
-        firstLink.classList.add('active');
-      }
-    }
+    const id = section.getAttribute('id');
+    if (!id) return;
+    const match = Array.from(sidebarLinks).find(link => link.getAttribute('href') === `#${id}`);
+    if (match) match.classList.add('active');
   }
-  
-  // Update on scroll
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        updateActiveLink();
-        ticking = false;
-      });
-      ticking = true;
+
+  // Setup GSAP ScrollTriggers for each section
+  linkSectionPairs.forEach(({ link, section }, i) => {
+    // Get previous and next section, for logic at edges
+    const prevSection = linkSectionPairs[i - 1]?.section;
+    const nextSection = linkSectionPairs[i + 1]?.section;
+
+    // Each trigger will activate the corresponding link as active
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top center-=50",
+      end: "bottom center-=50",
+      onEnter: () => setActiveLinkBySection(section),
+      onEnterBack: () => setActiveLinkBySection(section),
+      onLeave: () => {
+        // If scrolling down and leaving, activate next section if there is one
+        if (nextSection) setActiveLinkBySection(nextSection);
+        else setActiveLinkBySection(null); // None active at bottom
+      },
+      onLeaveBack: () => {
+        // If scrolling up and leaving, activate prev section if there is one
+        if (prevSection) setActiveLinkBySection(prevSection);
+        else setActiveLinkBySection(null); // None active at top
+      }
+    });
+  });
+
+  // Fallback for when at the very top of the page
+  ScrollTrigger.create({
+    start: 0,
+    end: 0,
+    onEnter: () => {
+      if (window.scrollY < 120) {
+        setActiveLinkBySection(linkSectionPairs[0]?.section);
+      }
     }
   });
-  
-  // Initial update
-  updateActiveLink();
+
+  // Initial state
+  setTimeout(() => {
+    let foundActive = false;
+    linkSectionPairs.forEach(({ section }) => {
+      const rect = section.getBoundingClientRect();
+      if (!foundActive && rect.top < window.innerHeight / 2 && rect.bottom > 0) {
+        setActiveLinkBySection(section);
+        foundActive = true;
+      }
+    });
+    if (!foundActive) setActiveLinkBySection(linkSectionPairs[0]?.section);
+  }, 0);
 }
 
-// Initialize scrollspy when DOM is ready
+// Initialize scrollspy with GSAP when DOM ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initScrollspy);
+  document.addEventListener('DOMContentLoaded', gsapScrollspy);
 } else {
-  initScrollspy();
+  gsapScrollspy();
 }
 
+
+//draggable cards
