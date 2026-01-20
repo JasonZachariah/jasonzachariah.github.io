@@ -5,22 +5,26 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-//makes rough underline on the rough-highlight class - triggered on scroll
-const e = document.querySelectorAll('.rough-underline');
-const comingSoon = document.querySelectorAll('.orange-highlight');
-
-e.forEach(element => {
-  const a1 = annotate(element, { type: 'underline', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 5 });
+// Initialize when DOM is ready
+function initRoughNotations() {
+  //makes rough underline on the rough-underline class - triggered on scroll
+  const e = document.querySelectorAll('.rough-underline');
   
-  ScrollTrigger.create({
-    trigger: element,
-    start: 'top 80%',
-    onEnter: () => a1.show(),
-    once: true
+  e.forEach(element => {
+    const a1 = annotate(element, { type: 'underline', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 5 });
+    
+    ScrollTrigger.create({
+      trigger: element,
+      start: 'top 80%',
+      onEnter: () => a1.show(),
+      once: true
+    });
   });
 
+  // Annotate coming soon elements
+  const comingSoon = document.querySelectorAll('.orange-highlight');
   comingSoon.forEach(element => {
-    const a2 = annotate(element, { type: 'highlight', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 10 , radius: 10, iterations: 3, animationDuration: 2000 });
+    const a2 = annotate(element, { type: 'highlight', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 10, radius: 10, iterations: 3, animationDuration: 2000 });
     ScrollTrigger.create({
       trigger: element,
       start: 'top 80%',
@@ -28,21 +32,7 @@ e.forEach(element => {
       once: true
     });
   });
-});
-
-
-
-
-const sidebarLinks = document.querySelectorAll('.sidebar-border a[href^="#"]');
-ScrollTrigger.create({
-  trigger: sidebarLinks,
-  start: 'top 80%',
-  onEnter: () => sidebarLinks.forEach(link => link.classList.add('active')),
-  once: true
-});   
-
-
-
+}
 
 // Scrollspy for sidebar navigation
 // GSAP-based scrollspy
@@ -130,12 +120,16 @@ function gsapScrollspy() {
   }, 0);
 }
 
-// Initialize scrollspy with GSAP when DOM ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', gsapScrollspy);
-} else {
+// Initialize everything when DOM is ready
+function init() {
+  initRoughNotations();
   gsapScrollspy();
 }
 
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 
 //draggable cards
