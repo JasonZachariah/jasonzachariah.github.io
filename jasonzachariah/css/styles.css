@@ -506,8 +506,40 @@ h4 .sidebar-link.active {
 }
 
 .orange-highlight {
+ 
+  display: inline-block;
 }
 
 .rough-underline{
  
+}
+
+.hiddenproject {
+  position: relative;
+  cursor: not-allowed;
+}
+
+.hiddenproject-content {
+  opacity: 0.4;
+}
+
+.hiddenproject a {
+  pointer-events: none;
+  cursor: not-allowed;
+  position: relative;
+  display: block;
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 10;
 }

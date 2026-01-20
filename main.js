@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 //makes rough underline on the rough-highlight class - triggered on scroll
 const e = document.querySelectorAll('.rough-underline');
+const comingSoon = document.querySelectorAll('.orange-highlight');
 
 e.forEach(element => {
   const a1 = annotate(element, { type: 'underline', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 5 });
@@ -16,6 +17,16 @@ e.forEach(element => {
     start: 'top 80%',
     onEnter: () => a1.show(),
     once: true
+  });
+
+  comingSoon.forEach(element => {
+    const a2 = annotate(element, { type: 'highlight', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 10 , radius: 10, iterations: 3, animationDuration: 2000 });
+    ScrollTrigger.create({
+      trigger: element,
+      start: 'top 80%',
+      onEnter: () => a2.show(),
+      once: true
+    });
   });
 });
 
