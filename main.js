@@ -1,36 +1,36 @@
-import { annotate, annotationGroup } from 'rough-notation';
-
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Initialize when DOM is ready
-function initRoughNotations() {
-  //makes rough underline on the rough-underline class - triggered on scroll
-  const e = document.querySelectorAll('.rough-underline');
-  
-  e.forEach(element => {
+// Initialize rough-notation via dynamic import so GitHub Pages still works if CDN is slow
+async function initRoughNotations() {
+  let annotate;
+  try {
+    const rough = await import('rough-notation');
+    annotate = rough.annotate;
+  } catch (err) {
+    console.warn('rough-notation could not load:', err);
+    return;
+  }
+  if (!annotate) return;
+
+  // Underlines – triggered on scroll
+  document.querySelectorAll('.rough-underline').forEach(element => {
     const a1 = annotate(element, { type: 'underline', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 5 });
-    
-    ScrollTrigger.create({
-      trigger: element,
-      start: 'top 80%',
-      onEnter: () => a1.show(),
-      once: true
-    });
+    ScrollTrigger.create({ trigger: element, start: 'top 80%', onEnter: () => a1.show(), once: true });
   });
 
-  // Annotate coming soon elements
-  const comingSoon = document.querySelectorAll('.orange-highlight');
-  comingSoon.forEach(element => {
+  // Highlight (e.g. handbook .rough-highlight)
+  document.querySelectorAll('.rough-highlight').forEach(element => {
+    const a = annotate(element, { type: 'highlight', multiline: true, color: 'var(--accent-color)', strokeWidth: 2, padding: 4 });
+    ScrollTrigger.create({ trigger: element, start: 'top 80%', onEnter: () => a.show(), once: true });
+  });
+
+  // Coming soon orange highlight
+  document.querySelectorAll('.orange-highlight').forEach(element => {
     const a2 = annotate(element, { type: 'highlight', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 10, radius: 10, iterations: 3, animationDuration: 2000 });
-    ScrollTrigger.create({
-      trigger: element,
-      start: 'top 80%',
-      onEnter: () => a2.show(),
-      once: true
-    });
+    ScrollTrigger.create({ trigger: element, start: 'top 80%', onEnter: () => a2.show(), once: true });
   });
 }
 
