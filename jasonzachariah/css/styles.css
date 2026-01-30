@@ -114,12 +114,26 @@
 
 @font-face {
   font-family: basefont;
-  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/IBMPlexSans-VariableFont_wdth,wght.ttf);
+  /* IBM Plex Sans medium as primary UI text */
+  src: url("/IBMPlexSans-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: basefont;
+  /* IBM Plex Sans semibold for heavier headings if needed */
+  src: url("/IBMPlexSans-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
 }
 
 @font-face {
   font-family: monofont;
-  src: url(/Users/jasonzachariah/Documents/GitHub/jasonzachariah.github.io/IBMPlexMono-Medium.ttf);
+  /* IBM Plex Mono for code/mono-styled text */
+  src: url("/IBMPlexMono-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
 }
 
 /* ============================================
