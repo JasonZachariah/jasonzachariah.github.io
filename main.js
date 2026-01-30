@@ -4,7 +4,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // Initialize rough-notation via dynamic import so GitHub Pages still works if CDN is slow
+// Only on home and about pages
 async function initRoughNotations() {
+  const path = (window.location.pathname || '/').replace(/\/$/, '') || '/';
+  const isHome = path === '' || path === '/' || path === '/index.html';
+  const isAbout = path === '/about' || path === '/about.html';
+  if (!isHome && !isAbout) return;
+
   let annotate;
   try {
     const rough = await import('rough-notation');
