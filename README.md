@@ -1,6 +1,16 @@
 # jasonzachariah.github.io
 
-Portfolio site. Deploys from the **main** branch—no build or npm deploy step.
+Portfolio site. The **HTML files in this repo root** (`index.html`, `archive.html`, `about.html`, etc.) are what GitHub Pages serves—no build step, no `dist` folder.
+
+## GitHub Pages setup
+
+In the repo on GitHub: **Settings → Pages → Build and deployment**:
+
+- **Source:** Deploy from a branch  
+- **Branch:** `main`  
+- **Folder:** `/ (root)`
+
+Then the root HTML files are your live site.
 
 ## Deploying (GitHub Desktop)
 
@@ -8,7 +18,7 @@ Portfolio site. Deploys from the **main** branch—no build or npm deploy step.
 2. Commit in GitHub Desktop.
 3. Push to **main**.
 
-GitHub Pages serves the repo root from main, so the site updates when you push. You don’t need to run any deploy command.
+The site updates as soon as you push; no deploy command needed.
 
 ## Local development
 
