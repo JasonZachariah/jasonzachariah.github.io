@@ -20,7 +20,7 @@
     <link href="output.css" rel="stylesheet">
 </head>
 
-<body data-barba="wrapper">
+<body>
     <nav class="container header-border">
         <div class="flex w-full py-4 items-center justify-between">
             <div class="flex items-center gap-4">
@@ -52,7 +52,7 @@
                 <div class="flex flex-col justify-between flex-1 pt-8 px-2 overflow-hidden">
                     <div class="flex flex-col gap-4">
                         <h4 class="break-words"><a href="#step1" class="sidebar-link">Context</a></h4>
-                        <h4 class="break-words"><a href="#step2" class="sidebar-link">CHALLENGE</a></h4>
+                        <h4 class="break-words"><a href="#step2" class="sidebar-link">Challenge</a></h4>
                         <h4 class="break-words"><a href="#step3" class="sidebar-link">Solution</a></h4>
                         <h4 class="break-words"><a href="#step4" class="sidebar-link">Final Products</a></h4>
                         <h4 class="break-words"><a href="#step5" class="sidebar-link">Reflection</a></h4>
@@ -119,7 +119,7 @@
 
                 <div class="space-y-4" id="step2">
                     <div class="space-y-4 ">
-                        <h4> CHALLENGE</h4>
+                        <h4>Challenge</h4>
                         <div class="important-bg space-y-8">
                             <div class="space-y-4">
                                 <h4>HMW statement</h4>
@@ -178,106 +178,87 @@
 
                                 </div>
                                 <img class="greyborder my-4 full" src="images/wizparser/FinalAssets.png">
-
+                                <img src="images/wizparser/wizparse_FigmaNotes.png" alt="Final Assets"
+                                    class="greyborder my-4 full">
                             </div>
                             <div class="space-y-4 ">
-                          
+
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div class="blank-bg">
                                         <div class="caption-lg">
                                             Past Development Process
                                         </div>
                                         <div class="space-y-4 h-full">
-                                            <p>1. Developer would go and make a new element from scratch without any context
+                                            <p>1. Developer would go and make a new element from scratch without any
+                                                context
                                                 or guidance.</p>
                                             <div class="header-border"></div>
                                             <p>2. Developers would try to figure out how to implement the element in the
                                                 codebase from the previous developer's code.</p>
                                             <div class="header-border"></div>
-                                            <p>3. Most of production time would be spent on bug fixing and making sure the
+                                            <p>3. Most of production time would be spent on bug fixing and making sure
+                                                the
                                                 element is working in the existing code space.</p>
                                             <div class="header-border"></div>
-                                            <p>4. The final element would be added, despite not matching the quality of the rest of the codebase.</p>
+                                            <p>4. The final element would be added, despite not matching the quality of
+                                                the rest of the codebase.</p>
                                         </div>
                                     </div>
                                     <div class="solution-bg">
                                         <div class="caption-lg">
-    
+
                                             New Development Process
-    
+
                                         </div>
                                         <div class=" space-y-4 h-full">
-                                            <p>1. Developers start by looking at the Wiz Parser design system, and see how
+                                            <p>1. Developers start by looking at the Wiz Parser design system, and see
+                                                how
                                                 they can use the components to create a new element.</p>
                                             <div class="header-border"></div>
-                                            <p>2. Developers have direct comments and instructions in the Figma file to help
-                                                them implement the element in the codebase, outlining typography spacing and
+                                            <p>2. Developers have direct comments and instructions in the Figma file to
+                                                help
+                                                them implement the element in the codebase, outlining typography spacing
+                                                and
                                                 breakpoints.</p>
                                             <div class="header-border"></div>
-                                            <p>3. Developers can easily scale and onboard new team members with the design system and documentation</p>
+                                            <p>3. Developers can easily scale and onboard new team members with the
+                                                design system and documentation</p>
                                             <div class="header-border"></div>
-                                            <p>4. The final element would be added, matching the quality of the rest of the codebase- creating a more consistent and maintainable codebase.</p>
+                                            <p>4. The final element would be added, matching the quality of the rest of
+                                                the codebase- creating a more consistent and maintainable codebase.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <p>Here are some of the details I prepared before handoff:</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-                                <div class="space-y-4 my-auto">
+                            <div class="space-y-4">
+                                <div class="space-y-4 content-width">
                                     <h3>Typography</h3>
                                     <p>
-                                        Typography guidelines were crucial for establishing a clear hierarchy that
-                                        worked on
-                                        both
-                                        desktop and mobile devices. Previously, type styles were chosen based on
-                                        appearance
-                                        rather
-                                        than purpose, leading to inefficiencies when converting them into CSS. By
-                                        labeling
-                                        them
-                                        according to their intended use, developers could easily understand where each
-                                        style
-                                        should
-                                        be applied.
+                                        Previously, type styles were not defined, which led to elements having no consistent style. To solve this, a typography guidelines was formed based on the existing fonts—Montserrat and Shantell Sans—allowing for a consistent style across all elements.
                                     </p>
                                 </div>
-                                <div>
-                                    <img class="greyborder full" src="images/wizparser/Typography.png">
-                                </div>
+                                <img class="greyborder full" src="images/wizparser/Typography.png">
                             </div>
                             <div class="header-border"></div>
 
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-                                <div class=" space-y-4 my-auto">
+                            <div class="space-y-4">
+                                <div class="space-y-4 content-width">
                                     <h3>Colours</h3>
                                     <p>
-                                        The primary and neutral palettes were defined using the Radix color system,
-                                        allowing
-                                        for straightforward integration into the Parser's code that would work in both
-                                        light and dark modes. Naming conventions were based on JSON file systems,
-                                        allowing easy implementation into the development codebase.
+                                        The primary and neutral palettes were defined using the Radix color system, allowing for straightforward integration into the Parser's code that would work in both light and dark modes. Naming conventions were based on JSON file systems, allowing easy implementation into the development codebase.
                                     </p>
                                 </div>
-                                <div>
-                                    <img class="greyborder full" src="images/wizparser/Colour_Modes.png">
-                                </div>
+                                <img class="greyborder full" src="images/wizparser/Colour_Modes.png">
                             </div>
-                            <div class="header-border   "></div>
+                            <div class="header-border"></div>
 
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-                                <div class="space-y-4 my-auto">
+                            <div class="space-y-4">
+                                <div class="space-y-4 content-width">
                                     <h3>Spacing</h3>
-                                    <p> Developing a consistent style
-                                        for
-                                        padding and margins for components was crucial for consistency across both
-                                        mobile and desktop screens. These spacings were based on the
-                                        4-point
-                                        system, allowing for developers to easily refer to when developing new elements.
-                                    </p>
+                                    <p>Developing a consistent style for padding and margins for components was crucial for consistency across both mobile and desktop screens. These spacings were based on the 4-point system, allowing for developers to easily refer to when developing new elements.</p>
                                 </div>
-                                <div>
-                                    <img class="greyborder full" src="images/wizparser/Sizing_Guidlines.png">
-                                </div>
+                                <img class="greyborder full" src="images/wizparser/Sizing_Guidlines.png">
                             </div>
                         </div>
 
@@ -325,7 +306,7 @@
                                 </div>
                             </div>
                         </div>
-                       
+
                         <div class="space-y-4" id="step5">
                             <h4>Reflection</h4>
                             <p class="content-width">This project was a great learning experience for me. I was able to
@@ -363,7 +344,7 @@
                                 <h3>WizEdOS</h3>
                             </a>
                         </div>
-            </div>
+                    </div>
         </section>
     </main>
 
