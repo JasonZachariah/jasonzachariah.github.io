@@ -134,12 +134,11 @@
 }
 
 /* ============================================
-   DARK MODE
-   ============================================ */
-
+   DARK MODE (commented out - default to light mode)
+   ============================================
+/*
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark / Brand */
     --brand-50: #0A0000;
     --brand-100: #260000;
     --brand-200: #460000;
@@ -152,7 +151,6 @@
     --brand-900: #FF8867;
     --brand-950: #FFAB8C;
 
-    /* Dark / Neutral */
     --neutral-50: #010000;
     --neutral-100: #110908;
     --neutral-200: #211817;
@@ -162,8 +160,8 @@
     --neutral-600: #716664;
     --neutral-700: #837776;
     --neutral-800: #A19594;
+    --neutral-900: #B8ADAC;
 
-    /* Semantic (dark mode) */
     --color-1: var(--neutral-800);
     --color-2: var(--neutral-700);
     --color-3: var(--neutral-300);
@@ -173,8 +171,8 @@
     --accent3-color: var(--neutral-200);
     --accent4-color: var(--neutral-200);
   }
-
 }
+*/
 
 /* ============================================
    FONT FACE DECLARATIONS
@@ -674,6 +672,18 @@ nav .site-logo {
   color: var(--brand-900);
 }
 
+nav h4 a {
+  text-decoration: none;
+  font: inherit;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  background-color: var(--brand-600);
+  padding: 0.25em 0.5em;
+}
+
+nav h4 a:hover {
+  color: var(--accent-color);
+}
+
 nav .site-logo {
   background-color: var(--brand-900);
 }
@@ -698,7 +708,9 @@ footer p,
 .footer-social-list .footer-social-link {
   text-decoration: none;
   font: inherit;
-  transition: color 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  background-color: var(--brand-600);
+  padding: 0.25em 0.5em;
 }
 
 .footer-social-list .footer-social-link:hover {
