@@ -3,16 +3,41 @@
    ============================================ */
 
 :root {
-  /* Color Palette */
-  --color-1: oklch(0.229 0.005 248.0);
-  --color-2: oklch(0.4661 0.003 60.35);
-  --color-3: #9b999947;
-  --color-4: #ffffff;
+  /* Light / Brand */
+  --brand-50: #FFE0CF;
+  --brand-100: #FFC7B4;
+  --brand-200: #FFAB94;
+  --brand-300: #FF8E75;
+  --brand-400: #F27155;
+  --brand-500: #E84B26;
+  --brand-600: #CA0000;
+  --brand-700: #A30000;
+  --brand-800: #7A0000;
+  --brand-900: #4E0000;
+  --brand-950: #270000;
 
-  --accent-color: #E84B26;
-  --accent2-color: #ff552f9b;
-  --accent3-color: #fbe9e8;
-  --accent4-color: #fefbfb;
+  /* Light / Neutral */
+  --neutral-50: #fef8f6;
+  --neutral-100: #F2E5E2;
+  --neutral-200: #DED1CF;
+  --neutral-300: #C7BBB8;
+  --neutral-400: #A79B99;
+  --neutral-500: #897D7B;
+  --neutral-600: #6B605E;
+  --neutral-700: #4F4543;
+  --neutral-800: #352B29;
+  --neutral-900: #1C1412;
+  --neutral-950: #110907;
+
+  /* Semantic (light mode) */
+  --color-1: var(--neutral-800);
+  --color-2: var(--neutral-600);
+  --color-3: var(--neutral-200);
+  --color-4: var(--neutral-50);
+  --accent-color: var(--brand-500);
+  --accent2-color: color-mix(in srgb, var(--brand-400) 60%, transparent);
+  --accent3-color: var(--brand-50);
+  --accent4-color: var(--neutral-50);
 
   /* Font Family */
   --font-family: "IBM Plex Sans", sans-serif;
@@ -109,6 +134,49 @@
 }
 
 /* ============================================
+   DARK MODE
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark / Brand */
+    --brand-50: #0A0000;
+    --brand-100: #260000;
+    --brand-200: #460000;
+    --brand-300: #660000;
+    --brand-400: #870000;
+    --brand-500: #A81500;
+    --brand-600: #C9310B;
+    --brand-700: #E84B26;
+    --brand-800: #FF6846;
+    --brand-900: #FF8867;
+    --brand-950: #FFAB8C;
+
+    /* Dark / Neutral */
+    --neutral-50: #010000;
+    --neutral-100: #110908;
+    --neutral-200: #211817;
+    --neutral-300: #352B2A;
+    --neutral-400: #4A403E;
+    --neutral-500: #5D5251;
+    --neutral-600: #716664;
+    --neutral-700: #837776;
+    --neutral-800: #A19594;
+
+    /* Semantic (dark mode) */
+    --color-1: var(--neutral-800);
+    --color-2: var(--neutral-700);
+    --color-3: var(--neutral-300);
+    --color-4: var(--neutral-100);
+    --accent-color: var(--brand-700);
+    --accent2-color: color-mix(in srgb, var(--brand-600) 60%, transparent);
+    --accent3-color: var(--neutral-200);
+    --accent4-color: var(--neutral-200);
+  }
+
+}
+
+/* ============================================
    FONT FACE DECLARATIONS
    ============================================ */
 
@@ -145,7 +213,7 @@ html {
 }
 
 body {
-  background-color: var(--accent4-color);
+  background-color: var(--neutral-50);
 }
 
 /* Text Selection Styles */
@@ -321,16 +389,33 @@ h4 .sidebar-link.active {
 
 }
 
+/* Logo: mask-based so it matches --color-2 (same as nav text beside it) */
+.site-logo {
+  display: inline-block;
+  width: 45px;
+  height: 40px;
+  background-color: var(--color-2);
+  -webkit-mask-image: url('../../jzlogo.svg');
+  mask-image: url('../../jzlogo.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  flex-shrink: 0;
+}
+
 .logo-container {
   max-width: 200px;
 }
 .orange-text {
-  color: var(--color-1);
+  color: var(--brand-900);
 }
 .orange-card{
   margin: 1rem;
 
-  background-color: var(--accent-color);
+  background-color: var(--brand-500);
   padding: 0.5rem;
   animation: rotate-simple 0.25s ease-in-out;
   animation-fill-mode: forwards;
@@ -407,15 +492,9 @@ h4 .sidebar-link.active {
 
 
 
-/* Content width constraint for text sections */
+/* Content width constraint for text sections (full width) */
 .content-width {
   max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .content-width {
-    max-width: 75%;
-  }
 }
 
 /* Full width class for flex-rows and images */
@@ -431,14 +510,40 @@ h4 .sidebar-link.active {
   padding: 0rem 2rem;
 }
 
-/* Sidebar Border */
+/* Sidebar (no border between sidebar and content) */
 .sidebar-border {
-  border-right: 2px solid var(--color-3);
+  border-right: none;
+}
+
+/* Project page: sidebar left, content centered on the page */
+.project-with-sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .project-with-sidebar {
+    grid-template-columns: auto 1fr minmax(0, 56rem) 1fr;
+  }
+
+  .project-with-sidebar .project-sidebar {
+    grid-column: 1;
+  }
+
+  .project-with-sidebar .project-content {
+    grid-column: 3;
+  }
 }
 
 /* Header Bottom Border */
 .header-border {
   border-bottom: 2px solid var(--color-3);
+}
+
+/* Remove bottom border specifically for nav bar */
+nav.header-border {
+  border-bottom: none;
 }
 
 
@@ -556,4 +661,46 @@ h4 .sidebar-link.active {
   opacity: 1;
   pointer-events: none;
   z-index: 10;
+}
+
+/* Header / Nav - same background as footer */
+nav {
+  background-color: var(--brand-500);
+}
+
+nav h4,
+nav h4 a,
+nav .site-logo {
+  color: var(--brand-900);
+}
+
+nav .site-logo {
+  background-color: var(--brand-900);
+}
+
+/* Footer */
+footer {
+  background-color: var(--brand-500);
+}
+
+footer h3,
+footer h4,
+footer h4 a,
+footer p,
+.footer-social-list .footer-social-link {
+  color: var(--brand-800);
+}
+
+.footer-social-list h4 {
+  margin: 0;
+}
+
+.footer-social-list .footer-social-link {
+  text-decoration: none;
+  font: inherit;
+  transition: color 0.15s ease;
+}
+
+.footer-social-list .footer-social-link:hover {
+  color: var(--accent-color);
 }

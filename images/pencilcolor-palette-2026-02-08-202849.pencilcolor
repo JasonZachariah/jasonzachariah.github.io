@@ -1,0 +1,276 @@
+{
+  "version": "v1",
+  "exportedAt": "2026-02-09T01:28:49.199Z",
+  "pluginVersion": "1.2.2",
+  "palette": {
+    "baseColor": "#E84B26",
+    "generationSettings": {
+      "baseHex": "#E84B26",
+      "includeNeutral": true,
+      "includeSystem": false,
+      "includeDark": true,
+      "harmony": "none",
+      "customColors": [],
+      "contrastMethod": "WCAG",
+      "advancedSettings": {
+        "lightness": 0,
+        "chroma": 0,
+        "colorSpace": "OKLCH"
+      }
+    },
+    "customColors": [],
+    "globalAccessibilitySettings": {
+      "lightness": 0,
+      "chroma": 0,
+      "colorSpace": "OKLCH",
+      "isActive": false
+    },
+    "generatedPalettes": [
+      {
+        "id": "dff63c38-0861-4aa9-855a-f220dc1a71ae",
+        "name": "Brand",
+        "hex": "#E84B26",
+        "colors": [
+          {
+            "backgroundColor": "#FFE0CF",
+            "text": "16.8",
+            "textColor": "#000000",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#FFC7B4",
+            "text": "14.1",
+            "textColor": "#000000",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#FFAB94",
+            "text": "11.5",
+            "textColor": "#000000",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#FF8E75",
+            "text": "9.4",
+            "textColor": "#000000",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#F27155",
+            "text": "7.3",
+            "textColor": "#000000",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#E84B26",
+            "text": "5.5",
+            "textColor": "#000000",
+            "isBase": true,
+            "isAnchor": true
+          },
+          {
+            "backgroundColor": "#CA0000",
+            "text": "6.0",
+            "textColor": "#ffffff",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#A30000",
+            "text": "8.2",
+            "textColor": "#ffffff",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#7A0000",
+            "text": "11.5",
+            "textColor": "#ffffff",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#4E0000",
+            "text": "15.9",
+            "textColor": "#ffffff",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#270000",
+            "text": "19.3",
+            "textColor": "#ffffff",
+            "isBase": false,
+            "isAnchor": false
+          }
+        ],
+        "paletteType": "primary",
+        "paletteRole": "brand",
+        "isPrimary": true,
+        "isSelected": false
+      },
+      {
+        "id": "85e7a9f1-88c4-4ec0-837d-42610036f413",
+        "name": "Neutral",
+        "hex": "#82818D",
+        "colors": [
+          {
+            "backgroundColor": "#F5F4FB",
+            "text": "19.2",
+            "textColor": "#000000",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#DDDCE4",
+            "text": "15.4",
+            "textColor": "#000000",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#C5C5CD",
+            "text": "12.2",
+            "textColor": "#000000",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#AEAEB7",
+            "text": "9.5",
+            "textColor": "#000000",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#9897A2",
+            "text": "7.3",
+            "textColor": "#000000",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#82818D",
+            "text": "5.5",
+            "textColor": "#000000",
+            "isBase": true,
+            "isAnchor": true
+          },
+          {
+            "backgroundColor": "#646370",
+            "text": "5.9",
+            "textColor": "#ffffff",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#484753",
+            "text": "9.1",
+            "textColor": "#ffffff",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#2D2C37",
+            "text": "13.8",
+            "textColor": "#ffffff",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#15141D",
+            "text": "18.3",
+            "textColor": "#ffffff",
+            "isBase": false,
+            "isAnchor": false
+          },
+          {
+            "backgroundColor": "#030206",
+            "text": "20.7",
+            "textColor": "#ffffff",
+            "isBase": false,
+            "isAnchor": false
+          }
+        ],
+        "paletteType": "theme",
+        "paletteRole": "neutral",
+        "isPrimary": false,
+        "darkColors": [
+          {
+            "backgroundColor": "#010101",
+            "text": "20.9",
+            "textColor": "#ffffff",
+            "isBase": false
+          },
+          {
+            "backgroundColor": "#09080C",
+            "text": "20.0",
+            "textColor": "#ffffff",
+            "isBase": false
+          },
+          {
+            "backgroundColor": "#1A191F",
+            "text": "17.5",
+            "textColor": "#ffffff",
+            "isBase": false
+          },
+          {
+            "backgroundColor": "#2C2C33",
+            "text": "13.9",
+            "textColor": "#ffffff",
+            "isBase": false
+          },
+          {
+            "backgroundColor": "#403F49",
+            "text": "10.4",
+            "textColor": "#ffffff",
+            "isBase": false
+          },
+          {
+            "backgroundColor": "#55545F",
+            "text": "7.4",
+            "textColor": "#ffffff",
+            "isBase": true
+          },
+          {
+            "backgroundColor": "#6B6A76",
+            "text": "5.3",
+            "textColor": "#ffffff",
+            "isBase": false
+          },
+          {
+            "backgroundColor": "#82818D",
+            "text": "5.5",
+            "textColor": "#000000",
+            "isBase": false
+          },
+          {
+            "backgroundColor": "#9D9CA9",
+            "text": "7.8",
+            "textColor": "#000000",
+            "isBase": false
+          },
+          {
+            "backgroundColor": "#BAB9C6",
+            "text": "10.8",
+            "textColor": "#000000",
+            "isBase": false
+          },
+          {
+            "backgroundColor": "#D7D6E2",
+            "text": "14.6",
+            "textColor": "#000000",
+            "isBase": false
+          }
+        ],
+        "isSelected": true,
+        "parentId": "dff63c38-0861-4aa9-855a-f220dc1a71ae"
+      }
+    ]
+  }
+}
