@@ -40,97 +40,83 @@
   --accent4-color: var(--neutral-50);
 
   /* Font Family */
-  --font-family: "IBM Plex Sans", sans-serif;
+  --font-family: Inter, sans-serif;
 
-  /* Type Scale - Display Large */
+  /* Type Scale */
   --display-lg-size: clamp(1.959rem, calc(1.577rem + 1.909vw), 3.008rem);
   --display-lg-weight: 800;
-  --display-lg-line-height: 1.55;
-  --display-lg-letter-spacing: 0.015em;
+  --display-lg-line-height: 1.47;
+  --display-lg-letter-spacing: 0.012em;
 
-  /* Type Scale - Display Medium */
   --display-md-size: clamp(1.801rem, calc(1.502rem + 1.492vw), 2.622rem);
   --display-md-weight: 800;
-  --display-md-line-height: 1.55;
-  --display-md-letter-spacing: 0.015em;
+  --display-md-line-height: 1.47;
+  --display-md-letter-spacing: 0.012em;
 
-  /* Type Scale - Heading 1 */
   --h1-size: clamp(1.656rem, calc(1.427rem + 1.143vw), 2.284rem);
-  --h1-weight: 500;
-  --h1-line-height: 1.55;
-  --h1-letter-spacing: 0.005em;
+  --h1-weight: 700;
+  --h1-line-height: 1.47;
+  --h1-letter-spacing: 0.016em;
 
-  /* Type Scale - Heading 2 */
   --h2-size: clamp(1.399rem, calc(1.278rem + 0.609vw), 1.734rem);
   --h2-weight: 600;
-  --h2-line-height: 1.55;
-  --h2-letter-spacing: 0.005em;
+  --h2-line-height: 1.47;
+  --h2-letter-spacing: 0.016em;
 
-  /* Type Scale - Heading 3 */
   --h3-size: clamp(1.287rem, calc(1.205rem + 0.409vw), 1.511rem);
-  --h3-weight: 500;
-  --h3-line-height: 1.6;
-  --h3-letter-spacing: 0.025em;
+  --h3-weight: 600;
+  --h3-line-height: 1.52;
+  --h3-letter-spacing: 0.02em;
 
-  /* Type Scale - Heading 4 */
   --h4-size: clamp(1.183rem, calc(1.134rem + 0.244vw), 1.317rem);
   --h4-weight: 500;
-  --h4-line-height: 1.6;
-  --h4-letter-spacing: 0.025em;
+  --h4-line-height: 1.52;
+  --h4-letter-spacing: 0.02em;
 
-  /* Type Scale - Heading 5 */
   --h5-size: clamp(1.134rem, calc(1.100rem + 0.173vw), 1.229rem);
   --h5-weight: 500;
-  --h5-line-height: 1.6;
-  --h5-letter-spacing: 0.03em;
+  --h5-line-height: 1.52;
+  --h5-letter-spacing: 0.024em;
 
-  /* Type Scale - Heading 6 */
   --h6-size: clamp(1.088rem, calc(1.066rem + 0.109vw), 1.148rem);
   --h6-weight: 500;
-  --h6-line-height: 1.6;
-  --h6-letter-spacing: 0.03em;
+  --h6-line-height: 1.52;
+  --h6-letter-spacing: 0.024em;
 
-  /* Type Scale - Body XL */
   --body-xl-size: clamp(1.043rem, calc(1.033rem + 0.052vw), 1.071rem);
   --body-xl-weight: 400;
-  --body-xl-line-height: 1.6;
-  --body-xl-letter-spacing: 0.03em;
+  --body-xl-line-height: 1.52;
+  --body-xl-letter-spacing: 0.024em;
 
-  /* Type Scale - Body */
   --body-size: clamp(1.000rem, calc(1.000rem + 0.000vw), 1.000rem);
   --body-weight: 400;
-  --body-line-height: 1.6;
-  --body-letter-spacing: 0.03em;
+  --body-line-height: 1.52;
+  --body-letter-spacing: 0.024em;
 
-  /* Type Scale - Body Small */
   --body-sm-size: clamp(0.959rem, calc(0.968rem + -0.046vw), 0.933rem);
   --body-sm-weight: 400;
-  --body-sm-line-height: 1.65;
-  --body-sm-letter-spacing: 0.03em;
+  --body-sm-line-height: 1.57;
+  --body-sm-letter-spacing: 0.024em;
 
-  /* Type Scale - Caption Large */
   --caption-lg-size: clamp(0.919rem, calc(0.937rem + -0.087vw), 0.871rem);
   --caption-lg-weight: 400;
-  --caption-lg-line-height: 1.65;
-  --caption-lg-letter-spacing: 0.03em;
+  --caption-lg-line-height: 1.57;
+  --caption-lg-letter-spacing: 0.024em;
 
-  /* Type Scale - Caption */
   --caption-size: clamp(0.882rem, calc(0.906rem + -0.124vw), 0.813rem);
   --caption-weight: 400;
-  --caption-line-height: 1.65;
-  --caption-letter-spacing: 0.03em;
+  --caption-line-height: 1.57;
+  --caption-letter-spacing: 0.024em;
 
-  /* Type Scale - Caption Small */
   --caption-sm-size: clamp(0.845rem, calc(0.877rem + -0.156vw), 0.759rem);
-  --caption-sm-weight: 400;
-  --caption-sm-line-height: 1.65;
-  --caption-sm-letter-spacing: 0.03em;
+  --caption-sm-weight: 300;
+  --caption-sm-line-height: 1.57;
+  --caption-sm-letter-spacing: 0.024em;
 
-  /* Type Scale - Overline */
   --overline-size: clamp(0.811rem, calc(0.848rem + -0.185vw), 0.709rem);
   --overline-weight: 500;
-  --overline-line-height: 1.65;
-  --overline-letter-spacing: 0.03em;
+  --overline-line-height: 1.57;
+  --overline-letter-spacing: 0.024em;
 }
 
 /* ============================================
