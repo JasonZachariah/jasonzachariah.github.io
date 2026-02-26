@@ -194,10 +194,18 @@
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  margin: 0;
+  padding-bottom: 0;
   background-color: var(--neutral-50);
+}
+
+main {
+  margin: 0;
 }
 
 /* Text Selection Styles */
@@ -226,7 +234,7 @@ h1 {
 }
 
 h2 {
-  display: flex;
+    display: inline-block;
   color: var(--color-1);
   font-family: basefont;
   font-size: var(--h2-size);
@@ -390,24 +398,48 @@ h4 .sidebar-link.active {
   flex-shrink: 0;
 }
 
+
+.about-container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 .logo-container {
-  max-width: 200px;
+  max-width: 100px;
 }
 .orange-text {
   color: var(--brand-900);
 }
+.orange-card-label {
+  display: inline-block;
+  background-color: var(--accent2-color);
+  padding: 0.25rem 0.75rem;
+}
+.orange-card-wrapper{
+  display: inline-block;
+  transform-origin: center center;
+  will-change: transform;
+  transition: transform 0.25s ease-out;
+}
+.orange-card-wrapper:hover{
+  transform: scale(1.02) rotate(2deg);
+}
 .orange-card{
   margin: 1rem;
-
-  background-color: var(--brand-500);
+  background-color: var(--neutral-100);
   padding: 0.5rem;
-  animation: rotate-simple 0.25s ease-in-out;
-  animation-fill-mode: forwards;
+  background-image: url("../../images/home/paper_texture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
   box-shadow: 10px var(--color-3)
 }
 .white-card{
   background-color: var(--color-3);
   padding: 0.5rem;
+  animation: rotate-simple 0.25s ease-in-out;
   animation: rotate-simple 0.25s ease-in-out;
   animation-fill-mode: forwards;
   box-shadow: 10px var(--color-3)
@@ -530,6 +562,10 @@ nav.header-border {
   border-bottom: none;
 }
 
+footer.header-border {
+  border-bottom: none;
+}
+
 
 
 /* Card Border and Hover Effects */
@@ -543,6 +579,87 @@ nav.header-border {
   transform: scale(1.01);
   animation-duration: 4s;
   box-shadow: 0 0 0 2px var(--color-3), 0 0 0 2.2px var(--color-3);
+}
+
+/* Hero section with tabs above content */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.hero-tabs-track {
+  position: relative;
+  display: flex;
+  background-color: var(--color-3);
+  padding: 0.25rem;
+}
+
+.hero-tab-indicator {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: calc(50% - 0.25rem);
+  height: calc(100% - 0.5rem);
+  background-color: var(--brand-500);
+  transition: transform 0.3s ease;
+}
+
+.hero-panels-container {
+  position: relative;
+  min-height: 28rem;
+}
+
+.hero-panel {
+  min-height: 28rem;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+.hero-panel.hero-panel--hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.hero-tabs-track[data-active="1"] .hero-tab-indicator {
+  transform: translateX(100%);
+}
+
+.hero-tab {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-width: 5rem;
+  padding: 0.35em 1.25em;
+  cursor: pointer;
+  border: none;
+  font: inherit;
+  background: var(--color-3);
+  color: var(--color-1);
+  transition: color 0.15s ease;
+}
+
+.hero-tab h4 {
+  color: inherit;
+}
+
+.hero-tab:hover {
+  color: var(--color-1);
+  color: var(--brand-900);
+}
+
+.hero-tab[aria-pressed="true"] {
+  background-color: var(--brand-600);
+  color: var(--brand-900);
 }
 
 /* Child Element Transitions */
@@ -677,6 +794,8 @@ nav .site-logo {
 /* Footer */
 footer {
   background-color: var(--brand-500);
+  padding-bottom: 0 !important;
+  margin-bottom: 0;
 }
 
 footer h3,
@@ -701,4 +820,8 @@ footer p,
 
 .footer-social-list .footer-social-link:hover {
   color: var(--accent-color);
+}
+
+.hero-underline {
+  box-shadow: inset 0 -0.35em var(--accent2-color);
 }

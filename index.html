@@ -74,64 +74,41 @@
     </nav>
 
     <main>
-        <!-- Hero Section -->
-        <!-- Two-column layout: introduction text on left, animated logo on right -->
-        <!-- Responsive: stacks vertically on mobile, side-by-side on medium+ screens -->
-        <div class="container grid grid-cols-1 md:grid-cols-2 items-center flex-col-reverse md:flex-row  gap-4">
-
-
-            <div class=" space-y-4 my-8">
-
-                <h1 class=""> Jason Zachariah is a product designer looking to <span
-                        class="rough-underline">bridge the gap between
-                        designers and developers</span></h1>
-
-
-
-
-                <div class="space-y-4">
-
-                    <h4>Work Experience</h4>
-                    <div class="space-y-2 flex flex-row items-center justify-between header-border">
-                        <h3>UX/UI Designer @ WizRobotics</h3>
-                        <h4>JUL 2025-Present</h4>
-                    </div>
-                    <div class="space-y-2 flex flex-row items-center justify-between header-border">
-                        <h3>Graphic Designer @ York ESports</h3>
-                        <h4>SEP 2024-JUN 2025</h4>
-                    </div>
-                    <div class="space-y-2 flex flex-row items-center justify-between header-border">
-                        <h3>Design Intern @ NVISION</h3>
-                        <h4>JAN 2022-JUN 2022</h4>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-            <!-- Right Column: Animated Logo -->
-            <!-- Displays animated GIF logo in a bordered container -->
-            <div class="flex justify-center items-center h-full   ">
-                <div class="w-lg orange-card justify-center items-center flex flex-col aspect-video ">
-                    <img src="images/home/jzlogo.gif" alt="Logo" class="logo-container">
-
-                    <div class="">
-                        <h4 class="text-center orange-text ">Looking for summer 2026 internships!</h4>
-                    </div>
-                    <div class="flex flex-row gap-2">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Portfolio Projects Grid -->
-        <!-- Responsive grid: 1 column on mobile, 2 columns on large screens -->
         <div class="container">
+            <!-- Hero Section -->
+            <div id="panel-intro" class="p-4 hero-panel grid grid-cols-1 md:grid-cols-2 items-center gap-4">
+                <div class="flex justify-center items-center h-full">
+                    <div class="orange-card-wrapper">
+                        <div class="w-lg orange-card flex flex-col aspect-video">
+                            <img src="images/home/jzlogo.gif" alt="Logo" class="logo-container">
+                            <div class="space-y-4">
+                                <h2>Jason Zachariah is a product designer looking to <span class="rough-underline hero-rough-underline">bridge the gap between designers and developers</span></h2>
+                                <h4 class="text-center orange-text highlight  mt-4">[Looking for summer 2026 internships!]</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4 my-8">
+                    <div class="space-y-4">
+                        <h4>Work Experience</h4>
+                        <div class="space-y-2 flex flex-row items-center justify-between header-border">
+                            <h3>UX/UI Designer @ WizRobotics</h3>
+                            <h4>JUL 2025-Present</h4>
+                        </div>
+                        <div class="space-y-2 flex flex-row items-center justify-between header-border">
+                            <h3>Graphic Designer @ York ESports</h3>
+                            <h4>SEP 2024-JUN 2025</h4>
+                        </div>
+                        <div class="space-y-2 flex flex-row items-center justify-between header-border">
+                            <h3>Design Intern @ NVISION</h3>
+                            <h4>JAN 2022-JUN 2022</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Projects Grid -->
+            <!-- Responsive grid: 1 column on mobile, 2 columns on large screens -->
             <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-8">
                 <!-- Project Card: Wiz Parser -->
                 <!-- Design system project card -->
@@ -266,7 +243,7 @@
 
     </main>
 
-    <footer class="container py-8 mt-16 header-border">
+    <footer class="container pt-8 mt-16 header-border">
         <div class="flex flex-col justify-between gap-8 text-left py-4">
             <div class="flex flex-col gap-2">
                 <h3>Design + Coded by Jason Zachariah</h3>

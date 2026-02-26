@@ -21,15 +21,33 @@ async function initRoughNotations() {
   }
   if (!annotate) return;
 
-  // Underlines – triggered on scroll
+  // Underlines – scroll-triggered
   document.querySelectorAll('.rough-underline').forEach(element => {
-    const a1 = annotate(element, { type: 'underline', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 5 });
-    ScrollTrigger.create({ trigger: element, start: 'top 80%', onEnter: () => a1.show(), once: true });
+    const a1 = annotate(element, {
+      type: 'underline',
+      multiline: true,
+      color: 'var(--accent-color)',
+      strokeWidth: 3,
+      padding: 5
+    });
+    ScrollTrigger.create({
+      trigger: element,
+      start: 'top 80%',
+      onEnter: () => a1.show(),
+      once: true
+    });
   });
 
   // Highlight (e.g. handbook .rough-highlight)
   document.querySelectorAll('.rough-highlight').forEach(element => {
-    const a = annotate(element, { type: 'highlight', multiline: true, color: 'var(--accent-color)', strokeWidth: 2, padding: 4 });
+    const a = annotate(element, {
+      type: 'highlight',
+      multiline: true,
+      // Semi-transparent accent for softer highlight
+      color: 'rgba(232, 75, 38, 0.70)',
+      strokeWidth: 2,
+      padding: 4
+    });
     ScrollTrigger.create({ trigger: element, start: 'top 80%', onEnter: () => a.show(), once: true });
   });
 
