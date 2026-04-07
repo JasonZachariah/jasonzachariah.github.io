@@ -80,39 +80,8 @@
                     <p>Old scraps from the past.</p>
                 </div>
                 <div class="w-full mt-8">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="aspect-square">
-                            <video class="greyborder w-full h-full object-cover" preload="auto" autoplay loop muted
-                                playsinline>
-                                <source src="images/archive/Blender Animated copy.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="aspect-square">
-                            <video class="greyborder w-full h-full object-cover" preload="auto" autoplay loop muted
-                                playsinline>
-                                <source src="images/archive/Ponyboy.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="aspect-square">
-                            <img src="images/archive/markhamfairgif.gif" alt="Markham Fair GIF"
-                                class="greyborder w-full h-full object-contain">
-                        </div>
-                        <div class="aspect-square">
-                            <img src="images/archive/Somethingforeverythingif.gif" alt="Something for Everything GIF"
-                                class="greyborder w-full h-full object-contain">
-                        </div>
-                        <div class="aspect-square">
-                            <img src="images/archive/swap gif.gif" alt="Swap GIF"
-                                class="greyborder w-full h-full object-contain">
-                        </div>
-                        <div class="aspect-square">
-
-                            <img src="images/archive/SkulltoHuman.gif" class="greyborder w-full h-full object-contain">
-
-                        </div>
-                        <div class="aspect-square">
-                            <iframe src="./archive-sentiment-sketch.html" width="400" height="400" class="greyborder w-full h-full"></iframe>
-                        </div>
+                    <div class="archive-infinite-grid" id="archive-infinite-grid" aria-label="Draggable archive gallery">
+                        <div class="archive-grid-track" id="archive-grid-track"></div>
                     </div>
                 </div>
             </div>
@@ -139,6 +108,7 @@
     {"imports":{"rough-notation":"https://cdn.jsdelivr.net/npm/rough-notation@0.5.1/+esm","gsap":"https://cdn.jsdelivr.net/npm/gsap@3.13.0/index.js","gsap/ScrollTrigger":"https://cdn.jsdelivr.net/npm/gsap@3.13.0/ScrollTrigger.js"}}
     </script>
     <script src="./main.js" type="module"></script>
+    <script src="./archive-grid.js" type="module"></script>
 </body>
 
 </html>
