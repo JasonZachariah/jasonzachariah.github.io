@@ -405,6 +405,54 @@ h4 .sidebar-link.active {
   margin-right: auto;
   width: 100%;
 }
+
+/* About page: draggable area between nav and footer, cards clipped inside */
+.about-photo-frame {
+  position: relative;
+  min-height: 580px;
+  padding: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.about-photo-frame .about-card {
+  position: absolute;
+  min-height: 0;
+  max-width: 400px;
+  width: fit-content;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, z-index 0s;
+}
+
+.about-photo-frame .about-text-card {
+  min-height: 0;
+  height: fit-content;
+  overflow-y: visible;
+  user-select: text;
+}
+
+.about-card {
+  cursor: grab;
+  user-select: none;
+}
+
+.about-card:active {
+  cursor: grabbing;
+}
+
+.about-card.picked-up {
+  transform: scale(1.06);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  z-index: 10;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.about-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: bottom;
+}
 .logo-container {
   max-width: 100px;
 }
