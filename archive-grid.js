@@ -8,11 +8,23 @@ if (gridRoot && gridTrack) {
     { type: "image", src: "images/archive/markhamfairgif.gif", alt: "Markham Fair GIF", fit: "contain" },
     { type: "image", src: "images/archive/Somethingforeverythingif.gif", alt: "Something for Everything GIF", fit: "contain" },
     { type: "image", src: "images/archive/swap gif.gif", alt: "Swap GIF", fit: "contain" },
-    { type: "image", src: "images/archive/SkulltoHuman.gif", alt: "Skull to Human GIF", fit: "contain" }
+    { type: "image", src: "images/archive/SkulltoHuman.gif", alt: "Skull to Human GIF", fit: "contain" },
+    { type: "image", src: "images/archive/saylchair.gif", alt: "Sayl Chair GIF", fit: "contain" }
   ];
 
-  const cols = 3;
-  const rows = Math.ceil(items.length / cols);
+  // Bento unit definition (grid coordinates in tile units)
+  // 6 cols x 4 rows; each item can span multiple rows/cols.
+  const baseCols = 6;
+  const baseRows = 4;
+  const bentoSlots = [
+    { col: 0, row: 0, colSpan: 2, rowSpan: 2 },
+    { col: 2, row: 0, colSpan: 1, rowSpan: 1 },
+    { col: 3, row: 0, colSpan: 3, rowSpan: 2 },
+    { col: 2, row: 1, colSpan: 1, rowSpan: 2 },
+    { col: 0, row: 2, colSpan: 2, rowSpan: 2 },
+    { col: 3, row: 2, colSpan: 1, rowSpan: 2 },
+    { col: 4, row: 2, colSpan: 2, rowSpan: 2 }
+  ];
   const repeatRange = 2;
   let tileSize = 280;
   let gap = 20;
@@ -56,15 +68,15 @@ if (gridRoot && gridTrack) {
     const css = getComputedStyle(gridRoot);
     tileSize = parseFloat(css.getPropertyValue("--archive-tile-size")) || 280;
     gap = parseFloat(css.getPropertyValue("--archive-grid-gap")) || 20;
-    periodWidth = cols * tileSize + (cols - 1) * gap;
-    periodHeight = rows * tileSize + (rows - 1) * gap;
+    periodWidth = baseCols * tileSize + (baseCols - 1) * gap;
+    periodHeight = baseRows * tileSize + (baseRows - 1) * gap;
   }
 
-  function createTileElement(item) {
+  function createTileElement(item, width, height) {
     const cell = document.createElement("div");
     cell.className = "archive-grid-cell";
-    cell.style.width = `${tileSize}px`;
-    cell.style.height = `${tileSize}px`;
+    cell.style.width = `${width}px`;
+    cell.style.height = `${height}px`;
 
     if (item.type === "video") {
       const video = document.createElement("video");
@@ -110,11 +122,12 @@ if (gridRoot && gridTrack) {
     for (let ry = -repeatRange; ry <= repeatRange; ry += 1) {
       for (let rx = -repeatRange; rx <= repeatRange; rx += 1) {
         items.forEach((item, index) => {
-          const col = index % cols;
-          const row = Math.floor(index / cols);
-          const x = rx * periodWidth + col * (tileSize + gap);
-          const y = ry * periodHeight + row * (tileSize + gap);
-          const node = createTileElement(item);
+          const slot = bentoSlots[index % bentoSlots.length];
+          const x = rx * periodWidth + slot.col * (tileSize + gap);
+          const y = ry * periodHeight + slot.row * (tileSize + gap);
+          const width = slot.colSpan * tileSize + (slot.colSpan - 1) * gap;
+          const height = slot.rowSpan * tileSize + (slot.rowSpan - 1) * gap;
+          const node = createTileElement(item, width, height);
           gridTrack.appendChild(node);
           tileRefs.push({ node, x, y });
         });
