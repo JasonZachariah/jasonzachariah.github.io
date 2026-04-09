@@ -53,8 +53,8 @@
   --display-md-line-height: 1.47;
   --display-md-letter-spacing: 0.012em;
 
-  --h1-size: clamp(1.5rem, calc(1.375rem + 0.625vw), 1.875rem);
-  --h1-weight: 700;
+  --h1-size: clamp(2rem, calc(1.75rem + 1vw), 2.5rem);
+  --h1-weight: 900;
   --h1-line-height: 1.47;
   --h1-letter-spacing: 0.016em;
 
@@ -466,9 +466,10 @@ h4 .sidebar-link.active {
 
 .hero-inline-logo {
   display: inline-block;
-  width: 1.4em;
-  height: 1.4em;
+  width: 3em;
+  height: 3em;
   margin-left: 0.2em;
+  align-self: flex-start;
   vertical-align: text-bottom;
 }
 .orange-text {
@@ -521,34 +522,112 @@ h4 .sidebar-link.active {
 /* Hero orange card: size in layout (not only transform) so md two-column rows don’t overlap */
 #panel-intro .orange-card {
   box-sizing: border-box;
-  width: min(32rem, 100%);
+  width: 100%;
   max-width: 100%;
+  aspect-ratio: auto;
+  height: auto;
   /* Global .orange-card margin is 1rem all sides; horizontal margin widens past 100% and overlaps the next column */
   margin-left: 0;
   margin-right: 0;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
   /* Heavier inset on the left than `p-10` on other sides */
-  padding-block: 2.5rem;
-  padding-inline-end: 2.5rem;
-  padding-inline-start: clamp(2rem, 2.6vw + 1.1rem, 3.2rem);
+  padding-block: clamp(1.875rem, 1.5rem + 1.15vw, 2.75rem);
+  padding-inline-end: 1.5rem;
+  padding-inline-start: clamp(1.2rem, 1.8vw + 0.7rem, 2rem);
 }
 
 /* Left-aligned type, centered as a block inside the card */
 #panel-intro .hero-card-inner {
   text-align: left;
   width: min(100%, 28rem);
+  min-width: 0;
+  align-self: flex-start;
+  height: 100%;
+  gap: clamp(1.25rem, 0.85rem + 1.1vw, 2rem);
+}
+
+#panel-intro .hero-card-inner h1,
+#panel-intro .hero-card-inner h2 {
+  margin-top: 0;
+  font-size: var(--h1-size);
+  line-height: var(--h1-line-height);
+  letter-spacing: var(--h1-letter-spacing);
+}
+
+#panel-intro .hero-intro-copy h3 {
+  margin-bottom: 0;
+}
+
+#panel-intro .hero-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+#panel-intro .hero-contact-item h4 {
+  margin: 0;
+  display: block;
+  color: var(--brand-900);
+  opacity: 0.85;
+}
+
+#panel-intro .hero-contact-item {
+  min-width: 0;
+}
+
+#panel-intro .hero-contact-item a {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 0.2rem;
+  color: var(--brand-900);
+  text-decoration: none;
+  font-family: basefont;
+  font-size: var(--body-sm-size);
+  line-height: var(--body-sm-line-height);
+  letter-spacing: var(--body-sm-letter-spacing);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Rounded “pill” underline in brand-900; clone keeps end caps on wrapped lines */
+#panel-intro .hero-contact-item a:hover,
+#panel-intro .hero-contact-item a:focus-visible {
+  text-decoration: none;
+  background-image: linear-gradient(var(--brand-900), var(--brand-900));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% max(2px, 0.12em);
+  border-radius: 999px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+@media (max-width: 47.999rem) {
+  #panel-intro .orange-card {
+    flex-direction: column;
+    aspect-ratio: auto;
+    max-height: none;
+    height: auto;
+    gap: 1rem;
+  }
+
+  #panel-intro .hero-card-inner {
+    width: 100%;
+    height: auto;
+  }
+
+  #panel-intro .hero-contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* From lg up, grow with viewport while staying within the grid column */
 @media (min-width: 64rem) {
-  #panel-intro .orange-card {
-    width: min(100%, max(32rem, min(40rem, 28vw)));
-  }
-
   #panel-intro .hero-card-inner {
     width: min(100%, 34rem);
   }
