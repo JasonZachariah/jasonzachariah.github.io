@@ -9,13 +9,14 @@ if (gridRoot && gridTrack) {
     { type: "image", src: "images/archive/Somethingforeverythingif.gif", alt: "Something for Everything GIF", fit: "contain" },
     { type: "image", src: "images/archive/swap gif.gif", alt: "Swap GIF", fit: "contain" },
     { type: "image", src: "images/archive/SkulltoHuman.gif", alt: "Skull to Human GIF", fit: "contain" },
-    { type: "image", src: "images/archive/saylchair.gif", alt: "Sayl Chair GIF", fit: "contain" }
+    { type: "image", src: "images/archive/saylchair.gif", alt: "Sayl Chair GIF", fit: "contain" },
+    { type: "image", src: "images/archive/oldaniamtionslogo.gif", alt: "Old Animation", fit: "contain" }
   ];
 
   // Bento unit definition (grid coordinates in tile units)
-  // 6 cols x 4 rows; each item can span multiple rows/cols.
+  // 6 cols x 5 rows; each item can span multiple rows/cols.
   const baseCols = 6;
-  const baseRows = 4;
+  const baseRows = 5;
   const bentoSlots = [
     { col: 0, row: 0, colSpan: 2, rowSpan: 2 },
     { col: 2, row: 0, colSpan: 1, rowSpan: 1 },
@@ -23,11 +24,12 @@ if (gridRoot && gridTrack) {
     { col: 2, row: 1, colSpan: 1, rowSpan: 2 },
     { col: 0, row: 2, colSpan: 2, rowSpan: 2 },
     { col: 3, row: 2, colSpan: 1, rowSpan: 2 },
-    { col: 4, row: 2, colSpan: 2, rowSpan: 2 }
+    { col: 4, row: 2, colSpan: 2, rowSpan: 2 },
+    { col: 2, row: 4, colSpan: 2, rowSpan: 1 }
   ];
   const repeatRange = 2;
   let tileSize = 280;
-  let gap = 20;
+  let gap = 60;
   let periodWidth = 0;
   let periodHeight = 0;
   let offsetX = 0;
