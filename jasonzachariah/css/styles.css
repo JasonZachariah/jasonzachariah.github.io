@@ -1014,8 +1014,8 @@ footer div:has(> ul.footer-social-list) > h4 {
 }
 
 .archive-infinite-grid {
-  --archive-grid-gap: 5rem;
-  --archive-tile-size: 220vw;
+  --archive-grid-gap: 25rem;
+  --archive-tile-size: 270vw;
   position: relative;
   width: 100%;
   min-height: 70vh;
