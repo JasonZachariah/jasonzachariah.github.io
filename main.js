@@ -22,7 +22,7 @@ async function initRoughNotations() {
   if (!annotate) return;
 
   // Underlines – scroll-triggered
-  document.querySelectorAll('.rough-underline').forEach(element => {
+  document.querySelectorAll('.rough-underline').forEach((element) => {
     const a1 = annotate(element, {
       type: 'underline',
       multiline: true,
@@ -55,6 +55,53 @@ async function initRoughNotations() {
   document.querySelectorAll('.orange-highlight').forEach(element => {
     const a2 = annotate(element, { type: 'highlight', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 10, radius: 10, iterations: 3, animationDuration: 2000 });
     ScrollTrigger.create({ trigger: element, start: 'top 80%', onEnter: () => a2.show(), once: true });
+  });
+}
+
+// Rough underline on hover/focus (nav, footer) and hover-only (project sidebar — no focus ring / sketch)
+async function initH4LinkRoughHover() {
+  let annotate;
+  try {
+    const rough = await import('rough-notation');
+    annotate = rough.annotate;
+  } catch (err) {
+    console.warn('rough-notation (link hover) could not load:', err);
+    return;
+  }
+  if (!annotate) return;
+
+  function attachRoughUnderline(link, { useFocus } = { useFocus: true }) {
+    let ann = null;
+    const show = () => {
+      if (!ann) {
+        ann = annotate(link, {
+          type: 'underline',
+          multiline: true,
+          color: 'var(--brand-900)',
+          strokeWidth: 2,
+          padding: 4,
+          iterations: 1,
+          animationDuration: 220
+        });
+      }
+      ann.show();
+    };
+    const hide = () => {
+      if (ann) ann.hide();
+    };
+    link.addEventListener('mouseenter', show);
+    link.addEventListener('mouseleave', hide);
+    if (useFocus) {
+      link.addEventListener('focus', show);
+      link.addEventListener('blur', hide);
+    }
+  }
+
+  document.querySelectorAll('nav h4 a, footer .footer-social-list .footer-social-link').forEach((link) => {
+    attachRoughUnderline(link, { useFocus: true });
+  });
+  document.querySelectorAll('.project-sidebar h4 a.sidebar-link').forEach((link) => {
+    attachRoughUnderline(link, { useFocus: false });
   });
 }
 
@@ -147,6 +194,7 @@ function gsapScrollspy() {
 // Initialize everything when DOM is ready
 function init() {
   initRoughNotations();
+  initH4LinkRoughHover();
   gsapScrollspy();
 }
 
