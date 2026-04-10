@@ -23,8 +23,18 @@ if (gridRoot && gridTrack) {
   const BURST_DURATION_MS = 720;
   const BURST_MAX_STAGGER_MS = 260;
   const LAYOUT_WAIT_MAX_FRAMES = 72;
+  const DRIFT_SPEED_MIN = 16;
+  const DRIFT_SPEED_MAX = 30;
+  const FLING_VELOCITY_SCALE = 0.92;
+  const FLING_MAX_SPEED = 260;
+  const EDGE_BOUNCE_DAMPING = 0.98;
+  const COLLISION_BOUNCE = 0.94;
+  const COLLISION_PUSHOUT = 0.52;
   let dragZBase = 10;
   let layoutGeneration = 0;
+  let motionRaf = null;
+  let motionState = [];
+  let lastMotionTs = 0;
 
   function randomInRange(min, max) {
     return min + Math.random() * (max - min);
@@ -289,6 +299,8 @@ if (gridRoot && gridTrack) {
     if (!placed) return;
 
     burstCardsToPositions(cells, placed, gen);
+    const waitMs = BURST_DURATION_MS + BURST_MAX_STAGGER_MS + 120;
+    window.setTimeout(() => startMotion(cells, gen), waitMs);
   }
 
   function schedulePlaceCardsWhenReady(cells, gen, frame = 0) {
@@ -310,18 +322,38 @@ if (gridRoot && gridTrack) {
     let activePointerId = null;
     let grabOffsetX = 0;
     let grabOffsetY = 0;
+    let lastPointerX = 0;
+    let lastPointerY = 0;
+    let lastPointerTs = 0;
+    let pointerVx = 0;
+    let pointerVy = 0;
+
+    function getStateForCell() {
+      return motionState.find((state) => state.cell === cell) || null;
+    }
 
     cell.addEventListener("pointerdown", (event) => {
       if (event.pointerType === "mouse" && event.button !== 0) return;
       activePointerId = event.pointerId;
       cell.setPointerCapture(activePointerId);
       cell.classList.add("archive-grid-cell--dragging");
+      cell.dataset.dragging = "true";
       cell.style.transition = "none";
       dragZBase += 1;
       cell.style.zIndex = String(dragZBase);
       const cellRect = cell.getBoundingClientRect();
       grabOffsetX = event.clientX - cellRect.left;
       grabOffsetY = event.clientY - cellRect.top;
+      lastPointerX = event.clientX;
+      lastPointerY = event.clientY;
+      lastPointerTs = performance.now();
+      pointerVx = 0;
+      pointerVy = 0;
+      const state = getStateForCell();
+      if (state) {
+        state.vx = 0;
+        state.vy = 0;
+      }
     });
 
     cell.addEventListener("pointermove", (event) => {
@@ -337,6 +369,22 @@ if (gridRoot && gridTrack) {
       top = Math.max(CARD_PADDING, Math.min(maxTop, top));
       cell.style.left = `${left}px`;
       cell.style.top = `${top}px`;
+
+      const now = performance.now();
+      const dt = Math.max(0.001, (now - lastPointerTs) / 1000);
+      const dx = event.clientX - lastPointerX;
+      const dy = event.clientY - lastPointerY;
+      pointerVx = dx / dt;
+      pointerVy = dy / dt;
+      lastPointerX = event.clientX;
+      lastPointerY = event.clientY;
+      lastPointerTs = now;
+
+      const state = getStateForCell();
+      if (state) {
+        state.x = left;
+        state.y = top;
+      }
     });
 
     function endDrag(event) {
@@ -344,19 +392,169 @@ if (gridRoot && gridTrack) {
       cell.releasePointerCapture(activePointerId);
       activePointerId = null;
       cell.classList.remove("archive-grid-cell--dragging");
+      cell.dataset.dragging = "false";
+
+      const state = getStateForCell();
+      if (state) {
+        const speed = Math.hypot(pointerVx, pointerVy);
+        if (speed > 0) {
+          const scale = Math.min(1, FLING_MAX_SPEED / speed) * FLING_VELOCITY_SCALE;
+          state.vx = pointerVx * scale;
+          state.vy = pointerVy * scale;
+        }
+        state.x = parseFloat(cell.style.left) || state.x;
+        state.y = parseFloat(cell.style.top) || state.y;
+      }
     }
 
     cell.addEventListener("pointerup", endDrag);
     cell.addEventListener("pointercancel", endDrag);
   }
 
+  function createMotionState(cells) {
+    const states = [];
+    for (const cell of cells) {
+      const left = parseFloat(cell.style.left) || 0;
+      const top = parseFloat(cell.style.top) || 0;
+      const angle = randomInRange(0, Math.PI * 2);
+      const speed = randomInRange(DRIFT_SPEED_MIN, DRIFT_SPEED_MAX);
+      states.push({
+        cell,
+        x: left,
+        y: top,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed
+      });
+    }
+    return states;
+  }
+
+  function bounceAgainstEdges(state, width, height, pad) {
+    const w = state.cell.offsetWidth;
+    const h = state.cell.offsetHeight;
+    const minX = pad;
+    const minY = pad;
+    const maxX = Math.max(pad, width - w - pad);
+    const maxY = Math.max(pad, height - h - pad);
+
+    if (state.x <= minX) {
+      state.x = minX;
+      state.vx = Math.abs(state.vx) * EDGE_BOUNCE_DAMPING;
+    } else if (state.x >= maxX) {
+      state.x = maxX;
+      state.vx = -Math.abs(state.vx) * EDGE_BOUNCE_DAMPING;
+    }
+
+    if (state.y <= minY) {
+      state.y = minY;
+      state.vy = Math.abs(state.vy) * EDGE_BOUNCE_DAMPING;
+    } else if (state.y >= maxY) {
+      state.y = maxY;
+      state.vy = -Math.abs(state.vy) * EDGE_BOUNCE_DAMPING;
+    }
+  }
+
+  function resolvePairCollision(a, b) {
+    const aw = a.cell.offsetWidth;
+    const ah = a.cell.offsetHeight;
+    const bw = b.cell.offsetWidth;
+    const bh = b.cell.offsetHeight;
+
+    const ax = a.x + aw / 2;
+    const ay = a.y + ah / 2;
+    const bx = b.x + bw / 2;
+    const by = b.y + bh / 2;
+
+    const dx = bx - ax;
+    const dy = by - ay;
+    const minDist = aw / 2 + bw / 2 + CARD_SEPARATION * 0.35;
+    const dist = Math.hypot(dx, dy) || 0.0001;
+
+    if (dist >= minDist) return;
+
+    const nx = dx / dist;
+    const ny = dy / dist;
+    const overlap = (minDist - dist) * COLLISION_PUSHOUT;
+    a.x -= nx * overlap;
+    a.y -= ny * overlap;
+    b.x += nx * overlap;
+    b.y += ny * overlap;
+
+    const tx = -ny;
+    const ty = nx;
+    const vaN = a.vx * nx + a.vy * ny;
+    const vaT = a.vx * tx + a.vy * ty;
+    const vbN = b.vx * nx + b.vy * ny;
+    const vbT = b.vx * tx + b.vy * ty;
+
+    a.vx = (vbN * nx + vaT * tx) * COLLISION_BOUNCE;
+    a.vy = (vbN * ny + vaT * ty) * COLLISION_BOUNCE;
+    b.vx = (vaN * nx + vbT * tx) * COLLISION_BOUNCE;
+    b.vy = (vaN * ny + vbT * ty) * COLLISION_BOUNCE;
+  }
+
+  function stepMotion(ts) {
+    if (!gridRoot.isConnected || motionState.length === 0) {
+      motionRaf = null;
+      return;
+    }
+    if (!lastMotionTs) lastMotionTs = ts;
+    const dt = Math.min(0.045, (ts - lastMotionTs) / 1000);
+    lastMotionTs = ts;
+
+    const rootWidth = gridTrack.clientWidth;
+    const rootHeight = gridTrack.clientHeight;
+    const activeStates = motionState.filter((s) => s.cell.dataset.dragging !== "true");
+
+    for (const state of activeStates) {
+      state.x += state.vx * dt;
+      state.y += state.vy * dt;
+      bounceAgainstEdges(state, rootWidth, rootHeight, CARD_PADDING);
+    }
+
+    for (let i = 0; i < activeStates.length; i += 1) {
+      for (let j = i + 1; j < activeStates.length; j += 1) {
+        resolvePairCollision(activeStates[i], activeStates[j]);
+      }
+    }
+
+    for (const state of motionState) {
+      if (state.cell.dataset.dragging === "true") continue;
+      state.cell.style.left = `${state.x}px`;
+      state.cell.style.top = `${state.y}px`;
+    }
+
+    motionRaf = requestAnimationFrame(stepMotion);
+  }
+
+  function startMotion(cells, gen) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+    if (gen !== layoutGeneration) return;
+
+    if (motionRaf !== null) {
+      cancelAnimationFrame(motionRaf);
+      motionRaf = null;
+    }
+    motionState = createMotionState(cells);
+    lastMotionTs = 0;
+    motionRaf = requestAnimationFrame(stepMotion);
+  }
+
   function buildScatter() {
     layoutGeneration += 1;
     const gen = layoutGeneration;
+    if (motionRaf !== null) {
+      cancelAnimationFrame(motionRaf);
+      motionRaf = null;
+    }
+    motionState = [];
+    lastMotionTs = 0;
     gridRoot.style.setProperty("--archive-media-scale", "1");
     gridTrack.textContent = "";
     const cells = items.map((item) => {
       const cell = createTileElement(item);
+      cell.dataset.dragging = "false";
       gridTrack.appendChild(cell);
       attachArchiveDrag(cell);
       return cell;
