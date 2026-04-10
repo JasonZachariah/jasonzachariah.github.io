@@ -10,7 +10,8 @@ if (gridRoot && gridTrack) {
     { type: "image", src: "images/archive/swap gif.gif", alt: "Swap GIF", fit: "contain" },
     { type: "image", src: "images/archive/SkulltoHuman.gif", alt: "Skull to Human GIF", fit: "contain" },
     { type: "image", src: "images/archive/saylchair.gif", alt: "Sayl Chair GIF", fit: "contain" },
-    { type: "image", src: "images/archive/oldaniamtionslogo.gif", alt: "Old Animation", fit: "contain" }
+    { type: "image", src: "images/archive/oldaniamtionslogo.gif", alt: "Old Animation", fit: "contain" },
+    { type: "image", src: "images/archive/p5jsgif.gif", alt: "p5.js GIF", fit: "contain" }
   ];
 
   const CARD_ROTATION_LIMIT = 3;
