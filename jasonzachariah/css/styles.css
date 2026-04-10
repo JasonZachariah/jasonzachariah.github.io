@@ -524,6 +524,7 @@ h4 .sidebar-link.active {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
+  max-height: 22rem;
   aspect-ratio: auto;
   height: auto;
   /* Global .orange-card margin is 1rem all sides; horizontal margin widens past 100% and overlaps the next column */
@@ -1093,37 +1094,80 @@ footer div:has(> ul.footer-social-list) > h4 {
 }
 
 .archive-infinite-grid {
-  --archive-grid-gap: clamp(0.65rem, 1.2vw, 1rem);
-  --archive-tile-size: clamp(4.6rem, 6.2vh, 5.9rem);
+  --archive-media-max-w: min(380px, 92vw);
+  --archive-media-max-h: min(420px, 55vh);
+  --archive-media-scale: 1;
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  min-height: 88vh;
   overflow: hidden;
-  cursor: grab;
-  touch-action: none;
-  border: 2px solid var(--color-3);
   background: transparent;
-}
-
-.archive-infinite-grid.dragging {
-  cursor: grabbing;
+  touch-action: pan-y;
 }
 
 .archive-grid-track {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  inset: 0;
+  z-index: 2;
+}
+
+.archive-grid-header {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.35rem;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.archive-grid-header h2,
+.archive-grid-header p {
+  margin: 0;
+  pointer-events: none;
 }
 
 .archive-grid-cell {
   position: absolute;
+  width: max-content;
+  height: max-content;
+  max-width: calc(var(--archive-media-max-w) * var(--archive-media-scale));
+  max-height: calc(var(--archive-media-max-h) * var(--archive-media-scale));
+  overflow: visible;
+  transform-origin: center center;
+  cursor: grab;
+  touch-action: none;
+}
+
+.archive-grid-cell--dragging {
+  cursor: grabbing;
+}
+
+.archive-grid-card {
+  display: block;
+  width: max-content;
+  height: max-content;
+  max-width: inherit;
+  max-height: inherit;
   overflow: hidden;
   background-color: var(--color-4);
 }
 
+.archive-span-1x1 { grid-column: span 1; grid-row: span 1; }
+.archive-span-1x2 { grid-column: span 1; grid-row: span 2; }
+.archive-span-2x1 { grid-column: span 2; grid-row: span 1; }
+.archive-span-2x2 { grid-column: span 2; grid-row: span 2; }
+.archive-span-3x2 { grid-column: span 3; grid-row: span 2; }
+
 .archive-grid-media {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
+  max-width: calc(var(--archive-media-max-w) * var(--archive-media-scale));
+  max-height: calc(var(--archive-media-max-h) * var(--archive-media-scale));
   display: block;
   border: 0;
   pointer-events: none;
@@ -1135,4 +1179,5 @@ footer div:has(> ul.footer-social-list) > h4 {
 
 .archive-fit-contain {
   object-fit: contain;
+  object-position: center;
 }
