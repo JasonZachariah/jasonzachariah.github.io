@@ -16,7 +16,7 @@
   --brand-900: #4E0000;
 
   /* Light / Neutral */
-  --neutral-50: #fef8f6;
+  --neutral-50: #ffffff;
   --neutral-100: #F2E5E2;
   --neutral-200: #DED1CF;
   --neutral-300: #C7BBB8;
@@ -35,6 +35,10 @@
   --accent-color: var(--brand-500);
   --accent2-color: color-mix(in srgb, var(--brand-400) 60%, transparent);
   --accent3-color: var(--brand-50);
+
+  /* Card corner radii */
+  --radius-card-lg: 0.575rem;
+  --radius-card-sm: 0.2375rem;
 
   /* Font Family (loaded via Google Fonts in each HTML page) */
   --font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
@@ -89,6 +93,7 @@ html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  background-color: var(--neutral-50);
 }
 
 body {
@@ -238,20 +243,32 @@ ol li::marker {
   font-family: var(--font-family);
 }
 
-/* Active sidebar link */
+/* Active sidebar link — pill; brand-400 fill, brand-800 label; selected state indents (transform only, no radius animation) */
 .sidebar-link {
-  transition: background-color 0.3s ease, padding 0.3s ease;
+  display: inline-block;
+  border-radius: 9999px;
+  padding: 0.4em 1em;
+  transform: translateX(0);
+  transition-property: background-color, color, transform;
+  transition-duration: 0.25s, 0.2s, 0.32s;
+  transition-timing-function: ease, ease, cubic-bezier(0.22, 1, 0.36, 1);
+  background-color: transparent;
 }
 
 .sidebar-link.active {
-  background-color: var(--color-3);
-  padding: 2px 4px;
-  display: inline-block;
+  background-color: var(--brand-400);
+  color: var(--brand-800);
+  transform: translateX(0.65rem);
 }
 
 /* Ensure h4 containing active sidebar link displays correctly */
 h4 .sidebar-link.active {
   display: inline-block;
+}
+
+/* Sidebar column: don’t clip pills (curved edges + active translateX) */
+.project-sidebar > .flex.flex-col {
+  overflow: visible;
 }
 
 /* No focus ring on project sidebar (active section still uses .active background) */
@@ -260,11 +277,17 @@ h4 .sidebar-link.active {
   outline: none;
 }
 
+/* Sidebar links: no sketch underline — subtle hover only */
+.project-sidebar a.sidebar-link:not(.active):hover {
+  color: var(--brand-800);
+}
+
 /* Solution section background */
 .solution-bg {
   background-color: var(--accent3-color);
   padding: 1.5rem;
-
+  border-radius: var(--radius-card-sm);
+  overflow: hidden;
 }
 
 /* Logo: mask-based so it matches --color-2 (same as nav text beside it) */
@@ -345,6 +368,8 @@ h4 .sidebar-link.active {
   max-height: 22rem;
   aspect-ratio: auto;
   height: auto;
+  border-radius: var(--radius-card-lg);
+  overflow: hidden;
   /* Global .orange-card margin is 1rem all sides; horizontal margin widens past 100% and overlaps the next column */
   margin-left: 0;
   margin-right: 0;
@@ -468,7 +493,9 @@ h4 .sidebar-link.active {
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
-  box-shadow: 10px var(--color-3)
+  box-shadow: 10px var(--color-3);
+  border-radius: var(--radius-card-lg);
+  overflow: hidden;
 }
 
 .orange-card h1,
@@ -494,6 +521,8 @@ h4 .sidebar-link.active {
 /* Blank background - same formatting as solution-bg but without background color */
 .blank-bg {
   padding: 1.5rem;
+  border-radius: var(--radius-card-sm);
+  overflow: hidden;
 }
 
 .blank-bg p {
@@ -505,6 +534,8 @@ h4 .sidebar-link.active {
 .important-bg {
   background-color: var(--color-3);
   padding: 1.5rem;
+  border-radius: var(--radius-card-sm);
+  overflow: hidden;
 }
 
 /* Quote styling with left border and gradient background */
@@ -513,6 +544,8 @@ h4 .sidebar-link.active {
   background: var(--accent3-color);
   padding: 1.5rem;
   color: var(--accent-color);
+  border-radius: var(--radius-card-sm);
+  overflow: hidden;
 }
 
 
@@ -581,13 +614,20 @@ footer.header-border {
 .greyborder {
   transition: all 0.5s ease;
   background-color: var(--color-4);
-  box-shadow: 0 0 0 2px var(--color-3);
+  box-shadow: 0 0 0 2px var(--neutral-100);
+  border-radius: var(--radius-card-lg);
+  overflow: hidden;
+}
+
+/* Tighter corners on compact text / grid callout cards */
+.greyborder.p-4 {
+  border-radius: var(--radius-card-sm);
 }
 
 .parent:hover .greyborder {
   transform: scale(1.01);
   animation-duration: 4s;
-  box-shadow: 0 0 0 2px var(--color-3), 0 0 0 2.2px var(--color-3);
+  box-shadow: 0 0 0 2px var(--neutral-100), 0 0 0 2.2px var(--neutral-100);
 }
 
 /* Home hero grid row: min height for two-column layout */
@@ -846,6 +886,7 @@ footer div:has(> ul.footer-social-list) > h4 {
   max-height: inherit;
   overflow: hidden;
   background-color: var(--color-4);
+  border-radius: var(--radius-card-lg);
 }
 
 .archive-span-1x1 { grid-column: span 1; grid-row: span 1; }

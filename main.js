@@ -58,7 +58,7 @@ async function initRoughNotations() {
   });
 }
 
-// Rough underline on hover/focus (nav, footer) and hover-only (project sidebar — no focus ring / sketch)
+// Rough underline on hover/focus (nav, footer). Sidebar section links use CSS only (pill active state).
 async function initH4LinkRoughHover() {
   let annotate;
   try {
@@ -99,9 +99,6 @@ async function initH4LinkRoughHover() {
 
   document.querySelectorAll('nav h4 a, footer .footer-social-list .footer-social-link').forEach((link) => {
     attachRoughUnderline(link, { useFocus: true });
-  });
-  document.querySelectorAll('.project-sidebar h4 a.sidebar-link').forEach((link) => {
-    attachRoughUnderline(link, { useFocus: false });
   });
 }
 
