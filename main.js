@@ -3,6 +3,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+/** Set by initSidebarScrollDot; scrollspy calls this so the dot lines up with the active pill. */
+let syncSidebarScrollDot = () => {};
+
 // Initialize rough-notation via dynamic import so GitHub Pages still works if CDN is slow
 // Only on home and about pages
 async function initRoughNotations() {
@@ -129,12 +132,17 @@ function gsapScrollspy() {
       if (window.scrollY < 100) {
         sidebarLinks[0].classList.add('active');
       }
+      syncSidebarScrollDot();
       return;
     }
     const id = section.getAttribute('id');
-    if (!id) return;
+    if (!id) {
+      syncSidebarScrollDot();
+      return;
+    }
     const match = Array.from(sidebarLinks).find(link => link.getAttribute('href') === `#${id}`);
     if (match) match.classList.add('active');
+    syncSidebarScrollDot();
   }
 
   // Setup GSAP ScrollTriggers for each section
@@ -188,11 +196,68 @@ function gsapScrollspy() {
   }, 0);
 }
 
+/** Orange dot on the track; vertical position follows the active sidebar pill (scrollspy). */
+function initSidebarScrollIndicator() {
+  const indicator = document.querySelector('.sidebar-scroll-indicator');
+  const dot = indicator?.querySelector('.sidebar-scroll-dot');
+  if (!indicator || !dot) return;
+
+  const mq = window.matchMedia('(min-width: 768px)');
+  let dotLayoutPrimed = false;
+
+  syncSidebarScrollDot = function syncDot() {
+    if (!mq.matches) return;
+    const active = document.querySelector('.project-sidebar a.sidebar-link.active');
+    const cluster = document.querySelector('.sidebar-nav-cluster');
+    const sectionLinks = cluster?.querySelectorAll('a.sidebar-link[href^="#"]');
+    let link = active;
+    if (!link && sectionLinks?.length) {
+      // Scrollspy clears .active past last section / above first; park dot on a sensible pill
+      link = window.scrollY < 120 ? sectionLinks[0] : sectionLinks[sectionLinks.length - 1];
+    }
+    if (!link) return;
+
+    const ir = indicator.getBoundingClientRect();
+    const lr = link.getBoundingClientRect();
+    const center = lr.top + lr.height / 2 - ir.top;
+    const half = 5;
+    const clamped = Math.min(Math.max(half, center), ir.height - half);
+
+    const skipTransition = !dotLayoutPrimed;
+    if (skipTransition) {
+      dot.classList.add('sidebar-scroll-dot--no-motion');
+    }
+    dot.style.top = `${clamped}px`;
+    if (skipTransition) {
+      dotLayoutPrimed = true;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          dot.classList.remove('sidebar-scroll-dot--no-motion');
+        });
+      });
+    }
+  };
+
+  syncSidebarScrollDot();
+  mq.addEventListener('change', syncSidebarScrollDot);
+  window.addEventListener('resize', syncSidebarScrollDot, { passive: true });
+  window.addEventListener('load', syncSidebarScrollDot, { passive: true });
+  ScrollTrigger.addEventListener('refresh', syncSidebarScrollDot);
+  window.addEventListener(
+    'scroll',
+    () => {
+      requestAnimationFrame(syncSidebarScrollDot);
+    },
+    { passive: true }
+  );
+}
+
 // Initialize everything when DOM is ready
 function init() {
   initRoughNotations();
   initH4LinkRoughHover();
   gsapScrollspy();
+  initSidebarScrollIndicator();
 }
 
 if (document.readyState === 'loading') {

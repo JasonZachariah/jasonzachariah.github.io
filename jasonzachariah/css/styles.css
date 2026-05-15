@@ -41,7 +41,7 @@
   --radius-card-sm: 0.2375rem;
 
   /* Font Family (loaded via Google Fonts in each HTML page) */
-  --font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-family: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
 
   /* Type Scale */
   --h1-size: clamp(2rem, calc(1.75rem + 1vw), 2.5rem);
@@ -63,6 +63,8 @@
   --h4-weight: 500;
   --h4-line-height: 1.52;
   --h4-letter-spacing: 0.02em;
+  /* OpenType wdth (100 = normal; lower = narrower). Ignored if the font has no width axis. */
+  --h4-wdth: 90;
 
   --body-size: clamp(1.000rem, calc(1.000rem + 0.000vw), 1.000rem);
   --body-weight: 550;
@@ -156,11 +158,13 @@ h4>a {
   color: var(--color-2);
   display: inline-block;
   font-family: var(--font-family);
+  
   text-transform: uppercase;
   font-size: var(--caption-size);
   font-weight: var(--caption-weight);
   line-height: var(--caption-line-height);
   letter-spacing: var(--caption-letter-spacing);
+  font-variation-settings: "wdth" var(--h4-wdth);
 }
 
 /* Paragraphs and Lists */
@@ -269,6 +273,64 @@ h4 .sidebar-link.active {
 /* Sidebar column: don’t clip pills (curved edges + active translateX) */
 .project-sidebar > .flex.flex-col {
   overflow: visible;
+}
+
+/* Scroll track + dot: dot aligns with the active section pill (scrollspy), not raw page % */
+.sidebar-scroll-indicator {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar-scroll-indicator {
+    display: block;
+    position: relative;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 0.75rem;
+    padding-block: 6px;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .sidebar-scroll-indicator::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+    background: var(--color-3);
+    border-radius: 1px;
+    opacity: 0.9;
+  }
+
+  .sidebar-scroll-dot {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+    border-radius: 50%;
+    background: var(--brand-500);
+    box-shadow:
+      0 0 0 2px var(--neutral-50),
+      0 1px 3px color-mix(in srgb, var(--neutral-900) 18%, transparent);
+    transform: translateY(-50%);
+    transition: top 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .sidebar-scroll-dot.sidebar-scroll-dot--no-motion {
+    transition: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sidebar-scroll-dot {
+      transition: none;
+    }
+  }
 }
 
 /* No focus ring on project sidebar (active section still uses .active background) */
