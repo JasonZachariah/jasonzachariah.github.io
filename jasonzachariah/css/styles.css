@@ -428,10 +428,18 @@ h4 .sidebar-link.active {
 
 /* Solution section background */
 .solution-bg {
-  background-color: var(--accent3-color);
+  background-color: var(--brand-50);
   padding: 1.5rem;
   border-radius: var(--radius-card-sm);
   overflow: hidden;
+}
+
+.solution-bg .header-border {
+  border-bottom-color: var(--brand-100);
+}
+
+.solution-bg.quote {
+  border-left-color: var(--brand-100);
 }
 
 /* Logo: mask-based so it matches --color-2 (same as nav text beside it) */
@@ -674,9 +682,10 @@ h4 .sidebar-link.active {
   min-height: 3.5rem;
 }
 
-/* Important section background */
+/* Important section — outline, no fill */
 .important-bg {
-  background-color: var(--color-3);
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
   padding: 1.5rem;
   border-radius: var(--radius-card-sm);
   overflow: hidden;

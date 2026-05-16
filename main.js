@@ -252,12 +252,81 @@ function initSidebarScrollIndicator() {
   );
 }
 
+/** Muted inline autoplay on mobile (iOS often needs .play() + playsInline). */
+function initMobileVideoAutoplay() {
+  const wired = new WeakSet();
+  let observer = null;
+
+  const tryPlay = (video) => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {});
+    }
+  };
+
+  const wireVideo = (video) => {
+    if (wired.has(video)) return;
+    wired.add(video);
+
+    if (!video.hasAttribute('autoplay')) {
+      video.setAttribute('autoplay', '');
+    }
+
+    tryPlay(video);
+    video.addEventListener('loadeddata', () => tryPlay(video), { once: true });
+
+    if (observer) observer.observe(video);
+  };
+
+  const wireAll = (root = document) => {
+    root.querySelectorAll('video').forEach(wireVideo);
+  };
+
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(({ target, isIntersecting }) => {
+          if (isIntersecting) tryPlay(target);
+          else target.pause();
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px 10% 0px' }
+    );
+  }
+
+  wireAll();
+
+  const mutationObserver = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      mutation.addedNodes.forEach((node) => {
+        if (node.nodeName === 'VIDEO') wireVideo(node);
+        else if (node.querySelectorAll) wireAll(node);
+      });
+    });
+  });
+  mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+  document.addEventListener(
+    'touchstart',
+    () => document.querySelectorAll('video').forEach(tryPlay),
+    { once: true, passive: true }
+  );
+}
+
 // Initialize everything when DOM is ready
 function init() {
   initRoughNotations();
   initH4LinkRoughHover();
   gsapScrollspy();
   initSidebarScrollIndicator();
+  initMobileVideoAutoplay();
 }
 
 if (document.readyState === 'loading') {
