@@ -1,31 +1,71 @@
+/* Satoshi Variable (local) */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* PP Pangram Sans Rounded — h2 (Bold), h4 (Narrow Semibold) */
+@font-face {
+  font-family: "PP Pangram Sans Rounded";
+  src: url("../../fonts/PPPangramSansRounded-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Pangram Sans Rounded";
+  src: url("../../fonts/PPPangramSansRounded-NarrowSemibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ============================================
    CSS VARIABLES
    ============================================ */
 
 :root {
-  /* Light / Brand */
-  --brand-50: #FFE0CF;
-  --brand-100: #FFC7B4;
-  --brand-200: #FFAB94;
-  --brand-300: #FF8E75;
-  --brand-400: #F27155;
-  --brand-500: #E84B26;
-  --brand-600: #CA0000;
-  --brand-700: #A30000;
-  --brand-800: #7A0000;
-  --brand-900: #4E0000;
+  /* Brand — OKLCH, warm orange → red (higher chroma) */
+  --brand-50: oklch(0.96 0.045 52);
+  --brand-100: oklch(0.92 0.08 50);
+  --brand-200: oklch(0.87 0.12 48);
+  --brand-300: oklch(0.81 0.16 46);
+  --brand-400: oklch(0.73 0.2 43);
+  --brand-500: oklch(0.64 0.24 40);
+  --brand-600: oklch(0.54 0.26 34);
+  --brand-700: oklch(0.44 0.24 30);
+  --brand-800: oklch(0.34 0.2 27);
+  --brand-900: oklch(0.25 0.16 24);
 
-  /* Light / Neutral */
-  --neutral-50: #ffffff;
-  --neutral-100: #F2E5E2;
-  --neutral-200: #DED1CF;
-  --neutral-300: #C7BBB8;
-  --neutral-400: #A79B99;
-  --neutral-500: #897D7B;
-  --neutral-600: #6B605E;
-  --neutral-700: #4F4543;
-  --neutral-800: #352B29;
-  --neutral-900: #1C1412;
+  /* Neutral — OKLCH cool slate (hue ~252–265) */
+  --neutral-50: oklch(0.995 0.008 265);
+  --neutral-100: oklch(0.96 0.016 262);
+  --neutral-200: oklch(0.90 0.024 260);
+  --neutral-300: oklch(0.82 0.03 258);
+  --neutral-400: oklch(0.70 0.034 256);
+  --neutral-500: oklch(0.58 0.036 255);
+  --neutral-600: oklch(0.48 0.034 254);
+  --neutral-700: oklch(0.38 0.032 253);
+  --neutral-800: oklch(0.28 0.03 252);
+  --neutral-900: oklch(0.18 0.028 252);
+
+  /* Accent spectrum — OKLCH (saturated) */
+  --accent-1: oklch(0.58 0.24 302); /* purple */
+  --accent-2: oklch(0.56 0.22 255); /* blue */
+  --accent-3: oklch(0.88 0.17 98);  /* yellow */
+  --accent-4: oklch(0.64 0.19 152); /* green */
+  --accent-5: oklch(0.58 0.26 27);  /* red */
+
+  /* Accent tints (backgrounds / soft fills) */
+  --accent-1-muted: oklch(0.94 0.06 302);
+  --accent-2-muted: oklch(0.94 0.05 255);
+  --accent-3-muted: oklch(0.96 0.08 98);
+  --accent-4-muted: oklch(0.94 0.06 152);
+  --accent-5-muted: oklch(0.94 0.06 27);
 
   /* Semantic (light mode) */
   --color-1: var(--neutral-800);
@@ -33,19 +73,20 @@
   --color-3: var(--neutral-200);
   --color-4: var(--neutral-50);
   --accent-color: var(--brand-500);
-  --accent2-color: color-mix(in srgb, var(--brand-400) 60%, transparent);
-  --accent3-color: var(--brand-50);
+  --accent2-color: color-mix(in oklch, var(--accent-2) 60%, transparent);
+  --accent3-color: var(--accent-3-muted);
 
   /* Card corner radii */
   --radius-card-lg: 0.575rem;
   --radius-card-sm: 0.2375rem;
 
-  /* Font Family (loaded via Google Fonts in each HTML page) */
-  --font-family: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  /* Font Family (Satoshi Variable — fonts/Satoshi-Variable.ttf) */
+  --font-family: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+  --rounded-font-family: "PP Pangram Sans Rounded", var(--font-family);
 
   /* Type Scale */
   --h1-size: clamp(2rem, calc(1.75rem + 1vw), 2.5rem);
-  --h1-weight: 610;
+  --h1-weight: 900;
   --h1-line-height: 1.47;
   --h1-letter-spacing: -0.016em;
 
@@ -60,11 +101,9 @@
   --h3-letter-spacing: 0.02em;
 
   --h4-size: clamp(1.183rem, calc(1.134rem + 0.244vw), 1.317rem);
-  --h4-weight: 500;
+  --h4-weight: 600;
   --h4-line-height: 1.52;
   --h4-letter-spacing: 0.02em;
-  /* OpenType wdth (100 = normal; lower = narrower). Ignored if the font has no width axis. */
-  --h4-wdth: 90;
 
   --body-size: clamp(1.000rem, calc(1.000rem + 0.000vw), 1.000rem);
   --body-weight: 550;
@@ -85,6 +124,50 @@
   --caption-sm-weight: 300;
   --caption-sm-line-height: 1.57;
   --caption-sm-letter-spacing: 0.024em;
+}
+
+/* ============================================
+   BACKGROUND UTILITIES (accent spectrum)
+   ============================================ */
+
+.bg-accent-1 {
+  background-color: var(--accent-1);
+}
+
+.bg-accent-2 {
+  background-color: var(--accent-2);
+}
+
+.bg-accent-3 {
+  background-color: var(--accent-3);
+}
+
+.bg-accent-4 {
+  background-color: var(--accent-4);
+}
+
+.bg-accent-5 {
+  background-color: var(--accent-5);
+}
+
+.bg-accent-1-muted {
+  background-color: var(--accent-1-muted);
+}
+
+.bg-accent-2-muted {
+  background-color: var(--accent-2-muted);
+}
+
+.bg-accent-3-muted {
+  background-color: var(--accent-3-muted);
+}
+
+.bg-accent-4-muted {
+  background-color: var(--accent-4-muted);
+}
+
+.bg-accent-5-muted {
+  background-color: var(--accent-5-muted);
 }
 
 /* ============================================
@@ -126,17 +209,17 @@ main {
 /* Headings */
 h1 {
   color: var(--color-1);
-  font-family: var(--font-family);
+  font-family: var(--rounded-font-family);
   font-size: var(--h1-size);
   font-weight: var(--h1-weight);
   line-height: var(--h1-line-height);
   letter-spacing: var(--h1-letter-spacing);
-  text-wrap: pretty;
+  /*text-wrap: pretty;*/
 }
 
 h2 {
   color: var(--color-1);
-  font-family: var(--font-family);
+  font-family: var(--rounded-font-family);
   font-size: var(--h2-size);
   font-weight: var(--h2-weight);
   line-height: var(--h2-line-height);
@@ -157,14 +240,13 @@ h4,
 h4>a {
   color: var(--color-2);
   display: inline-block;
-  font-family: var(--font-family);
+  font-family: var(--rounded-font-family);
   
   text-transform: uppercase;
   font-size: var(--caption-size);
-  font-weight: var(--caption-weight);
+  font-weight: var(--h4-weight);
   line-height: var(--caption-line-height);
   letter-spacing: var(--caption-letter-spacing);
-  font-variation-settings: "wdth" var(--h4-wdth);
 }
 
 /* Paragraphs and Lists */

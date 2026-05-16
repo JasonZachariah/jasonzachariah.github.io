@@ -47,7 +47,7 @@ async function initRoughNotations() {
       type: 'highlight',
       multiline: true,
       // Semi-transparent accent for softer highlight
-      color: 'rgba(232, 75, 38, 0.70)',
+      color: 'oklch(0.64 0.24 40 / 0.7)',
       strokeWidth: 2,
       padding: 4
     });
