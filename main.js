@@ -56,7 +56,7 @@ async function initRoughNotations() {
 
   // Coming soon orange highlight
   document.querySelectorAll('.orange-highlight').forEach(element => {
-    const a2 = annotate(element, { type: 'highlight', multiline: true, color: 'var(--accent-color)', strokeWidth: 3, padding: 10, radius: 10, iterations: 3, animationDuration: 2000 });
+    const a2 = annotate(element, { type: 'highlight', multiline: true, color: 'var(--brand-700)', strokeWidth: 3, padding: 10, radius: 10, iterations: 3, animationDuration: 2000 });
     ScrollTrigger.create({ trigger: element, start: 'top 80%', onEnter: () => a2.show(), once: true });
   });
 }

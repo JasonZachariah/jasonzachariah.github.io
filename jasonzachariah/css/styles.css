@@ -85,7 +85,7 @@
   --rounded-font-family: "PP Pangram Sans Rounded", var(--font-family);
 
   /* Type Scale */
-  --h1-size: clamp(2rem, calc(1.75rem + 1vw), 2.5rem);
+  --h1-size: clamp(2.5rem, calc(2.25rem + 1vw), 3rem);
   --h1-weight: 900;
   --h1-line-height: 1.47;
   --h1-letter-spacing: -0.016em;
@@ -304,6 +304,15 @@ td {
   word-wrap: pretty;
 }
 
+.caption-sm {
+  font-weight: 600;
+  display: inline-block;
+  max-width: 100%;
+  background-color: var(--neutral-100);
+  border-radius: var(--radius-card-sm);
+  padding: 0.35em 0.65em;
+}
+
 
 /* Important Text */
 .important-text {
@@ -442,14 +451,14 @@ h4 .sidebar-link.active {
   border-left-color: var(--brand-100);
 }
 
-/* Logo: mask-based so it matches --color-2 (same as nav text beside it) */
+/* Logo: PNG mask so fill matches --color-2 / nav --brand-900 */
 .site-logo {
   display: inline-block;
   width: 45px;
   height: 40px;
   background-color: var(--color-2);
-  -webkit-mask-image: url('../../images/home/jznewlogo.svg');
-  mask-image: url('../../images/home/jznewlogo.svg');
+  -webkit-mask-image: url('../../images/home/jznewlogo.png');
+  mask-image: url('../../images/home/jznewlogo.png');
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -718,7 +727,7 @@ h4 .sidebar-link.active {
 
 .container {
   max-width: 100vw;
-  padding: 0rem 2rem;
+  padding-inline: 2rem;
 }
 
 /* Sidebar (no border between sidebar and content) */
@@ -833,18 +842,34 @@ footer.header-border {
    RESPONSIVE DESIGN
    ============================================ */
 
-/* Larger Desktop (max-width: 1024px) */
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
   .container {
-    max-width: 100vw;
-    padding: 0rem 4rem;
+    padding-inline: 3rem;
   }
 }
 
-/* Small Size (max-width: 640px) */
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: 5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-inline: clamp(6rem, 8vw, 9rem);
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    padding-inline: clamp(6rem, 10vw, 12rem);
+  }
+}
+
+/* Small screens */
 @media (max-width: 640px) {
   .container {
-    padding: 0rem 2rem;
+    padding-inline: 2rem;
   }
 }
 
@@ -913,7 +938,13 @@ nav h4 a:focus-visible {
 }
 
 nav .site-logo {
-  background-color: var(--brand-900);
+  background-color: transparent;
+  background-image: url('../../images/home/jznewlogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 /* Footer */
