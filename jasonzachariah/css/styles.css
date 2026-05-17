@@ -756,6 +756,41 @@ h4 .sidebar-link.active {
   }
 }
 
+/* About: work experience — role and date on one row, date hugging right */
+.work-exp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.work-exp-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.25rem;
+  white-space: nowrap;
+  padding-bottom: 0.5rem;
+}
+
+.work-exp-row h3,
+.work-exp-row .work-exp-date {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.work-exp-row h3 {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-wrap: nowrap;
+}
+
+.work-exp-row .work-exp-date {
+  flex: 0 0 auto;
+  margin-left: auto;
+  text-align: right;
+}
+
 /* Header Bottom Border */
 .header-border {
   border-bottom: 2px solid var(--color-3);
