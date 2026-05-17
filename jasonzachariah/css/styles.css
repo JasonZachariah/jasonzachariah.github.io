@@ -451,14 +451,14 @@ h4 .sidebar-link.active {
   border-left-color: var(--brand-100);
 }
 
-/* Logo: PNG mask so fill matches --color-2 / nav --brand-900 */
+/* Logo: SVG mask so fill matches --color-2 / nav shows full artwork */
 .site-logo {
   display: inline-block;
   width: 45px;
   height: 40px;
   background-color: var(--color-2);
-  -webkit-mask-image: url('../../images/home/jznewlogo.png');
-  mask-image: url('../../images/home/jznewlogo.png');
+  -webkit-mask-image: url('../../jzlogodark.svg');
+  mask-image: url('../../jzlogodark.svg');
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -973,8 +973,10 @@ nav h4 a:focus-visible {
 }
 
 nav .site-logo {
+  width: 54px;
+  height: 48px;
   background-color: transparent;
-  background-image: url('../../images/home/jznewlogo.png');
+  background-image: url('../../jzlogodark.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1097,6 +1099,10 @@ footer div:has(> ul.footer-social-list) > h4 {
   cursor: grabbing;
 }
 
+.archive-grid-cell--morphing .archive-grid-media {
+  opacity: 0;
+}
+
 .archive-grid-card {
   display: block;
   width: max-content;
@@ -1105,7 +1111,6 @@ footer div:has(> ul.footer-social-list) > h4 {
   max-height: inherit;
   overflow: hidden;
   background-color: var(--color-4);
-  border-radius: var(--radius-card-lg);
 }
 
 .archive-span-1x1 { grid-column: span 1; grid-row: span 1; }
@@ -1131,4 +1136,88 @@ footer div:has(> ul.footer-social-list) > h4 {
 .archive-fit-contain {
   object-fit: contain;
   object-position: center;
+}
+
+.archive-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 2.5rem);
+  box-sizing: border-box;
+}
+
+.archive-lightbox[hidden] {
+  display: none;
+}
+
+.archive-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: oklch(0.12 0.02 24 / 0.45);
+  backdrop-filter: blur(8px);
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 0.46s ease;
+}
+
+.archive-lightbox.is-open .archive-lightbox-backdrop {
+  opacity: 1;
+}
+
+.archive-lightbox-content {
+  position: relative;
+  z-index: 1;
+  max-width: min(92vw, 1200px);
+  max-height: 90vh;
+  opacity: 0;
+}
+
+.archive-lightbox.is-morph-complete .archive-lightbox-content {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.archive-lightbox-morph {
+  position: fixed;
+  z-index: 1001;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: var(--color-4);
+  will-change: transform;
+}
+
+.archive-lightbox-morph-media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.archive-lightbox-media {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(92vw, 1200px);
+  max-height: 90vh;
+  object-fit: contain;
+  background-color: var(--color-4);
+}
+
+body.archive-lightbox-open {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .archive-lightbox-backdrop,
+  .archive-lightbox-content {
+    transition: none;
+  }
 }
