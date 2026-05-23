@@ -3,16 +3,92 @@ const gridTrack = document.getElementById("archive-grid-track");
 
 if (gridRoot && gridTrack) {
   const items = [
-    { type: "video", src: "images/archive/Blender Animated copy.mp4", fit: "contain" },
-    { type: "video", src: "images/archive/Ponyboy.mp4", fit: "contain" },
-    { type: "image", src: "images/archive/markhamfairgif.gif", alt: "Markham Fair GIF", fit: "contain" },
-    { type: "image", src: "images/archive/Somethingforeverythingif.gif", alt: "Something for Everything GIF", fit: "contain" },
-    { type: "image", src: "images/archive/swap gif.gif", alt: "Swap GIF", fit: "contain" },
-    { type: "image", src: "images/archive/SkulltoHuman.gif", alt: "Skull to Human GIF", fit: "contain" },
-    { type: "image", src: "images/archive/saylchair.gif", alt: "Sayl Chair GIF", fit: "contain" },
-    { type: "image", src: "images/archive/oldaniamtionslogo.gif", alt: "Old Animation", fit: "contain" },
-    { type: "image", src: "images/archive/p5jsgif.gif", alt: "p5.js GIF", fit: "contain" },
-    { type: "image", src: "images/archive/p5cooltriangles.gif", alt: "p5.js Cool Triangles GIF", fit: "contain" }
+    {
+      type: "video",
+      src: "images/archive/Blender Animated copy.mp4",
+      fit: "contain",
+      title: "Blender Animation",
+      description: "Early 3D motion study exploring form, lighting, and camera movement in Blender."
+    },
+    {
+      type: "video",
+      src: "images/archive/Ponyboy.mp4",
+      fit: "contain",
+      title: "Ponyboy",
+      description: "Short character animation experiment with rhythm, pose, and personality."
+    },
+    {
+      type: "image",
+      src: "images/archive/markhamfairgif.gif",
+      alt: "Markham Fair GIF",
+      fit: "contain",
+      title: "Markham Fair",
+      description: "Illustrated loop inspired by the fairgrounds—color, crowd energy, and signage."
+    },
+    {
+      type: "image",
+      src: "images/archive/Somethingforeverythingif.gif",
+      alt: "Something for Everything GIF",
+      fit: "contain",
+      title: "Something for Everything",
+      description: "Playful graphic animation built around repetition and visual punch."
+    },
+    {
+      type: "image",
+      src: "images/archive/swap gif.gif",
+      alt: "Swap GIF",
+      fit: "contain",
+      title: "Swap",
+      description: "Quick morph-style GIF testing transitions between two visual states."
+    },
+    {
+      type: "image",
+      src: "images/archive/SkulltoHuman.gif",
+      alt: "Skull to Human GIF",
+      fit: "contain",
+      title: "Skull to Human",
+      description: "Anatomical transformation study from skeletal structure to full figure."
+    },
+    {
+      type: "image",
+      src: "images/archive/saylchair.gif",
+      alt: "Sayl Chair GIF",
+      fit: "contain",
+      title: "Sayl Chair",
+      description: "Product-focused motion piece highlighting silhouette and material contrast."
+    },
+    {
+      type: "image",
+      src: "images/archive/oldaniamtionslogo.gif",
+      alt: "Old Animation",
+      fit: "contain",
+      title: "Old Animations Logo",
+      description: "Logo animation draft from an earlier branding exploration."
+    },
+    {
+      type: "image",
+      src: "images/archive/p5jsgif.gif",
+      alt: "p5.js GIF",
+      fit: "contain",
+      title: "p5.js Sketch",
+      description: "Generative study coded in p5.js—motion driven by simple rules and randomness."
+    },
+    {
+      type: "image",
+      src: "images/archive/p5cooltriangles.gif",
+      alt: "p5.js Cool Triangles GIF",
+      fit: "contain",
+      title: "Cool Triangles",
+      description: "Geometric p5.js loop playing with triangle clusters and shifting palettes."
+    },
+    {
+      type: "image",
+      src: "images/archive/mySketch (4).gif",
+      alt: "Starry Night GIF",
+      fit: "contain",
+      title: "Starry Night",
+      description: "p5.js sketch evoking a night sky—particles, drift, and layered depth."
+    }
   ];
 
   const CARD_ROTATION_LIMIT = 3;
@@ -51,6 +127,25 @@ if (gridRoot && gridTrack) {
     return min + Math.random() * (max - min);
   }
 
+  function isGifSrc(src) {
+    return /\.gif(\?.*)?$/i.test(src || "");
+  }
+
+  function restartGifPlayback(img) {
+    const src = img.dataset.archiveSrc || img.getAttribute("src");
+    if (!src || !isGifSrc(src)) return;
+    const cleanSrc = src.split("?")[0];
+    img.dataset.archiveSrc = cleanSrc;
+    img.src = "";
+    void img.offsetWidth;
+    img.src = cleanSrc;
+  }
+
+  function wakeGifsInCell(cell) {
+    const img = cell.querySelector("img.archive-grid-media");
+    if (img) restartGifPlayback(img);
+  }
+
   function overlapsWithSeparation(rectA, rectB) {
     const buffer = CARD_SEPARATION + ROTATION_BBOX_BUFFER;
     return !(
@@ -69,6 +164,8 @@ if (gridRoot && gridTrack) {
     cell.dataset.archiveType = item.type;
     cell.dataset.archiveSrc = item.src;
     cell.dataset.archiveAlt = item.alt || "";
+    cell.dataset.archiveTitle = item.title || item.alt || "";
+    cell.dataset.archiveDescription = item.description || "";
     card.className = "archive-grid-card";
     card.style.transform = `rotate(${rotation}deg)`;
 
@@ -94,6 +191,9 @@ if (gridRoot && gridTrack) {
     img.src = item.src;
     img.alt = item.alt || "";
     img.loading = "eager";
+    if (isGifSrc(item.src)) {
+      img.dataset.archiveSrc = item.src;
+    }
     card.appendChild(img);
     cell.appendChild(card);
     return cell;
@@ -163,6 +263,7 @@ if (gridRoot && gridTrack) {
         cell.style.opacity = "";
         cell.style.left = `${chosen.x}px`;
         cell.style.top = `${chosen.y}px`;
+        wakeGifsInCell(cell);
       });
       return;
     }
@@ -231,6 +332,7 @@ if (gridRoot && gridTrack) {
               cell.style.top = `${chosen.y}px`;
               cell.style.transform = "scale(1)";
               cell.style.opacity = "1";
+              wakeGifsInCell(cell);
             });
           } catch (_) {
             cell.style.transition = [
@@ -264,6 +366,11 @@ if (gridRoot && gridTrack) {
         requestAnimationFrame(startBurst);
       });
     });
+
+    window.setTimeout(() => {
+      if (gen !== layoutGeneration) return;
+      cells.forEach(wakeGifsInCell);
+    }, BURST_DURATION_MS + BURST_MAX_STAGGER_MS + 80);
   }
 
   function whenMediaReady(cell) {
@@ -355,6 +462,9 @@ if (gridRoot && gridTrack) {
     img.className = "archive-lightbox-media";
     img.src = src;
     img.alt = alt || "";
+    if (isGifSrc(src)) {
+      img.dataset.archiveSrc = src;
+    }
     return img;
   }
 
@@ -380,18 +490,53 @@ if (gridRoot && gridTrack) {
     return { w: Math.max(1, rect.width), h: Math.max(1, rect.height) };
   }
 
+  function getLightboxMetaWidth() {
+    if (window.innerWidth < 768) return 0;
+    return Math.min(300, Math.max(220, window.innerWidth * 0.26));
+  }
+
   function computeExpandedRect(naturalW, naturalH) {
-    const maxW = Math.min(window.innerWidth * 0.92, 1200);
-    const maxH = window.innerHeight * 0.9;
-    const scale = Math.min(1, maxW / naturalW, maxH / naturalH);
+    const metaWidth = getLightboxMetaWidth();
+    const gap = metaWidth > 0 ? 32 : 0;
+    const maxMediaW = Math.min(window.innerWidth * 0.92 - metaWidth - gap, 900);
+    const maxMediaH = window.innerHeight * 0.9;
+    const scale = Math.min(1, maxMediaW / naturalW, maxMediaH / naturalH);
     const width = naturalW * scale;
     const height = naturalH * scale;
+    const stageWidth = width + gap + metaWidth;
+    const stageLeft = (window.innerWidth - stageWidth) / 2;
     return {
-      left: (window.innerWidth - width) / 2,
+      left: stageLeft,
       top: (window.innerHeight - height) / 2,
       width,
       height
     };
+  }
+
+  function populateLightboxContent(type, src, alt, title, description) {
+    lightboxContentEl.textContent = "";
+
+    const stage = document.createElement("div");
+    stage.className = "archive-lightbox-stage";
+
+    const mediaWrap = document.createElement("div");
+    mediaWrap.className = "archive-lightbox-media-wrap";
+    mediaWrap.appendChild(buildLightboxMedia(type, src, alt));
+
+    const meta = document.createElement("aside");
+    meta.className = "archive-lightbox-meta";
+
+    const heading = document.createElement("h3");
+    heading.className = "archive-lightbox-title";
+    heading.textContent = title || alt || "Untitled";
+
+    const body = document.createElement("p");
+    body.className = "archive-lightbox-description";
+    body.textContent = description || "";
+
+    meta.append(heading, body);
+    stage.append(mediaWrap, meta);
+    lightboxContentEl.appendChild(stage);
   }
 
   function rectSnapshot(rect) {
@@ -505,9 +650,8 @@ if (gridRoot && gridTrack) {
     lightboxContentEl = contentEl;
   }
 
-  function openArchiveLightboxInstant(cell, type, src, alt) {
-    lightboxContentEl.textContent = "";
-    lightboxContentEl.appendChild(buildLightboxMedia(type, src, alt));
+  function openArchiveLightboxInstant(cell, type, src, alt, title, description) {
+    populateLightboxContent(type, src, alt, title, description);
     morphOriginCell = cell;
     lightboxEl.hidden = false;
     lightboxOpen = true;
@@ -522,10 +666,12 @@ if (gridRoot && gridTrack) {
     const type = cell.dataset.archiveType;
     const src = cell.dataset.archiveSrc;
     const alt = cell.dataset.archiveAlt || "";
+    const title = cell.dataset.archiveTitle || "";
+    const description = cell.dataset.archiveDescription || "";
     if (!type || !src) return;
 
     if (prefersReducedMotion()) {
-      openArchiveLightboxInstant(cell, type, src, alt);
+      openArchiveLightboxInstant(cell, type, src, alt, title, description);
       return;
     }
 
@@ -535,8 +681,7 @@ if (gridRoot && gridTrack) {
 
     lightboxAnimating = true;
     morphOriginCell = cell;
-    lightboxContentEl.textContent = "";
-    lightboxContentEl.appendChild(buildLightboxMedia(type, src, alt));
+    populateLightboxContent(type, src, alt, title, description);
 
     lightboxEl.hidden = false;
     lightboxEl.classList.remove("is-morph-complete");
@@ -551,8 +696,11 @@ if (gridRoot && gridTrack) {
 
     await runFlipMorph(morph, fromRect, toRect);
     cell.classList.remove("archive-grid-cell--morphing");
+    wakeGifsInCell(cell);
     removeMorph();
     lightboxEl.classList.add("is-morph-complete");
+    const lightboxImg = lightboxContentEl.querySelector("img.archive-lightbox-media");
+    if (lightboxImg) restartGifPlayback(lightboxImg);
     lightboxAnimating = false;
   }
 
@@ -611,6 +759,7 @@ if (gridRoot && gridTrack) {
 
     await runFlipMorph(morph, toRect, fromRect);
     morphOriginCell.classList.remove("archive-grid-cell--morphing");
+    wakeGifsInCell(morphOriginCell);
     removeMorph();
     lightboxAnimating = false;
     closeArchiveLightboxInstant();

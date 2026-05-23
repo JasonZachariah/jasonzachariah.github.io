@@ -320,8 +320,68 @@ function initMobileVideoAutoplay() {
   );
 }
 
+function initMobileNav() {
+  document.querySelectorAll('nav.header-border').forEach((nav) => {
+    const inner = nav.querySelector(':scope > div');
+    if (!inner) return;
+
+    inner.classList.add('nav-bar-inner');
+
+    let links = inner.querySelector('.nav-links');
+    if (!links) {
+      const legacy = Array.from(inner.children).find(
+        (el) => el !== inner.firstElementChild && el.querySelector('h4 a')
+      );
+      if (!legacy) return;
+      legacy.classList.add('nav-links');
+      links = legacy;
+    }
+
+    if (!links.id) links.id = 'site-nav-menu';
+
+    let toggle = inner.querySelector('.nav-menu-toggle');
+    if (!toggle) {
+      toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'nav-menu-toggle';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-controls', links.id);
+      toggle.setAttribute('aria-label', 'Open menu');
+      toggle.innerHTML =
+        '<span class="nav-menu-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 12.25H13.25M2.75 8.25H13.25M2.75 4.25H13.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
+      inner.insertBefore(toggle, links);
+    }
+
+    const setMenuOpen = (open) => {
+      nav.classList.toggle('nav-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      links.setAttribute('aria-hidden', String(!open));
+    };
+
+    const closeMenu = () => setMenuOpen(false);
+
+    links.setAttribute('aria-hidden', 'true');
+    toggle.addEventListener('click', () => setMenuOpen(!nav.classList.contains('nav-open')));
+
+    links.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!nav.classList.contains('nav-open')) return;
+      if (!nav.contains(event.target)) closeMenu();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
+  });
+}
+
 // Initialize everything when DOM is ready
 function init() {
+  initMobileNav();
   initRoughNotations();
   initH4LinkRoughHover();
   gsapScrollspy();
