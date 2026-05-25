@@ -1,10 +1,20 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
-/** Set by initSidebarScrollDot; scrollspy calls this so the dot lines up with the active pill. */
+/** Set by initSidebarScrollIndicator; scrollspy calls this so the dot lines up with the active pill. */
 let syncSidebarScrollDot = () => {};
+
+function whenInView(element, callback, { once = true, rootMargin = '0px 0px -20% 0px' } = {}) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        callback(entry.target);
+        if (once) observer.disconnect();
+      });
+    },
+    { rootMargin, threshold: 0 }
+  );
+  observer.observe(element);
+  return observer;
+}
 
 // Initialize rough-notation via dynamic import so GitHub Pages still works if CDN is slow
 // Only on home and about pages
@@ -24,40 +34,40 @@ async function initRoughNotations() {
   }
   if (!annotate) return;
 
-  // Underlines – scroll-triggered
   document.querySelectorAll('.rough-underline').forEach((element) => {
-    const a1 = annotate(element, {
+    const ann = annotate(element, {
       type: 'underline',
       multiline: true,
       color: 'var(--accent-color)',
       strokeWidth: 3,
       padding: 5
     });
-    ScrollTrigger.create({
-      trigger: element,
-      start: 'top 80%',
-      onEnter: () => a1.show(),
-      once: true
-    });
+    whenInView(element, () => ann.show());
   });
 
-  // Highlight (e.g. handbook .rough-highlight)
-  document.querySelectorAll('.rough-highlight').forEach(element => {
-    const a = annotate(element, {
+  document.querySelectorAll('.rough-highlight').forEach((element) => {
+    const ann = annotate(element, {
       type: 'highlight',
       multiline: true,
-      // Semi-transparent accent for softer highlight
       color: 'oklch(0.64 0.24 40 / 0.7)',
       strokeWidth: 2,
       padding: 4
     });
-    ScrollTrigger.create({ trigger: element, start: 'top 80%', onEnter: () => a.show(), once: true });
+    whenInView(element, () => ann.show());
   });
 
-  // Coming soon orange highlight
-  document.querySelectorAll('.orange-highlight').forEach(element => {
-    const a2 = annotate(element, { type: 'highlight', multiline: true, color: 'var(--brand-700)', strokeWidth: 3, padding: 10, radius: 10, iterations: 3, animationDuration: 2000 });
-    ScrollTrigger.create({ trigger: element, start: 'top 80%', onEnter: () => a2.show(), once: true });
+  document.querySelectorAll('.orange-highlight').forEach((element) => {
+    const ann = annotate(element, {
+      type: 'highlight',
+      multiline: true,
+      color: 'var(--brand-700)',
+      strokeWidth: 3,
+      padding: 10,
+      radius: 10,
+      iterations: 3,
+      animationDuration: 2000
+    });
+    whenInView(element, () => ann.show());
   });
 }
 
@@ -105,29 +115,28 @@ async function initH4LinkRoughHover() {
   });
 }
 
-// Scrollspy for sidebar navigation
-// GSAP-based scrollspy
-function gsapScrollspy() {
+function initScrollspy() {
   const sidebarLinks = document.querySelectorAll('.sidebar-border a[href^="#"]');
   if (sidebarLinks.length === 0) return;
 
-  // Map sidebar links to section targets
-  const linkSectionPairs = Array.from(sidebarLinks).map(link => {
-    const href = link.getAttribute('href');
-    if (href && href.startsWith('#')) {
-      const section = document.querySelector(href);
-      if (section) return { link, section };
-    }
-    return null;
-  }).filter(Boolean);
+  const linkSectionPairs = Array.from(sidebarLinks)
+    .map((link) => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const section = document.querySelector(href);
+        if (section) return { link, section };
+      }
+      return null;
+    })
+    .filter(Boolean);
   if (linkSectionPairs.length === 0) return;
 
-  // Add sidebar-link class to all sidebar links for styling
-  sidebarLinks.forEach(link => link.classList.add('sidebar-link'));
+  sidebarLinks.forEach((link) => link.classList.add('sidebar-link'));
 
-  // Remove 'active' from all; add to correct link
+  const visibility = new Map();
+
   function setActiveLinkBySection(section) {
-    sidebarLinks.forEach(link => link.classList.remove('active'));
+    sidebarLinks.forEach((link) => link.classList.remove('active'));
     if (!section) {
       if (window.scrollY < 100) {
         sidebarLinks[0].classList.add('active');
@@ -140,60 +149,71 @@ function gsapScrollspy() {
       syncSidebarScrollDot();
       return;
     }
-    const match = Array.from(sidebarLinks).find(link => link.getAttribute('href') === `#${id}`);
+    const match = Array.from(sidebarLinks).find((link) => link.getAttribute('href') === `#${id}`);
     if (match) match.classList.add('active');
     syncSidebarScrollDot();
   }
 
-  // Setup GSAP ScrollTriggers for each section
-  linkSectionPairs.forEach(({ link, section }, i) => {
-    // Get previous and next section, for logic at edges
-    const prevSection = linkSectionPairs[i - 1]?.section;
-    const nextSection = linkSectionPairs[i + 1]?.section;
+  function pickActiveSection() {
+    let bestSection = null;
+    let bestScore = -1;
 
-    // Each trigger will activate the corresponding link as active
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top center-=50",
-      end: "bottom center-=50",
-      onEnter: () => setActiveLinkBySection(section),
-      onEnterBack: () => setActiveLinkBySection(section),
-      onLeave: () => {
-        // If scrolling down and leaving, activate next section if there is one
-        if (nextSection) setActiveLinkBySection(nextSection);
-        else setActiveLinkBySection(null); // None active at bottom
-      },
-      onLeaveBack: () => {
-        // If scrolling up and leaving, activate prev section if there is one
-        if (prevSection) setActiveLinkBySection(prevSection);
-        else setActiveLinkBySection(null); // None active at top
+    linkSectionPairs.forEach(({ section }) => {
+      const score = visibility.get(section) ?? 0;
+      if (score > bestScore) {
+        bestScore = score;
+        bestSection = section;
       }
     });
+
+    if (bestSection) {
+      setActiveLinkBySection(bestSection);
+      return;
+    }
+
+    if (window.scrollY < 120) {
+      setActiveLinkBySection(linkSectionPairs[0]?.section);
+      return;
+    }
+
+    const nearBottom =
+      window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 80;
+    if (nearBottom) {
+      setActiveLinkBySection(linkSectionPairs[linkSectionPairs.length - 1]?.section);
+    }
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        visibility.set(entry.target, entry.isIntersecting ? entry.intersectionRatio : 0);
+      });
+      pickActiveSection();
+    },
+    {
+      rootMargin: '-42% 0px -42% 0px',
+      threshold: [0, 0.1, 0.25, 0.5, 0.75, 1]
+    }
+  );
+
+  linkSectionPairs.forEach(({ section }) => {
+    visibility.set(section, 0);
+    observer.observe(section);
   });
 
-  // Fallback for when at the very top of the page
-  ScrollTrigger.create({
-    start: 0,
-    end: 0,
-    onEnter: () => {
+  window.addEventListener(
+    'scroll',
+    () => {
       if (window.scrollY < 120) {
         setActiveLinkBySection(linkSectionPairs[0]?.section);
+      } else {
+        pickActiveSection();
       }
-    }
-  });
+    },
+    { passive: true }
+  );
 
-  // Initial state
-  setTimeout(() => {
-    let foundActive = false;
-    linkSectionPairs.forEach(({ section }) => {
-      const rect = section.getBoundingClientRect();
-      if (!foundActive && rect.top < window.innerHeight / 2 && rect.bottom > 0) {
-        setActiveLinkBySection(section);
-        foundActive = true;
-      }
-    });
-    if (!foundActive) setActiveLinkBySection(linkSectionPairs[0]?.section);
-  }, 0);
+  setActiveLinkBySection(linkSectionPairs[0]?.section);
 }
 
 /** Orange dot on the track; vertical position follows the active sidebar pill (scrollspy). */
@@ -212,7 +232,6 @@ function initSidebarScrollIndicator() {
     const sectionLinks = cluster?.querySelectorAll('a.sidebar-link[href^="#"]');
     let link = active;
     if (!link && sectionLinks?.length) {
-      // Scrollspy clears .active past last section / above first; park dot on a sensible pill
       link = window.scrollY < 120 ? sectionLinks[0] : sectionLinks[sectionLinks.length - 1];
     }
     if (!link) return;
@@ -242,7 +261,6 @@ function initSidebarScrollIndicator() {
   mq.addEventListener('change', syncSidebarScrollDot);
   window.addEventListener('resize', syncSidebarScrollDot, { passive: true });
   window.addEventListener('load', syncSidebarScrollDot, { passive: true });
-  ScrollTrigger.addEventListener('refresh', syncSidebarScrollDot);
   window.addEventListener(
     'scroll',
     () => {
@@ -379,12 +397,11 @@ function initMobileNav() {
   });
 }
 
-// Initialize everything when DOM is ready
 function init() {
   initMobileNav();
   initRoughNotations();
   initH4LinkRoughHover();
-  gsapScrollspy();
+  initScrollspy();
   initSidebarScrollIndicator();
   initMobileVideoAutoplay();
 }
@@ -395,4 +412,6 @@ if (document.readyState === 'loading') {
   init();
 }
 
-//draggable cards
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) init();
+});
