@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
     <!-- Navigation Bar -->
     <!-- Contains logo and main navigation links -->
     <nav class="container header-border">
@@ -40,10 +41,10 @@
         </div>
     </nav>
 
-    <main id="swup" class="transition-main">
+    <main id="main-content" tabindex="-1" class="transition-main">
         <section class="container project-with-sidebar">
             <!-- Sidebar -->
-            <div class="project-sidebar hidden md:h-screen md:sticky md:inset-y-0 md:left-0 md:flex md:flex-col sidebar-border">
+            <aside class="project-sidebar hidden md:h-screen md:sticky md:inset-y-0 md:left-0 md:flex md:flex-col sidebar-border" role="complementary" aria-label="Page sections" aria-controls="project-content">
                 <div class="flex flex-col justify-between flex-1 pt-8 ps-2 pe-7 min-w-0">
                     <div class="sidebar-nav-cluster flex flex-row items-stretch gap-2 min-w-0">
                         <div class="sidebar-scroll-indicator" aria-hidden="true">
@@ -51,16 +52,16 @@
                         </div>
                         <div class="flex flex-col gap-4 min-w-0 flex-1">
                         <h4 class="break-words"><a href="./" class="sidebar-link"><span aria-hidden="true">←</span> Home</a></h4>
-                        <h4 class="break-words"><a href="#step1" class="sidebar-link">Context</a></h4>
-                        <h4 class="break-words"><a href="#step2" class="sidebar-link">Initial Notes</a></h4>
-                        <h4 class="break-words"><a href="#step3" class="sidebar-link">Creating the Flows</a></h4>
-                        <h4 class="break-words"><a href="#step7" class="sidebar-link">Reflection</a></h4>
+                        <h4 class="break-words"><button type="button" class="sidebar-link" data-section-target="#step1">Context</button></h4>
+                        <h4 class="break-words"><button type="button" class="sidebar-link" data-section-target="#step2">Initial Notes</button></h4>
+                        <h4 class="break-words"><button type="button" class="sidebar-link" data-section-target="#step3">Creating the Flows</button></h4>
+                        <h4 class="break-words"><button type="button" class="sidebar-link" data-section-target="#step7">Reflection</button></h4>
                         </div>
                     </div>
                 </div>
-            </div>
+            </aside>
 
-            <div class="project-content space-y-8 mt-16 w-full">
+            <div id="project-content" class="project-content space-y-8 mt-16 w-full">
                 <div class="flex flex-col md:flex-row justify-between w-full items-center">
 
                     <h2>WizEdOS</h2>

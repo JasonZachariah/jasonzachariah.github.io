@@ -115,31 +115,88 @@ async function initH4LinkRoughHover() {
   });
 }
 
-function initScrollspy() {
-  const sidebarLinks = document.querySelectorAll('.sidebar-border a[href^="#"]');
-  if (sidebarLinks.length === 0) return;
+function navigateToProjectSection(targetSelector) {
+  const section = document.querySelector(targetSelector);
+  if (!section) return;
 
-  const linkSectionPairs = Array.from(sidebarLinks)
-    .map((link) => {
-      const href = link.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        const section = document.querySelector(href);
-        if (section) return { link, section };
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  section.scrollIntoView({
+    behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    block: 'start'
+  });
+  if (history.pushState) {
+    history.pushState(null, '', targetSelector);
+  } else {
+    window.location.hash = targetSelector.slice(1);
+  }
+}
+
+function initSidebarSectionButtons() {
+  const sectionButtons = document.querySelectorAll(
+    '.project-sidebar button.sidebar-link[data-section-target]'
+  );
+  sectionButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.sectionTarget;
+      if (target) navigateToProjectSection(target);
+    });
+  });
+}
+
+/** ArrowUp/ArrowDown move focus between sidebar section buttons. */
+function initSidebarSectionCycle() {
+  const aside = document.querySelector('.project-sidebar[role="complementary"]');
+  if (!aside) return;
+
+  const sectionButtons = Array.from(
+    aside.querySelectorAll('button.sidebar-link[data-section-target]')
+  );
+  if (sectionButtons.length === 0) return;
+
+  aside.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') return;
+    const focused = event.target;
+    if (!aside.contains(focused)) return;
+    if (!focused.matches('button.sidebar-link[data-section-target]')) return;
+
+    event.preventDefault();
+    const currentIndex = sectionButtons.indexOf(focused);
+    if (currentIndex < 0) return;
+    const direction = event.key === 'ArrowUp' ? -1 : 1;
+    const nextIndex = Math.max(0, Math.min(sectionButtons.length - 1, currentIndex + direction));
+    sectionButtons[nextIndex].focus();
+  });
+}
+
+function initScrollspy() {
+  const sidebarButtons = document.querySelectorAll(
+    '.project-sidebar button.sidebar-link[data-section-target]'
+  );
+  if (sidebarButtons.length === 0) return;
+
+  const linkSectionPairs = Array.from(sidebarButtons)
+    .map((button) => {
+      const target = button.dataset.sectionTarget;
+      if (target && target.startsWith('#')) {
+        const section = document.querySelector(target);
+        if (section) return { button, section };
       }
       return null;
     })
     .filter(Boolean);
   if (linkSectionPairs.length === 0) return;
 
-  sidebarLinks.forEach((link) => link.classList.add('sidebar-link'));
-
   const visibility = new Map();
 
-  function setActiveLinkBySection(section) {
-    sidebarLinks.forEach((link) => link.classList.remove('active'));
+  function setActiveButtonBySection(section) {
+    sidebarButtons.forEach((button) => {
+      button.classList.remove('active');
+      button.removeAttribute('aria-current');
+    });
     if (!section) {
-      if (window.scrollY < 100) {
-        sidebarLinks[0].classList.add('active');
+      if (window.scrollY < 100 && sidebarButtons[0]) {
+        sidebarButtons[0].classList.add('active');
+        sidebarButtons[0].setAttribute('aria-current', 'true');
       }
       syncSidebarScrollDot();
       return;
@@ -149,8 +206,13 @@ function initScrollspy() {
       syncSidebarScrollDot();
       return;
     }
-    const match = Array.from(sidebarLinks).find((link) => link.getAttribute('href') === `#${id}`);
-    if (match) match.classList.add('active');
+    const match = Array.from(sidebarButtons).find(
+      (button) => button.dataset.sectionTarget === `#${id}`
+    );
+    if (match) {
+      match.classList.add('active');
+      match.setAttribute('aria-current', 'true');
+    }
     syncSidebarScrollDot();
   }
 
@@ -167,19 +229,19 @@ function initScrollspy() {
     });
 
     if (bestSection) {
-      setActiveLinkBySection(bestSection);
+      setActiveButtonBySection(bestSection);
       return;
     }
 
     if (window.scrollY < 120) {
-      setActiveLinkBySection(linkSectionPairs[0]?.section);
+      setActiveButtonBySection(linkSectionPairs[0]?.section);
       return;
     }
 
     const nearBottom =
       window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 80;
     if (nearBottom) {
-      setActiveLinkBySection(linkSectionPairs[linkSectionPairs.length - 1]?.section);
+      setActiveButtonBySection(linkSectionPairs[linkSectionPairs.length - 1]?.section);
     }
   }
 
@@ -205,7 +267,7 @@ function initScrollspy() {
     'scroll',
     () => {
       if (window.scrollY < 120) {
-        setActiveLinkBySection(linkSectionPairs[0]?.section);
+        setActiveButtonBySection(linkSectionPairs[0]?.section);
       } else {
         pickActiveSection();
       }
@@ -213,7 +275,7 @@ function initScrollspy() {
     { passive: true }
   );
 
-  setActiveLinkBySection(linkSectionPairs[0]?.section);
+  setActiveButtonBySection(linkSectionPairs[0]?.section);
 }
 
 /** Orange dot on the track; vertical position follows the active sidebar pill (scrollspy). */
@@ -227,9 +289,9 @@ function initSidebarScrollIndicator() {
 
   syncSidebarScrollDot = function syncDot() {
     if (!mq.matches) return;
-    const active = document.querySelector('.project-sidebar a.sidebar-link.active');
+    const active = document.querySelector('.project-sidebar .sidebar-link.active');
     const cluster = document.querySelector('.sidebar-nav-cluster');
-    const sectionLinks = cluster?.querySelectorAll('a.sidebar-link[href^="#"]');
+    const sectionLinks = cluster?.querySelectorAll('button.sidebar-link[data-section-target]');
     let link = active;
     if (!link && sectionLinks?.length) {
       link = window.scrollY < 120 ? sectionLinks[0] : sectionLinks[sectionLinks.length - 1];
@@ -401,6 +463,8 @@ function init() {
   initMobileNav();
   initRoughNotations();
   initH4LinkRoughHover();
+  initSidebarSectionButtons();
+  initSidebarSectionCycle();
   initScrollspy();
   initSidebarScrollIndicator();
   initMobileVideoAutoplay();
