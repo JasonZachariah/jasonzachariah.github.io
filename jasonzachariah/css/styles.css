@@ -338,124 +338,102 @@ ol li::marker {
   font-family: var(--font-family);
 }
 
-/* Active sidebar link — pill; brand-400 fill, brand-800 label; selected state indents (transform only, no radius animation) */
+/* Sidebar section links — selected state: small rounded left bar */
 .sidebar-link {
-  display: inline-block;
-  border-radius: 9999px;
-  padding: 0.4em 1em;
-  transform: translateX(0);
-  transition-property: background-color, color, transform, box-shadow;
-  transition-duration: 0.25s, 0.2s, 0.32s, 0.2s;
-  transition-timing-function: ease, ease, cubic-bezier(0.22, 1, 0.36, 1), ease;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.4em 1em 0.4em 0.75em;
+  transition-property: color, box-shadow;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: ease, ease;
   background-color: transparent;
 }
 
 .project-sidebar button.sidebar-link {
+  position: relative;
   margin: 0;
   border: 0;
   font: inherit;
   color: inherit;
   cursor: pointer;
   text-align: left;
+  text-transform: uppercase;
   appearance: none;
   -webkit-appearance: none;
   max-width: 100%;
 }
 
-.sidebar-link.active {
-  background-color: var(--brand-400);
-  color: var(--brand-800);
-  transform: translateX(0.65rem);
+.project-sidebar .sidebar-link.active,
+.project-sidebar .sidebar-link[aria-current="true"] {
+  color: var(--brand-900);
+}
+
+.project-sidebar .sidebar-section-nav {
+  position: relative;
+  background: transparent;
+}
+
+.sidebar-active-indicator {
+  position: absolute;
+  left: 0;
+  width: 2px;
+  border-radius: 9999px;
+  background-color: var(--brand-500);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition:
+    top 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.2s ease;
+}
+
+.sidebar-section-nav.is-indicator-ready .sidebar-active-indicator {
+  opacity: 1;
+}
+
+.sidebar-active-indicator.sidebar-active-indicator--no-motion {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-active-indicator {
+    transition: none;
+  }
+}
+
+.project-sidebar .sidebar-link.active:focus-visible,
+.project-sidebar .sidebar-link[aria-current="true"]:focus-visible {
+  box-shadow:
+    0 0 0 2px var(--neutral-50),
+    0 0 0 4px var(--neutral-900);
 }
 
 /* Ensure h4 containing active sidebar link displays correctly */
-h4 .sidebar-link.active {
-  display: inline-block;
+h4 .sidebar-link.active,
+h4 .sidebar-link[aria-current="true"] {
+  display: block;
 }
 
-/* Sidebar column: don’t clip pills (curved edges + active translateX) */
+/* Sidebar column: don’t clip active left bars */
 .project-sidebar > .flex.flex-col {
   overflow: visible;
-}
-
-/* Scroll track + dot: dot aligns with the active section pill (scrollspy), not raw page % */
-.sidebar-scroll-indicator {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .sidebar-scroll-indicator {
-    display: block;
-    position: relative;
-    flex-shrink: 0;
-    align-self: stretch;
-    width: 0.75rem;
-    padding-block: 6px;
-    box-sizing: border-box;
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  .sidebar-scroll-indicator::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    transform: translateX(-50%);
-    background: var(--color-3);
-    border-radius: 1px;
-    opacity: 0.9;
-  }
-
-  .sidebar-scroll-dot {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    margin-left: -5px;
-    border-radius: 50%;
-    background: var(--brand-500);
-    box-shadow:
-      0 0 0 2px var(--neutral-50),
-      0 1px 3px color-mix(in srgb, var(--neutral-900) 18%, transparent);
-    transform: translateY(-50%);
-    transition: top 0.42s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .sidebar-scroll-dot.sidebar-scroll-dot--no-motion {
-    transition: none;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .sidebar-scroll-dot {
-      transition: none;
-    }
-  }
 }
 
 .project-sidebar .sidebar-link:focus {
   outline: none;
 }
 
-.project-sidebar .sidebar-link:focus-visible {
+.project-sidebar .sidebar-link:focus-visible:not(.active):not([aria-current="true"]) {
   outline: none;
   box-shadow:
     0 0 0 2px var(--neutral-50),
-    0 0 0 4px var(--brand-800);
+    0 0 0 4px var(--neutral-900);
 }
 
-.project-sidebar .sidebar-link.active:focus-visible {
-  box-shadow:
-    0 0 0 2px var(--brand-400),
-    0 0 0 4px var(--brand-900);
-}
-
-/* Sidebar pills: no sketch underline — subtle hover only */
-.project-sidebar .sidebar-link:not(.active):hover {
-  color: var(--brand-800);
+.project-sidebar .sidebar-link:hover {
+  color: var(--brand-900);
 }
 
 /* Solution section background */
@@ -998,8 +976,8 @@ footer.header-border {
   z-index: 10;
 }
 
-/* Header / Nav */
-nav {
+/* Header / Nav — scope to site header only (not sidebar section nav) */
+nav.header-border {
   background-color: var(--brand-500);
 }
 
@@ -1038,13 +1016,13 @@ nav {
   box-shadow: 0 0 0 2px var(--brand-900);
 }
 
-nav h4,
-nav h4 a,
-nav .site-logo {
+nav.header-border h4,
+nav.header-border h4 a,
+nav.header-border .site-logo {
   color: var(--brand-900);
 }
 
-nav h4 a {
+nav.header-border h4 a {
   text-decoration: none;
   font: inherit;
   transition: color 0.15s ease;
@@ -1054,16 +1032,16 @@ nav h4 a {
   border-radius: 0;
 }
 
-nav h4 a:hover {
+nav.header-border h4 a:hover {
   color: var(--brand-900);
 }
 
-nav h4 a:focus-visible {
+nav.header-border h4 a:focus-visible {
   outline: 2px solid var(--brand-900);
   outline-offset: 3px;
 }
 
-nav .site-logo {
+nav.header-border .site-logo {
   width: 54px;
   height: 48px;
 }
@@ -1174,17 +1152,16 @@ nav .site-logo {
 /* Footer */
 footer {
   background-color: transparent;
-  padding-bottom: 0 !important;
   margin-bottom: 0;
 }
 
-/* Add more vertical breathing room across all page footers */
-footer.container > div.flex.flex-col {
-  padding-block: 1.5rem;
+footer.container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 footer h3,
-footer > div > div > p {
+footer.container > div > p {
   color: var(--color-1);
   margin: 0;
 }

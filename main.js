@@ -1,5 +1,4 @@
-/** Set by initSidebarScrollIndicator; scrollspy calls this so the dot lines up with the active pill. */
-let syncSidebarScrollDot = () => {};
+let syncSidebarActiveIndicator = () => {};
 
 function whenInView(element, callback, { once = true, rootMargin = '0px 0px -20% 0px' } = {}) {
   const observer = new IntersectionObserver(
@@ -138,33 +137,69 @@ function initSidebarSectionButtons() {
   sectionButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const target = button.dataset.sectionTarget;
-      if (target) navigateToProjectSection(target);
+      if (target) {
+        navigateToProjectSection(target);
+        syncSidebarActiveIndicator(button);
+      }
     });
   });
 }
 
-/** ArrowUp/ArrowDown move focus between sidebar section buttons. */
-function initSidebarSectionCycle() {
+/** Roving tabindex: one section control in tab order; arrows move focus. */
+function initSidebarRovingTabindex() {
   const aside = document.querySelector('.project-sidebar[role="complementary"]');
   if (!aside) return;
 
+  const nav = aside.querySelector('.sidebar-section-nav');
+  if (!nav) return;
+
   const sectionButtons = Array.from(
-    aside.querySelectorAll('button.sidebar-link[data-section-target]')
+    nav.querySelectorAll('button.sidebar-link[data-section-target]')
   );
   if (sectionButtons.length === 0) return;
 
-  aside.addEventListener('keydown', (event) => {
-    if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') return;
-    const focused = event.target;
-    if (!aside.contains(focused)) return;
-    if (!focused.matches('button.sidebar-link[data-section-target]')) return;
+  let focusedIndex = 0;
 
-    event.preventDefault();
-    const currentIndex = sectionButtons.indexOf(focused);
-    if (currentIndex < 0) return;
-    const direction = event.key === 'ArrowUp' ? -1 : 1;
-    const nextIndex = Math.max(0, Math.min(sectionButtons.length - 1, currentIndex + direction));
-    sectionButtons[nextIndex].focus();
+  function setRovingTabindex(index) {
+    sectionButtons.forEach((button, i) => {
+      button.tabIndex = i === index ? 0 : -1;
+    });
+    focusedIndex = index;
+  }
+
+  setRovingTabindex(0);
+
+  sectionButtons.forEach((button, index) => {
+    button.addEventListener('focus', () => setRovingTabindex(index));
+  });
+
+  nav.addEventListener('keydown', (event) => {
+    let nextIndex = focusedIndex;
+
+    switch (event.key) {
+      case 'ArrowDown':
+        event.preventDefault();
+        nextIndex = Math.min(sectionButtons.length - 1, focusedIndex + 1);
+        break;
+      case 'ArrowUp':
+        event.preventDefault();
+        nextIndex = Math.max(0, focusedIndex - 1);
+        break;
+      case 'Home':
+        event.preventDefault();
+        nextIndex = 0;
+        break;
+      case 'End':
+        event.preventDefault();
+        nextIndex = sectionButtons.length - 1;
+        break;
+      default:
+        return;
+    }
+
+    if (nextIndex !== focusedIndex) {
+      sectionButtons[nextIndex].focus();
+    }
   });
 }
 
@@ -197,13 +232,12 @@ function initScrollspy() {
       if (window.scrollY < 100 && sidebarButtons[0]) {
         sidebarButtons[0].classList.add('active');
         sidebarButtons[0].setAttribute('aria-current', 'true');
+        syncSidebarActiveIndicator(sidebarButtons[0]);
       }
-      syncSidebarScrollDot();
       return;
     }
     const id = section.getAttribute('id');
     if (!id) {
-      syncSidebarScrollDot();
       return;
     }
     const match = Array.from(sidebarButtons).find(
@@ -212,8 +246,8 @@ function initScrollspy() {
     if (match) {
       match.classList.add('active');
       match.setAttribute('aria-current', 'true');
+      syncSidebarActiveIndicator(match);
     }
-    syncSidebarScrollDot();
   }
 
   function pickActiveSection() {
@@ -278,58 +312,52 @@ function initScrollspy() {
   setActiveButtonBySection(linkSectionPairs[0]?.section);
 }
 
-/** Orange dot on the track; vertical position follows the active sidebar pill (scrollspy). */
-function initSidebarScrollIndicator() {
-  const indicator = document.querySelector('.sidebar-scroll-indicator');
-  const dot = indicator?.querySelector('.sidebar-scroll-dot');
-  if (!indicator || !dot) return;
+/** Animated left bar slides to the active sidebar section link. */
+function initSidebarActiveIndicator() {
+  const nav = document.querySelector('.sidebar-section-nav');
+  const indicator = nav?.querySelector('.sidebar-active-indicator');
+  if (!nav || !indicator) return;
 
-  const mq = window.matchMedia('(min-width: 768px)');
-  let dotLayoutPrimed = false;
+  let layoutPrimed = false;
 
-  syncSidebarScrollDot = function syncDot() {
-    if (!mq.matches) return;
-    const active = document.querySelector('.project-sidebar .sidebar-link.active');
-    const cluster = document.querySelector('.sidebar-nav-cluster');
-    const sectionLinks = cluster?.querySelectorAll('button.sidebar-link[data-section-target]');
-    let link = active;
-    if (!link && sectionLinks?.length) {
-      link = window.scrollY < 120 ? sectionLinks[0] : sectionLinks[sectionLinks.length - 1];
+  syncSidebarActiveIndicator = function syncIndicator(link) {
+    const active =
+      link ||
+      nav.querySelector('.sidebar-link.active, .sidebar-link[aria-current="true"]');
+    if (!active) {
+      indicator.style.opacity = '0';
+      return;
     }
-    if (!link) return;
 
-    const ir = indicator.getBoundingClientRect();
-    const lr = link.getBoundingClientRect();
-    const center = lr.top + lr.height / 2 - ir.top;
-    const half = 5;
-    const clamped = Math.min(Math.max(half, center), ir.height - half);
+    const navRect = nav.getBoundingClientRect();
+    const linkRect = active.getBoundingClientRect();
+    const fontSize = parseFloat(getComputedStyle(active).fontSize) || 16;
+    const inset = fontSize * 0.3;
+    const top = linkRect.top - navRect.top + inset;
+    const height = Math.max(0, linkRect.height - inset * 2);
 
-    const skipTransition = !dotLayoutPrimed;
-    if (skipTransition) {
-      dot.classList.add('sidebar-scroll-dot--no-motion');
+    if (!layoutPrimed) {
+      indicator.classList.add('sidebar-active-indicator--no-motion');
     }
-    dot.style.top = `${clamped}px`;
-    if (skipTransition) {
-      dotLayoutPrimed = true;
+
+    indicator.style.opacity = '1';
+    indicator.style.top = `${top}px`;
+    indicator.style.height = `${height}px`;
+    nav.classList.add('is-indicator-ready');
+
+    if (!layoutPrimed) {
+      layoutPrimed = true;
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          dot.classList.remove('sidebar-scroll-dot--no-motion');
+          indicator.classList.remove('sidebar-active-indicator--no-motion');
         });
       });
     }
   };
 
-  syncSidebarScrollDot();
-  mq.addEventListener('change', syncSidebarScrollDot);
-  window.addEventListener('resize', syncSidebarScrollDot, { passive: true });
-  window.addEventListener('load', syncSidebarScrollDot, { passive: true });
-  window.addEventListener(
-    'scroll',
-    () => {
-      requestAnimationFrame(syncSidebarScrollDot);
-    },
-    { passive: true }
-  );
+  syncSidebarActiveIndicator();
+  window.addEventListener('resize', () => syncSidebarActiveIndicator(), { passive: true });
+  window.addEventListener('load', () => syncSidebarActiveIndicator(), { passive: true });
 }
 
 /** Muted inline autoplay on mobile (iOS often needs .play() + playsInline). */
@@ -464,9 +492,9 @@ function init() {
   initRoughNotations();
   initH4LinkRoughHover();
   initSidebarSectionButtons();
-  initSidebarSectionCycle();
+  initSidebarRovingTabindex();
+  initSidebarActiveIndicator();
   initScrollspy();
-  initSidebarScrollIndicator();
   initMobileVideoAutoplay();
 }
 

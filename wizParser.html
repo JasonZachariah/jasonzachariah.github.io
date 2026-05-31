@@ -46,19 +46,15 @@
             <!-- Sidebar -->
             <aside class="project-sidebar hidden md:h-screen md:sticky md:inset-y-0 md:left-0 md:flex md:flex-col sidebar-border" role="complementary" aria-label="Page sections" aria-controls="project-content">
                 <div class="flex flex-col justify-between flex-1 pt-8 ps-2 pe-7 min-w-0">
-                    <div class="sidebar-nav-cluster flex flex-row items-stretch gap-2 min-w-0">
-                        <div class="sidebar-scroll-indicator" aria-hidden="true">
-                            <span class="sidebar-scroll-dot"></span>
-                        </div>
-                        <div class="flex flex-col gap-4 min-w-0 flex-1">
-                            <h4 class="break-words"><a href="./" class="sidebar-link"><span aria-hidden="true">←</span>
-                                    Home</a></h4>
+                    <div class="sidebar-nav-cluster min-w-0">
+                            <nav class="sidebar-section-nav flex flex-col gap-4 min-w-0 flex-1" aria-label="On this page">
+                            <span class="sidebar-active-indicator" aria-hidden="true"></span>
                             <h4 class="break-words"><button type="button" class="sidebar-link" data-section-target="#step1">Context</button></h4>
                             <h4 class="break-words"><button type="button" class="sidebar-link" data-section-target="#step2">Challenge</button></h4>
                             <h4 class="break-words"><button type="button" class="sidebar-link" data-section-target="#step3">Solution</button></h4>
                             <h4 class="break-words"><button type="button" class="sidebar-link" data-section-target="#step4">Final Products</button></h4>
                             <h4 class="break-words"><button type="button" class="sidebar-link" data-section-target="#step5">Reflection</button></h4>
-                        </div>
+                            </nav>
                     </div>
                 </div>
             </aside>
@@ -121,11 +117,12 @@
                 <img src="images/wizparser/Inconsistencies.png" alt="Inconsistencies" class="greyborder my-4 full">
 
                 <div class="space-y-4" id="step2">
+                    <h4>Challenge</h4>
                     <div class="space-y-4 ">
 
                         <div class="important-bg space-y-8">
                             <div class="space-y-4">
-                                <h4>HMW statement</h4>
+                                <p class="caption-lg">HMW statement</p>
                                 <h2>How might we create a design system that allows developers to
                                     move
                                     to a whole other way of designing
@@ -359,8 +356,7 @@
     </main>
 
         <footer class="container">
-        <div class="flex flex-col justify-between gap-8 text-left py-4">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-2">
                 <p>Design + Coded by Jason Zachariah</p>
 
                 <div class="flex flex-row gap-2 items-center">
@@ -380,7 +376,6 @@
                         </li>
                     </ul>
                 </div>
-            </div>
         </div>
 
     </footer>
