@@ -15,8 +15,6 @@ function whenInView(element, callback, { once = true, rootMargin = '0px 0px -20%
   return observer;
 }
 
-// Initialize rough-notation via dynamic import so GitHub Pages still works if CDN is slow
-// Only on home and about pages
 async function initRoughNotations() {
   const path = (window.location.pathname || '/').replace(/\/$/, '') || '/';
   const isHome = path === '' || path === '/' || path === '/index.html';
@@ -70,7 +68,6 @@ async function initRoughNotations() {
   });
 }
 
-// Rough underline on hover/focus (nav, footer). Sidebar section links use CSS only (pill active state).
 async function initH4LinkRoughHover() {
   let annotate;
   try {
@@ -145,7 +142,6 @@ function initSidebarSectionButtons() {
   });
 }
 
-/** Roving tabindex: one section control in tab order; arrows move focus. */
 function initSidebarRovingTabindex() {
   const aside = document.querySelector('.project-sidebar[role="complementary"]');
   if (!aside) return;
@@ -312,7 +308,6 @@ function initScrollspy() {
   setActiveButtonBySection(linkSectionPairs[0]?.section);
 }
 
-/** Animated left bar slides to the active sidebar section link. */
 function initSidebarActiveIndicator() {
   const nav = document.querySelector('.sidebar-section-nav');
   const indicator = nav?.querySelector('.sidebar-active-indicator');
@@ -360,7 +355,6 @@ function initSidebarActiveIndicator() {
   window.addEventListener('load', () => syncSidebarActiveIndicator(), { passive: true });
 }
 
-/** Muted inline autoplay on mobile (iOS often needs .play() + playsInline). */
 function initMobileVideoAutoplay() {
   const wired = new WeakSet();
   let observer = null;
