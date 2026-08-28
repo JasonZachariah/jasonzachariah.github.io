@@ -25,39 +25,37 @@
 }
 
 :root {
-  --brand-50: oklch(0.96 0.045 52);
-  --brand-100: oklch(0.92 0.08 50);
-  --brand-200: oklch(0.87 0.12 48);
-  --brand-300: oklch(0.81 0.16 46);
-  --brand-400: oklch(0.73 0.2 43);
-  --brand-500: oklch(0.64 0.24 40);
-  --brand-600: oklch(0.54 0.26 34);
-  --brand-700: oklch(0.44 0.24 30);
-  --brand-800: oklch(0.34 0.2 27);
-  --brand-900: oklch(0.25 0.16 24);
+ --brand-50: rgb(240, 249, 255);
+ --brand-100: rgb(224, 242, 254);
+ --brand-200: rgb(186, 230, 253);
+ --brand-300: rgb(125, 211, 252);
+ --brand-400: rgb(56, 189, 248);
+ --brand-500: rgb(9, 132, 227);
+ --brand-600: rgb(3, 105, 170);
+ --brand-700: rgb(3, 84, 128);
 
-  --neutral-50: oklch(0.995 0.008 265);
+  --neutral-50: rgb(251, 253, 255);
   --neutral-100: oklch(0.96 0.016 262);
-  --neutral-200: oklch(0.90 0.024 260);
-  --neutral-300: oklch(0.82 0.03 258);
-  --neutral-400: oklch(0.70 0.034 256);
-  --neutral-500: oklch(0.58 0.036 255);
-  --neutral-600: oklch(0.48 0.034 254);
-  --neutral-700: oklch(0.38 0.032 253);
-  --neutral-800: oklch(0.28 0.03 252);
-  --neutral-900: oklch(0.18 0.028 252);
+  --neutral-200: rgb(247, 249, 251);
+  --neutral-300: rgb(243, 245, 249);
+  --neutral-400: rgb(229, 231, 235);
+  --neutral-500: rgb(209, 213, 219);
+  --neutral-600: rgb(156, 163, 175);
+  --neutral-700: rgb(107, 114, 128);
+  --neutral-800: rgb(75, 85, 99);
+  --neutral-900: rgb(55, 65, 81);
 
-  --accent-1: oklch(0.58 0.24 302);
-  --accent-2: oklch(0.56 0.22 255);
+  --accent-1: oklch(62.327% 0.14593 305.906);
+  --accent-2: oklch(61  .176% 0.16319 256.471);
   --accent-3: oklch(0.88 0.17 98);
-  --accent-4: oklch(0.64 0.19 152);
-  --accent-5: oklch(0.58 0.26 27);
+  --accent-4: oklch(61.176% 0.16319 256.471);
+  --accent-5: oklch(61.176% 0.16319 256.471);
 
-  --accent-1-muted: oklch(0.94 0.06 302);
-  --accent-2-muted: oklch(0.94 0.05 255);
-  --accent-3-muted: oklch(0.96 0.08 98);
-  --accent-4-muted: oklch(0.94 0.06 152);
-  --accent-5-muted: oklch(0.94 0.06 27);
+  --accent-1-muted: oklch(94.06% 0.06 302);
+  --accent-2-muted: oklch(94.05% 0.05 255);
+  --accent-3-muted: oklch(96.08% 0.08 98);
+  --accent-4-muted: oklch(94.06% 0.06 152);
+  --accent-5-muted: oklch(94.06% 0.06 27);
 
   --color-1: var(--neutral-800);
   --color-2: var(--neutral-600);

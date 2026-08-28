@@ -6,14 +6,15 @@ type CardProps = {
   tags: string[];
   image: string;
   link: string;
+  isDisabled: boolean;
 };
 
-export default function Card({ title, description, tags, image, link }: CardProps) {
+export default function Card({ title, description, tags, image, link, isDisabled=false }: CardProps) {
   const isVideo = image.endsWith(".mp4");
 
   return (
     <div className="parent">
-      <a href={link}>
+      <a href={isDisabled ? "#" : link}>
         <div className="flex flex-col greyborder">
           <div>
             {isVideo ? (

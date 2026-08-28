@@ -36,12 +36,12 @@ export default function Page() {
                     <img src="/jzlogdark.png" alt="" className="hero-inline-logo" width="48" height="48"
                         decoding="async" /></h1>
             </div>
-
-<Card title="Wiz Parser" description="Creating a unified design system for faster development times." tags={["DESIGN SYSTEMS", "UX DESIGN"]} image="/images/wizparser/header.mp4" link="/wizParser" />
-<Card title="DESNbook" description="An all-in-one dashboard for design students to plan their degrees." tags={["CASE STUDY", "USER RESEARCH"]} image="/images/handbook/addcoursesfilter.mp4" link="/handbook" />
-<Card title="WizEdOS" description="Refining brand identity and optimizing website content layout." tags={["WEB DESIGN", "BRANDING"]} image="/images/wizedos/wizedosheader.png" link="/wizedos" />
-<Card title="Octobud" description="A learning device made to meet the needs of students and teachers." tags={["USER RESEARCH", "PROTOTYPING"]} image="/images/octobud/octobudscancard.mp4" link="/octobud" />
-<Card title="Reforma" description="A dynamic Chrome extension for web accessibility." tags={["PRODUCT DESIGN", "ACCESSIBILITY DESIGN"]} image="/images/reforma/reformaBird.png" link="/reforma" />
+<Card title="Acronym Rollodex" description="An acronyms archive to help OPS employes communicate efficiently." tags={["SERVICE DESIGN","WEB DEVELOPMENT", "USER RESEARCH"]} image="/images/acronymrollodex/acronymrollodex.png" link="/acronymrollodex" isDisabled={true} />
+<Card title="Wiz Parser" description="Creating a unified design system for faster development times." tags={["DESIGN SYSTEMS", "UX DESIGN"]} image="/images/wizparser/header.mp4" link="/wizParser" isDisabled={false} />
+<Card title="DESNbook" description="An all-in-one dashboard for design students to plan their degrees." tags={["CASE STUDY", "USER RESEARCH"]} image="/images/handbook/addcoursesfilter.mp4" link="/handbook" isDisabled={false} />
+<Card title="WizEdOS" description="Refining brand identity and optimizing website content layout." tags={["WEB DESIGN", "BRANDING"]} image="/images/wizedos/wizedosheader.png" link="/wizedos" isDisabled={false} />
+<Card title="Octobud" description="A learning device made to meet the needs of students and teachers." tags={["USER RESEARCH", "PROTOTYPING"]} image="/images/octobud/octobudscancard.mp4" link="/octobud" isDisabled={false} />
+<Card title="Reforma" description="A dynamic Chrome extension for web accessibility." tags={["PRODUCT DESIGN", "ACCESSIBILITY DESIGN"]} image="/images/reforma/reformaBird.png" link="/reforma" isDisabled={false} />
 
         </div>
 
