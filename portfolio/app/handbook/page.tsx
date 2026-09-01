@@ -116,19 +116,19 @@ export default function Page() {
                     </div>
                     <div className="grid grid-col-1 md:grid-cols-3 gap-4 text-center">
                         <div className="space-y-4 greyborder p-4">
-                            <h2 className="important-text" style="justify-content: center;">25%</h2>
+                            <h2 className="important-text" style={{ justifyContent: "center" }}>25%</h2>
                             <p className="caption-sm">
                                 rely on third-party tools (Notion, Excel, etc.)
                             </p>
                         </div>
                         <div className="space-y-4 greyborder p-4">
-                            <h2 className="important-text" style="justify-content: center;"><b>53%</b></h2>
+                            <h2 className="important-text" style={{ justifyContent: "center" }}><b>53%</b></h2>
                             <p className="caption-sm">
                                 had trouble keeping track of course requirements
                             </p>
                         </div>
                         <div className="space-y-4 greyborder p-4">
-                            <h2 className="important-text" style="justify-content: center;"><b>46%</b></h2>
+                            <h2 className="important-text" style={{ justifyContent: "center" }}><b>46%</b></h2>
                             <p className="caption-sm">
                                 wished for more support when planning their degree.
                             </p>

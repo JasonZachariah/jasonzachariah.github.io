@@ -152,7 +152,7 @@ export default function Page() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <img className="greyborder child col-span-3 my-4 full" style="width: 100%;"
+                        <img className="greyborder child col-span-3 my-4 full" style={{ width: "100%" }}
                             src="/images/wizedos/InformationArchitecture.png" />
                     </div>
 
