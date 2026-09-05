@@ -15,7 +15,11 @@ export default function Card({ title, description, tags, image, link }: CardProp
     <div className="parent">
       <a href={link}>
         <div className="flex flex-col greyborder">
-          <div>
+        
+          <div className="m-4">
+            <h2>{title}</h2>
+            <p>{description}</p>
+            <div>
             {isVideo ? (
               <video
                 className="aspect-16/9 mt-0 mb-4"
@@ -34,21 +38,20 @@ export default function Card({ title, description, tags, image, link }: CardProp
                 alt={title}
                 width={1000}
                 height={563}
+                style={{ aspectRatio: "16/9" }}
               />
             )}
           </div>
-          <div className="m-4">
-            <h2>{title}</h2>
-            <p>{description}</p>
             <div className="space-x-2">
               {tags.map((tag, i) => (
                 <span key={tag} className="contents">
-                  {i > 0 && <h4 className="w-fit text-center">|</h4>}
+                  {i > 0 && <h4 className="w-fit text-center">&nbsp;|&nbsp;</h4>}
                   <h4 className="w-fit text-center">{tag}</h4>
                 </span>
               ))}
             </div>
           </div>
+          
         </div>
       </a>
     </div>

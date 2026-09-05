@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import Sidebar from "@/components/Sidebar";
 export const metadata: Metadata = {
   title: "DESNbook — Jason Zachariah",
   description: "DESNbook case study by Jason Zachariah: an all-in-one dashboard concept that helps design students plan degrees, track requirements, and build schedules.",
@@ -26,20 +26,8 @@ export default function Page() {
 <main id="main-content" tabIndex={-1} className="transition-main">
 
         <section className="container project-with-sidebar">
-            <aside className="project-sidebar hidden md:h-screen md:sticky md:inset-y-0 md:left-0 md:flex md:flex-col sidebar-border" role="complementary" aria-label="Page sections" aria-controls="project-content">
-                <div className="flex flex-col justify-between flex-1 pt-8 ps-2 pe-7 min-w-0">
-                    <div className="sidebar-nav-cluster min-w-0">
-                        <nav className="sidebar-section-nav flex flex-col gap-4 min-w-0 flex-1" aria-label="On this page">
-                        <span className="sidebar-active-indicator" aria-hidden="true"></span>
-                        <h4 className="break-words"><button type="button" className="sidebar-link" data-section-target="#step1">Context</button></h4>
-                        <h4 className="break-words"><button type="button" className="sidebar-link" data-section-target="#step2">Initial Research</button></h4>
-                        <h4 className="break-words"><button type="button" className="sidebar-link" data-section-target="#step4">Ideation Process</button></h4>
-                        <h4 className="break-words"><button type="button" className="sidebar-link" data-section-target="#step5">User Feedback</button></h4>
-                        <h4 className="break-words"><button type="button" className="sidebar-link" data-section-target="#step7">Next Steps</button></h4>
-                        </nav>
-                    </div>
-                </div>
-            </aside>
+                 <Sidebar anchorLinks={["Context", "Initial Research", "Ideation Process", "User Feedback", "Next Steps"]} />
+          
 
             <div id="project-content" className="project-content space-y-8 mt-16 w-full">
                 <div className="flex flex-col md:flex-row justify-between w-full items-center">
@@ -75,7 +63,7 @@ export default function Page() {
                         <p>1 Designer (My role)</p>
                     </div>
                 </div>
-                <div className="space-y-4" id="step1">
+                <div className="space-y-4" id="context">
                     <h4>Context</h4>
                     <div className="space-y-4 content-width">
                         <h3>Planning out courses for the DESN program is a hassle, leading to students to feel
@@ -101,7 +89,7 @@ export default function Page() {
 
                 </div>
                
-                <div className="space-y-4" id="step2">
+                <div className="space-y-4" id="initial-research">
                     <h4>Initial Research</h4>
                     <div className="space-y-4 content-width">
                         <h3>To understand the pain points of degree planning, I surveyed <b>15 current DESN students</b>.</h3>
@@ -237,7 +225,7 @@ export default function Page() {
                     </div>
                 </div>
 
-                <div className="space-y-4" id="step4">
+                <div className="space-y-4" id="ideation-process">
                     <h4>Ideation Process</h4>
 
                     <div className="space-y-4 content-width">
@@ -268,7 +256,7 @@ export default function Page() {
                     </div>
                 </div>
 
-                <div className="space-y-4" id="step5">
+                <div className="space-y-4" id="user-feedback">
                     <h4>User Feedback</h4>
                     <div className="space-y-4 content-width">
                         <h3>Mid-Fidelity to Hi-Fidelity</h3>
@@ -342,7 +330,7 @@ export default function Page() {
                     </div>
                 </div>
 
-                <div className="space-y-4" id="step7">
+                <div className="space-y-4" id="next-steps">
                     <h4>Next Steps</h4>
                     <div className="space-y-4 content-width">
                         <h3>Connection to Existing Platforms</h3>
