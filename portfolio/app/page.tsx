@@ -58,34 +58,13 @@ export default function Page() {
             </h1>
           </div>
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-8">
+            <Card title="Rollodex" description="Creating a universal acronym directory for the Ministry of Education" tags={["USER RESEARCH", "DESIGN ENGINEERING"]} image="/images/octobud/octobudscancard.mp4" link="/rollodex" />
             <Card title="Wiz Parser" description="Creating a unified design system for faster development times." tags={["DESIGN SYSTEMS", "UX DESIGN"]} image="/images/wizparser/header.mp4" link="/wizParser" />
             <Card title="DESNbook" description="An all-in-one dashboard for design students to plan their degrees." tags={["CASE STUDY", "USER RESEARCH"]} image="/images/handbook/addcoursesfilter.mp4" link="/handbook" />
             <Card title="WizEdOS" description="Refining brand identity and optimizing website content layout." tags={["WEB DESIGN", "BRANDING"]} image="/images/wizedos/wizedosheader.png" link="/wizedos" />
-            <Card title="Octobud" description="A learning device made to meet the needs of students and teachers." tags={["USER RESEARCH", "PROTOTYPING"]} image="/images/octobud/octobudscancard.mp4" link="/octobud" />
-            <div className="parent hiddenproject">
-              <a href="/">
-                <div className="flex flex-col greyborder relative hiddenproject-content">
-                  <div>
-                    <img className="aspect-16/9 mt-0 mb-4" src="/images/reforma/reformaBird.png" alt="Reforma Header" />
-                  </div>
-                  <div className="m-4">
-                    <h2>Reforma</h2>
-                    <p>A dynamic Chrome extension for web accessibility.</p>
-                    <div className="space-x-2">
-                      <h4 className="w-fit text-center">PRODUCT DESIGN</h4>
-                      <h4 className="w-fit text-center">|</h4>
-                      <h4 className="w-fit text-center">ACCESSIBILITY DESIGN</h4>
-                    </div>
-                  </div>
-                </div>
-                <div className="coming-soon-overlay">
-                  <h2 className="orange-highlight">COMING SOON</h2>
-                </div>
-              </a>
-            </div>
-          </div>
+               </div>
         </div>
       </main>
     </>
-  );
+  )
 }
