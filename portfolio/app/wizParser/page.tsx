@@ -1,3 +1,4 @@
+import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -29,49 +30,8 @@ export default function Page() {
     <>
       <main id="main-content" tabIndex={-1} className="transition-main">
         <section className="container project-with-sidebar">
-          <aside
-            className="project-sidebar hidden md:h-screen md:sticky md:inset-y-0 md:left-0 md:flex md:flex-col sidebar-border"
-            role="complementary"
-            aria-label="Page sections"
-            aria-controls="project-content"
-          >
-            <div className="flex flex-col justify-between flex-1 pt-8 ps-2 pe-7 min-w-0">
-              <div className="sidebar-nav-cluster min-w-0">
-                <nav
-                  className="sidebar-section-nav flex flex-col gap-4 min-w-0 flex-1"
-                  aria-label="On this page"
-                >
-                  <span className="sidebar-active-indicator" aria-hidden="true" />
-                  <h4 className="break-words">
-                    <button type="button" className="sidebar-link" data-section-target="#step1">
-                      Context
-                    </button>
-                  </h4>
-                  <h4 className="break-words">
-                    <button type="button" className="sidebar-link" data-section-target="#step2">
-                      Challenge
-                    </button>
-                  </h4>
-                  <h4 className="break-words">
-                    <button type="button" className="sidebar-link" data-section-target="#step3">
-                      Solution
-                    </button>
-                  </h4>
-                  <h4 className="break-words">
-                    <button type="button" className="sidebar-link" data-section-target="#step4">
-                      Final Products
-                    </button>
-                  </h4>
-                  <h4 className="break-words">
-                    <button type="button" className="sidebar-link" data-section-target="#step5">
-                      Reflection
-                    </button>
-                  </h4>
-                </nav>
-              </div>
-            </div>
-          </aside>
-
+        <Sidebar anchorLinks={["Context", "Challenge", "Solution", "Final Products", "Reflection"]} />
+         
           <div id="project-content" className="project-content space-y-8 mt-16 w-full">
             <div className="flex flex-col md:flex-row justify-between w-full items-center">
               <h2>Wiz Parser</h2>
