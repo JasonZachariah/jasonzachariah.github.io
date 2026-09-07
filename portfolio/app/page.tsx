@@ -2,11 +2,11 @@ import Card from "@/components/Card";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Jason Zachariah — Product Designer",
+  title: "Jason Zachariah Product Designer",
   description: "Jason Zachariah is a product designer who bridges design and development. He builds accessible educational technology and design systems. Web Developer at the Ministry of Education; former UX/UI Designer at WizRobotics.",
   alternates: { canonical: "https://jasonzachariah.github.io/" },
   openGraph: {
-    title: "Jason Zachariah — Product Designer",
+    title: "Jason Zachariah Product Designer",
     description: "Jason Zachariah is a product designer who bridges design and development. He builds accessible educational technology and design systems. Web Developer at the Ministry of Education; former UX/UI Designer at WizRobotics.",
     url: "https://jasonzachariah.github.io/",
     siteName: "Jason Zachariah",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jason Zachariah — Product Designer",
+    title: "Jason Zachariah Product Designer",
     description: "Jason Zachariah is a product designer who bridges design and development. He builds accessible educational technology and design systems. Web Developer at the Ministry of Education; former UX/UI Designer at WizRobotics.",
     images: ["https://jasonzachariah.github.io/images/home/openGraph.png"],
   },
@@ -58,7 +58,7 @@ export default function Page() {
             </h1>
           </div>
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-8">
-            <Card title="Rollodex" description="Creating a universal acronym directory for the Ministry of Education" tags={["USER RESEARCH", "DESIGN ENGINEERING"]} image="/images/rollodex/Rollodex_Header.png" link="/rollodex" locked={true} />
+            <Card title="Rollodex" description="Creating a universal acronym directory for the Ministry of Education" tags={["USER RESEARCH", "DESIGN ENGINEERING"]} image="/images/rollodex/rollodex_header.png" link="/rollodex" locked={true} />
             <Card title="Wiz Parser" description="Creating a unified design system for faster development times." tags={["DESIGN SYSTEMS", "UX DESIGN"]} image="/images/wizparser/header.mp4" link="/wizParser" />
             <Card title="DESNbook" description="An all-in-one dashboard for design students to plan their degrees." tags={["CASE STUDY", "USER RESEARCH"]} image="/images/handbook/addcoursesfilter.mp4" link="/handbook" />
             <Card title="WizEdOS" description="Refining brand identity and optimizing website content layout." tags={["WEB DESIGN", "BRANDING"]} image="/images/wizedos/wizedosheader.png" link="/wizedos" />

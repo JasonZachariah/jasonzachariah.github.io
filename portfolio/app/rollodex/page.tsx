@@ -37,7 +37,7 @@ export default function Page() {
                
                 <div className=" child flex justify-center">
 
-                    <img className=" image2 greyborder full" src="/images/rollodex/Rollodex_Header.png" />
+                    <img className=" image2 greyborder full" src="/images/rollodex/rollodex_header.png" />
                 </div>
                 <div className="flex justify-between flex-col   md:flex-row full">
                     <div>
