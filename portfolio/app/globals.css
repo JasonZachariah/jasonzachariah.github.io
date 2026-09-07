@@ -2,10 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Overpass", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+
 
   /* Three breakpoints: default (<768), md (768), lg (1024) */
   --breakpoint-sm: initial;
@@ -40,17 +37,7 @@
 }
 
 :root {
-  --brand-50: oklch(0.96 0.045 52);
-  --brand-100: oklch(0.92 0.08 50);
-  --brand-200: oklch(0.87 0.12 48);
-  --brand-300: oklch(0.81 0.16 46);
-  --brand-400: oklch(0.73 0.2 43);
-  --brand-500: oklch(0.64 0.24 40);
-  --brand-600: oklch(0.54 0.26 34);
-  --brand-700: oklch(0.44 0.24 30);
-  --brand-800: oklch(0.34 0.2 27);
-  --brand-900: oklch(0.25 0.16 24);
-
+ 
   --neutral-50: oklch(0.995 0.008 265);
   --neutral-100: oklch(0.96 0.016 262);
   --neutral-200: oklch(0.90 0.024 260);
@@ -86,7 +73,7 @@
   --radius-card-sm: 0.2375rem;
 
   --base-font-family: "Overpass", ui-sans-serif, system-ui, sans-serif;
-  --header-font-family: "PP Pangram Sans Rounded", var(--base-font-family);
+  --header-font-family: "PP Pangram Sans Rounded",ui-sans-serif, system-ui, sans-serif;
 
   /* Type scale: minor second (ratio 1.067), base = body 1rem */
   --type-ratio: 1.067;
@@ -172,15 +159,46 @@ body {
 main {
   margin: 0;
 }
-
-::-moz-selection {
-  color: var(--color-1);
-  background: var(--color-3);
+.locked-card {
+  cursor: not-allowed;
+  pointer-events: none;
+  position: relative;
 }
 
-::selection {
+.locked-card h2,
+.locked-card p,
+.locked-card img,
+.locked-card video,
+.locked-card .space-x-2 {
+  opacity: 0.5;
+}
+
+
+
+.locked-card-media {
+  position: relative;
+}
+
+.locked-card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: calc(100% - 1rem);
+  font-size: var(--h4-size);
+  font-weight: var(--h4-weight);
+  line-height: var(--h4-line-height);
+  letter-spacing: var(--h4-letter-spacing);
+  font-family: var(--header-font-family);
+  text-transform: uppercase;
   color: var(--color-1);
-  background: var(--color-3);
+  background-color: var(--accent-3);
+  
+  padding: 0.35em 0.35em;
+  text-align: center;
+  pointer-events: none;
 }
 
 h1 {

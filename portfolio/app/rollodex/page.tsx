@@ -30,32 +30,30 @@ export default function Page() {
            
 
             <div id="project-content" className="project-content space-y-8 mt-16 w-full">
-                <div className="flex flex-col md:flex-row justify-between w-full items-center">
+             
+                    <h1>Rollodex</h1>
+                    <h2>A universal acronym directory for the Ministry of Education</h2>
 
-                    <h2>WizEdOS</h2>
-                    <p>A redesign for the WizEdOS platform</p>
-
-                </div>
+               
                 <div className=" child flex justify-center">
 
-                    <video className=" image2 greyborder full" preload="auto" autoPlay loop muted playsInline>
-                        <source src="/images/wizedos/Header.mp4" type="video/mp4" />
-                    </video>
+                    <img className=" image2 greyborder full" src="/images/rollodex/Rollodex_Header.png" />
                 </div>
                 <div className="flex justify-between flex-col   md:flex-row full">
                     <div>
                         <p><b>Project Type:</b></p>
-                        <p>Client Work (WizRobotics)</p>
+                        <p>Client Work (Ministry of Education)</p>
                     </div>
                     <div>
                         <p><b>Timeline:</b></p>
-                        <p>2 weeks</p>
+                        <p>9 weeks (June 2026 - August 2026)</p>
                     </div>
                     <div>
                         <p><b>Tools & Skills:</b></p>
-                        <p>Figma</p>
-                        <p>Jitter</p>
-                        <p>Webflow</p>
+                        <p>User Research</p>
+                        <p>Design Engineering</p>
+                        <p>Supabase</p>
+                        <p>React+Vite</p>
                     </div>
                     <div>
                         <p><b>Team:</b></p>
@@ -65,7 +63,7 @@ export default function Page() {
                 <div className="space-y-4" id="step1">
                     <h4>Context</h4>
                     <div className="space-y-4 content-width">
-                        <h3>WizEdOS had a problem- their website failed to communicate the value of their service.</h3>
+                        <h3> The Ministry of Education needed a universal acronym directory for the Ministry of Education.</h3>
 
                         <p>
                             During my time at WizRobotics, I had the opportunity to create a new direction for

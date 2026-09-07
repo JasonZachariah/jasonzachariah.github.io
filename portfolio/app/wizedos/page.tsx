@@ -29,12 +29,9 @@ export default function Page() {
         <Sidebar anchorLinks={["Context", "Initial Notes", "Creating the Flows", "Reflection"]} />
          
             <div id="project-content" className="project-content space-y-8 mt-16 w-full">
-                <div className="flex flex-col md:flex-row justify-between w-full items-center">
+                <h1>WizEdOS</h1>
+                <h2>A redesign for the WizEdOS platform</h2>
 
-                    <h2>WizEdOS</h2>
-                    <p>A redesign for the WizEdOS platform</p>
-
-                </div>
                 <div className=" child flex justify-center">
 
                     <video className=" image2 greyborder full" preload="auto" autoPlay loop muted playsInline>

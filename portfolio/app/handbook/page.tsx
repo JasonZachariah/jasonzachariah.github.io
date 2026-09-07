@@ -30,12 +30,11 @@ export default function Page() {
           
 
             <div id="project-content" className="project-content space-y-8 mt-16 w-full">
-                <div className="flex flex-col md:flex-row justify-between w-full items-center">
 
-                    <h2>DESNbook</h2>
-                    <p>Concept for an all-in-one dashboard that allows design students to plan their degrees.</p>
 
-                </div>
+                    <h1>DESNbook</h1>
+                    <h2>Concept for an all-in-one dashboard that allows design students to plan their degrees.</h2>
+
                 <div className=" child flex justify-center greyborder">
                     <video className="image1 greyborder full" preload="auto" autoPlay loop muted playsInline>
                         <source src="/images/handbook/addandfilterfinal.mp4" type="video/mp4" />

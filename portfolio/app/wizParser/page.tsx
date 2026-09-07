@@ -33,9 +33,9 @@ export default function Page() {
         <Sidebar anchorLinks={["Context", "Challenge", "Solution", "Final Products", "Reflection"]} />
          
           <div id="project-content" className="project-content space-y-8 mt-16 w-full">
-            <div className="flex flex-col md:flex-row justify-between w-full items-center">
-              <h2>Wiz Parser</h2>
-              <p>A design system to reduce developer&apos;s headaches.</p>
+            <div className="">
+              <h1>Wiz Parser</h1>
+              <h2>A design system to reduce developer&apos;s headaches.</h2>
             </div>
             <div className=" child flex justify-center">
               <video className=" image4 greyborder full" preload="auto" autoPlay loop muted playsInline>
@@ -53,7 +53,7 @@ export default function Page() {
                 <p>
                   <b>Timeline:</b>
                 </p>
-                <p>1 week</p>
+                <p>8 weeks</p>
               </div>
               <div>
                 <p>
