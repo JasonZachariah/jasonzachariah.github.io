@@ -1,5 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @theme {
 
@@ -18,22 +17,6 @@
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
   border-radius: 0.25rem; 
   
-}
-
-@font-face {
-  font-family: "PP Pangram Sans Rounded";
-  src: url("/fonts/PPPangramSansRounded-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Pangram Sans Rounded";
-  src: url("/fonts/PPPangramSansRounded-NarrowSemibold.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
 }
 
 :root {
@@ -72,8 +55,8 @@
   --radius-card-lg: 0.575rem;
   --radius-card-sm: 0.2375rem;
 
-  --base-font-family: "Overpass", ui-sans-serif, system-ui, sans-serif;
-  --header-font-family: "PP Pangram Sans Rounded",ui-sans-serif, system-ui, sans-serif;
+  --base-font-family: var(--font-overpass), ui-sans-serif, system-ui, sans-serif;
+  --header-font-family: var(--font-pp-sans-rounded), ui-sans-serif, system-ui, sans-serif;
 
   /* Type scale: minor second (ratio 1.067), base = body 1rem */
   --type-ratio: 1.067;
