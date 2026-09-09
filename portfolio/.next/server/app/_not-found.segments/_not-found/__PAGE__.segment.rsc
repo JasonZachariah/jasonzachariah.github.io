@@ -1,0 +1,23 @@
+1:"$Sreact.fragment"
+2:I[8500,["500","static/chunks/500-b13bb91f5a6311b6.js","345","static/chunks/app/not-found-cc25108b331b5f14.js"],""]
+3:I[484,[],"OutletBoundary"]
+4:"$Sreact.suspense"
+8:I[484,[],"ViewportBoundary"]
+9:I[484,[],"MetadataBoundary"]
+a:I[6869,[],"IconMark"]
+c:I[7121,[],""]
+d:I[4581,[],""]
+:HL["/_next/static/css/cb156d3d229eded5.css","style"]
+7:X
+f:X
+f:C
+0:{"buildId":"4d4R8iId2tXh8cTor6DU4","data":[{"rsc":["$","$1","c",{"children":[["$","main",null,{"id":"main-content","tabIndex":-1,"className":"h-screen flex items-center justify-center flex-col","children":[["$","span",null,{"className":"site-logo","aria-label":"Jason Zachariah Logo"}],["$","h3",null,{"children":"Page not found!"}],["$","p",null,{"children":"This project isn't open yet. Try again another time"}],["$","$L2",null,{"href":"/","children":["$","h4",null,{"children":"Go to home"}]}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Jason Zachariah"}],["$","meta","1",{"name":"description","content":"Jason Zachariah is a product designer who bridges design and development. He builds accessible educational technology and design systems."}],["$","link","2",{"rel":"icon","href":"/favicon.ico?603d046c9a6fdfbb","type":"image/x-icon","sizes":"16x16"}],["$","$La","3",{}]]}]}]}],null]}],"isPartial":"$@b","staleTime":"$7","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@e","staleTime":"$7","varyParams":"$f"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/cb156d3d229eded5.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}],"notFound":[["$","main",null,{"id":"main-content","tabIndex":-1,"className":"h-screen flex items-center justify-center flex-col","children":[["$","span",null,{"className":"site-logo","aria-label":"Jason Zachariah Logo"}],["$","h3",null,{"children":"Page not found!"}],["$","p",null,{"children":"This project isn't open yet. Try again another time"}],["$","$L2",null,{"href":"/","children":["$","h4",null,{"children":"Go to home"}]}]]}],[]]}]}]}]]}],"isPartial":"$@10","staleTime":"$7","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@11","rootVaryParams":null,"needsRuntimeRequest":"$@12"}
+5:null
+7:300
+12:true
+7:C
+11:0
+b:"$undefined"
+e:"$undefined"
+10:"$undefined"
+6:"$undefined"

@@ -1,0 +1,17 @@
+1:"$Sreact.fragment"
+2:I[7121,[],""]
+3:I[4581,[],""]
+4:I[8500,["500","static/chunks/500-b13bb91f5a6311b6.js","345","static/chunks/app/not-found-cc25108b331b5f14.js"],""]
+5:I[484,[],"OutletBoundary"]
+6:"$Sreact.suspense"
+9:I[484,[],"ViewportBoundary"]
+b:I[484,[],"MetadataBoundary"]
+d:I[7123,[],"default",1]
+:HL["/_next/static/css/cb156d3d229eded5.css","style"]
+8:X
+0:{"P":null,"c":["","_not-found"],"q":"","i":false,"f":[[["",{"children":["_not-found",{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/cb156d3d229eded5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"id":"main-content","tabIndex":-1,"className":"h-screen flex items-center justify-center flex-col","children":[["$","span",null,{"className":"site-logo","aria-label":"Jason Zachariah Logo"}],["$","h3",null,{"children":"Page not found!"}],["$","p",null,{"children":"This project isn't open yet. Try again another time"}],["$","$L4",null,{"href":"/","children":["$","h4",null,{"children":"Go to home"}]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","main",null,{"id":"main-content","tabIndex":-1,"className":"h-screen flex items-center justify-center flex-col","children":[["$","span",null,{"className":"site-logo","aria-label":"Jason Zachariah Logo"}],["$","h3",null,{"children":"Page not found!"}],["$","p",null,{"children":"This project isn't open yet. Try again another time"}],["$","$L4",null,{"href":"/","children":["$","h4",null,{"children":"Go to home"}]}]]}],null,["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],{},null,false,null]},null,false,"$8"]},null,false,null],["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$6",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],null]}],false]],"m":"$undefined","G":["$d",[]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"4d4R8iId2tXh8cTor6DU4"}
+8:C
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:I[6869,[],"IconMark"]
+7:null
+c:[["$","title","0",{"children":"Jason Zachariah"}],["$","meta","1",{"name":"description","content":"Jason Zachariah is a product designer who bridges design and development. He builds accessible educational technology and design systems."}],["$","link","2",{"rel":"icon","href":"/favicon.ico?603d046c9a6fdfbb","type":"image/x-icon","sizes":"16x16"}],["$","$Le","3",{}]]
