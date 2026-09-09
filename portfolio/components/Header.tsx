@@ -5,6 +5,7 @@ export default function Header() {
 
         <a href="./" className="flex items-center gap-4" aria-label="Home">
             <span className="site-logo" aria-hidden="true"></span>
+            <p style={{ fontFamily: "var(--font-pp-sans-rounded)" }}> Jason Zachariah </p>
         </a>
 
         <div className="flex justify-end-safe space-x-6">
