@@ -38,9 +38,7 @@ export default function Page() {
               <h2>A design system to reduce developer&apos;s headaches.</h2>
             </div>
             <div className=" child flex justify-center">
-              <video className=" image4 greyborder full" preload="auto" autoPlay loop muted playsInline>
-                <source src="/images/wizparser/header.mp4" type="video/mp4" />
-              </video>
+              <img className=" image4 greyborder full" src="/images/wizparser/Header.gif" alt="Wiz Parser Header" />
             </div>
             <div className="flex justify-between flex-col   md:flex-row full">
               <div>

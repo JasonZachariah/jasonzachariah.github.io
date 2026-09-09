@@ -552,6 +552,42 @@ h4 .sidebar-link[aria-current="true"] {
   overflow: hidden;
 }
 
+.bento-grid {
+  column-count: 1;
+  column-gap: 1rem;
+}
+
+.bento-card {
+  break-inside: avoid;
+  margin: 0 0 1rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.bento-media {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  .bento-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bento-grid {
+    column-count: 3;
+  }
+}
+
 .greyborder.p-4 {
   border-radius: var(--radius-card-sm);
 }
