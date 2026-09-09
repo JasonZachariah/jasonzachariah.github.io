@@ -53,7 +53,7 @@ export default function Page() {
         <div className="container">
           <div id="panel-intro" className="mb-12 mt-4">
             <h1>
-              Jason Zachariah is a product designer looking to bridge the gap between designers and developers.
+              Jason Zachariah is a product designer looking to bridge the gap between designers and developers
               <img src="/jzlogdark.png" alt="" className="hero-inline-logo" width={48} height={48} decoding="async" />
             </h1>
           </div>
