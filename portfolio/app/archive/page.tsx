@@ -11,14 +11,17 @@ export const metadata: Metadata = {
 const archiveMedia = [
   "/images/archive/markhamfairgif.gif",
   "/images/archive/Somethingforeverythingif.gif",
-  "/images/archive/swap gif.gif",
-  "/images/archive/SkulltoHuman.gif",
+  
+
   "/images/archive/saylchair.gif",
   "/images/archive/oldaniamtionslogo.gif",
   "/images/archive/p5jsgif.gif",
   "/images/archive/p5cooltriangles.gif",
   "/images/archive/mySketch (4).gif",
   "/images/archive/Blender Animated copy.mp4",
+  "/images/archive/swap gif.gif",
+  "/images/archive/BacktoSchool_Kindergarten.mp4",
+  "/images/archive/OntarioMuseumDay.png",
 ];
 
 export default function Archive() {
