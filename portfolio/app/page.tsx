@@ -51,11 +51,18 @@ export default function Page() {
       />
       <main id="main-content" tabIndex={-1}>
         <div className="container">
-          <div id="panel-intro" className="mb-12 mt-4">
+          <div id="panel-intro" className="mb-12 mt-4 flex flex-col gap-4">
+            <h4>Previous Web Developer @ <a href="https://www.ontario.ca/page/ministry-education"  className="pagelink" target="_blank" rel="noopener noreferrer">Ministry of Education</a></h4>
             <h1>
               Jason Zachariah is a product designer looking to bridge the gap between designers and developers
               <img src="/jzlogdark.png" alt="" className="hero-inline-logo" width={48} height={48} decoding="async" />
             </h1>
+            <div className="flex  gap-4">
+            <h4>Socials:</h4>
+            <a href="https://github.com/JasonZachariah" target="_blank" rel="noopener noreferrer" className="pagelink">GitHub</a>
+          <a href="https://www.instagram.com/jasonz.design/" target="_blank" rel="noopener noreferrer" className="pagelink">Instagram</a>
+          <a href="https://www.linkedin.com/in/jasontzachariah/" target="_blank" rel="noopener noreferrer" className="pagelink">LinkedIn</a>
+</div>
           </div>
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-8">
             <Card title="Rollodex" description="Creating a universal acronym directory for the Ministry of Education" tags={["USER RESEARCH", "DESIGN ENGINEERING"]} image="/images/rollodex/rollodex_header.png" link="/rollodex" locked={true} />

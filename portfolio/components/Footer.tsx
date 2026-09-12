@@ -11,6 +11,8 @@ export default function Footer() {
           <div className="flex justify-end-safe space-x-6">
           <a href="https://github.com/JasonZachariah" target="_blank" rel="noopener noreferrer" className="pagelink">GitHub</a>
           <a href="https://www.instagram.com/jasonz.design/" target="_blank" rel="noopener noreferrer" className="pagelink">Instagram</a>
+          <a href="https://www.linkedin.com/in/jasontzachariah/" target="_blank" rel="noopener noreferrer" className="pagelink">LinkedIn</a>
+
 
           </div>
       </div>

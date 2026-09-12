@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BentoGrid from "@/components/BentoGrid";
 
 export const metadata: Metadata = {
-  title: "Archive — Jason Zachariah",
+  title: "Archive | Jason Zachariah",
   description:
     "Visual archive of work by Jason Zachariah, a product designer focused on accessible educational technology, design systems, and UX for edtech products.",
   alternates: { canonical: "https://jasonzachariah.github.io/archive" },

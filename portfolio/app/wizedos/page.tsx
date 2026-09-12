@@ -2,11 +2,11 @@ import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "WizEdOS — Jason Zachariah",
+  title: "WizEdOS | Jason Zachariah",
   description: "WizEdOS case study by Jason Zachariah: UX/UI redesign of the WizEdOS educational platform, including user flows and interface design.",
   alternates: { canonical: "https://jasonzachariah.github.io/wizedos" },
   openGraph: {
-    title: "WizEdOS — Jason Zachariah",
+    title: "WizEdOS | Jason Zachariah",
     description: "WizEdOS case study by Jason Zachariah: UX/UI redesign of the WizEdOS educational platform, including user flows and interface design.",
     url: "https://jasonzachariah.github.io/wizedos",
     siteName: "Jason Zachariah",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WizEdOS — Jason Zachariah",
+    title: "WizEdOS | Jason Zachariah",
     description: "WizEdOS case study by Jason Zachariah: UX/UI redesign of the WizEdOS educational platform, including user flows and interface design.",
     images: ["https://jasonzachariah.github.io/images/home/openGraph.png"],
   },
@@ -34,7 +34,7 @@ export default function Page() {
 
                 <div className=" child flex justify-center">
 
-                    <video className=" image2 greyborder full" preload="auto" autoPlay loop muted playsInline>
+                    <video className=" image2 greyborder full" preload="auto" autoPlay muted playsInline>
                         <source src="/images/wizedos/Header.mp4" type="video/mp4" />
                     </video>
                 </div>

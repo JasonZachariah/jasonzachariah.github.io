@@ -13,10 +13,10 @@
 
 *:focus-visible {
   outline: 2px solid transparent;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
-  border-radius: 0.25rem; 
-  
+  box-shadow:
+  0 0 0 2px var(--neutral-50),
+  0 0 0 4px #3b82f6;
+
 }
 
 :root {
@@ -261,7 +261,7 @@ li b {
   word-wrap: break-word;
 }
 
-.caption-sm,
+
 tr,
 td {
   color: var(--color-2);
@@ -281,8 +281,7 @@ td {
   font-weight: 600;
   display: inline-block;
   max-width: 100%;
-  background-color: var(--neutral-100);
-  border-radius: var(--radius-card-sm);
+ 
   padding: 0.35em 0.65em;
 }
 
@@ -400,7 +399,7 @@ h4 .sidebar-link[aria-current="true"] {
 }
 
 .solution-bg {
-  background-color: var(--brand-50);
+  background-color: var(--accent-1-muted);
   padding: 1.5rem;
   border-radius: var(--radius-card-sm);
   overflow: hidden;
@@ -462,7 +461,7 @@ h4 .sidebar-link[aria-current="true"] {
 
 .quote {
   border-left: 4px solid var(--accent-color);
-  background: var(--accent3-color);
+
   padding: 1.5rem;
   color: var(--accent-color);
   border-radius: var(--radius-card-sm);
@@ -550,6 +549,28 @@ h4 .sidebar-link[aria-current="true"] {
   box-shadow: 0 0 0 2px var(--neutral-100);
   border-radius: var(--radius-card-lg);
   overflow: hidden;
+}
+
+.parent a {
+  display: block;
+  border-radius: var(--radius-card-lg);
+  text-decoration: none;
+  color: inherit;
+}
+
+.parent a:focus {
+  outline: none;
+}
+
+.parent a:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.parent a:focus-visible .greyborder {
+  box-shadow:
+    0 0 0 2px var(--neutral-50),
+    0 0 0 4px #3b82f6;
 }
 
 .bento-grid {

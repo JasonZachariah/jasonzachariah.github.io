@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
+import ImageDetails from "@/components/ImageDetails";
 export const metadata: Metadata = {
-  title: "DESNbook — Jason Zachariah",
+  title: "DESNbook | Jason Zachariah",
   description: "DESNbook case study by Jason Zachariah: an all-in-one dashboard concept that helps design students plan degrees, track requirements, and build schedules.",
   alternates: { canonical: "https://jasonzachariah.github.io/handbook" },
   openGraph: {
-    title: "DESNbook — Jason Zachariah",
+    title: "DESNbook | Jason Zachariah",
     description: "DESNbook case study by Jason Zachariah: an all-in-one dashboard concept that helps design students plan degrees, track requirements, and build schedules.",
     url: "https://jasonzachariah.github.io/handbook",
     siteName: "Jason Zachariah",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DESNbook — Jason Zachariah",
+    title: "DESNbook | Jason Zachariah",
     description: "DESNbook case study by Jason Zachariah: an all-in-one dashboard concept that helps design students plan degrees, track requirements, and build schedules.",
     images: ["https://jasonzachariah.github.io/images/home/openGraph.png"],
   },
@@ -172,57 +173,19 @@ export default function Page() {
 
                     <div className="space-y-4">
                         <h4>Final Product</h4>
-                        <div className="space-y-4">
-                            <div className="space-y-4">
-                                <div>
-                                    <video className="greyborder full" preload="auto" autoPlay loop muted playsInline>
-                                        <source src="/images/handbook/finalprereq.mp4" type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                                <div className="space-y-4">
-                                    <h3>Clearer Course Requirements</h3>
-                                    <p>An organized way to view course requirements, as well as how they affect your
-                                        degree progress.</p>
-                                </div>
-                            </div>
-                            <div className="header-border"></div>
+                        
+                                    <ImageDetails title="Clearer Course Requirements" description="An organized way to view course requirements, as well as how they affect your degree progress." image="/images/handbook/finalprereq.mp4" />
+                             
 
-                            <div className="space-y-4">
-                                <div>
-                                    <video className="greyborder full" preload="auto" autoPlay loop muted playsInline>
-                                        <source src="/images/handbook/VSBfinal.mp4" type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                                <div className="space-y-4">
-                                    <h3>Adaptive Schedule Builder</h3>
-                                    <p>Allows users to visualize potential schedules,
-                                        with simple toggle buttons to add/remove courses from their timetable.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="header-border"></div>
 
-                            <div className="space-y-4">
-                                <div>
-                                    <video className="greyborder full" preload="auto" autoPlay loop muted playsInline>
-                                        <source src="/images/handbook/sidebarfinal.mp4" type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    <ImageDetails title="Adaptive Schedule Builder" description="Allows users to visualize potential schedules, with simple toggle buttons to add/remove courses from their timetable." image="/images/handbook/VSBfinal.mp4" />
+                                 
+                                    <ImageDetails title="Resolve course issues with one click." description="Instead of manually figuring out issues within course, DESNbook displays, as well as offer solutions to correct, scheduling errors or conflict in your schedule, conveniently in the sidebar of the dashboard." image="/images/handbook/sidebarfinal.mp4" />
                                 </div>
-                                <div className="space-y-4">
-                                    <h3>Resolve course issues with one click.</h3>
-                                    <p>Instead of manually figuring out issues within course, DESNbook displays, as well
-                                        as
-                                        offer solutions to correct, scheduling errors or conflict in your schedule,
-                                        conveniently
-                                        in the sidebar of the dashboard</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
+
 
                 <div className="space-y-4" id="ideation-process">
                     <h4>Ideation Process</h4>
@@ -292,40 +255,12 @@ export default function Page() {
 
                     <div className="space-y-4">
                         <h4>Design Changes</h4>
-                        <div className="space-y-4">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="space-y-4">
-                                    <h3>Course Card Design</h3>
-                                    <p>
-                                        User testing showed that course cards lacked clarity and essential details, such
-                                        as when a
-                                        course was offered. Based on feedback, I redesigned the cards with clearer
-                                        organization and
-                                        added labels to show which requirements each course fulfills.
-                                    </p>
-                                </div>
-                                <div>
-                                    <img className="greyborder full" src="/images/handbook/desnbookcard.png" />
-                                </div>
-                            </div>
-                            <div className="header-border"></div>
+                             <ImageDetails title="Course Card Design" description="User testing showed that course cards lacked clarity and essential details, such as when a course was offered. Based on feedback, I redesigned the cards with clearer organization and added labels to show which requirements each course fulfills." image="/images/handbook/desnbookcardfinal.mp4" />
+                                
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="space-y-4">
-                                    <h3>Suggestion Sidebar</h3>
-                                    <p>
-                                        Users wanted the sidebar to be more functional. Early versions displayed only
-                                        credit totals
-                                        without actionable suggestions. The improved version includes recommendations
-                                        and quick
-                                        fixes students can apply with one click.
-                                    </p>
-                                </div>
-                                <div>
-                                    <img className="greyborder full" src="/images/handbook/sidebarimage.png" />
-                                </div>
-                            </div>
-                        </div>
+                            <ImageDetails title="Suggestion Sidebar" description="Users wanted the sidebar to be more functional. Early versions displayed only credit totals without actionable suggestions. The improved version includes recommendations and quick fixes students can apply with one click." image="/images/handbook/sidebarimage.mp4" />
+                            
+                       
                     </div>
                 </div>
 

@@ -1,14 +1,15 @@
+import ImageDetails from "@/components/ImageDetails";
 import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Wiz Parser — Jason Zachariah",
+  title: "Wiz Parser | Jason Zachariah",
   description:
     "Wiz Parser case study by Jason Zachariah: a design system and UX overhaul that helps developers build consistent UI for an edtech teaching platform.",
   alternates: { canonical: "https://jasonzachariah.github.io/wizParser" },
   openGraph: {
-    title: "Wiz Parser — Jason Zachariah",
+    title: "Wiz Parser | Jason Zachariah",
     description:
       "Wiz Parser case study by Jason Zachariah: a design system and UX overhaul that helps developers build consistent UI for an edtech teaching platform.",
     url: "https://jasonzachariah.github.io/wizParser",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wiz Parser — Jason Zachariah",
+    title: "Wiz Parser | Jason Zachariah",
     description:
       "Wiz Parser case study by Jason Zachariah: a design system and UX overhaul that helps developers build consistent UI for an edtech teaching platform.",
     images: ["https://jasonzachariah.github.io/images/home/openGraph.png"],
@@ -30,8 +31,8 @@ export default function Page() {
     <>
       <main id="main-content" tabIndex={-1} className="transition-main">
         <section className="container project-with-sidebar">
-        <Sidebar anchorLinks={["Context", "Challenge", "Solution", "Final Products", "Reflection"]} />
-         
+          <Sidebar anchorLinks={["Context", "Challenge", "Solution", "Final Products", "Reflection"]} />
+
           <div id="project-content" className="project-content space-y-8 mt-16 w-full">
             <div className="">
               <h1>Wiz Parser</h1>
@@ -202,52 +203,11 @@ export default function Page() {
                     </div>
                   </div>
                   <p>Here are some of the details I prepared before handoff:</p>
-                  <div className="space-y-4">
-                    <div className="space-y-4 content-width">
-                      <h3>Typography</h3>
-                      <p>
-                        Previously, type styles were not defined, which led to elements having no consistent style. To
-                        solve this, a typography guidelines was formed based on the existing fonts—Montserrat and
-                        Shantell Sans—allowing for a consistent style across all elements.
-                      </p>
-                    </div>
-                    <img className="greyborder full" src="/images/wizparser/Typography.png" alt="Typography guidelines" />
-                  </div>
-                  <div className="header-border" />
 
-                  <div className="space-y-4">
-                    <div className="space-y-4 content-width">
-                      <h3>Colours</h3>
-                      <p>
-                        The primary and neutral palettes were defined using the Radix color system, allowing for
-                        straightforward integration into the Parser&apos;s code that would work in both light and dark
-                        modes. Naming conventions were based on JSON file systems, allowing easy implementation into the
-                        development codebase.
-                      </p>
-                    </div>
-                    <img
-                      className="greyborder full"
-                      src="/images/wizparser/DesignTokenBeforeAndAfter.png"
-                      alt="Design token before and after"
-                    />
-                  </div>
-                  <div className="header-border" />
+                  <ImageDetails title="Typography" description="Previously, type styles were not defined, which led to elements having no consistent style. To solve this, a typography guidelines was formed based on the existing fonts—Montserrat and Shantell Sans—allowing for a consistent style across all elements." image="/images/wizparser/Typography.png" />
 
-                  <div className="space-y-4">
-                    <div className="space-y-4 content-width">
-                      <h3>Spacing</h3>
-                      <p>
-                        Developing a consistent style for padding and margins for components was crucial for consistency
-                        across both mobile and desktop screens. These spacings were based on the 4-point system,
-                        allowing for developers to easily refer to when developing new elements.
-                      </p>
-                    </div>
-                    <img
-                      className="greyborder full"
-                      src="/images/wizparser/Sizing_Guidlines.png"
-                      alt="Sizing guidelines"
-                    />
-                  </div>
+                  <ImageDetails title="Colours" description="The primary and neutral palettes were defined using the Radix color system, allowing for straightforward integration into the Parser&apos;s code that would work in both light and dark modes. Naming conventions were based on JSON file systems, allowing easy implementation into the development codebase." image="/images/wizparser/DesignTokenBeforeAndAfter.png" />
+                  <ImageDetails title="Spacing" description="Developing a consistent style for padding and margins for components was crucial for consistency across both mobile and desktop screens. These spacings were based on the 4-point system, allowing for developers to easily refer to when developing new elements." image="/images/wizparser/Sizing_Guidlines.png" />
                 </div>
 
                 <div className="space-y-4" id="final-products">

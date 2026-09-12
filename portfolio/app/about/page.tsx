@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About — Jason Zachariah",
+  title: "About | Jason Zachariah",
   description: "About Jason Zachariah: product designer with 3+ years in design and coding education. He designs thoughtful ways for emergent technology, including AI, to fit everyday life. Experience at Ministry of Education, WizRobotics, York ESports, and NVISION.",
   alternates: { canonical: "https://jasonzachariah.github.io/about" },
   openGraph: {
-    title: "About — Jason Zachariah",
+    title: "About | Jason Zachariah",
     description: "About Jason Zachariah: product designer with 3+ years in design and coding education. He designs thoughtful ways for emergent technology, including AI, to fit everyday life. Experience at Ministry of Education, WizRobotics, York ESports, and NVISION.",
     url: "https://jasonzachariah.github.io/about",
     siteName: "Jason Zachariah",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About — Jason Zachariah",
+    title: "About | Jason Zachariah",
     description: "About Jason Zachariah: product designer with 3+ years in design and coding education. He designs thoughtful ways for emergent technology, including AI, to fit everyday life. Experience at Ministry of Education, WizRobotics, York ESports, and NVISION.",
     images: ["https://jasonzachariah.github.io/images/home/openGraph.png"],
   },
