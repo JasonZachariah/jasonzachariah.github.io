@@ -70,7 +70,7 @@ export default function Page() {
                 <p>1 Front-end Developer</p>
               </div>
             </div>
-            <div className="space-y-4" id="step1">
+            <div className="space-y-4" id="context">
               <h4>Context</h4>
               <div className="space-y-4 content-width">
                 <h3>A lack of a design system doesn&apos;t just impact designers, but developers too.</h3>
@@ -91,7 +91,7 @@ export default function Page() {
               className="greyborder my-4 full"
             />
 
-            <div className="space-y-4" id="step2">
+            <div className="space-y-4" id="challenge">
               <h4>Challenge</h4>
               <div className="space-y-4 ">
                 <div className="important-bg space-y-8">
@@ -129,7 +129,7 @@ export default function Page() {
               </div>
 
               <div className="space-y-4">
-                <div className="space-y-4" id="step3">
+                <div className="space-y-4" id="solution">
                   <div className="space-y-4">
                     <h4>Solution</h4>
                     <div className="space-y-4 content-width">
@@ -250,7 +250,7 @@ export default function Page() {
                   </div>
                 </div>
 
-                <div className="space-y-4" id="step4">
+                <div className="space-y-4" id="final-products">
                   <h4>Final Products</h4>
                   <div className="space-y-4 content-width">
                     <h3>A whole new way of designing elements</h3>
@@ -288,7 +288,7 @@ export default function Page() {
                   </div>
                 </div>
 
-                <div className="space-y-4" id="step5">
+                <div className="space-y-4" id="reflection">
                   <h4>Reflection</h4>
                   <p className="content-width">
                     This project was a great learning experience for me. I was able to work with a team to create a

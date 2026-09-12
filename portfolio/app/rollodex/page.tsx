@@ -26,7 +26,7 @@ export default function Page() {
     <>
 <main id="main-content" tabIndex={-1} className="transition-main">
         <section className="container project-with-sidebar">
-                <Sidebar anchorLinks={["Context", "Initial Notes", "Creating the Flows", "Reflection"]} />
+                <Sidebar anchorLinks={["Context", "Solution", "Initial Notes", "Creating the Flows", "Reflection"]} />
            
 
             <div id="project-content" className="project-content space-y-8 mt-16 w-full">
@@ -60,7 +60,7 @@ export default function Page() {
                         <p>Web Designer (My role)</p>
                     </div>
                 </div>
-                <div className="space-y-4" id="step1">
+                <div className="space-y-4" id="context">
                     <h4>Context</h4>
                     <div className="space-y-4 content-width">
                         <h3> The Ministry of Education needed a universal acronym directory for the Ministry of Education.</h3>
@@ -80,8 +80,15 @@ export default function Page() {
                         </p>
                     </div>
                 </div>
+                <div className="space-y-4" id="solution">
+                  
+<h3>Rollodex is a centralized dashboard for acronyms used across the Ontario Public Service (OPS), providing a reliable source for finding and understanding acronym for OPS employees.</h3>       <p>
+                            The solution was to create a new website for the client.
+                        </p>
+                   
+                </div>
 
-                <div className="space-y-4" id="step2">
+                <div className="space-y-4" id="initial-notes">
                     <h4>Initial Notes</h4>
                     <div className="space-y-4 content-width">
                         <h3>So, what were the issues with the old WizEdOS system?</h3>
@@ -114,7 +121,7 @@ export default function Page() {
                     </p>
                 </div>
 
-                <div className="space-y-4" id="step3">
+                <div className="space-y-4" id="creating-the-flows">
                     <h4>Creating the Flows</h4>
                     <div className="space-y-4 content-width">
                         <h3>Treat the website layout like a conversation</h3>
@@ -163,7 +170,7 @@ export default function Page() {
 
                 </div>
 
-                <div className="space-y-4" id="step7">
+                <div className="space-y-4" id="reflection">
                     <h4>Reflection</h4>
                     <div className="space-y-4 greyborder p-4 content-width">
                         <p className="caption-lg">1. Work with your client, not against them</p>
