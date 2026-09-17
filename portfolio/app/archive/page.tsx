@@ -22,6 +22,7 @@ const archiveMedia = [
   "/images/archive/swap gif.gif",
   "/images/archive/BacktoSchool_Kindergarten.mp4",
   "/images/archive/OntarioMuseumDay.png",
+  "/images/archive/Ponyboy.mp4",
 ];
 
 export default function Archive() {
