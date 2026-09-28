@@ -52,23 +52,23 @@ export default function Page() {
       <main id="main-content" tabIndex={-1}>
         <div className="container">
           <div id="panel-intro" className="mb-12 mt-4 flex flex-col gap-4">
-            <h4>Previous Web Developer @ <a href="https://www.ontario.ca/page/ministry-education"  className="pagelink" target="_blank" rel="noopener noreferrer">Ministry of Education</a></h4>
+            <p className="header">Previous Web Developer @ <a href="https://www.ontario.ca/page/ministry-education"  className="pagelink" target="_blank" rel="noopener noreferrer">Ministry of Education</a></p>
             <h1>
               Jason Zachariah is a product designer looking to bridge the gap between designers and developers
               <img src="/jzlogdark.png" alt="" className="hero-inline-logo" width={48} height={48} decoding="async" />
             </h1>
             <div className="flex  gap-4">
-            <h4>Socials:</h4>
+            <p className="header">Socials:</p>
             <a href="https://github.com/JasonZachariah" target="_blank" rel="noopener noreferrer" className="pagelink">GitHub</a>
           <a href="https://www.instagram.com/jasonz.design/" target="_blank" rel="noopener noreferrer" className="pagelink">Instagram</a>
           <a href="https://www.linkedin.com/in/jasontzachariah/" target="_blank" rel="noopener noreferrer" className="pagelink">LinkedIn</a>
 </div>
           </div>
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-8">
-            <Card title="Rollodex" description="Creating a universal acronym directory for the Ministry of Education" tags={["USER RESEARCH", "DESIGN ENGINEERING"]} image="/images/rollodex/rollodex_header.png" link="/rollodex" locked={true} />
-            <Card title="Wiz Parser" description="Creating a unified design system for faster development times." tags={["DESIGN SYSTEMS", "UX DESIGN"]} image="/images/wizparser/Header.gif" link="/wizParser" />
-            <Card title="DESNbook" description="An all-in-one dashboard for design students to plan their degrees." tags={["CASE STUDY", "USER RESEARCH"]} image="/images/handbook/addcoursesfilter.mp4" link="/handbook" />
-            <Card title="WizEdOS" description="Refining brand identity and optimizing website content layout." tags={["WEB DESIGN", "BRANDING"]} image="/images/wizedos/wizedosheader.png" link="/wizedos" />
+            <Card title="Creating a universal acronym directory for the Ministry of Education" description="" tags={["MINISTRY OF EDUCATION", "2026"]} image="/images/rollodex/rollodex_header.png" link="/rollodex" />
+            <Card title="A unified design system for faster development times for AI" description="" tags={["WIZROBOTICS", "2025"]} image="/images/wizparser/Header.gif" link="/wizParser" />
+            <Card title="An all-in-one dashboard for design students to plan their degrees." description="" tags={["PERSONAL PROJECT", "2025"]} image="/images/handbook/addcoursesfilter.mp4" link="/handbook" />
+            <Card title="Refining brand identity to optimize website content layout." description="" tags={["WIZROBOTICS", "2025"]} image="/images/wizedos/wizedosheader.png" link="/wizedos" />
                </div>
         </div>
       </main>

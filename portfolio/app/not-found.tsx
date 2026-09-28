@@ -7,7 +7,7 @@ export default function NotFound() {
       <h3>Page not found!</h3>
      
       <Link href="/">
-        <h4>Go to home</h4>
+        <p className="header">Go to home</p>
       </Link>
     </main>
   );

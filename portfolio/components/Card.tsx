@@ -17,9 +17,15 @@ export default function Card({ title, description, tags, image, link, locked = f
       <a href={locked ? undefined : link} aria-disabled={locked || undefined}>
         <div className="flex flex-col greyborder">
           <div className="m-4">
-            <h2>{title}</h2>
-            <p>{description}</p>
-
+         
+          <div className="space-x-2">
+              {tags.map((tag, i) => (
+                <span key={tag} className="contents">
+                  {i > 0 && <h4 className="w-fit text-center">&nbsp;|&nbsp;</h4>}
+                  <h4 className="w-fit text-center">{tag}</h4>
+                </span>
+              ))}
+            </div>
             <div className="locked-card-media aspect-16/9 mt-0 mb-4">
               {locked && <span className="locked-card-text">Coming soon</span>}
               {isVideo ? (
@@ -43,15 +49,9 @@ export default function Card({ title, description, tags, image, link, locked = f
                 />
               )}
             </div>
-
-            <div className="space-x-2">
-              {tags.map((tag, i) => (
-                <span key={tag} className="contents">
-                  {i > 0 && <h4 className="w-fit text-center">&nbsp;|&nbsp;</h4>}
-                  <h4 className="w-fit text-center">{tag}</h4>
-                </span>
-              ))}
-            </div>
+            <h2>{title}</h2>
+           
+            
           </div>
         </div>
       </a>

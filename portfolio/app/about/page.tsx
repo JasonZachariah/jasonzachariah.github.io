@@ -36,7 +36,7 @@ export default function Page() {
 
                   
                     <div className="pt-4">
-                        <h4>My Philosophy</h4>
+                        <p className="header">My Philosophy</p>
                         <p>
                             Working as a product designer and after-school coding teacher for <b>3 years</b> now, I have watched
                             how technologies have evolved over time and how they impact the next generation. With the rise of
@@ -45,7 +45,7 @@ export default function Page() {
                             them to fit into everyday life.
                         </p>
                         <div className="work-exp pt-4">
-                            <h4>My Experience</h4>
+                            <p className="header">My Experience</p>
                             <div className="work-exp-row header-border">
                                 <h3>Web Developer @ Ministry of Education</h3>
                                 <h4 className="work-exp-date">May 2026–Present</h4>

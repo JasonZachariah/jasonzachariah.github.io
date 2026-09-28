@@ -59,7 +59,7 @@ export default function Page() {
                     </div>
                 </div>
                 <div className="space-y-4" id="context">
-                    <h4>Context</h4>
+                    <p className="header">Context</p>
                     <div className="space-y-4 content-width">
                         <h3>WizEdOS had a problem- their website failed to communicate the value of their service.</h3>
 
@@ -80,7 +80,7 @@ export default function Page() {
                 </div>
 
                 <div className="space-y-4" id="initial-notes">
-                    <h4>Initial Notes</h4>
+                    <p className="header">Initial Notes</p>
                     <div className="space-y-4 content-width">
                         <h3>So, what were the issues with the old WizEdOS system?</h3>
 
@@ -113,7 +113,7 @@ export default function Page() {
                 </div>
 
                 <div className="space-y-4" id="creating-the-flows">
-                    <h4>Creating the Flows</h4>
+                    <p className="header">Creating the Flows</p>
                     <div className="space-y-4 content-width">
                         <h3>Treat the website layout like a conversation</h3>
 
@@ -162,7 +162,7 @@ export default function Page() {
                 </div>
 
                 <div className="space-y-4" id="reflection">
-                    <h4>Reflection</h4>
+                    <p className="header">Reflection</p>
                     <div className="space-y-4 greyborder p-4 content-width">
                         <p className="caption-lg">1. Work with your client, not against them</p>
                         <p>
@@ -179,11 +179,11 @@ export default function Page() {
                 <div className="header-border mt-16"></div>
                 <div className="flex flex-col md:flex-row justify-between gap-4 mt-16 full">
                     <a href="/wizParser" className="pagelink px-2 py-1">
-                        <h4 className="whitespace-nowrap">PREVIOUS: </h4>
+                        <p className="header whitespace-nowrap">PREVIOUS: </p>
                         <h3>Wiz Parser</h3>
                     </a>
                     <a href="/handbook" className="pagelink px-2 py-1">
-                        <h4 className="whitespace-nowrap">NEXT: </h4>
+                        <p className="header whitespace-nowrap">NEXT: </p>
                         <h3>DESNbook</h3>
                     </a>
                 </div>

@@ -72,7 +72,7 @@ export default function Page() {
               </div>
             </div>
             <div className="space-y-4" id="context">
-              <h4>Context</h4>
+              <p className="header">Context</p>
               <div className="space-y-4 content-width">
                 <h3>A lack of a design system doesn&apos;t just impact designers, but developers too.</h3>
                 <p>
@@ -93,7 +93,7 @@ export default function Page() {
             />
 
             <div className="space-y-4" id="challenge">
-              <h4>Challenge</h4>
+              <p className="header">Challenge</p>
               <div className="space-y-4 ">
                 <div className="important-bg space-y-8">
                   <div className="space-y-4">
@@ -132,7 +132,7 @@ export default function Page() {
               <div className="space-y-4">
                 <div className="space-y-4" id="solution">
                   <div className="space-y-4">
-                    <h4>Solution</h4>
+                    <p className="header">Solution</p>
                     <div className="space-y-4 content-width">
                       <h3>Perfecting handoff</h3>
                       <p>
@@ -211,7 +211,7 @@ export default function Page() {
                 </div>
 
                 <div className="space-y-4" id="final-products">
-                  <h4>Final Products</h4>
+                  <p className="header">Final Products</p>
                   <div className="space-y-4 content-width">
                     <h3>A whole new way of designing elements</h3>
                     <p>Here are a few of the deliverables created for the final Wiz Parser:</p>
@@ -249,7 +249,7 @@ export default function Page() {
                 </div>
 
                 <div className="space-y-4" id="reflection">
-                  <h4>Reflection</h4>
+                  <p className="header">Reflection</p>
                   <p className="content-width">
                     This project was a great learning experience for me. I was able to work with a team to create a
                     design system that would be easy to use and understand. Here are a few of the things I learned:
@@ -279,11 +279,11 @@ export default function Page() {
                 <div className="header-border mt-16" />
                 <div className="flex flex-col md:flex-row justify-between gap-4 mt-16 full">
                   <Link href="/octobud" className="pagelink px-2 py-1">
-                    <h4 className="whitespace-nowrap">PREVIOUS: </h4>
+                    <p className="header whitespace-nowrap">PREVIOUS: </p>
                     <h3>Octobud</h3>
                   </Link>
                   <Link href="/wizedos" className="pagelink px-2 py-1">
-                    <h4 className="whitespace-nowrap">NEXT: </h4>
+                    <p className="header whitespace-nowrap">NEXT: </p>
                     <h3>WizEdOS</h3>
                   </Link>
                 </div>

@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 @theme {
 
@@ -223,6 +223,24 @@ h4>a {
   font-weight: var(--h4-weight);
   line-height: var(--caption-line-height);
   letter-spacing: var(--caption-letter-spacing);
+}
+
+p.header,
+.header,
+.header > a {
+  color: var(--color-2);
+  display: inline-block;
+  font-family: var(--header-font-family);
+  text-transform: uppercase;
+  font-size: var(--caption-size);
+  font-weight: var(--h4-weight);
+  line-height: var(--caption-line-height);
+  letter-spacing: var(--caption-letter-spacing);
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+  word-wrap: normal;
 }
 
 p,

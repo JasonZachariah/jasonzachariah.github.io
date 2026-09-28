@@ -1,195 +1,218 @@
+import ImageDetails from "@/components/ImageDetails";
 import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "WizEdOS | Jason Zachariah",
-    description: "WizEdOS case study by Jason Zachariah: UX/UI redesign of the WizEdOS educational platform, including user flows and interface design.",
-    alternates: { canonical: "https://jasonzachariah.github.io/wizedos" },
-    openGraph: {
-        title: "WizEdOS | Jason Zachariah",
-        description: "WizEdOS case study by Jason Zachariah: UX/UI redesign of the WizEdOS educational platform, including user flows and interface design.",
-        url: "https://jasonzachariah.github.io/wizedos",
-        siteName: "Jason Zachariah",
-        images: ["https://jasonzachariah.github.io/images/home/openGraph.png"],
-        type: "website",
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "WizEdOS | Jason Zachariah",
-        description: "WizEdOS case study by Jason Zachariah: UX/UI redesign of the WizEdOS educational platform, including user flows and interface design.",
-        images: ["https://jasonzachariah.github.io/images/home/openGraph.png"],
-    },
+  title: "Rollodex | Jason Zachariah",
+  description:
+    "Rollodex case study by Jason Zachariah: a universal acronym directory for the Ministry of Education and Ontario Public Service.",
+  alternates: { canonical: "https://jasonzachariah.github.io/rollodex" },
+  openGraph: {
+    title: "Rollodex | Jason Zachariah",
+    description:
+      "Rollodex case study by Jason Zachariah: a universal acronym directory for the Ministry of Education and Ontario Public Service.",
+    url: "https://jasonzachariah.github.io/rollodex",
+    siteName: "Jason Zachariah",
+    images: ["https://jasonzachariah.github.io/images/home/openGraph.png"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rollodex | Jason Zachariah",
+    description:
+      "Rollodex case study by Jason Zachariah: a universal acronym directory for the Ministry of Education and Ontario Public Service.",
+    images: ["https://jasonzachariah.github.io/images/home/openGraph.png"],
+  },
 };
 
 export default function Page() {
-    return (
-        <>
-            <main id="main-content" tabIndex={-1} className="transition-main">
-                <section className="container project-with-sidebar">
-                    <Sidebar anchorLinks={["Context", "Solution", "Initial Notes", "Creating the Flows", "Reflection"]} />
+  return (
+    <>
+      <main id="main-content" tabIndex={-1} className="transition-main">
+        <section className="container project-with-sidebar">
+          <Sidebar anchorLinks={["Context", "Solution", "Testing", "Impact"]} />
 
+          <div id="project-content" className="project-content space-y-8 mt-16 w-full">
+            <h1>Rollodex</h1>
+            <h2>A universal acronym directory for the Ministry of Education</h2>
 
-                    <div id="project-content" className="project-content space-y-8 mt-16 w-full">
+            <div className="child flex justify-center">
+              <img
+                className="image2 greyborder full"
+                src="/images/rollodex/rollodex_header.png"
+                alt="Rollodex header"
+              />
+            </div>
 
-                        <h1>Rollodex</h1>
-                        <h2>A universal acronym directory for the Ministry of Education</h2>
+            <div className="flex justify-between flex-col md:flex-row full">
+              <div>
+                <p>
+                  <b>Project Type:</b>
+                </p>
+                <p>Client Work (Ministry of Education)</p>
+              </div>
+              <div>
+                <p>
+                  <b>Timeline:</b>
+                </p>
+                <p>9 weeks (June 2026 - August 2026)</p>
+              </div>
+              <div>
+                <p>
+                  <b>Tools & Skills:</b>
+                </p>
+                <p>User Research</p>
+                <p>Design Engineering</p>
+                <p>Supabase</p>
+                <p>React+Vite</p>
+              </div>
+              <div>
+                <p>
+                  <b>Team:</b>
+                </p>
+                <p>Web Designer (My role)</p>
+              </div>
+            </div>
 
+            <div className="space-y-4" id="context">
+              <p className="header">Context</p>
+              <div className="space-y-4 content-width">
+                <h3>
+The  Ontario Public Service (OPS) is full of acronyms, but
+                  there was no single place to find information about them
+                </h3>
+                <p>
+                  When I joined the Ministry of Education, one of the first things I noticed was how much of the
+                  language was based in acronyms. Whether in emails, live webpages or documents, making sure acronyms were used properly was a major concer in the OPS, and a large painpoint for new and experienced staff alike.
+                </p>
+                <p>
+                  While there existed makeup solutions, none of the provided resoucres fully help solve the problem, and ended up causing more problems than they solved. Therfore, I decided to design and build a new solution.
+                </p>
+                <img
+                  className="greyborder my-4 full"
+                  src="/images/rollodex/pastversions.png"
+                  alt="Three past solutions for acronym management: an internal list, a vibe-coded tracker and a PDF glossary"
+                />
+                <p>
+                  The real gap was not the lack of a list. It was the lack of a source of truth that was easy to search,
+                  secure, and could be maintained by the people who actually use the acronyms.
+                </p>
+              </div>
+            </div>
 
-                        <div className=" child flex justify-center">
+            <div className="space-y-4" id="solution">
+              <p className="header">Solution</p>
+              <div className="space-y-4 content-width">
+                <h3>
+                  Rollodex is a single, searchable directory that standardizes how acronyms are updated and used across the Ministry of Education
+                </h3>
+              
+              </div>
+              <ImageDetails
+                title="Find any acronym in seconds"
+                description="Instead of scrolling a dense list, staff can search by acronym, full name, tags or description. Results update instantly and can be sorted, so the answer is usually the first card on the screen."
+                image="/images/rollodex/rollodex_filter.gif"
+              />
+              <ImageDetails
+                title="Narrow results to what matters"
+                description="Filters for ministry or division, language, and cloud or local acronyms cut hundreds of results down to a handful. Bookmarks let people keep the acronyms they use every day one click away."
+                image="/images/rollodex/rollodex_options.gif"
+              />
+              <ImageDetails
+                title="Context, not just a full name"
+                description="Each acronym has its own page with a definition, division, language and tags. Staff can copy the full name straight into a document, or save the entry as a PDF, replacing the old glossary that was always out of date."
+                image="/images/rollodex/rollodex_download.gif"
+              />
+            </div>
 
-                            <img className=" image2 greyborder full" src="/images/rollodex/rollodex_header.png" />
-                        </div>
-                        <div className="flex justify-between flex-col   md:flex-row full">
-                            <div>
-                                <p><b>Project Type:</b></p>
-                                <p>Client Work (Ministry of Education)</p>
-                            </div>
-                            <div>
-                                <p><b>Timeline:</b></p>
-                                <p>9 weeks (June 2026 - August 2026)</p>
-                            </div>
-                            <div>
-                                <p><b>Tools & Skills:</b></p>
-                                <p>User Research</p>
-                                <p>Design Engineering</p>
-                                <p>Supabase</p>
-                                <p>React+Vite</p>
-                            </div>
-                            <div>
-                                <p><b>Team:</b></p>
-                                <p>Web Designer (My role)</p>
-                            </div>
-                        </div>
-                        <div className="space-y-4" id="context">
-                            <h4>Context</h4>
-                            <div className="space-y-4 content-width">
-                                <h3>The Ministry of Education had a gap, there was no centralized directory for acronyms used across the Ontario Public Service (OPS)</h3>
+            <div className="space-y-4" id="testing">
+              <p className="header">Testing</p>
+              <div className="space-y-4 content-width">
+                <h3>Focusing on the Ministry of Education, not the entire OPS</h3>
+                <p>
+                  Since I was working with the Ministry of Education, I was able to focus on the needs of the Ministry of Health, rather than the entire OPS. This allowed me to focus on the needs of the users, and to design a product that is specific to the Ministry of Education. This however came with the tradeoff that any acronyms that were not specific to the Ministry of Education were not included in the product, for example an acronym that was used in the Ontario Public Service, but not the Ministry of Education. This was a tradeoff that I was willing to make, as I felt that it was more important to focus on the needs of the Ministry of Education for a beta launch, before expanding to the entire OPS
+                </p>
+              </div>
+              <div className="space-y-4 content-width">
+                <h3>Testing inside real workdays, not in a Figma file</h3>
+                <p>
+                  Due to the time constraints of the project being less than 10 weeks, I was unable to conduct traditional user testing. Instead, I deployed test versions of Rollodex with Cloudflare Pages, in order for users to test the product in their daily routines. Each design variant had its own test link, which let colleagues use Rollodex in their daily routines while I fixed issues and refined the design between rounds.
+                  This allowed me to get real feedback from users about the product, and to refine the design based on their needs. This did come with its own challenges, as I had to ensure that the test versions were stable and working enough to allow users to use the product in their daily routines.
+                </p>
+                
+                <h3>Testing inside real workdays, not in a Figma file</h3>
+                <p>
+                  Due to the time constraints of the project being less than 10 weeks, I was unable to conduct traditional user testing. Instead, I deployed test versions of Rollodex with Cloudflare Pages, in order for users to test the product in their daily routines. Each design variant had its own test link, which let colleagues use Rollodex in their daily routines while I fixed issues and refined the design between rounds.
+                  This allowed me to get real feedback from users about the product, and to refine the design based on their needs. This did come with its own challenges, as I had to ensure that the test versions were stable and working enough to allow users to use the product in their daily routines.
+                </p>
+                <img
+                  className="greyborder my-4 full"
+                  src="/images/rollodex/cloudfare_test.png"
+                  alt="Cloudflare deployment serving the live version and two test versions of Rollodex"
+                />
+                <p>Watching people use it for real surfaced two needs that a static prototype would have missed.</p>
+              </div>
+              <div className="space-y-4 content-width">
+                <h3>Creating a central source of truth</h3>
+                <p>
+                 The Rollodex is only as good as the data it contains. To avoid ending up with another out-of-date list in the future,
+                  I built an admin dashboard for managing acronyms globally. This allows the CO or the head of each department to manage the acronyms for their respective ministry or division, so the people closest to the acronyms are the ones responsible for them.
+                </p>
+              </div>
+              <div className="space-y-4 content-width">
+                <h3>What about acronyms only my team uses?</h3>
+                <p>
+                  Not every acronym belongs in a ministry-wide database. Local acronyms let users save team-specific
+                  terms to their own list, so they can still rely on Rollodex without waiting for an admin to approve an
+                  entry.
+                </p>
+              </div>
+            </div>
 
-                                <p>
-                                    During my time at the Ontario Public Service (OPS), there was a gap in the knowledge of acronyms used across the OPS. Acronyms are used in all ares of the OPS, and making sure that the correct acronyms are used in the correct context. This was a problem because it was difficult for employees to find the information they needed quickly and efficiently. while there were some resources avavlbe, such as a ministry acronym list or a department acronym list, there was no way for this information to be updated or maintained by the OPS.
-                                </p>
-                                <img className="greyborder my-4 full" src="/images/rollodex/pastversions.png" />
-                            </div>
-                        </div>
-                        <div className="space-y-4" id="solution">
+            <div className="space-y-4" id="impact">
+              <p className="header">Impact</p>
+              <div className="space-y-4 content-width">
+                <h3>Creating a product that supports the people who needed it most</h3>
+                <p>
+                
+                </p>
+                <p>
+                  The feedback that meant the most came unprompted, in messages from colleagues after launch:
+                </p>
+                <img
+                  className="greyborder my-4 full"
+                  src="/images/rollodex/rollodex_comments.png"
+                  alt="Messages from OPS colleagues praising Rollodex after launch"
+                />
+                <blockquote className="border-l-4 pl-4 italic">
+                  &ldquo;Thanks for creating this. I plan to use it all the time.&rdquo;
+                </blockquote>
+              </div>
+              <div className="space-y-4 content-width">
+                <h3>What I learned</h3>
+                <p>
+                  Designing inside the codebase changed how I think about testing. Shipping real, working versions early
+                  gave me honest feedback about how the tool fit into people&apos;s work, not just how it looked. It also
+                  meant the product was maintainable from day one, which was the problem every past solution had failed
+                  to solve.
+                </p>
+              </div>
+            </div>
 
-                            <h3>Rollodex is a centralized dashboard for acronyms used across the Ontario Public Service (OPS), providing a reliable source for finding and understanding acronym for OPS employees.</h3>       <p>
-                                The solution was to create a new website for the client.
-                            </p>
-
-                        </div>
-
-                        <div className="space-y-4" id="initial-notes">
-                            <h4>Initial Notes</h4>
-                            <div className="space-y-4 content-width">
-                                <h3>So, what were the issues with the old WizEdOS system?</h3>
-
-                                <p>After reviewing the initial website with the client, these were the main pain points that
-                                    emerged:</p>
-
-                            </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="space-y-4 greyborder p-4">
-                                    <p className="caption-lg">Inconsistent Branding</p>
-                                    <p>
-                                        Many images on the website were random stock illustrations that failed to communicate
-                                        the company's services. As a result, the site felt disjointed and gave off an unprofessional
-                                        impression.
-                                    </p>
-                                </div>
-                                <div className="space-y-4 greyborder p-4">
-                                    <p className="caption-lg">Confusing Page Setup</p>
-                                    <p>
-                                        Important sections such as the booking form were placed in hard-to-access areas, making
-                                        it difficult for users to locate key actions quickly.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <p>
-                                With a clear understanding of what needed improvement, I began the research and development
-                                phase.
-                            </p>
-                        </div>
-
-                        <div className="space-y-4" id="creating-the-flows">
-                            <h4>Creating the Flows</h4>
-                            <div className="space-y-4 content-width">
-                                <h3>Treat the website layout like a conversation</h3>
-
-                                <p>
-                                    To get a clearer idea of how to structure the website that would satisfy the client, I had
-                                    them
-                                    "pitch" me the WizEdOS service as if I were another business
-                                    . Using this method, I was able to identify natural ways to group content, taking notes on
-                                    major
-                                    points and structuring them based on how the client explained the platform.
-                                </p>
-
-                                <p>
-                                    This process allowed us to find what aspects of the website needed to be added, and how we
-                                    should organize them by pages.
-                                </p>
-
-                                <p> From this, we identified two main user flows for the WizEdOS website:
-                                    to encourage companies to book a meeting, and second, to showcase the four sub-services
-                                    of WizEdOS.</p>
-
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <img className="greyborder child col-span-3 my-4 full" style={{ width: "100%" }}
-                                    src="/images/wizedos/InformationArchitecture.png" />
-                            </div>
-
-                            <div className="space-y-4">
-                                <p>
-                                    For the first flow, this was achieved by adding a CTA button in both the hero section and
-                                    the
-                                    navigation bar. This opened a pop-up modal, allowing users to access the booking flow easily
-                                    without it disrupting the users flow like it did before
-                                </p>
-
-                            </div>
-                            <img className="greyborder my-4 full" src="/images/wizedos/HeroSection.png" />
-
-                            <video className="greyborder full" preload="auto" autoPlay loop muted playsInline>
-                                <source src="/images/wizedos/WireFrame_to_Final.mp4" type="video/mp4" />
-                            </video>
-
-                            <img className="greyborder my-4 full" src="/images/wizedos/Styleguide.png" />
-
-                        </div>
-
-                        <div className="space-y-4" id="reflection">
-                            <h4>Reflection</h4>
-                            <div className="space-y-4 greyborder p-4 content-width">
-                                <p className="caption-lg">1. Work with your client, not against them</p>
-                                <p>
-                                    Maintaining transparency and involving the client in design decisions helped minimize revisions later and ensured we were aligned on the final deliverables.
-                                </p>
-                            </div>
-                            <div className="space-y-4 greyborder p-4 content-width">
-                                <p className="caption-lg">2. Seeing the Big Picture</p>
-                                <p>
-                                    Adapting the existing brand identity to a flexible design system helped create a cohesive and consistent brand. This helped the client understand the value of the design system and how it would benefit the company in the long run.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="header-border mt-16"></div>
-                        <div className="flex flex-col md:flex-row justify-between gap-4 mt-16 full">
-                            <a href="/wizParser" className="pagelink px-2 py-1">
-                                <h4 className="whitespace-nowrap">PREVIOUS: </h4>
-                                <h3>Wiz Parser</h3>
-                            </a>
-                            <a href="/handbook" className="pagelink px-2 py-1">
-                                <h4 className="whitespace-nowrap">NEXT: </h4>
-                                <h3>DESNbook</h3>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </>
-    );
+            <div className="header-border mt-16"></div>
+            <div className="flex flex-col md:flex-row justify-between gap-4 mt-16 full">
+              <a href="/wizParser" className="pagelink px-2 py-1">
+                <p className="header whitespace-nowrap">PREVIOUS: </p>
+                <h3>Wiz Parser</h3>
+              </a>
+              <a href="/handbook" className="pagelink px-2 py-1">
+                <p className="header whitespace-nowrap">NEXT: </p>
+                <h3>DESNbook</h3>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
 }

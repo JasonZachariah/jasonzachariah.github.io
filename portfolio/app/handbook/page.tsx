@@ -64,7 +64,7 @@ export default function Page() {
                     </div>
                 </div>
                 <div className="space-y-4" id="context">
-                    <h4>Context</h4>
+                    <p className="header">Context</p>
                     <div className="space-y-4 content-width">
                         <h3>Planning out courses for the DESN program is a hassle, leading to students to feel
                             frustrated
@@ -90,7 +90,7 @@ export default function Page() {
                 </div>
                
                 <div className="space-y-4" id="initial-research">
-                    <h4>Initial Research</h4>
+                    <p className="header">Initial Research</p>
                     <div className="space-y-4 content-width">
                         <h3>To understand the pain points of degree planning, I surveyed <b>15 current DESN students</b>.</h3>
                         <p>
@@ -127,7 +127,7 @@ export default function Page() {
                 <div className="important-bg space-y-8">
                     
                     <div className="space-y-4">
-                        <h4>HMW STATEMENT</h4>
+                        <p className="header">HMW STATEMENT</p>
                         <h2>How do we make the process of planning out DESN student requirements a simplified,
                             single experience?
                         </h2>
@@ -162,7 +162,7 @@ export default function Page() {
                 </div>
 
                 <div className="solution-bg space-y-4">
-                    <h4>Solution</h4>
+                    <p className="header">Solution</p>
                     <div className="space-y-4">
                         <h3>One dashboard for all your course planning needs</h3>
                         <p>
@@ -172,7 +172,7 @@ export default function Page() {
                     </div>
 
                     <div className="space-y-4">
-                        <h4>Final Product</h4>
+                        <p className="header">Final Product</p>
                         
                                     <ImageDetails title="Clearer Course Requirements" description="An organized way to view course requirements, as well as how they affect your degree progress." image="/images/handbook/finalprereq.mp4" />
                              
@@ -188,7 +188,7 @@ export default function Page() {
 
 
                 <div className="space-y-4" id="ideation-process">
-                    <h4>Ideation Process</h4>
+                    <p className="header">Ideation Process</p>
 
                     <div className="space-y-4 content-width">
                         <h3>Re-evaluating the User Journey</h3>
@@ -219,7 +219,7 @@ export default function Page() {
                 </div>
 
                 <div className="space-y-4" id="user-feedback">
-                    <h4>User Feedback</h4>
+                    <p className="header">User Feedback</p>
                     <div className="space-y-4 content-width">
                         <h3>Mid-Fidelity to Hi-Fidelity</h3>
                         <p>
@@ -254,7 +254,7 @@ export default function Page() {
                     </div>
 
                     <div className="space-y-4">
-                        <h4>Design Changes</h4>
+                        <p className="header">Design Changes</p>
                              <ImageDetails title="Course Card Design" description="User testing showed that course cards lacked clarity and essential details, such as when a course was offered. Based on feedback, I redesigned the cards with clearer organization and added labels to show which requirements each course fulfills." image="/images/handbook/desnbookcardfinal.mp4" />
                                 
 
@@ -265,7 +265,7 @@ export default function Page() {
                 </div>
 
                 <div className="space-y-4" id="next-steps">
-                    <h4>Next Steps</h4>
+                    <p className="header">Next Steps</p>
                     <div className="space-y-4 content-width">
                         <h3>Connection to Existing Platforms</h3>
                         <p>
@@ -296,11 +296,11 @@ export default function Page() {
                 <div className="header-border mt-16"></div>
                 <div className="flex flex-col md:flex-row justify-between gap-4 mt-16 full">
                     <a href="/wizedos" className="pagelink px-2 py-1">
-                        <h4 className="whitespace-nowrap">PREVIOUS: </h4>
+                        <p className="header whitespace-nowrap">PREVIOUS: </p>
                         <h3>WizEdOS</h3>
                     </a>
                     <a href="/octobud" className="pagelink px-2 py-1">
-                        <h4 className="whitespace-nowrap">NEXT: </h4>
+                        <p className="header whitespace-nowrap">NEXT: </p>
                         <h3>Octobud</h3>
                     </a>
                 </div>
