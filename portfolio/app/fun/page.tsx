@@ -10,18 +10,15 @@ export const metadata: Metadata = {
 export default function FunPage() {
   return (
     <main id="main-content" tabIndex={-1}>
-      <div className="container py-12 space-y-8">
-        <div>
-          <h1>Fun</h1>
-          <p>Speak to drive the sketch. Press S to export.</p>
-        </div>
+      <div className="container py-12">
         <div
-          id="fun-sketch-copy"
-          className="fun-sketch flex w-full justify-center overflow-hidden"
-          aria-label="Speech-driven Riso sketch"
+          id="random-row"
+          data-supabase-url={process.env.NEXT_PUBLIC_SUPABASE_URL}
+          data-supabase-key={process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}
+          data-table="APItest"
         />
       </div>
-      <Script src="/sketches/funSketchCopy.js" strategy="afterInteractive" />
+      <Script src="/sketches/randomRow.js" strategy="afterInteractive" />
     </main>
   );
 }
