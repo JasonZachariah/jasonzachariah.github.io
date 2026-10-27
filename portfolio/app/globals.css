@@ -71,9 +71,9 @@
   --h2-line-height: 1.35;
   --h2-letter-spacing: 0.01em;
 
-  --h3-size: 1.138rem; 
+  --h3-size: 1.2rem; 
   --h3-weight: 600;
-  --h3-line-height: 1.4;
+  --h3-line-height: 1.5;
   --h3-letter-spacing: 0.01em;
 
   --h4-size: 1.067rem; 
@@ -629,6 +629,28 @@ h4 .sidebar-link[aria-current="true"] {
 
 .greyborder.p-4 {
   border-radius: var(--radius-card-sm);
+}
+
+.notes-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--color-4);
+  box-shadow: 0 0 0 2px var(--neutral-100);
+  border-radius: var(--radius-card-lg);
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .notes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .parent:hover .greyborder {
