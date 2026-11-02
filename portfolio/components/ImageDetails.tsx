@@ -10,8 +10,8 @@ export default function ImageDetails({
   const isVideo = image.endsWith(".mp4");
 
   return (
-    <div className="mx-auto flex w-full flex-col items-center justify-center gap-12 py-4 md:flex-row">
-      <div className="w-full shrink-0 md:w-1/2">
+    <div className="mx-auto flex w-full flex-col items-start gap-4 py-4">
+      <div className="w-full">
         {isVideo ? (
           <video
             className="greyborder w-full"
@@ -27,7 +27,7 @@ export default function ImageDetails({
           <img className="greyborder w-full" src={image} alt={title} />
         )}
       </div>
-      <div className="w-full space-y-4 md:w-1/2">
+      <div className="w-full space-y-4">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>

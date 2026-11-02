@@ -79,31 +79,15 @@ export default function Page() {
               <div className="space-y-16">
                 <div className="space-y-4 content-width">
                   <h3>
-                    The Ontario Public Service (OPS) is full of acronyms, but there was no easy way to find information
-                    about them
+                    The Ontario Public Service (OPS)  had a gap - there was no easy way to find information about acronyms
                   </h3>
                   <p>
                     When I joined the Ministry of Education, one of the first things I noticed was how much of the
                     language was based in acronyms. Whether in emails, live webpages or documents, making sure acronyms
-                    were used properly was a major concer in the OPS, and a large painpoint for new and experienced
+                    were used properly was a major concern in the OPS, and a large painpoint for new and experienced
                     staff alike.
                   </p>
-                </div>
-                <div className="space-y-4 content-width">
-                  <h3>Existing solutions existed, but were not enough</h3>
-                  <p>
-                    Looking at the past solutions, there were none that fully help solve the problem. PDF and Internal
-                    Lists were the most common solutions, but they were not easy to search, and could not be easily
-                    updated- making them not very useful for the long term.
-                  </p>
-                  <p>
-                    There also existed vibe-coded trackers that certain persons used to track acronyms, but these were
-                    not very scalable and only worked for a single user, not a team.
-                  </p>
-                  <p>
-                    The real gap was not the lack of a list. It was the lack of a source of truth that was easy to
-                    search, secure, and could be maintained by the people who actually use the acronyms.
-                  </p>
+                  <p>This was especially true in our team in the <strong>Digital Communication branch</strong>, we had a lot of acronyms that were used frequently, but not easily searchable. While there were some in-team solutions,such as personal "vibe-coded" trackers, they only worked for a single user, and could not be easily shared with the team or other departments.</p>
                   <img
                     className="greyborder full"
                     src="/images/rollodex/pastversions.png"
@@ -121,7 +105,8 @@ export default function Page() {
                     Rollodex is a single, searchable directory that standardizes how acronyms are updated and used
                     across the Ministry of Education
                   </h3>
-                </div>
+                  <p> Led by the Digital Communication Branch and spearheaded by me, Rollodex is a centralized, searchable directory that standardizes the creation, maintenance, and use of acronyms across the Ministry of Education.  </p>
+                </div>             
                 <ImageDetails
                   title="Find any acronym in seconds"
                   description="Instead of scrolling a dense list, staff can search by acronym, full name, tags or description. Results update instantly and can be sorted, so the answer is usually the first card on the screen."
@@ -148,7 +133,7 @@ export default function Page() {
                     Before developing, there were three major constraints I had to consider on the scope of the project
                     on my end:
                   </h3>
-                  <div className="notes-grid">
+                  <div >
                     <div className="notes-card">
                       <p className="caption-lg">Focusing on the Ministry of Education, not the entire OPS</p>
                       <p>
@@ -190,6 +175,8 @@ export default function Page() {
                       src="/images/rollodex/cloudfare_test.png"
                       alt="Cloudflare deployment serving the live version and two test versions of Rollodex"
                     />
+                    <h3> Creating perfec handoffs for developers of the future</h3>
+                    <p> As mentioned eariler, this project focused on a small snapshot of the Ministry of Education, but the admin dashboard and the live version of Rollodex are designed to be easily extended to other ministries and divisions. To that end, the next developer who takes over the project will have a clear, well-documented starting point, rather than having to figure everything out from scratch.</p>
                   </div>
                 </div>
               </div>
@@ -206,18 +193,15 @@ export default function Page() {
                     src="/images/rollodex/rollodex_comments.png"
                     alt="Messages from OPS colleagues praising Rollodex after launch"
                   />
-                  <blockquote className="border-l-4 pl-4 italic">
-                    &ldquo;Thanks for creating this. I plan to use it all the time.&rdquo;
-                  </blockquote>
+
                 </div>
                 <div className="space-y-4 content-width">
-                  <h3>What I learned</h3>
-                  <p>
-                    Designing inside the codebase changed how I think about testing. Shipping real, working versions
-                    early gave me honest feedback about how the tool fit into people&apos;s work, not just how it
-                    looked. It also meant the product was maintainable from day one, which was the problem every past
-                    solution had failed to solve.
-                  </p>
+                  <h3>What did Rollodex achieve?</h3>
+
+                  <h2>
+                    By allowing a gradual transition from the old tool to the new tool, we were able to get honest feedback about how the tool fit into people&apos;s work, not just how it
+                    looked. By creating a product that was able to be used by the people who needed it most and adapt to their needs, Rollodex has become a go-to tool for OPS staff.
+                  </h2>
                 </div>
               </div>
             </div>

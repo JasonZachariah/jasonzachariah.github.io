@@ -65,10 +65,11 @@ export default function Page() {
 </div>
           </div>
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-8">
+            <Card title="Allowing students to have a voice in their grad show website" description="" tags={["YORK DESIGN", "2026"]} image="/images/archive/p5cooltriangles.gif" link="/rollodex" locked={true}/>
             <Card title="Creating a universal acronym directory for the Ministry of Education" description="" tags={["MINISTRY OF EDUCATION", "2026"]} image="/images/rollodex/rollodex_header.png" link="/rollodex" />
             <Card title="A unified design system for faster development times for AI" description="" tags={["WIZROBOTICS", "2025"]} image="/images/wizparser/Header.gif" link="/wizParser" />
             <Card title="An all-in-one dashboard for design students to plan their degrees." description="" tags={["PERSONAL PROJECT", "2025"]} image="/images/handbook/addcoursesfilter.mp4" link="/handbook" />
-            <Card title="Refining brand identity to optimize website content layout." description="" tags={["WIZROBOTICS", "2025"]} image="/images/wizedos/wizedosheader.png" link="/wizedos" />
+            {/* <Card title="Refining brand identity to optimize website content layout." description="" tags={["WIZROBOTICS", "2025"]} image="/images/wizedos/wizedosheader.png" link="/wizedos" /> */}
                </div>
         </div>
       </main>

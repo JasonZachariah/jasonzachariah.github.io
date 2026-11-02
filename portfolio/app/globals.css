@@ -52,8 +52,8 @@
   --accent2-color: color-mix(in oklch, var(--accent-2) 60%, transparent);
   --accent3-color: var(--accent-3-muted);
 
-  --radius-card-lg: 0.575rem;
-  --radius-card-sm: 0.2375rem;
+  --radius-card-lg: 0;
+  --radius-card-sm: 0;
 
   --base-font-family: var(--font-overpass), ui-sans-serif, system-ui, sans-serif;
   --header-font-family: var(--font-pp-sans-rounded), ui-sans-serif, system-ui, sans-serif;
