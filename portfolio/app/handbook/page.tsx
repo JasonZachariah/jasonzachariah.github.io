@@ -34,70 +34,56 @@ export default function Page() {
             anchorLinks={["Context", "Initial Research", "Ideation Process", "User Feedback", "Next Steps"]}
           />
 
-          <div id="project-content" className="project-content space-y-8 mt-16 w-full">
-            <h1>DESNbook</h1>
-            <h2>Concept for an all-in-one dashboard that allows design students to plan their degrees.</h2>
+          <div id="project-content" className="project-content space-y-12 mt-16 w-full">
+            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between full">
+              <h1>DESNbook</h1>
+              <h2 className="md:max-w-sm md:text-right">
+                Concept for an all-in-one dashboard that allows design students to plan their degrees.
+              </h2>
+            </div>
 
             <div className="child flex justify-center">
-              <video className="image2 greyborder full" preload="auto" autoPlay loop muted playsInline>
+              <video className="image2 greyborder full aspect-16/9 object-contain" preload="auto" autoPlay loop muted playsInline>
                 <source src="/images/handbook/addandfilterfinal.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
 
-            <div className="flex justify-between flex-col md:flex-row full">
-              <div>
-                <p>
-                  <b>Project Type:</b>
-                </p>
-                <p>Personal Project</p>
-              </div>
-              <div>
-                <p>
-                  <b>Timeline:</b>
-                </p>
-                <p>9 weeks (April-June 2025)</p>
-              </div>
-              <div>
-                <p>
-                  <b>Tools & Skills:</b>
-                </p>
-                <p>Figma</p>
-                <p>Jitter</p>
-                <p>User Research</p>
-                <p>User Testing</p>
-              </div>
-              <div>
-                <p>
-                  <b>Team:</b>
-                </p>
-                <p>1 Designer (My role)</p>
-              </div>
-            </div>
-
             <div className="space-y-4" id="context">
               <p className="header">Context</p>
-              <div className="space-y-4 content-width">
-                
-                  <h3>
-                    Planning out courses for the DESN program is a hassle, leading students to feel frustrated and
-                    overwhelmed when planning their degrees.
-                  </h3>
-                  <div className="space-y-4">
-                    <p>
-                      As a design student in the DESN program, one area I dreaded was planning my courses - especially
-                      in my first year. The DESN Program is a <span className="rough-highlight">120-credit program</span>{" "}
-                      that requires students to plan out their courses to fit the requirements. However, the resources
-                      used to help students require students to reference multiple sources of information.
-                    </p>
-                  </div>
-                
-                <div className="quote space-y-4">
-                  <p className="caption-lg">
-                    &ldquo;I had to pick my 2nd year courses and having to map out my picks for the next 2 years over
-                    and over by hand to make sure I wasn&apos;t missing anything...&rdquo;
+              <div className="space-y-16">
+                <div className="space-y-4 content-width">
+                  <p className="quote-lg">
+                    Planning a DESN degree meant mapping a 120-credit program by hand, pulling requirements from
+                    several places, and checking again and again that nothing was missing.
                   </p>
-                  <p className="caption-sm">-DESN Student, when asked about course planning challenges.</p>
+                  <div className="flex justify-between flex-col md:flex-row full">
+                    <div>
+                      <p>
+                        <b>Project Type:</b>
+                      </p>
+                      <p>Personal Project</p>
+                    </div>
+                    <div>
+                      <p>
+                        <b>Timeline:</b>
+                      </p>
+                      <p>9 weeks (April-June 2025)</p>
+                    </div>
+                    <div>
+                      <p>
+                        <b>Tools & Skills:</b>
+                      </p>
+                      <p>Figma, Jitter, User Research, User Testing</p>
+                    </div>
+                  </div>
+                  <div className="quote space-y-4">
+                    <p className="caption-lg">
+                      &ldquo;I had to pick my 2nd year courses and having to map out my picks for the next 2 years over
+                      and over by hand to make sure I wasn&apos;t missing anything...&rdquo;
+                    </p>
+                    <p className="caption-sm">-DESN Student, when asked about course planning challenges.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -178,7 +164,7 @@ export default function Page() {
                   </div>
                 
                 <img
-                  className="greyborder my-4 full"
+                  className="greyborder my-4 full aspect-16/9 object-contain"
                   src="/images/handbook/competitor.png"
                   alt="Competitor analysis of degree planning tools"
                 />
@@ -235,12 +221,12 @@ export default function Page() {
                   </div>
                 
                 <img
-                  className="greyborder my-4 full"
+                  className="greyborder my-4 full aspect-16/9 object-contain"
                   src="/images/handbook/currentjourney.png"
                   alt="Current fragmented course-planning journey"
                 />
                 <img
-                  className="greyborder my-4 full"
+                  className="greyborder my-4 full aspect-16/9 object-contain"
                   src="/images/handbook/revisedjourney.png"
                   alt="Revised unified course-planning journey"
                 />
@@ -261,7 +247,7 @@ export default function Page() {
                   </div>
                 
                 <img
-                  className="greyborder my-4 full"
+                  className="greyborder my-4 full aspect-16/9 object-contain"
                   src="/images/handbook/Wireframes.png"
                   alt="DESNbook mid-fidelity wireframes"
                 />

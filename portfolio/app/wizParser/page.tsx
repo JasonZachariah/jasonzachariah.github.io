@@ -32,67 +32,44 @@ export default function Page() {
         <section className="container project-with-sidebar">
           <Sidebar anchorLinks={["Context", "Challenge", "Solution", "Final Products", "Reflection"]} />
 
-          <div id="project-content" className="project-content space-y-8 mt-16 w-full">
-            <h1>Wiz Parser</h1>
-            <h2>A design system to reduce developer&apos;s headaches.</h2>
-
-            <div className="child flex justify-center">
-              <img className="image2 greyborder full" src="/images/wizparser/Header.gif" alt="Wiz Parser header" />
+          <div id="project-content" className="project-content space-y-12 mt-16 w-full">
+            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between full">
+              <h1>Wiz Parser</h1>
+              <h2 className="md:max-w-sm md:text-right">A design system to reduce developer&apos;s headaches.</h2>
             </div>
 
-            <div className="flex justify-between flex-col md:flex-row full">
-              <div>
-                <p>
-                  <b>Project Type:</b>
-                </p>
-                <p>Client Work (WizRobotics)</p>
-              </div>
-              <div>
-                <p>
-                  <b>Timeline:</b>
-                </p>
-                <p>8 weeks</p>
-              </div>
-              <div>
-                <p>
-                  <b>Tools & Skills:</b>
-                </p>
-                <p>Figma</p>
-                <p>User Research</p>
-                <p>User Testing</p>
-                <p>JSON File Systems</p>
-              </div>
-              <div>
-                <p>
-                  <b>Team:</b>
-                </p>
-                <p>1 Web Designer (My role)</p>
-                <p>1 Front-end Developer</p>
-              </div>
+            <div className="child flex justify-center">
+              <img className="image2 greyborder full aspect-16/9 object-contain" src="/images/wizparser/Header.gif" alt="Wiz Parser header" />
             </div>
 
             <div className="space-y-4" id="context">
               <p className="header">Context</p>
-              <div className="space-y-4 content-width">
-                
-                  <h3>A lack of a design system doesn&apos;t just impact designers, but developers too.</h3>
-                  <div className="space-y-4">
-                    <p>
-                      I was assigned to work with a front-end developer to redesign Wiz Parser - an online interactive
-                      teaching platform. The current developer had no system in place for creating new elements, instead
-                      &quot;designing&quot; them as they were needed and trying to replicate what was already there.
-                    </p>
-                    <p>
-                      I soon realized that this was more than just a visual redesign, but a core issue on how elemnts
-                      were designed and developed.
-                    </p>
+              <div className="space-y-16">
+                <div className="space-y-4 content-width">
+                  <p className="quote-lg">
+                  Wiz Parser, an online teaching platform, often created new elements as needed by copying existing components, leading to inconsistencies and development challenges. A design system was introduced to help developers build consistent components that supported the AI-driven development process.   </p>
+                  <div className="flex justify-between flex-col md:flex-row full">
+                    <div>
+                      <p>
+                        <b>Project Type:</b>
+                      </p>
+                      <p>Client Work (WizRobotics)</p>
+                    </div>
+                    <div>
+                      <p>
+                        <b>Timeline:</b>
+                      </p>
+                      <p>8 weeks</p>
+                    </div>
+                    <div>
+                      <p>
+                        <b>Tools & Skills:</b>
+                      </p>
+                      <p>Figma, User Research, User Testing, JSON File Systems</p>
+                    </div>
                   </div>
-                
-                <img
-                  className="greyborder my-4 full"
-                  src="/images/wizparser/Inconsistencies.png"
-                  alt="Visual inconsistencies across Wiz Parser elements"
-                />
+ 
+                </div>
               </div>
             </div>
 
@@ -105,6 +82,11 @@ export default function Page() {
                     How might we create a design system that allows developers to move to a whole other way of designing
                     elements?
                   </h2>
+                  <img
+                    className="greyborder full aspect-16/9 object-contain"
+                    src="/images/wizparser/Inconsistencies.png"
+                    alt="Visual inconsistencies across Wiz Parser elements"
+                  />
                 </div>
                 <div className="notes-grid">
                   <div className="notes-card">
@@ -146,7 +128,7 @@ export default function Page() {
                   </div>
                 
                 <img
-                  className="greyborder my-4 full"
+                  className="greyborder my-4 full aspect-16/9 object-contain"
                   src="/images/wizparser/wizparse_FigmaNotes.png"
                   alt="Figma notes prepared for developer handoff"
                 />
@@ -234,32 +216,32 @@ export default function Page() {
                   </div>
                 
                 <img
-                  className="greyborder my-4 full"
+                  className="greyborder my-4 full aspect-16/9 object-contain"
                   src="/images/wizparser/FinalScreens.png"
                   alt="Final Wiz Parser screens at desktop and mobile breakpoints"
                 />
                 <p className="caption-sm">Desktop and Mobile Breakpoints</p>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 full">
                   <div className="space-y-2">
-                    <video className="greyborder full" preload="auto" autoPlay loop muted playsInline>
+                    <video className="greyborder full aspect-16/9 object-contain" preload="auto" autoPlay loop muted playsInline>
                       <source src="/images/wizparser/Light_Dark.mp4" type="video/mp4" />
                     </video>
                     <p className="caption-sm">Light and Dark Mode Toggle</p>
                   </div>
                   <div className="space-y-2">
-                    <video className="greyborder full" preload="auto" autoPlay loop muted playsInline>
+                    <video className="greyborder full aspect-16/9 object-contain" preload="auto" autoPlay loop muted playsInline>
                       <source src="/images/wizparser/Drop-Down-Question.mp4" type="video/mp4" />
                     </video>
                     <p className="caption-sm">Drop-Down Question Interaction</p>
                   </div>
                   <div className="space-y-2">
-                    <video className="greyborder full" preload="auto" autoPlay loop muted playsInline>
+                    <video className="greyborder full aspect-16/9 object-contain" preload="auto" autoPlay loop muted playsInline>
                       <source src="/images/wizparser/AI-Chat.mp4" type="video/mp4" />
                     </video>
                     <p className="caption-sm">AI Chat Functionality</p>
                   </div>
                   <div className="space-y-2">
-                    <video className="greyborder full" preload="auto" autoPlay loop muted playsInline>
+                    <video className="greyborder full aspect-16/9 object-contain" preload="auto" autoPlay loop muted playsInline>
                       <source src="/images/wizparser/Copy_Text.mp4" type="video/mp4" />
                     </video>
                     <p className="caption-sm">Copy Text Feature</p>

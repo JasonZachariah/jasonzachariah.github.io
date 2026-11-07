@@ -486,6 +486,21 @@ h4 .sidebar-link[aria-current="true"] {
   overflow: hidden;
 }
 
+.quote-lg {
+  margin: 0;
+  padding: 0.15rem 0 0.15rem 1.25rem;
+  border-left: 4px solid var(--accent-1);
+  color: var(--color-1);
+  font-family: var(--base-font-family);
+  font-size: clamp(1.5rem, 1.25rem + 0.7vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
 .content-width {
   max-width: 100%;
 }

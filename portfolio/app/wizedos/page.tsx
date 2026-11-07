@@ -31,63 +31,51 @@ export default function Page() {
         <section className="container project-with-sidebar">
           <Sidebar anchorLinks={["Context", "Initial Notes", "Creating the Flows", "Reflection"]} />
 
-          <div id="project-content" className="project-content space-y-8 mt-16 w-full">
-            <h1>WizEdOS</h1>
-            <h2>A redesign for the WizEdOS platform</h2>
+          <div id="project-content" className="project-content space-y-12 mt-16 w-full">
+            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between full">
+              <h1>WizEdOS</h1>
+              <h2 className="md:max-w-sm md:text-right">A redesign for the WizEdOS platform</h2>
+            </div>
 
             <div className="child flex justify-center">
-              <video className="image2 greyborder full" preload="auto" autoPlay muted playsInline>
+              <video className="image2 greyborder full aspect-16/9 object-contain" preload="auto" autoPlay muted playsInline>
                 <source src="/images/wizedos/Header.mp4" type="video/mp4" />
               </video>
             </div>
 
-            <div className="flex justify-between flex-col md:flex-row full">
-              <div>
-                <p>
-                  <b>Project Type:</b>
-                </p>
-                <p>Client Work (WizRobotics)</p>
-              </div>
-              <div>
-                <p>
-                  <b>Timeline:</b>
-                </p>
-                <p>2 weeks</p>
-              </div>
-              <div>
-                <p>
-                  <b>Tools & Skills:</b>
-                </p>
-                <p>Figma</p>
-                <p>Jitter</p>
-                <p>Webflow</p>
-              </div>
-              <div>
-                <p>
-                  <b>Team:</b>
-                </p>
-                <p>Web Designer (My role)</p>
-              </div>
-            </div>
-
             <div className="space-y-4" id="context">
               <p className="header">Context</p>
-              <div className="space-y-4 content-width">
-                
-                  <h3>WizEdOS had a problem- their website failed to communicate the value of their service.</h3>
-                  <div className="space-y-4">
-                    <p>
-                      During my time at WizRobotics, I had the opportunity to create a new direction for{" "}
-                      <a className="underlinelink" href="https://www.wizedos.com/">
-                        WizEdOS, an all-in-one learning platform for STEM educators.
-                      </a>{" "}
-                      Initially, when discussing the project&apos;s scope, the client believed that only a simple visual
-                      refresh with a few minor website edits was needed. However, after analyzing the site and
-                      discussing long-term goals for the service, it became clear that there was a major disconnect
-                      between the existing design and the changes truly necessary.
-                    </p>
+              <div className="space-y-16">
+                <div className="space-y-4 content-width">
+                  <p className="quote-lg">
+                    <a className="underlinelink" href="https://www.wizedos.com/">
+                      WizEdOS
+                    </a>
+                    , an all-in-one learning platform for STEM educators, looked like it needed a visual refresh. The
+                    site failed to communicate the value of the service, and the existing design was out of step with
+                    where the product needed to go.
+                  </p>
+                  <div className="flex justify-between flex-col md:flex-row full">
+                    <div>
+                      <p>
+                        <b>Project Type:</b>
+                      </p>
+                      <p>Client Work (WizRobotics)</p>
+                    </div>
+                    <div>
+                      <p>
+                        <b>Timeline:</b>
+                      </p>
+                      <p>2 weeks</p>
+                    </div>
+                    <div>
+                      <p>
+                        <b>Tools & Skills:</b>
+                      </p>
+                      <p>Figma, Jitter, Webflow</p>
+                    </div>
                   </div>
-                
+                </div>
               </div>
             </div>
 
@@ -146,7 +134,7 @@ export default function Page() {
                   </div>
                 
                 <img
-                  className="greyborder my-4 full"
+                  className="greyborder my-4 full aspect-16/9 object-contain"
                   src="/images/wizedos/InformationArchitecture.png"
                   alt="WizEdOS information architecture"
                 />
@@ -161,15 +149,15 @@ export default function Page() {
                   </div>
                 
                 <img
-                  className="greyborder my-4 full"
+                  className="greyborder my-4 full aspect-16/9 object-contain"
                   src="/images/wizedos/HeroSection.png"
                   alt="WizEdOS hero section with booking CTA"
                 />
-                <video className="greyborder my-4 full" preload="auto" autoPlay loop muted playsInline>
+                <video className="greyborder my-4 full aspect-16/9 object-contain" preload="auto" autoPlay loop muted playsInline>
                   <source src="/images/wizedos/WireFrame_to_Final.mp4" type="video/mp4" />
                 </video>
                 <img
-                  className="greyborder my-4 full"
+                  className="greyborder my-4 full aspect-16/9 object-contain"
                   src="/images/wizedos/Styleguide.png"
                   alt="WizEdOS style guide"
                 />

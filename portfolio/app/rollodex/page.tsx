@@ -32,19 +32,27 @@ export default function Page() {
         <section className="container project-with-sidebar">
           <Sidebar anchorLinks={["Context", "Solution", "Testing", "Impact"]} />
 
-          <div id="project-content" className="project-content space-y-8 mt-16 w-full">
-            <h1>Rollodex</h1>
-            <h2>A universal acronym directory for the Ministry of Education</h2>
-
+          <div id="project-content" className="project-content space-y-12 mt-16 w-full">
+            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between full">
+              <h1>Rollodex</h1>
+              <h2 className="md:max-w-sm md:text-right">A universal acronym directory for the Ministry of Education</h2>
+            </div>
+          
             <div className="child flex justify-center">
               <img
-                className="image2 greyborder full"
+                className="image2 greyborder full aspect-16/9 object-contain"
                 src="/images/rollodex/rollodex_header.png"
                 alt="Rollodex header"
               />
             </div>
-
-            <div className="flex justify-between flex-col md:flex-row full">
+            <div className="space-y-4" id="context">
+              <p className="header">Context</p>
+              <div className="space-y-16">
+                <div className="space-y-4 content-width">
+                  <p className="quote-lg">
+                    The Digital Communication Branch of the Ministry of Education had a gap in the way they managed acronyms, causing silos in information and confusion for staff. Therfore, a solution was needed to standardize how acronyms are updated and used across the branch. 
+                  </p>
+                  <div className="flex justify-between flex-col md:flex-row full">
               <div>
                 <p>
                   <b>Project Type:</b>
@@ -61,63 +69,42 @@ export default function Page() {
                 <p>
                   <b>Tools & Skills:</b>
                 </p>
-                <p>User Research</p>
-                <p>Design Engineering</p>
-                <p>Supabase</p>
-                <p>React+Vite</p>
-              </div>
-              <div>
-                <p>
-                  <b>Team:</b>
-                </p>
-                <p>Web Designer (My role)</p>
+                <p>User Research, Design Engineering, Supabase, React+Vite</p>
               </div>
             </div>
 
-            <div className="space-y-4" id="context">
-              <p className="header">Context</p>
-              <div className="space-y-16">
-                <div className="space-y-4 content-width">
-                  <h3>
-                    The Ontario Public Service (OPS)  had a gap - there was no easy way to find information about acronyms
-                  </h3>
-                  <p>
-                    When I joined the Ministry of Education, one of the first things I noticed was how much of the
-                    language was based in acronyms. Whether in emails, live webpages or documents, making sure acronyms
-                    were used properly was a major concern in the OPS, and a large painpoint for new and experienced
-                    staff alike.
-                  </p>
-                  <p>This was especially true in our team in the <strong>Digital Communication branch</strong>, we had a lot of acronyms that were used frequently, but not easily searchable. While there were some in-team solutions,such as personal "vibe-coded" trackers, they only worked for a single user, and could not be easily shared with the team or other departments.</p>
-                  <img
-                    className="greyborder full"
-                    src="/images/rollodex/pastversions.png"
-                    alt="Three past solutions for acronym management: an internal list, a vibe-coded tracker and a PDF glossary"
-                  />
                 </div>
               </div>
             </div>
+          
 
-            <div className="space-y-4" id="solution">
-              <p className="header">Solution</p>
-              <div className="space-y-16">
-                <div className="space-y-4 content-width">
+            <div className="flex flex-col gap-4" id="solution">
+              <p className="header !mb-0">Solution</p>
+              <div className="flex flex-col gap-16">
+                <div className="flex flex-col gap-4 [&_p]:!mb-0">
                   <h3>
                     Rollodex is a single, searchable directory that standardizes how acronyms are updated and used
                     across the Ministry of Education
                   </h3>
-                  <p> Led by the Digital Communication Branch and spearheaded by me, Rollodex is a centralized, searchable directory that standardizes the creation, maintenance, and use of acronyms across the Ministry of Education.  </p>
-                </div>             
+                  <p>
+                    I led the project for the Digital Communication Branch. Instead of another list that only one person
+                    could maintain, Rollodex is one place to create, look up, and keep acronyms current.
+                  </p>
+                </div>
                 <ImageDetails
+                  className="!py-0"
                   title="Find any acronym in seconds"
                   description="Instead of scrolling a dense list, staff can search by acronym, full name, tags or description. Results update instantly and can be sorted, so the answer is usually the first card on the screen."
                   image="/images/rollodex/rollodex_filter.gif"
                 />
                 <ImageDetails
+                  className="!py-0"
                   title="Narrow results to what matters"
                   description="Filters for ministry or division, language, and cloud or local acronyms cut hundreds of results down to a handful. Bookmarks let people keep the acronyms they use every day one click away."
                   image="/images/rollodex/rollodex_options.gif"
                 />
                 <ImageDetails
+                  className="!py-0"
                   title="Context, not just a full name"
                   description="Each acronym has its own page with a definition, division, language and tags. Staff can copy the full name straight into a document, or save the entry as a PDF, replacing the old glossary that was always out of date."
                   image="/images/rollodex/rollodex_download.gif"
@@ -125,82 +112,75 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="space-y-4" id="testing">
-              <p className="header">Testing</p>
-              <div className="space-y-16">
-                <div className="space-y-4 content-width">
-                  <h3>
-                    Before developing, there were three major constraints I had to consider on the scope of the project
-                    on my end:
-                  </h3>
-                  <div >
-                    <div className="notes-card">
-                      <p className="caption-lg">Focusing on the Ministry of Education, not the entire OPS</p>
-                      <p>
-                        Since this project focused on the Ministry of Education, I tailored Rollodex specifically to
-                        their needs instead of the entire OPS. As a result, only acronyms relevant to the Ministry were
-                        included, with expansion to a wider audience planned for the future.
-                      </p>
-                    </div>
-                    <div className="notes-card">
-                      <p className="caption-lg">Creating a central source of truth</p>
-                      <p>
-                        The Rollodex is only as good as the data it contains. To avoid ending up with another
-                        out-of-date list in the future, I built an admin dashboard for managing acronyms globally. This
-                        allows the CO or the head of each department to manage the acronyms for their respective
-                        ministry or division, so the people closest to the acronyms are the ones responsible for them.
-                      </p>
-                    </div>
-                    <div className="notes-card">
-                      <p className="caption-lg">What about acronyms only my team uses?</p>
-                      <p>
-                        Not every acronym belongs in a ministry-wide database. Local acronyms let users save
-                        team-specific terms to their own list, so they can still rely on Rollodex without waiting for an
-                        admin to approve an entry.
-                      </p>
-                    </div>
-                  </div>
+            <div className="flex flex-col gap-4" id="testing">
+              <p className="header !mb-0">Testing</p>
+              <div className="flex flex-col gap-16">
+                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                  <h3>Auditing existing acronyms planners</h3>
+                  <p>
+                    Looking at existing acronyms planners, I found that most were outdated and inconsistent. Current
+                    methods, such as a PDF glossary, an internal list, or a personal tracker, were not easy to search
+                    or share, and went stale as soon as the person maintaining them moved on. Many were missing
+                    important details like the division or language, core information that was needed to use them in
+                    the Communication Branch.
+                  </p>
                 </div>
-                <div className="content-width">
-                  <div className="notes-card">
-                    <p className="caption-lg">Testing inside real workdays, not in a Figma file</p>
-                    <p>
-                      Due to the time con. I put test versions of Rollodex live with Cloudflare Pages, so colleagues
-                      could try it in their actual workflows. Real feedback rolled in as people used each variant,
-                      letting me quickly fix issues and reshape the design based on their needs.
-                    </p>
-                    <p>Watching people use it for real surfaced two needs that a static prototype would have missed.</p>
-                    <img
-                      className="greyborder full"
-                      src="/images/rollodex/cloudfare_test.png"
-                      alt="Cloudflare deployment serving the live version and two test versions of Rollodex"
-                    />
-                    <h3> Creating perfec handoffs for developers of the future</h3>
-                    <p> As mentioned eariler, this project focused on a small snapshot of the Ministry of Education, but the admin dashboard and the live version of Rollodex are designed to be easily extended to other ministries and divisions. To that end, the next developer who takes over the project will have a clear, well-documented starting point, rather than having to figure everything out from scratch.</p>
-                  </div>
+                <img
+                  className="greyborder full aspect-16/9 object-contain"
+                  src="/images/rollodex/pastversions.png"
+                  alt="Three past solutions for acronym management: an internal list, a vibe-coded tracker and a PDF glossary"
+                />
+                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                  <h3>Testing inside real workdays, not in a Figma file</h3>
+                  <p>
+                    Time was short, so a static prototype would not have told me enough. I put test versions of
+                    Rollodex live on Cloudflare Pages and asked colleagues to use them in their actual work. Feedback
+                    came in as they did, and I could fix issues and reshape the design between versions.
+                  </p>
+                </div>
+                <img
+                  className="greyborder full aspect-16/9 object-contain"
+                  src="/images/rollodex/cloudfare_test.png"
+                  alt="Cloudflare deployment serving the live version and two test versions of Rollodex"
+                />
+                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                  <h3>Implementing ODS design system</h3>
+                  <p>
+                    I implemented the ODS design system to ensure consistency and accessibility across the project.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                  <h3>Future-proofing for the next developer</h3>
+                  <p>
+                    The project had to keep going after I left. I wrote documentation at three levels: how to use
+                    Rollodex, how to run the admin dashboard, and how to keep developing it.
+                  </p>
+                  <p>
+                    That gave the team a clear handoff, so the next person could pick the work up instead of starting
+                    from scratch.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-4" id="impact">
-              <p className="header">Impact</p>
-              <div className="space-y-16">
-                <div className="space-y-4 content-width">
-                  <h3>Creating a product that supports the people who needed it most</h3>
+            <div className="flex flex-col gap-4" id="impact">
+              <p className="header !mb-0">Impact</p>
+              <div className="flex flex-col gap-16">
+                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                  <h3>Built for the people who needed it most</h3>
                   <p>The feedback that meant the most came unprompted, in messages from colleagues after launch:</p>
-                  <img
-                    className="greyborder full"
-                    src="/images/rollodex/rollodex_comments.png"
-                    alt="Messages from OPS colleagues praising Rollodex after launch"
-                  />
-
                 </div>
-                <div className="space-y-4 content-width">
-                  <h3>What did Rollodex achieve?</h3>
-
+                <img
+                  className="greyborder full aspect-16/9 object-contain"
+                  src="/images/rollodex/rollodex_comments.png"
+                  alt="Messages from OPS colleagues praising Rollodex after launch"
+                />
+                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                  <h3>What Rollodex changed</h3>
                   <h2>
-                    By allowing a gradual transition from the old tool to the new tool, we were able to get honest feedback about how the tool fit into people&apos;s work, not just how it
-                    looked. By creating a product that was able to be used by the people who needed it most and adapt to their needs, Rollodex has become a go-to tool for OPS staff.
+                    A gradual move from the old lists to Rollodex gave us honest feedback about how it fit into
+                    people&apos;s work, not just how it looked. Because the people who needed it could use it, and we
+                    could adapt it with them, it became a go-to tool for OPS staff.
                   </h2>
                 </div>
               </div>
