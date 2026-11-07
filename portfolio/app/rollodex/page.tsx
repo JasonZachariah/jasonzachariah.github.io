@@ -32,7 +32,7 @@ export default function Page() {
         <section className="container project-with-sidebar">
           <Sidebar anchorLinks={["Context", "Solution", "Testing", "Impact"]} />
 
-          <div id="project-content" className="project-content space-y-12 mt-16 w-full">
+          <div id="project-content" className="project-content mt-16 flex w-full flex-col gap-16">
             <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between full">
               <h1>Rollodex</h1>
               <h2 className="md:max-w-sm md:text-right">A universal acronym directory for the Ministry of Education</h2>
@@ -45,14 +45,13 @@ export default function Page() {
                 alt="Rollodex header"
               />
             </div>
-            <div className="space-y-4" id="context">
-              <p className="header">Context</p>
-              <div className="space-y-16">
-                <div className="space-y-4 content-width">
+            <div className="flex flex-col gap-4" id="context">
+              <p className="header !mb-0">Context</p>
+              <div className="flex flex-col gap-4 content-width">
                   <p className="quote-lg">
                     The Digital Communication Branch of the Ministry of Education had a gap in the way they managed acronyms, causing silos in information and confusion for staff. Therfore, a solution was needed to standardize how acronyms are updated and used across the branch. 
                   </p>
-                  <div className="flex justify-between flex-col md:flex-row full">
+                  <div className="flex flex-col gap-4 md:flex-row md:justify-between full [&_p]:!mb-0">
               <div>
                 <p>
                   <b>Project Type:</b>
@@ -75,8 +74,6 @@ export default function Page() {
 
                 </div>
               </div>
-            </div>
-          
 
             <div className="flex flex-col gap-4" id="solution">
               <p className="header !mb-0">Solution</p>
@@ -148,8 +145,6 @@ export default function Page() {
                   <p>
                     I implemented the ODS design system to ensure consistency and accessibility across the project.
                   </p>
-                </div>
-                <div className="flex flex-col gap-4 [&_p]:!mb-0">
                   <h3>Future-proofing for the next developer</h3>
                   <p>
                     The project had to keep going after I left. I wrote documentation at three levels: how to use
@@ -175,7 +170,7 @@ export default function Page() {
                   src="/images/rollodex/rollodex_comments.png"
                   alt="Messages from OPS colleagues praising Rollodex after launch"
                 />
-                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                <div className="flex flex-col gap-4 [&_h2]:!mb-0">
                   <h3>What Rollodex changed</h3>
                   <h2>
                     A gradual move from the old lists to Rollodex gave us honest feedback about how it fit into
@@ -186,8 +181,8 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="header-border mt-16"></div>
-            <div className="flex flex-col md:flex-row justify-between gap-4 mt-16 full">
+            <div className="header-border"></div>
+            <div className="flex flex-col md:flex-row justify-between gap-4 full">
               <a href="/wizParser" className="pagelink px-2 py-1">
                 <p className="header whitespace-nowrap">PREVIOUS: </p>
                 <h3>Wiz Parser</h3>

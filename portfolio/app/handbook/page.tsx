@@ -164,7 +164,7 @@ export default function Page() {
                   </div>
                 
                 <img
-                  className="greyborder my-4 full aspect-16/9 object-contain"
+                  className="greyborder my-4 full"
                   src="/images/handbook/competitor.png"
                   alt="Competitor analysis of degree planning tools"
                 />
@@ -221,12 +221,12 @@ export default function Page() {
                   </div>
                 
                 <img
-                  className="greyborder my-4 full aspect-16/9 object-contain"
+                  className="greyborder my-4 full"
                   src="/images/handbook/currentjourney.png"
                   alt="Current fragmented course-planning journey"
                 />
                 <img
-                  className="greyborder my-4 full aspect-16/9 object-contain"
+                  className="greyborder my-4 full"
                   src="/images/handbook/revisedjourney.png"
                   alt="Revised unified course-planning journey"
                 />
@@ -247,7 +247,7 @@ export default function Page() {
                   </div>
                 
                 <img
-                  className="greyborder my-4 full aspect-16/9 object-contain"
+                  className="greyborder my-4 full"
                   src="/images/handbook/Wireframes.png"
                   alt="DESNbook mid-fidelity wireframes"
                 />

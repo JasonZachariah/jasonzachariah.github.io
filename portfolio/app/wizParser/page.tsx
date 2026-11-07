@@ -47,7 +47,10 @@ export default function Page() {
               <div className="space-y-16">
                 <div className="space-y-4 content-width">
                   <p className="quote-lg">
-                  Wiz Parser, an online teaching platform, often created new elements as needed by copying existing components, leading to inconsistencies and development challenges. A design system was introduced to help developers build consistent components that supported the AI-driven development process.   </p>
+                    A lack of a design system doesn&apos;t just affect designers. On Wiz Parser, an online teaching
+                    platform, new elements were made up as they were needed and copied from whatever already existed,
+                    so the real problem was how the interface was built.
+                  </p>
                   <div className="flex justify-between flex-col md:flex-row full">
                     <div>
                       <p>
@@ -68,7 +71,11 @@ export default function Page() {
                       <p>Figma, User Research, User Testing, JSON File Systems</p>
                     </div>
                   </div>
- 
+                  <img
+                    className="greyborder full aspect-16/9 object-contain"
+                    src="/images/wizparser/Inconsistencies.png"
+                    alt="Visual inconsistencies across Wiz Parser elements"
+                  />
                 </div>
               </div>
             </div>
@@ -82,15 +89,10 @@ export default function Page() {
                     How might we create a design system that allows developers to move to a whole other way of designing
                     elements?
                   </h2>
-                  <img
-                    className="greyborder full aspect-16/9 object-contain"
-                    src="/images/wizparser/Inconsistencies.png"
-                    alt="Visual inconsistencies across Wiz Parser elements"
-                  />
                 </div>
                 <div className="notes-grid">
                   <div className="notes-card">
-                    <p className="caption-lg">Poor Handoffs</p>
+                    <p className="caption-lg">Create better handoff communication</p>
                     <p>
                       There existed no system in place for developers to create new elements, instead trying to
                       replicate what the previous developer had done with no context.
