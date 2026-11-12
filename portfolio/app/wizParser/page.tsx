@@ -42,11 +42,9 @@ export default function Page() {
               <p className="header !mb-0">Context</p>
               <div className="flex flex-col gap-4 content-width">
                 <p className="quote-lg">
-                  A lack of a design system doesn&apos;t just affect designers. On Wiz Parser, an online teaching
-                  platform, new elements were made up as they were needed and copied from whatever already existed,
-                  so the real problem was how the interface was built.
+                 Wiz Parser, an online teaching
+                platform, used AI generated elements that were then copied and pasted into the codebase, creating a lot of inconsistency and bugs in the codebase, and a lot of time was spent on reprompting the AI to generate new elements.
                 </p>
-              
               </div>
             </div>
 
