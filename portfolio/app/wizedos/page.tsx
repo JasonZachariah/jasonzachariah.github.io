@@ -31,55 +31,53 @@ export default function Page() {
         <section className="container project-with-sidebar">
           <Sidebar anchorLinks={["Context", "Initial Notes", "Creating the Flows", "Reflection"]} />
 
-          <div id="project-content" className="project-content space-y-12 mt-16 w-full">
-            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between full">
+          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-8">
+            <div className="flex flex-col gap-2 full">
               <h1>WizEdOS</h1>
-              <h2 className="md:max-w-sm md:text-right">A redesign for the WizEdOS platform</h2>
+              <h2>A redesign for the WizEdOS platform</h2>
             </div>
 
-            <div className="child flex justify-center">
+            <div className="flex flex-col gap-4" id="context">
+              <p className="header !mb-0">Context</p>
+              <div className="flex flex-col gap-4 content-width">
+                <p className="quote-lg">
+                  <a className="underlinelink" href="https://www.wizedos.com/">
+                    WizEdOS
+                  </a>
+                  , an all-in-one learning platform for STEM educators, looked like it needed a visual refresh. The
+                  site failed to communicate the value of the service, and the existing design was out of step with
+                  where the product needed to go.
+                </p>
+              </div>
+            </div>
+
+            <div className="child flex flex-col gap-4">
               <video className="image2 greyborder full aspect-16/9 object-contain" preload="auto" autoPlay muted playsInline>
                 <source src="/images/wizedos/Header.mp4" type="video/mp4" />
               </video>
-            </div>
-
-            <div className="space-y-4" id="context">
-              <p className="header">Context</p>
-              <div className="space-y-16">
-                <div className="space-y-4 content-width">
-                  <p className="quote-lg">
-                    <a className="underlinelink" href="https://www.wizedos.com/">
-                      WizEdOS
-                    </a>
-                    , an all-in-one learning platform for STEM educators, looked like it needed a visual refresh. The
-                    site failed to communicate the value of the service, and the existing design was out of step with
-                    where the product needed to go.
+              <div className="flex flex-col gap-4 md:flex-row md:justify-between full [&_p]:!mb-0">
+                <div>
+                  <p>
+                    <b>Team:</b>
                   </p>
-                  <div className="flex justify-between flex-col md:flex-row full">
-                    <div>
-                      <p>
-                        <b>Project Type:</b>
-                      </p>
-                      <p>Client Work (WizRobotics)</p>
-                    </div>
-                    <div>
-                      <p>
-                        <b>Timeline:</b>
-                      </p>
-                      <p>2 weeks</p>
-                    </div>
-                    <div>
-                      <p>
-                        <b>Tools & Skills:</b>
-                      </p>
-                      <p>Figma, Jitter, Webflow</p>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-1 [&_p]:!mb-0">
-                    <p className="header !mb-0">Role</p>
-                    <p>Web designer. I set a new direction for the site so it could communicate the value of the service.</p>
-                  </div>
+                  <p>Web Designer</p>
                 </div>
+                <div>
+                  <p>
+                    <b>Timeline:</b>
+                  </p>
+                  <p>2 weeks</p>
+                </div>
+                <div>
+                  <p>
+                    <b>Tools & Skills:</b>
+                  </p>
+                  <p>Figma, Jitter, Webflow</p>
+                </div>
+              </div>
+              <div className="role-note">
+                <p className="header !mb-0">Role</p>
+                <p>Web designer. I set a new direction for the site so it could communicate the value of the service.</p>
               </div>
             </div>
 
@@ -148,7 +146,7 @@ export default function Page() {
                     <p>
                       For the first flow, this was achieved by adding a CTA button in both the hero section and the
                       navigation bar. This opened a pop-up modal, allowing users to access the booking flow easily
-                      without it disrupting the users flow like it did before
+                      without disrupting the user&apos;s flow the way it did before.
                     </p>
                   </div>
                 
@@ -196,8 +194,8 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="header-border mt-16"></div>
-            <div className="flex flex-col md:flex-row justify-between gap-4 mt-16 full">
+            <div className="header-border"></div>
+            <div className="flex flex-col md:flex-row justify-between gap-4 full">
               <a href="/wizParser" className="pagelink px-2 py-1">
                 <p className="header whitespace-nowrap">PREVIOUS: </p>
                 <h3>Wiz Parser</h3>

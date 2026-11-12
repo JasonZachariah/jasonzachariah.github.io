@@ -32,56 +32,57 @@ export default function Page() {
         <section className="container project-with-sidebar">
           <Sidebar anchorLinks={["Context", "Solution", "Testing", "Impact"]} />
 
-          <div id="project-content" className="project-content mt-16 flex w-full flex-col gap-16">
-            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between full">
+          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-8">
+            <div className="flex flex-col gap-2 full">
               <h1>Rollodex</h1>
-              <h2 className="md:max-w-sm md:text-right">A universal acronym directory for the Ministry of Education</h2>
+              <h2>A universal acronym directory for the Ministry of Education</h2>
             </div>
           
-            <div className="child flex justify-center">
+            <div className="flex flex-col gap-4" id="context">
+              <p className="header !mb-0">Context</p>
+              <div className="flex flex-col gap-4 content-width">
+                <p className="quote-lg">
+                  The Communication Branch of the Ministry of Education had a gap in the way they managed acronyms, causing silos in information and confusion for staff. A solution was needed to standardize how acronyms are updated and used across the branch.
+                </p>
+              </div>
+            </div>
+            <div className="child flex flex-col gap-4">
               <img
                 className="image2 greyborder full aspect-16/9 object-contain"
                 src="/images/rollodex/rollodex_header.png"
                 alt="Rollodex header"
               />
-            </div>
-            <div className="flex flex-col gap-4" id="context">
-              <p className="header !mb-0">Context</p>
-              <div className="flex flex-col gap-4 content-width">
-                  <p className="quote-lg">
-                    The Digital Communication Branch of the Ministry of Education had a gap in the way they managed acronyms, causing silos in information and confusion for staff. Therfore, a solution was needed to standardize how acronyms are updated and used across the branch. 
+              <div className="flex flex-col gap-4 md:flex-row md:justify-between full [&_p]:!mb-0">
+                <div>
+                  <p>
+                    <b>Team:</b>
                   </p>
-                  <div className="flex flex-col gap-4 md:flex-row md:justify-between full [&_p]:!mb-0">
-              <div>
-                <p>
-                  <b>Team:</b>
-                </p>
-                <p>Digital Communication Branch (Ministry of Education)</p>
-              </div>
-              <div>
-                <p>
-                  <b>Timeline:</b>
-                </p>
-                <p>9 weeks (June 2026 - August 2026)</p>
-              </div>
-              <div>
-                <p>
-                  <b>Tools & Skills:</b>
-                </p>
-                <p>User Research, Design Engineering, Supabase, React+Vite</p>
-              </div>
-            </div>
-                  <div className="flex flex-col gap-1 [&_p]:!mb-0">
-                    <p className="header !mb-0">Role</p>
-                    <p>I was in charge of the design and development of the early Rollodex, including supplimenry services such as an admin dashboard and handoff documentation.</p>
-                  </div>
-
+                  <p>Digital Communication Branch (Ministry of Education)</p>
+                </div>
+                <div>
+                  <p>
+                    <b>Timeline:</b>
+                  </p>
+                  <p>9 weeks (June 2026 - August 2026)</p>
+                </div>
+                <div>
+                  <p>
+                    <b>Tools & Skills:</b>
+                  </p>
+                  <p>User Research, Design Engineering, Supabase, React+Vite</p>
                 </div>
               </div>
+              <div className="role-note">
+                <p className="header !mb-0">Role</p>
+                <p>
+                  I was in charge of the design and development of the early Rollodex, including supplementary services such as an admin dashboard and handoff documentation.
+                </p>
+              </div>
+            </div>
 
             <div className="flex flex-col gap-4" id="solution">
               <p className="header !mb-0">Solution</p>
-              <div className="flex flex-col gap-16">
+              <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-4 [&_p]:!mb-0">
                   <h3>
                     Rollodex is a single, searchable directory that standardizes how acronyms are updated and used
@@ -115,11 +116,11 @@ export default function Page() {
 
             <div className="flex flex-col gap-4" id="testing">
               <p className="header !mb-0">Testing</p>
-              <div className="flex flex-col gap-16">
+              <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-4 [&_p]:!mb-0">
-                  <h3>Auditing existing acronyms planners</h3>
+                  <h3>Auditing existing acronym planners</h3>
                   <p>
-                    Looking at existing acronyms planners, I found that most were outdated and inconsistent. Current
+                    Looking at existing acronym planners, I found that most were outdated and inconsistent. Current
                     methods, such as a PDF glossary, an internal list, or a personal tracker, were not easy to search
                     or share, and went stale as soon as the person maintaining them moved on. Many were missing
                     important details like the division or language, core information that was needed to use them in
@@ -145,7 +146,7 @@ export default function Page() {
                   alt="Cloudflare deployment serving the live version and two test versions of Rollodex"
                 />
                 <div className="flex flex-col gap-4 [&_p]:!mb-0">
-                  <h3>Implementing ODS design system</h3>
+                  <h3>Implementing the ODS design system</h3>
                   <p>
                     I implemented the ODS design system to ensure consistency and accessibility across the project.
                   </p>
@@ -164,7 +165,7 @@ export default function Page() {
 
             <div className="flex flex-col gap-4" id="impact">
               <p className="header !mb-0">Impact</p>
-              <div className="flex flex-col gap-16">
+              <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-4 [&_p]:!mb-0">
                   <h3>Built for the people who needed it most</h3>
                   <p>The feedback that meant the most came unprompted, in messages from colleagues after launch:</p>

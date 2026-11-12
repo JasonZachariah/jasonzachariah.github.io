@@ -32,55 +32,53 @@ export default function Page() {
         <section className="container project-with-sidebar">
           <Sidebar anchorLinks={["Context", "Challenge", "Solution", "Final Products", "Reflection"]} />
 
-          <div id="project-content" className="project-content space-y-12 mt-16 w-full">
-            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between full">
+          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-8">
+            <div className="flex flex-col gap-2 full">
               <h1>Wiz Parser</h1>
-              <h2 className="md:max-w-sm md:text-right">A design system to reduce developer&apos;s headaches.</h2>
+              <h2>A design system to reduce developers&apos; headaches.</h2>
             </div>
 
-            <div className="child flex justify-center">
+            <div className="flex flex-col gap-4" id="context">
+              <p className="header !mb-0">Context</p>
+              <div className="flex flex-col gap-4 content-width">
+                <p className="quote-lg">
+                  A lack of a design system doesn&apos;t just affect designers. On Wiz Parser, an online teaching
+                  platform, new elements were made up as they were needed and copied from whatever already existed,
+                  so the real problem was how the interface was built.
+                </p>
+                <img
+                  className="greyborder full aspect-16/9 object-contain"
+                  src="/images/wizparser/Inconsistencies.png"
+                  alt="Visual inconsistencies across Wiz Parser elements"
+                />
+              </div>
+            </div>
+
+            <div className="child flex flex-col gap-4">
               <img className="image2 greyborder full aspect-16/9 object-contain" src="/images/wizparser/Header.gif" alt="Wiz Parser header" />
-            </div>
-
-            <div className="space-y-4" id="context">
-              <p className="header">Context</p>
-              <div className="space-y-16">
-                <div className="space-y-4 content-width">
-                  <p className="quote-lg">
-                    A lack of a design system doesn&apos;t just affect designers. On Wiz Parser, an online teaching
-                    platform, new elements were made up as they were needed and copied from whatever already existed,
-                    so the real problem was how the interface was built.
+              <div className="flex flex-col gap-4 md:flex-row md:justify-between full [&_p]:!mb-0">
+                <div>
+                  <p>
+                    <b>Team:</b>
                   </p>
-                  <div className="flex justify-between flex-col md:flex-row full">
-                    <div>
-                      <p>
-                        <b>Project Type:</b>
-                      </p>
-                      <p>Client Work (WizRobotics)</p>
-                    </div>
-                    <div>
-                      <p>
-                        <b>Timeline:</b>
-                      </p>
-                      <p>8 weeks</p>
-                    </div>
-                    <div>
-                      <p>
-                        <b>Tools & Skills:</b>
-                      </p>
-                      <p>Figma, User Research, User Testing, JSON File Systems</p>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-1 [&_p]:!mb-0">
-                    <p className="header !mb-0">Role</p>
-                    <p>Web designer. I worked with a front-end developer to redesign how the interface was built.</p>
-                  </div>
-                  <img
-                    className="greyborder full aspect-16/9 object-contain"
-                    src="/images/wizparser/Inconsistencies.png"
-                    alt="Visual inconsistencies across Wiz Parser elements"
-                  />
+                  <p>1 Web Designer, 1 Front-end Developer</p>
                 </div>
+                <div>
+                  <p>
+                    <b>Timeline:</b>
+                  </p>
+                  <p>8 weeks</p>
+                </div>
+                <div>
+                  <p>
+                    <b>Tools & Skills:</b>
+                  </p>
+                  <p>Figma, User Research, User Testing, JSON File Systems</p>
+                </div>
+              </div>
+              <div className="role-note">
+                <p className="header !mb-0">Role</p>
+                <p>I was in charge of the design and development of the Wiz Parser design system, testing with the developers and iterating on the design system until it was ready for production.</p>
               </div>
             </div>
 
@@ -105,8 +103,8 @@ export default function Page() {
                   <div className="notes-card">
                     <p className="caption-lg">Inconsistent Designs</p>
                     <p>
-                      Without a proper system for creating elements in Wiz Parser, the platform lacked consistency,
-                      lacking visual and interaction consistency.
+                      Without a proper system for creating elements in Wiz Parser, the platform lacked visual and
+                      interaction consistency.
                     </p>
                   </div>
                   <div className="notes-card">
@@ -128,8 +126,8 @@ export default function Page() {
                   <div className="space-y-4">
                     <p>
                       Previously, we had hourly check-ups, which caused a disconnect in the design process. However, due
-                      to our short time span, both the deve and I had to this of communicating We switched to Loom,
-                      enabling real-time visual updates without interrupting our workflow.
+                      to our short time span, both the developer and I had to change how we were communicating. We switched
+                      to Loom, enabling real-time visual updates without interrupting our workflow.
                     </p>
                   </div>
                 
@@ -179,16 +177,16 @@ export default function Page() {
                       <div className="header-border" />
                       <p>
                         2. Developers have direct comments and instructions in the Figma file to help them implement the
-                        element in the codebase, outlining typography spacing and breakpoints.
+                        element in the codebase, outlining typography, spacing, and breakpoints.
                       </p>
                       <div className="header-border" />
                       <p>
                         3. Developers can easily scale and onboard new team members with the design system and
-                        documentation
+                        documentation.
                       </p>
                       <div className="header-border" />
                       <p>
-                        4. The final element would be added, matching the quality of the rest of the codebase- creating
+                        4. The final element would be added, matching the quality of the rest of the codebase, creating
                         a more consistent and maintainable codebase.
                       </p>
                     </div>
@@ -197,7 +195,7 @@ export default function Page() {
               </div>
               <ImageDetails
                 title="Typography"
-                description="Previously, type styles were not defined, which led to elements having no consistent style. To solve this, a typography guidelines was formed based on the existing fonts—Montserrat and Shantell Sans—allowing for a consistent style across all elements."
+                description="Previously, type styles were not defined, which led to elements having no consistent style. To solve this, typography guidelines were created from the existing fonts—Montserrat and Shantell Sans—so every element could share one style."
                 image="/images/wizparser/Typography.png"
               />
               <ImageDetails
@@ -207,7 +205,7 @@ export default function Page() {
               />
               <ImageDetails
                 title="Spacing"
-                description="Developing a consistent style for padding and margins for components was crucial for consistency across both mobile and desktop screens. These spacings were based on the 4-point system, allowing for developers to easily refer to when developing new elements."
+                description="Developing a consistent style for padding and margins was crucial across both mobile and desktop screens. These spacings were based on the 4-point system, so developers could refer to them when building new elements."
                 image="/images/wizparser/Sizing_Guidlines.png"
               />
             </div>
@@ -277,8 +275,8 @@ export default function Page() {
                       <div className="notes-card">
                         <p className="caption-lg">2. Communicate Better, not More</p>
                         <p>
-                          By sitting down with the developers and understanding their workflow, I was able to fully
-                          understand their needs and understand how to design for them.
+                          By sitting down with the developers and understanding their workflow, I could see their needs and
+                          design for them.
                         </p>
                       </div>
                       <div className="notes-card">
@@ -294,8 +292,8 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="header-border mt-16"></div>
-            <div className="flex flex-col md:flex-row justify-between gap-4 mt-16 full">
+            <div className="header-border"></div>
+            <div className="flex flex-col md:flex-row justify-between gap-4 full">
               <a href="/octobud" className="pagelink px-2 py-1">
                 <p className="header whitespace-nowrap">PREVIOUS: </p>
                 <h3>Octobud</h3>

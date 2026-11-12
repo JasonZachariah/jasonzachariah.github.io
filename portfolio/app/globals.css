@@ -330,6 +330,13 @@ ol li::marker {
   width: 100%;
   box-sizing: border-box;
   padding: 0.4em 1em 0.4em 0.75em;
+  color: var(--color-2);
+  font-family: var(--header-font-family);
+  font-size: var(--caption-size);
+  font-weight: var(--h4-weight);
+  line-height: var(--caption-line-height);
+  letter-spacing: var(--caption-letter-spacing);
+  text-transform: uppercase;
   transition-property: color, box-shadow;
   transition-duration: 0.2s, 0.2s;
   transition-timing-function: ease, ease;
@@ -486,19 +493,58 @@ h4 .sidebar-link[aria-current="true"] {
   overflow: hidden;
 }
 
+.quote-solid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--accent-1-muted);
+  color: var(--color-1);
+}
+
+.quote-solid p,
+.quote-solid .caption-lg,
+.quote-solid .caption-sm {
+  margin: 0;
+  color: var(--color-1);
+  background: transparent;
+}
+
 .quote-lg {
   margin: 0;
   padding: 0.15rem 0 0.15rem 1.25rem;
   border-left: 4px solid var(--accent-1);
   color: var(--color-1);
   font-family: var(--base-font-family);
-  font-size: clamp(1.5rem, 1.25rem + 0.7vw, 1.9rem);
+  font-size: clamp(1rem, 1.25rem + 0.25vw, 1.5rem);
   font-weight: 600;
   line-height: 1.35;
   letter-spacing: -0.01em;
   text-wrap: pretty;
   -webkit-hyphens: manual;
   hyphens: manual;
+}
+
+.role-note {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.9rem 1.1rem;
+  background-color: color-mix(in oklch, var(--accent-1) 8%, var(--neutral-50));
+  color: var(--color-1);
+}
+
+.role-note p {
+  margin: 0;
+}
+
+.role-note p:not(.header) {
+  max-width: none;
+  font-size: 1rem;
+  font-weight: 450;
+  line-height: 1.5;
 }
 
 .content-width {
