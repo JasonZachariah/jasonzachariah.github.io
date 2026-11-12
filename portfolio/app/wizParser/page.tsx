@@ -46,11 +46,7 @@ export default function Page() {
                   platform, new elements were made up as they were needed and copied from whatever already existed,
                   so the real problem was how the interface was built.
                 </p>
-                <img
-                  className="greyborder full aspect-16/9 object-contain"
-                  src="/images/wizparser/Inconsistencies.png"
-                  alt="Visual inconsistencies across Wiz Parser elements"
-                />
+              
               </div>
             </div>
 
@@ -91,6 +87,11 @@ export default function Page() {
                     How might we create a design system that allows developers to move to a whole other way of designing
                     elements?
                   </h2>
+                  <img
+                  className="greyborder full aspect-16/9 object-contain"
+                  src="/images/wizparser/Inconsistencies.png"
+                  alt="Visual inconsistencies across Wiz Parser elements"
+                />
                 </div>
                 <div className="notes-grid">
                   <div className="notes-card">
