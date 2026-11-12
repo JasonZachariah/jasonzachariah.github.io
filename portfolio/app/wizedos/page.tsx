@@ -75,6 +75,10 @@ export default function Page() {
                       <p>Figma, Jitter, Webflow</p>
                     </div>
                   </div>
+                  <div className="flex flex-col gap-1 [&_p]:!mb-0">
+                    <p className="header !mb-0">Role</p>
+                    <p>Web designer. I set a new direction for the site so it could communicate the value of the service.</p>
+                  </div>
                 </div>
               </div>
             </div>

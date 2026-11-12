@@ -71,6 +71,10 @@ export default function Page() {
                       <p>Figma, User Research, User Testing, JSON File Systems</p>
                     </div>
                   </div>
+                  <div className="flex flex-col gap-1 [&_p]:!mb-0">
+                    <p className="header !mb-0">Role</p>
+                    <p>Web designer. I worked with a front-end developer to redesign how the interface was built.</p>
+                  </div>
                   <img
                     className="greyborder full aspect-16/9 object-contain"
                     src="/images/wizparser/Inconsistencies.png"

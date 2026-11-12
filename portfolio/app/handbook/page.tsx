@@ -77,6 +77,10 @@ export default function Page() {
                       <p>Figma, Jitter, User Research, User Testing</p>
                     </div>
                   </div>
+                  <div className="flex flex-col gap-1 [&_p]:!mb-0">
+                    <p className="header !mb-0">Role</p>
+                    <p>Designer. I researched how students plan their degrees and designed the dashboard.</p>
+                  </div>
                   <div className="quote space-y-4">
                     <p className="caption-lg">
                       &ldquo;I had to pick my 2nd year courses and having to map out my picks for the next 2 years over

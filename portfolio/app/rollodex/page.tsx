@@ -54,9 +54,9 @@ export default function Page() {
                   <div className="flex flex-col gap-4 md:flex-row md:justify-between full [&_p]:!mb-0">
               <div>
                 <p>
-                  <b>Project Type:</b>
+                  <b>Team:</b>
                 </p>
-                <p>Client Work (Ministry of Education)</p>
+                <p>Digital Communication Branch (Ministry of Education)</p>
               </div>
               <div>
                 <p>
@@ -71,6 +71,10 @@ export default function Page() {
                 <p>User Research, Design Engineering, Supabase, React+Vite</p>
               </div>
             </div>
+                  <div className="flex flex-col gap-1 [&_p]:!mb-0">
+                    <p className="header !mb-0">Role</p>
+                    <p>I was in charge of the design and development of the early Rollodex, including supplimenry services such as an admin dashboard and handoff documentation.</p>
+                  </div>
 
                 </div>
               </div>
