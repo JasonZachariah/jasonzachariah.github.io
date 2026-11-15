@@ -1,4 +1,5 @@
 import ImageDetails from "@/components/ImageDetails";
+import Notes from "@/components/Notes";
 import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
 
@@ -120,19 +121,23 @@ export default function Page() {
                 <div className="flex flex-col gap-4 [&_p]:!mb-0">
                   <h3>Auditing existing acronym planners</h3>
                   <p>
-                    Looking at existing acronym planners, I found that most were outdated and inconsistent. Current
-                    methods, such as a PDF glossary, an internal list, or a personal tracker, were not easy to search
-                    or share, and went stale as soon as the person maintaining them moved on. Many were missing
-                    important details like the division or language, core information that was needed to use them in
-                    the Communication Branch.
+                  Before diving into solution, we looked at pre-existing solutions that existed in the ministry, such as a PDF glossary, an internal list, or personal "vibe coded" trackers. From these, we began to identify the major issues and pain points that we needed to address, both from a user experience and a saftey standpoint.
                   </p>
                 </div>
+            
                 <img
                   className="greyborder full aspect-16/9 object-contain"
                   src="/images/rollodex/pastversions.png"
                   alt="Three past solutions for acronym management: an internal list, a vibe-coded tracker and a PDF glossary"
                 />
-                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                <p> From these, we broke the major issues into 3 major pain points:</p>
+                <Notes
+                  items={[
+                    "Existing methods lacked a way to stay up to date and accurate",
+                    "Information was scattered across multiple sources, making it difficult to find and use",
+                    "Personal trackers lacked security and could be leaked to unauthorized users",
+                  ]}
+                />     <div className="flex flex-col gap-4 [&_p]:!mb-0">
                   <h3>Testing inside real workdays, not in a Figma file</h3>
                   <p>
                     Time was short, so a static prototype would not have told me enough. I put test versions of

@@ -1,4 +1,5 @@
 import Sidebar from "@/components/Sidebar";
+import Notes from "@/components/Notes";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -88,23 +89,18 @@ export default function Page() {
                   <h3>So, what were the issues with the old WizEdOS system?</h3>
                   <div className="space-y-4">
                     <p>After reviewing the initial website with the client, these were the main pain points that emerged:</p>
-                    <div className="notes-grid">
-                      <div className="notes-card">
-                        <p className="caption-lg">Inconsistent Branding</p>
-                        <p>
-                          Many images on the website were random stock illustrations that failed to communicate the
-                          company&apos;s services. As a result, the site felt disjointed and gave off an unprofessional
-                          impression.
-                        </p>
-                      </div>
-                      <div className="notes-card">
-                        <p className="caption-lg">Confusing Page Setup</p>
-                        <p>
-                          Important sections such as the booking form were placed in hard-to-access areas, making it
-                          difficult for users to locate key actions quickly.
-                        </p>
-                      </div>
-                    </div>
+                    <Notes
+                      items={[
+                        {
+                          title: "Inconsistent Branding",
+                          text: "Many images on the website were random stock illustrations that failed to communicate the company's services. As a result, the site felt disjointed and gave off an unprofessional impression.",
+                        },
+                        {
+                          title: "Confusing Page Setup",
+                          text: "Important sections such as the booking form were placed in hard-to-access areas, making it difficult for users to locate key actions quickly.",
+                        },
+                      ]}
+                    />
                     <p>
                       With a clear understanding of what needed improvement, I began the research and development phase.
                     </p>
@@ -172,23 +168,18 @@ export default function Page() {
                 
                   <h3>What I learned</h3>
                   <div className="space-y-4">
-                    <div className="notes-grid">
-                      <div className="notes-card">
-                        <p className="caption-lg">1. Work with your client, not against them</p>
-                        <p>
-                          Maintaining transparency and involving the client in design decisions helped minimize revisions
-                          later and ensured we were aligned on the final deliverables.
-                        </p>
-                      </div>
-                      <div className="notes-card">
-                        <p className="caption-lg">2. Seeing the Big Picture</p>
-                        <p>
-                          Adapting the existing brand identity to a flexible design system helped create a cohesive and
-                          consistent brand. This helped the client understand the value of the design system and how it
-                          would benefit the company in the long run.
-                        </p>
-                      </div>
-                    </div>
+                    <Notes
+                      items={[
+                        {
+                          title: "1. Work with your client, not against them",
+                          text: "Maintaining transparency and involving the client in design decisions helped minimize revisions later and ensured we were aligned on the final deliverables.",
+                        },
+                        {
+                          title: "2. Seeing the Big Picture",
+                          text: "Adapting the existing brand identity to a flexible design system helped create a cohesive and consistent brand. This helped the client understand the value of the design system and how it would benefit the company in the long run.",
+                        },
+                      ]}
+                    />
                   </div>
                 
               </div>

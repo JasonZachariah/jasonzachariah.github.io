@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Sidebar from "@/components/Sidebar";
 import ImageDetails from "@/components/ImageDetails";
+import Notes from "@/components/Notes";
 
 export const metadata: Metadata = {
   title: "DESNbook | Jason Zachariah",
@@ -136,22 +137,18 @@ export default function Page() {
                     experience?
                   </h2>
                 </div>
-                <div className="notes-grid">
-                  <div className="notes-card">
-                    <p className="caption-lg">Confusion over course requirements</p>
-                    <p>
-                      The current design handbook lacks support for showing how courses affect the degree, leaving students
-                      lost when planning their degrees.
-                    </p>
-                  </div>
-                  <div className="notes-card">
-                    <p className="caption-lg">Planning your degree is tedious</p>
-                    <p>
-                      The current process requires students to use multiple disconnected platforms to follow degree
-                      requirements, leading to a workflow prone to errors.
-                    </p>
-                  </div>
-                </div>
+                <Notes
+                  items={[
+                    {
+                      title: "Confusion over course requirements",
+                      text: "The current design handbook lacks support for showing how courses affect the degree, leaving students lost when planning their degrees.",
+                    },
+                    {
+                      title: "Planning your degree is tedious",
+                      text: "The current process requires students to use multiple disconnected platforms to follow degree requirements, leading to a workflow prone to errors.",
+                    },
+                  ]}
+                />
               </div>
 
               <div className="space-y-4 content-width">
@@ -315,19 +312,18 @@ export default function Page() {
                 
                   <h3>Reflection</h3>
                   <div className="space-y-4">
-                    <div className="notes-grid">
-                      <div className="notes-card">
-                        <p className="caption-lg">1. Don&apos;t Reinvent the Wheel</p>
-                        <p>My early designs focused on aesthetics rather than usability.</p>
-                      </div>
-                      <div className="notes-card">
-                        <p className="caption-lg">2. Data with Human Empathy</p>
-                        <p>
-                          By prioritizing user journeys and incorporating feedback from real students, the final product
-                          helps students navigate degree planning.
-                        </p>
-                      </div>
-                    </div>
+                    <Notes
+                      items={[
+                        {
+                          title: "1. Don't Reinvent the Wheel",
+                          text: "My early designs focused on aesthetics rather than usability.",
+                        },
+                        {
+                          title: "2. Data with Human Empathy",
+                          text: "By prioritizing user journeys and incorporating feedback from real students, the final product helps students navigate degree planning.",
+                        },
+                      ]}
+                    />
                   </div>
                 
               </div>

@@ -1,4 +1,5 @@
 import ImageDetails from "@/components/ImageDetails";
+import Notes from "@/components/Notes";
 import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
 
@@ -91,29 +92,22 @@ export default function Page() {
                   alt="Visual inconsistencies across Wiz Parser elements"
                 />
                 </div>
-                <div className="notes-grid">
-                  <div className="notes-card">
-                    <p className="caption-lg">Create better handoff communication</p>
-                    <p>
-                      There existed no system in place for developers to create new elements, instead trying to
-                      replicate what the previous developer had done with no context.
-                    </p>
-                  </div>
-                  <div className="notes-card">
-                    <p className="caption-lg">Inconsistent Designs</p>
-                    <p>
-                      Without a proper system for creating elements in Wiz Parser, the platform lacked visual and
-                      interaction consistency.
-                    </p>
-                  </div>
-                  <div className="notes-card">
-                    <p className="caption-lg">Time Constraints</p>
-                    <p>
-                      Due to the time constraints of the developers, I had to work quickly and efficiently to create a
-                      design system that would be easy to use and understand.
-                    </p>
-                  </div>
-                </div>
+                <Notes
+                  items={[
+                    {
+                      title: "Create better handoff communication",
+                      text: "There existed no system in place for developers to create new elements, instead trying to replicate what the previous developer had done with no context.",
+                    },
+                    {
+                      title: "Inconsistent Designs",
+                      text: "Without a proper system for creating elements in Wiz Parser, the platform lacked visual and interaction consistency.",
+                    },
+                    {
+                      title: "Time Constraints",
+                      text: "Due to the time constraints of the developers, I had to work quickly and efficiently to create a design system that would be easy to use and understand.",
+                    },
+                  ]}
+                />
               </div>
             </div>
 
@@ -263,29 +257,22 @@ export default function Page() {
                       This project was a great learning experience for me. I was able to work with a team to create a
                       design system that would be easy to use and understand. Here are a few of the things I learned:
                     </p>
-                    <div className="notes-grid">
-                      <div className="notes-card">
-                        <p className="caption-lg">1. Design Systems are Powerful</p>
-                        <p>
-                          A good design system is more than just a set of guidelines. It&apos;s a tool that helps
-                          developers create consistent, efficient, and maintainable code.
-                        </p>
-                      </div>
-                      <div className="notes-card">
-                        <p className="caption-lg">2. Communicate Better, not More</p>
-                        <p>
-                          By sitting down with the developers and understanding their workflow, I could see their needs and
-                          design for them.
-                        </p>
-                      </div>
-                      <div className="notes-card">
-                        <p className="caption-lg">3. Iterate Faster</p>
-                        <p>
-                          In a small company, every decision counts. By developing a back and forth process with the
-                          developers, I was able to iterate faster and more efficiently.
-                        </p>
-                      </div>
-                    </div>
+                    <Notes
+                      items={[
+                        {
+                          title: "1. Design Systems are Powerful",
+                          text: "A good design system is more than just a set of guidelines. It's a tool that helps developers create consistent, efficient, and maintainable code.",
+                        },
+                        {
+                          title: "2. Communicate Better, not More",
+                          text: "By sitting down with the developers and understanding their workflow, I could see their needs and design for them.",
+                        },
+                        {
+                          title: "3. Iterate Faster",
+                          text: "In a small company, every decision counts. By developing a back and forth process with the developers, I was able to iterate faster and more efficiently.",
+                        },
+                      ]}
+                    />
                   </div>
                 
               </div>
