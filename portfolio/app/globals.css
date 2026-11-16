@@ -624,10 +624,14 @@ h4 .sidebar-link[aria-current="true"] {
 
 .greyborder {
   transition: all 0.5s ease;
-  background-color: var(--color-4);
-  box-shadow: 0 0 0 2px var(--neutral-100);
   border-radius: var(--radius-card-lg);
   overflow: hidden;
+}
+
+.parent .greyborder,
+.locked-card .greyborder {
+  background-color: var(--color-4);
+  box-shadow: 0 0 0 2px var(--neutral-100);
 }
 
 .parent a {
@@ -698,7 +702,6 @@ h4 .sidebar-link[aria-current="true"] {
   gap: 0.5rem;
   padding: 1.25rem 1.5rem;
   background-color: var(--color-4);
-  box-shadow: 0 0 0 2px var(--neutral-100);
   border-radius: var(--radius-card-lg);
 }
 

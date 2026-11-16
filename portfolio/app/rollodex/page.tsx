@@ -137,12 +137,17 @@ export default function Page() {
                     "Information was scattered across multiple sources, making it difficult to find and use",
                     "Personal trackers lacked security and could be leaked to unauthorized users",
                   ]}
-                />     <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                />  
+<h3>Creating a filtering strategy</h3>
+                <p> One strategy that was used to test the filtering capabities ws a quick co-design sessions, where I gather members of the branch acronyms, and test out how they personally "filtered" for acronyms they needed to use in their work </p>
+<img src="/images/rollodex/rollodex_codesign.png" alt="Co-design session with branch acronyms" />
+                <p>From this, we were able to break down the filtering capabilities into 3 major catagories: ministry/branch, language, and the name of the acronym. We also added a "bookmark" feature, so users could keep the acronyms they use most often one click away.</p>
+                
+                   <div className="flex flex-col gap-4 [&_p]:!mb-0">
                   <h3>Testing inside real workdays, not in a Figma file</h3>
                   <p>
-                    Time was short, so a static prototype would not have told me enough. I put test versions of
-                    Rollodex live on Cloudflare Pages and asked colleagues to use them in their actual work. Feedback
-                    came in as they did, and I could fix issues and reshape the design between versions.
+                   Due to time contrstiarts, and the worry of the project being "left in the dust" by the next person, I decided to put test versions of
+                    Rollodex live on Cloudflare Pages and ask colleagues to use them in their day to day work. This allowed us to get feedback as they did, and we could use that feedback to shape the design between versions.
                   </p>
                 </div>
                 <img
@@ -151,19 +156,22 @@ export default function Page() {
                   alt="Cloudflare deployment serving the live version and two test versions of Rollodex"
                 />
                 <div className="flex flex-col gap-4 [&_p]:!mb-0">
-                  <h3>Implementing the ODS design system</h3>
+                  <h3>Creating a system that allowed for updates to be made</h3>
                   <p>
-                    I implemented the ODS design system to ensure consistency and accessibility across the project.
-                  </p>
-                  <h3>Future-proofing for the next developer</h3>
-                  <p>
-                    The project had to keep going after I left. I wrote documentation at three levels: how to use
-                    Rollodex, how to run the admin dashboard, and how to keep developing it.
-                  </p>
-                  <p>
-                    That gave the team a clear handoff, so the next person could pick the work up instead of starting
-                    from scratch.
-                  </p>
+                One of the major point with existing systems of acronym management was that they were not updatable. Vibecode trackers esepcailly had a lot of security concerns, as the databases could be shared b sharing a link, without any password protection.   </p>
+                
+                <p>To mitigate this, an admin panel was created, allowing for the updating of the database by managers who could not only add new acronyms, but also edit and delete existing ones.     this allowed for both the Rollodex and Admin t be password protected, meaning that only authorized users could access the system. </p> 
+                              <h3>Creating a system that allowed for updates to be made</h3>
+                 <p>
+                One of the major point with existing systems of acronym management was that they were not updatable. Vibecode trackers esepcailly had a lot of security concerns, as the databases could be shared b sharing a link, without any password protection.   </p>
+                
+                <p>To mitigate this, an admin panel was created, allowing for the updating of the database by managers who could not only add new acronyms, but also edit and delete existing ones.     this allowed for both the Rollodex and Admin t be password protected, meaning that only authorized users could access the system. </p> 
+                              <h3>Future-proofing for the next developer</h3>
+                 <p>
+                Since I only had the 2 months to work on the project, I wrote documentation at three levels: how to use
+                Rollodex, how to run the admin dashboard, and how to keep developing it. This gave the team a clear handoff, so the next person could pick the work up instead of starting
+                from scratch.
+              </p>
                 </div>
               </div>
             </div>
