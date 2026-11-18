@@ -138,6 +138,13 @@ export default function Page() {
                     "Personal trackers lacked security and could be leaked to unauthorized users",
                   ]}
                 />  
+
+                <h3> Creating a secure platform that allowed for updates to be made</h3>
+                <p> One of the major point with existing systems of acronym management was that they were not updatable. Vibecode trackers esepcailly had a lot of security concerns, as the databases could be shared b sharing a link, without any password protection.   </p>
+
+                <img src="/images/rollodex/rollodex_safety.png" alt="Safety features of Rollodex" />
+                <p>To mitigate this, an admin panel was created, allowing for the updating of the database by managers who could not only add new acronyms, but also edit and delete existing ones.This allowed for both the Rollodex and Admin t be password protected, meaning that only authorized users could access the system. </p> 
+                <img src="/images/rollodex/rollodex_admindiagram.png" alt="Diagram of the admin panel and how it works" />
 <h3>Creating a filtering strategy</h3>
                 <p> One strategy that was used to test the filtering capabities ws a quick co-design sessions, where I gather members of the branch acronyms, and test out how they personally "filtered" for acronyms they needed to use in their work </p>
 <img src="/images/rollodex/rollodex_codesign.png" alt="Co-design session with branch acronyms" />
