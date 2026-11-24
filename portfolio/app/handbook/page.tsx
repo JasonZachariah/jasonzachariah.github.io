@@ -35,7 +35,7 @@ export default function Page() {
             anchorLinks={["Context", "Initial Research", "Solution", "Ideation Process", "User Feedback", "Next Steps"]}
           />
 
-          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-8">
+          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-16">
             <div className="flex flex-col gap-2 full">
               <h1>DESNbook</h1>
               <h2>Concept for an all-in-one dashboard that allows design students to plan their degrees.</h2>
@@ -79,7 +79,7 @@ export default function Page() {
               </div>
               <div className="role-note">
                 <p className="header !mb-0">Role</p>
-                <p>This was a solo project,where I researched how students plan their degrees and designed the dashboard to help them do so.</p>
+                <p>This was a solo project, where I researched how students plan their degrees and designed the dashboard to help them do so.</p>
               </div>
             </div>
 
@@ -87,15 +87,17 @@ export default function Page() {
               <p className="header">Initial Research</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>
-                    To understand the pain points of degree planning, I surveyed <b>15 current DESN students</b>.
-                  </h3>
-                  <div className="space-y-4">
-                    <p>
-                      This helped me understand their experiences when planning their degrees. I asked a mix of
-                      qualitative and quantitative questions to pinpoint what made course planning difficult.
-                    </p>
-                    <p>Based on these interviews, here are the major pain points identified:</p>
+                  <div className="section-copy">
+                    <h3>
+                      To understand the pain points of degree planning, I surveyed <b>15 current DESN students</b>.
+                    </h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        This helped me understand their experiences when planning their degrees. I asked a mix of
+                        qualitative and quantitative questions to pinpoint what made course planning difficult.
+                      </p>
+                      <p>Based on these interviews, here are the major pain points identified:</p>
+                    </div>
                   </div>
                 
                 <div className="flex flex-col gap-4">
@@ -153,14 +155,16 @@ export default function Page() {
 
               <div className="space-y-4 content-width">
                 
-                  <h3>Competitor Analysis</h3>
-                  <div className="space-y-4">
-                    <p>
-                      I analyzed the three most common tools design students use to plan their degrees, focusing on
-                      their strengths and weaknesses. While each app had one or two strong core features, none supported
-                      the full journey needed. This reinforced survey feedback about the frustration of switching
-                      between multiple platforms.
-                    </p>
+                  <div className="section-copy">
+                    <h3>Competitor Analysis</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        I analyzed the three most common tools design students use to plan their degrees, focusing on
+                        their strengths and weaknesses. While each app had one or two strong core features, none supported
+                        the full journey needed. This reinforced survey feedback about the frustration of switching
+                        between multiple platforms.
+                      </p>
+                    </div>
                   </div>
                 
                 <img
@@ -175,12 +179,14 @@ export default function Page() {
               <p className="header">Solution</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>One dashboard for all your course planning needs</h3>
-                  <div className="space-y-4">
-                    <p>
-                      A live digital planner that tracks DESN requirements, allowing students to manage course planning,
-                      view potential schedules, and address any issues in one place.
-                    </p>
+                  <div className="section-copy">
+                    <h3>One dashboard for all your course planning needs</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        A live digital planner that tracks DESN requirements, allowing students to manage course planning,
+                        view potential schedules, and address any issues in one place.
+                      </p>
+                    </div>
                   </div>
                 
               </div>
@@ -205,19 +211,21 @@ export default function Page() {
               <p className="header">Ideation Process</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>Re-evaluating the User Journey</h3>
-                  <div className="space-y-4">
-                    <p>
-                      The current design journey is made of three separate flows: one for checking degree
-                      requirements, one for checking availability of courses, and one for plotting their timetables.
-                      This split-up system creates potential for miscommunication and a chance for students to fail to
-                      maintain degree requirements.
-                    </p>
-                    <p>
-                      To fix this, the new flow should let students move between each flow easily, keeping it one
-                      experience and preventing user error.
-                    </p>
-                    <p>After finalizing this new system, I could now start designing the mid-fidelity screens.</p>
+                  <div className="section-copy">
+                    <h3>Re-evaluating the User Journey</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        The current design journey is made of three separate flows: one for checking degree
+                        requirements, one for checking availability of courses, and one for plotting their timetables.
+                        This split-up system creates potential for miscommunication and a chance for students to fail to
+                        maintain degree requirements.
+                      </p>
+                      <p>
+                        To fix this, the new flow should let students move between each flow easily, keeping it one
+                        experience and preventing user error.
+                      </p>
+                      <p>After finalizing this new system, I could now start designing the mid-fidelity screens.</p>
+                    </div>
                   </div>
                 
                 <div className="flex flex-col gap-4 md:flex-row md:justify-between full">
@@ -239,13 +247,15 @@ export default function Page() {
               <p className="header">User Feedback</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>Mid-Fidelity to High-Fidelity</h3>
-                  <div className="space-y-4">
-                    <p>
-                      Based on my research, I developed a mid-fidelity prototype that addressed the revised user
-                      journey, consolidating all major flows into a single dashboard. The dashboard used a central
-                      sidebar system to allow users to navigate between their different flows.
-                    </p>
+                  <div className="section-copy">
+                    <h3>Mid-Fidelity to High-Fidelity</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        Based on my research, I developed a mid-fidelity prototype that addressed the revised user
+                        journey, consolidating all major flows into a single dashboard. The dashboard used a central
+                        sidebar system to allow users to navigate between their different flows.
+                      </p>
+                    </div>
                   </div>
                 
                 <img
@@ -254,33 +264,35 @@ export default function Page() {
                   alt="DESNbook mid-fidelity wireframes"
                 />
                 
-                  <h3>Testing the prototype</h3>
-                  <div className="space-y-4">
-                    <p>
-                      To test the prototype, I asked <b>three design students who hadn&apos;t used the app</b> to:
-                    </p>
-                    <ol>
-                      <li>
-                        <p>
-                          <b>Add a course to their first-year schedule.</b>
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <b>Check which credits they still needed.</b>
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <b>Create a timetable for one year.</b>
-                        </p>
-                      </li>
-                    </ol>
-                    <p>
-                      Since these three flows were most important to students, my goal was to make them as simple and
-                      intuitive as possible.
-                    </p>
-                    <p>Here are the insights gained from this testing:</p>
+                  <div className="section-copy">
+                    <h3>Testing the prototype</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        To test the prototype, I asked <b>three design students who hadn&apos;t used the app</b> to:
+                      </p>
+                      <ol>
+                        <li>
+                          <p>
+                            <b>Add a course to their first-year schedule.</b>
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <b>Check which credits they still needed.</b>
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <b>Create a timetable for one year.</b>
+                          </p>
+                        </li>
+                      </ol>
+                      <p>
+                        Since these three flows were most important to students, my goal was to make them as simple and
+                        intuitive as possible.
+                      </p>
+                      <p>Here are the insights gained from this testing:</p>
+                    </div>
                   </div>
                 
               </div>
@@ -300,30 +312,32 @@ export default function Page() {
               <p className="header">Next Steps</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>Connection to Existing Platforms</h3>
-                  <div className="space-y-4">
-                    <p>
-                      Since users wouldn&apos;t transition to a new platform immediately, a sync function with existing
-                      systems would improve productivity. Making DESNbook the central hub for planning would speed up
-                      workflows and reduce human error when cross-referencing resources.
-                    </p>
+                  <div className="section-copy">
+                    <h3>Connection to Existing Platforms</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        Since users wouldn&apos;t transition to a new platform immediately, a sync function with existing
+                        systems would improve productivity. Making DESNbook the central hub for planning would speed up
+                        workflows and reduce human error when cross-referencing resources.
+                      </p>
+                    </div>
                   </div>
-                
-                
-                  <h3>Reflection</h3>
-                  <div className="space-y-4">
-                    <Notes
-                      items={[
-                        {
-                          title: "1. Don't Reinvent the Wheel",
-                          text: "My early designs focused on aesthetics rather than usability.",
-                        },
-                        {
-                          title: "2. Data with Human Empathy",
-                          text: "By prioritizing user journeys and incorporating feedback from real students, the final product helps students navigate degree planning.",
-                        },
-                      ]}
-                    />
+                  <div className="section-copy">
+                    <h3>Reflection</h3>
+                    <div className="section-copy-body space-y-4">
+                      <Notes
+                        items={[
+                          {
+                            title: "1. Don't Reinvent the Wheel",
+                            text: "My early designs focused on aesthetics rather than usability.",
+                          },
+                          {
+                            title: "2. Data with Human Empathy",
+                            text: "By prioritizing user journeys and incorporating feedback from real students, the final product helps students navigate degree planning.",
+                          },
+                        ]}
+                      />
+                    </div>
                   </div>
                 
               </div>

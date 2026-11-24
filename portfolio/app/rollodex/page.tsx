@@ -31,9 +31,9 @@ export default function Page() {
     <>
       <main id="main-content" tabIndex={-1} className="transition-main">
         <section className="container project-with-sidebar">
-          <Sidebar anchorLinks={["Context", "Solution", "Testing", "Impact"]} />
+          <Sidebar anchorLinks={["Context", "Solution","Research","Testing", "Impact" ,"Conclusion"]} />
 
-          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-8">
+          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-16">
             <div className="flex flex-col gap-2 full">
               <h1>Rollodex</h1>
               <h2>A universal acronym directory for the Ministry of Education</h2>
@@ -43,7 +43,7 @@ export default function Page() {
               <p className="header !mb-0">Context</p>
               <div className="flex flex-col gap-4 content-width">
                 <p className="quote-lg">
-                  The Communication Branch of the Ministry of Education had a gap in the way they managed acronyms, causing silos in information and confusion for staff. A solution was needed to standardize how acronyms are updated and used across the branch.
+                  The Communication Branch of the Ministry of Education needed one way to update and use acronyms, because scattered lists were leaving staff with siloed, inconsistent information.
                 </p>
               </div>
             </div>
@@ -84,7 +84,7 @@ export default function Page() {
             <div className="flex flex-col gap-4" id="solution">
               <p className="header !mb-0">Solution</p>
               <div className="flex flex-col gap-8">
-                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                <div className="section-copy">
                   <h3>
                     Rollodex is a single, searchable directory that standardizes how acronyms are updated and used
                     across the Ministry of Education
@@ -115,46 +115,83 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4" id="testing">
+            <div className="flex flex-col gap-4" id="research">
               <p className="header !mb-0">Testing</p>
               <div className="flex flex-col gap-8">
-                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                <div className="section-copy">
                   <h3>Auditing existing acronym planners</h3>
                   <p>
-                  Before diving into solution, we looked at pre-existing solutions that existed in the ministry, such as a PDF glossary, an internal list, or personal "vibe coded" trackers. From these, we began to identify the major issues and pain points that we needed to address, both from a user experience and a saftey standpoint.
+                    Before diving into the solution, we looked at pre-existing solutions that existed in the ministry,
+                    such as a PDF glossary, an internal list, or personal "vibe coded" trackers. From these, we began to
+                    identify the major issues and pain points that we needed to address, both from a user experience and
+                    a safety standpoint.
                   </p>
                 </div>
-            
                 <img
                   className="greyborder full aspect-16/9 object-contain"
                   src="/images/rollodex/pastversions.png"
                   alt="Three past solutions for acronym management: an internal list, a vibe-coded tracker and a PDF glossary"
                 />
-                <p> From these, we broke the major issues into 3 major pain points:</p>
-                <Notes
-                  items={[
-                    "Existing methods lacked a way to stay up to date and accurate",
-                    "Information was scattered across multiple sources, making it difficult to find and use",
-                    "Personal trackers lacked security and could be leaked to unauthorized users",
-                  ]}
-                />  
-
-                <h3> Creating a secure platform that allowed for updates to be made</h3>
-                <p> One of the major point with existing systems of acronym management was that they were not updatable. Vibecode trackers esepcailly had a lot of security concerns, as the databases could be shared b sharing a link, without any password protection.   </p>
-
-                <img src="/images/rollodex/rollodex_safety.png" alt="Safety features of Rollodex" />
-                <p>To mitigate this, an admin panel was created, allowing for the updating of the database by managers who could not only add new acronyms, but also edit and delete existing ones.This allowed for both the Rollodex and Admin t be password protected, meaning that only authorized users could access the system. </p> 
-                <img src="/images/rollodex/rollodex_admindiagram.png" alt="Diagram of the admin panel and how it works" />
-<h3>Creating a filtering strategy</h3>
-                <p> One strategy that was used to test the filtering capabities ws a quick co-design sessions, where I gather members of the branch acronyms, and test out how they personally "filtered" for acronyms they needed to use in their work </p>
-<img src="/images/rollodex/rollodex_codesign.png" alt="Co-design session with branch acronyms" />
-                <p>From this, we were able to break down the filtering capabilities into 3 major catagories: ministry/branch, language, and the name of the acronym. We also added a "bookmark" feature, so users could keep the acronyms they use most often one click away.</p>
-                
-                   <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                  <p>From these, we broke the major issues into 3 major pain points:</p>
+                  <Notes
+                    items={[
+                      "Existing methods lacked a way to stay up to date and accurate",
+                      "Information was scattered across multiple sources, making it difficult to find and use",
+                      "Personal trackers lacked security and could be leaked to unauthorized users",
+                    ]}
+                  />
+                </div>
+                <p className="header !mb-0" id="testing">Testing</p>
+                <div className="section-copy">
+                  <h3>Creating a secure platform that allowed for updates to be made</h3>
+                  <p>
+                    One of the major points with existing systems of acronym management was that they were not updatable.
+                    Vibe-coded trackers especially had a lot of security concerns, as the databases could be shared by
+                    sharing a link, without any password protection.
+                  </p>
+                </div>
+                <img
+                  className="greyborder full aspect-16/9 object-contain"
+                  src="/images/rollodex/rollodex_safety.png"
+                  alt="Safety features of Rollodex"
+                />
+                <p>
+                  To mitigate this, an admin panel was created, allowing for the updating of the database by managers
+                  who could not only add new acronyms, but also edit and delete existing ones. This allowed for both
+                  the Rollodex and Admin to be password protected, meaning that only authorized users could access the
+                  system.
+                </p>
+                <img
+                  className="greyborder full aspect-16/9 object-contain"
+                  src="/images/rollodex/rollodex_admindiagram.png"
+                  alt="Diagram of the admin panel and how it works"
+                />
+                <div className="section-copy">
+                  <h3>Creating a filtering strategy</h3>
+                  <p>
+                    One strategy that was used to test the filtering capabilities was a quick co-design session, where
+                    I gathered members of the branch and tested out how they personally "filtered" for acronyms they
+                    needed to use in their work.
+                  </p>
+                </div>
+                <img
+                  className="greyborder full aspect-16/9 object-contain"
+                  src="/images/rollodex/rollodex_codesign.png"
+                  alt="Co-design session with branch acronyms"
+                />
+                <p>
+                  From this, we were able to break down the filtering capabilities into 3 major categories:
+                  ministry/branch, language, and the name of the acronym. We also added a "bookmark" feature, so users
+                  could keep the acronyms they use most often one click away.
+                </p>
+                <div className="section-copy">
                   <h3>Testing inside real workdays, not in a Figma file</h3>
                   <p>
-                   Due to time contrstiarts, and the worry of the project being "left in the dust" by the next person, I decided to put test versions of
-                    Rollodex live on Cloudflare Pages and ask colleagues to use them in their day to day work. This allowed us to get feedback as they did, and we could use that feedback to shape the design between versions.
+                    Due to time constraints, and the worry of the project being "left in the dust" by the next person,
+                    I decided to put test versions of Rollodex live on Cloudflare Pages and ask colleagues to use them
+                    in their day-to-day work. This allowed us to get feedback as they did, and we could use that
+                    feedback to shape the design between versions.
                   </p>
                 </div>
                 <img
@@ -162,23 +199,13 @@ export default function Page() {
                   src="/images/rollodex/cloudfare_test.png"
                   alt="Cloudflare deployment serving the live version and two test versions of Rollodex"
                 />
-                <div className="flex flex-col gap-4 [&_p]:!mb-0">
-                  <h3>Creating a system that allowed for updates to be made</h3>
+                <div className="section-copy">
+                  <h3>Future-proofing for the next developer</h3>
                   <p>
-                One of the major point with existing systems of acronym management was that they were not updatable. Vibecode trackers esepcailly had a lot of security concerns, as the databases could be shared b sharing a link, without any password protection.   </p>
-                
-                <p>To mitigate this, an admin panel was created, allowing for the updating of the database by managers who could not only add new acronyms, but also edit and delete existing ones.     this allowed for both the Rollodex and Admin t be password protected, meaning that only authorized users could access the system. </p> 
-                              <h3>Creating a system that allowed for updates to be made</h3>
-                 <p>
-                One of the major point with existing systems of acronym management was that they were not updatable. Vibecode trackers esepcailly had a lot of security concerns, as the databases could be shared b sharing a link, without any password protection.   </p>
-                
-                <p>To mitigate this, an admin panel was created, allowing for the updating of the database by managers who could not only add new acronyms, but also edit and delete existing ones.     this allowed for both the Rollodex and Admin t be password protected, meaning that only authorized users could access the system. </p> 
-                              <h3>Future-proofing for the next developer</h3>
-                 <p>
-                Since I only had the 2 months to work on the project, I wrote documentation at three levels: how to use
-                Rollodex, how to run the admin dashboard, and how to keep developing it. This gave the team a clear handoff, so the next person could pick the work up instead of starting
-                from scratch.
-              </p>
+                    Since I only had the 2 months to work on the project, I wrote documentation at three levels: how to
+                    use Rollodex, how to run the admin dashboard, and how to keep developing it. This gave the team a
+                    clear handoff, so the next person could pick the work up instead of starting from scratch.
+                  </p>
                 </div>
               </div>
             </div>
@@ -186,7 +213,7 @@ export default function Page() {
             <div className="flex flex-col gap-4" id="impact">
               <p className="header !mb-0">Impact</p>
               <div className="flex flex-col gap-8">
-                <div className="flex flex-col gap-4 [&_p]:!mb-0">
+                <div className="section-copy">
                   <h3>Built for the people who needed it most</h3>
                   <p>The feedback that meant the most came unprompted, in messages from colleagues after launch:</p>
                 </div>
@@ -195,13 +222,12 @@ export default function Page() {
                   src="/images/rollodex/rollodex_comments.png"
                   alt="Messages from OPS colleagues praising Rollodex after launch"
                 />
-                <div className="flex flex-col gap-4 [&_h2]:!mb-0">
-                  <h3>What Rollodex changed</h3>
-                  <h2>
-                    A gradual move from the old lists to Rollodex gave us honest feedback about how it fit into
-                    people&apos;s work, not just how it looked. Because the people who needed it could use it, and we
-                    could adapt it with them, it became a go-to tool for OPS staff.
-                  </h2>
+                <div className="flex flex-col gap-4">
+                  <p className="header !mb-0" id="conclusion">Conclusion</p>
+                  <div className="section-copy">
+                    <h3>What Rollodex changed</h3>
+                    <p>This project was my first time leadi</p>
+                  </div>
                 </div>
               </div>
             </div>

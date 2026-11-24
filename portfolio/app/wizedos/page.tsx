@@ -32,7 +32,7 @@ export default function Page() {
         <section className="container project-with-sidebar">
           <Sidebar anchorLinks={["Context", "Initial Notes", "Creating the Flows", "Reflection"]} />
 
-          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-8">
+          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-16">
             <div className="flex flex-col gap-2 full">
               <h1>WizEdOS</h1>
               <h2>A redesign for the WizEdOS platform</h2>
@@ -45,9 +45,7 @@ export default function Page() {
                   <a className="underlinelink" href="https://www.wizedos.com/">
                     WizEdOS
                   </a>
-                  , an all-in-one learning platform for STEM educators, looked like it needed a visual refresh. The
-                  site failed to communicate the value of the service, and the existing design was out of step with
-                  where the product needed to go.
+                  , an all-in-one learning platform for STEM educators, needed a visual refresh because the site failed to communicate the value of the service and was out of step with where the product needed to go.
                 </p>
               </div>
             </div>
@@ -86,24 +84,26 @@ export default function Page() {
               <p className="header">Initial Notes</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>So, what were the issues with the old WizEdOS system?</h3>
-                  <div className="space-y-4">
-                    <p>After reviewing the initial website with the client, these were the main pain points that emerged:</p>
-                    <Notes
-                      items={[
-                        {
-                          title: "Inconsistent Branding",
-                          text: "Many images on the website were random stock illustrations that failed to communicate the company's services. As a result, the site felt disjointed and gave off an unprofessional impression.",
-                        },
-                        {
-                          title: "Confusing Page Setup",
-                          text: "Important sections such as the booking form were placed in hard-to-access areas, making it difficult for users to locate key actions quickly.",
-                        },
-                      ]}
-                    />
-                    <p>
-                      With a clear understanding of what needed improvement, I began the research and development phase.
-                    </p>
+                  <div className="section-copy">
+                    <h3>So, what were the issues with the old WizEdOS system?</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>After reviewing the initial website with the client, these were the main pain points that emerged:</p>
+                      <Notes
+                        items={[
+                          {
+                            title: "Inconsistent Branding",
+                            text: "Many images on the website were random stock illustrations that failed to communicate the company's services. As a result, the site felt disjointed and gave off an unprofessional impression.",
+                          },
+                          {
+                            title: "Confusing Page Setup",
+                            text: "Important sections such as the booking form were placed in hard-to-access areas, making it difficult for users to locate key actions quickly.",
+                          },
+                        ]}
+                      />
+                      <p>
+                        With a clear understanding of what needed improvement, I began the research and development phase.
+                      </p>
+                    </div>
                   </div>
                 
               </div>
@@ -113,22 +113,24 @@ export default function Page() {
               <p className="header">Creating the Flows</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>Treat the website layout like a conversation</h3>
-                  <div className="space-y-4">
-                    <p>
-                      To get a clearer idea of how to structure the website that would satisfy the client, I had them
-                      &quot;pitch&quot; me the WizEdOS service as if I were another business. Using this method, I was
-                      able to identify natural ways to group content, taking notes on major points and structuring them
-                      based on how the client explained the platform.
-                    </p>
-                    <p>
-                      This process allowed us to find what aspects of the website needed to be added, and how we should
-                      organize them by pages.
-                    </p>
-                    <p>
-                      From this, we identified two main user flows for the WizEdOS website: to encourage companies to
-                      book a meeting, and second, to showcase the four sub-services of WizEdOS.
-                    </p>
+                  <div className="section-copy">
+                    <h3>Treat the website layout like a conversation</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        To get a clearer idea of how to structure the website that would satisfy the client, I had them
+                        &quot;pitch&quot; me the WizEdOS service as if I were another business. Using this method, I was
+                        able to identify natural ways to group content, taking notes on major points and structuring them
+                        based on how the client explained the platform.
+                      </p>
+                      <p>
+                        This process allowed us to find what aspects of the website needed to be added, and how we should
+                        organize them by pages.
+                      </p>
+                      <p>
+                        From this, we identified two main user flows for the WizEdOS website: to encourage companies to
+                        book a meeting, and second, to showcase the four sub-services of WizEdOS.
+                      </p>
+                    </div>
                   </div>
                 
                 <img
@@ -137,13 +139,15 @@ export default function Page() {
                   alt="WizEdOS information architecture"
                 />
                 
-                  <h3>Booking without breaking the page</h3>
-                  <div className="space-y-4">
-                    <p>
-                      For the first flow, this was achieved by adding a CTA button in both the hero section and the
-                      navigation bar. This opened a pop-up modal, allowing users to access the booking flow easily
-                      without disrupting the user&apos;s flow the way it did before.
-                    </p>
+                  <div className="section-copy">
+                    <h3>Booking without breaking the page</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        For the first flow, this was achieved by adding a CTA button in both the hero section and the
+                        navigation bar. This opened a pop-up modal, allowing users to access the booking flow easily
+                        without disrupting the user&apos;s flow the way it did before.
+                      </p>
+                    </div>
                   </div>
                 
                 <img
@@ -166,20 +170,22 @@ export default function Page() {
               <p className="header">Reflection</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>What I learned</h3>
-                  <div className="space-y-4">
-                    <Notes
-                      items={[
-                        {
-                          title: "1. Work with your client, not against them",
-                          text: "Maintaining transparency and involving the client in design decisions helped minimize revisions later and ensured we were aligned on the final deliverables.",
-                        },
-                        {
-                          title: "2. Seeing the Big Picture",
-                          text: "Adapting the existing brand identity to a flexible design system helped create a cohesive and consistent brand. This helped the client understand the value of the design system and how it would benefit the company in the long run.",
-                        },
-                      ]}
-                    />
+                  <div className="section-copy">
+                    <h3>What I learned</h3>
+                    <div className="section-copy-body space-y-4">
+                      <Notes
+                        items={[
+                          {
+                            title: "1. Work with your client, not against them",
+                            text: "Maintaining transparency and involving the client in design decisions helped minimize revisions later and ensured we were aligned on the final deliverables.",
+                          },
+                          {
+                            title: "2. Seeing the Big Picture",
+                            text: "Adapting the existing brand identity to a flexible design system helped create a cohesive and consistent brand. This helped the client understand the value of the design system and how it would benefit the company in the long run.",
+                          },
+                        ]}
+                      />
+                    </div>
                   </div>
                 
               </div>

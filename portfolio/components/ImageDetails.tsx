@@ -14,7 +14,7 @@ export default function ImageDetails({
   const isVideo = image.endsWith(".mp4");
 
   return (
-    <div className={`mx-auto flex w-full flex-col items-start gap-4 py-4 ${className}`}>
+    <div className={`mx-auto flex w-full flex-row items-center color-red gap-8 py-4 ${className}`}>
       <div className="w-full">
         {isVideo ? (
           <video

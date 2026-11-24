@@ -33,7 +33,7 @@ export default function Page() {
         <section className="container project-with-sidebar">
           <Sidebar anchorLinks={["Context", "Challenge", "Solution", "Final Products", "Reflection"]} />
 
-          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-8">
+          <div id="project-content" className="project-content mt-8 flex w-full flex-col gap-16">
             <div className="flex flex-col gap-2 full">
               <h1>Wiz Parser</h1>
               <h2>A design system to reduce developers&apos; headaches.</h2>
@@ -43,8 +43,9 @@ export default function Page() {
               <p className="header !mb-0">Context</p>
               <div className="flex flex-col gap-4 content-width">
                 <p className="quote-lg">
-                 Wiz Parser, an online teaching
-                platform, used AI generated elements that were then copied and pasted into the codebase, creating a lot of inconsistency and bugs in the codebase, and a lot of time was spent on reprompting the AI to generate new elements.
+                  Wiz Parser, an online teaching platform, used AI-generated elements that were then copied and pasted
+                  into the codebase, creating a lot of inconsistency and bugs in the codebase, and a lot of time was
+                  spent on reprompting the AI to generate new elements.
                 </p>
               </div>
             </div>
@@ -115,13 +116,15 @@ export default function Page() {
               <p className="header">Solution</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>Perfecting handoff</h3>
-                  <div className="space-y-4">
-                    <p>
-                      Previously, we had hourly check-ups, which caused a disconnect in the design process. However, due
-                      to our short time span, both the developer and I had to change how we were communicating. We switched
-                      to Loom, enabling real-time visual updates without interrupting our workflow.
-                    </p>
+                  <div className="section-copy">
+                    <h3>Perfecting handoff</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        Previously, we had hourly check-ups, which caused a disconnect in the design process. However, due
+                        to our short time span, both the developer and I had to change how we were communicating. We switched
+                        to Loom, enabling real-time visual updates without interrupting our workflow.
+                      </p>
+                    </div>
                   </div>
                 
                 <img
@@ -130,12 +133,14 @@ export default function Page() {
                   alt="Figma notes prepared for developer handoff"
                 />
                 
-                  <h3>A clearer development process</h3>
-                  <div className="space-y-4">
-                    <p>
-                      From this, we were able to create a design strategy that would allow for a more efficient and
-                      effective design process:
-                    </p>
+                  <div className="section-copy">
+                    <h3>A clearer development process</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        From this, we were able to create a design strategy that would allow for a more efficient and
+                        effective design process:
+                      </p>
+                    </div>
                   </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -207,9 +212,11 @@ export default function Page() {
               <p className="header">Final Products</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>A whole new way of designing elements</h3>
-                  <div className="space-y-4">
-                    <p>Here are a few of the deliverables created for the final Wiz Parser:</p>
+                  <div className="section-copy">
+                    <h3>A whole new way of designing elements</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>Here are a few of the deliverables created for the final Wiz Parser:</p>
+                    </div>
                   </div>
                 
                 <img
@@ -251,28 +258,30 @@ export default function Page() {
               <p className="header">Reflection</p>
               <div className="space-y-4 content-width">
                 
-                  <h3>What I learned</h3>
-                  <div className="space-y-4">
-                    <p>
-                      This project was a great learning experience for me. I was able to work with a team to create a
-                      design system that would be easy to use and understand. Here are a few of the things I learned:
-                    </p>
-                    <Notes
-                      items={[
-                        {
-                          title: "1. Design Systems are Powerful",
-                          text: "A good design system is more than just a set of guidelines. It's a tool that helps developers create consistent, efficient, and maintainable code.",
-                        },
-                        {
-                          title: "2. Communicate Better, not More",
-                          text: "By sitting down with the developers and understanding their workflow, I could see their needs and design for them.",
-                        },
-                        {
-                          title: "3. Iterate Faster",
-                          text: "In a small company, every decision counts. By developing a back and forth process with the developers, I was able to iterate faster and more efficiently.",
-                        },
-                      ]}
-                    />
+                  <div className="section-copy">
+                    <h3>What I learned</h3>
+                    <div className="section-copy-body space-y-4">
+                      <p>
+                        This project was a great learning experience for me. I was able to work with a team to create a
+                        design system that would be easy to use and understand. Here are a few of the things I learned:
+                      </p>
+                      <Notes
+                        items={[
+                          {
+                            title: "1. Design Systems are Powerful",
+                            text: "A good design system is more than just a set of guidelines. It's a tool that helps developers create consistent, efficient, and maintainable code.",
+                          },
+                          {
+                            title: "2. Communicate Better, not More",
+                            text: "By sitting down with the developers and understanding their workflow, I could see their needs and design for them.",
+                          },
+                          {
+                            title: "3. Iterate Faster",
+                            text: "In a small company, every decision counts. By developing a back and forth process with the developers, I was able to iterate faster and more efficiently.",
+                          },
+                        ]}
+                      />
+                    </div>
                   </div>
                 
               </div>
