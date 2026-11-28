@@ -61,7 +61,7 @@
   /* Type scale: minor second (ratio 1.067), base = body 1rem */
   --type-ratio: 1.067;
 
-  --h1-size: clamp(2.177rem, 1.95rem + 0.75vw, 2.644rem); /* steps 12–15 */
+  --h1-size: clamp(1.577rem, 1.05rem + 0.5vw, 1.84rem); /* steps 12–15 */
   --h1-weight: 900;
   --h1-line-height: 1.25;
   --h1-letter-spacing: -0.016em;

@@ -5,7 +5,6 @@ import { useEffect, useId, useState } from "react";
 const links = [
   { href: "./", label: "Projects" },
   { href: "./archive", label: "Archive" },
-  { href: "./about", label: "About" },
   {
     href: "https://drive.google.com/file/d/1dYPKVENDlAFRUzEPWyE4Pw8uElywU83K/view?usp=sharing",
     label: "Resume",
